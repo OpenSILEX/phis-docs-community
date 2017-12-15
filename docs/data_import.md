@@ -1,5 +1,11 @@
-# Importing data
 
-| Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
-| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
-| Item One       | POLYGON (( ... ... , ... ... ))       | Header One     | Header      | Item Two      | Header One     | Header     |
+
+
+new file : mkdocs.yml
+
+new directory : /docs
+
+new file : docs/community.md
+new file : docs/experimental-organization.md
+new file : docs/index.md
+new file : docs/overview.md

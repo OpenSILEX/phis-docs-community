@@ -18,10 +18,21 @@
 
 ## Agronomical Objects
 
+### Object types
+
 plot : link toward AGROVOC: smallest unit (one treatment maximum per plot)
 
 block: combination of plots
 
 field : ...
+
+### Importing Objects
+
+# Importing data
+
+| Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
+| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
+| Item One       | POLYGON (( ... ... , ... ... ))       | Header One     | Header      | Item Two      | Header One     | Header     |
+
 
 ## Variables
