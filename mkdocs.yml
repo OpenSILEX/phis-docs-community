@@ -1,0 +1,6 @@
+site_name: PHIS2
+pages:
+   - Home: index.md
+   - Overview: overview.md
+   - Experimental Organization: experimental-organization.md
+   - Community: community.md
