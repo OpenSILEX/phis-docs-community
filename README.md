@@ -19,3 +19,6 @@ Every PHIS2 user is welcomed to enrich this repository with its experience of th
 
 ## Issues
 This documentation is currently under developpement. If a PHIS2 user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis2-docs-community/issues).
+
+## Version
+&copy; INRA MISTEA 2014-2017 (SILEX-PHIS-FIELD v.0.1 - 15 May 2017)
