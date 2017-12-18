@@ -4,7 +4,11 @@ For full documentation visit [PHIS2 wiki](https://mulcyber.toulouse.inra.fr/plug
 
 ## Project layout
 
-    mkdocs.yml    # The configuration file.
+    mkdocs.yml
     docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        index.md
+        overview.md
+        experimental-organization.md
+        community.md
+        img/
+          create-project_subproject-type.png
