@@ -10,5 +10,9 @@ For full documentation visit [PHIS2 wiki](https://mulcyber.toulouse.inra.fr/plug
         overview.md
         experimental-organization.md
         community.md
+        css/
+          bootstrap.css
+          site.css
         img/
           create-project_subproject-type.png
+          wallpaper_leaf.jpg
