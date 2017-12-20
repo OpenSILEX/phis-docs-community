@@ -3,12 +3,14 @@
 ## Projects
 
 ### What are projects ?
-A project is the higher level of organisation in PHIS.
-A single experimentation can include several experiments from various experimental campaigns.
+A research project is the higher level of organisation in PHIS.
+It is generally the object of a contract or a grant agreement between the laboratory performing the research activities and funding agencies providing the financial support.
+A project can hold many experiments from various experimental campaigns.
+Besides, several projects can participate to the same experimentation.
 
 ### What are project properties ?
 Projects fact sheets are all public, i.e. visible for every PHIS user, including those unrelated to them.
-However, experiments and objects included in a project are accessible only to the users defined as owner or guest of this project.
+However, experimental data included in a project are accessible only to users who belong to an owner or guest groups of the experimentation.
 
 ### Create a project
 Within the `Projects` menu, one can create a new project with the
@@ -21,11 +23,12 @@ The mandatory fields, followed by an asterisk, are:
 - name
 - date (start / end)
 
-However, it is highly recommended to fill every field. If possible, fields requiring plain text (keywords, description) should be answered to in english.
+However, it is highly recommended to fill every field. If possible, fields requiring plain text (keywords, description) should be answered to in English.
 
 `URI`. The project URI is automatically created using the acronym provided by the user.
 
 `Acronym`. Short and meaningful, the acronym will be the preferred way to refer to the created project.
+The acronym provided here is usually the one of the research project.
 A project acronym cannot include spaces.
 Once the project created, its acronym can no longer be modified.
 
@@ -62,7 +65,7 @@ The email adresses refer uniquely to persons existing on Phis.
 
 `Keywords`. Keywords characterizing the project. Each keyword should be separated by a comma and not include any capital letter, e.g. *drought, maize*.
 
-`Description`. Complete plain text description of the project, preferably provided in english language. Additionally to the description, informations can be provided as uploaded files, after the project has been created.
+`Description`. Complete plain text description of the project, preferably provided in English language. Additionally to the description, informations can be provided as uploaded files, after the project has been created.
 
 ## Experiments
 
@@ -87,7 +90,7 @@ The mandatory fields, followed by an asterisk, are:
 - date (start / end)
 - campaign
 
-However, it is highly recommended to fill every field. If possible, fields requiring plain text (keywords, description) should be answered to in english.
+However, it is highly recommended to fill every field. If possible, fields requiring plain text (keywords, description) should be answered to in English.
 
 `URI`. The project URI is automatically created by Phis web service which uses the acronym of the Phis instance from where the experiment is created (e.g. *DIA* for Diaphen) and the **campaign** provided by the user (e.g. *2018*).
 
@@ -132,7 +135,7 @@ Please go to [Access rights](../community/#access-rights) for further details on
 
 `Keywords`. Keywords characterizing the experiment. Each keyword, should be separated by a comma and not include any capital letter, e.g. *nitrogen use efficiency, rapeseed*.
 
-`Comment`. Complete plain text description of the experiment, preferably provided in english language. Additionally to the description, informations can be provided as uploaded files, after the experiment has been created.
+`Comment`. Complete plain text description of the experiment, preferably provided in English language. Additionally to the description, informations can be provided as uploaded files, after the experiment has been created.
 
 Completing the experiment creation within Phis is then achieved by clicking on the <span class="btn btn-success">Create</span> button.
 
@@ -152,6 +155,8 @@ block: combination of plots
 field : large spatial unit that includes plots and possibly blocks
 
 ### Importing Objects
+
+https://en.wikipedia.org/wiki/Well-known_text
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
