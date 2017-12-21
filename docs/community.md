@@ -5,31 +5,78 @@
 ### Persons properties
 Phis community is composed of persons which can be either:
 - **persons** identified by their names and email. Persons have to be created within Phis before being refered to by projects and expertiments.
-- **users**, term refering to persons linked to a Phis account: they are provided with a password that they can change at any time (see [Manage a user account](../community/#manage-a-user-account)).
+- **users**, term refering to persons linked to a Phis account: they are provided with a password that they can change at any time. Phis users are either classic users or administrators.
 
-### New users: get an access to PHIS2
-*todo*
-ask Phis developpers..
-ask smone w/ a Phis account
-accounts and authorization access
+### Create a person
+Within the `Persons` menu, one can create a new one with the
+<span class="btn btn-success">Create Person</span> button.
 
-### Manage a user account
-*todo*.
-`Tools > Persons`
-`ORCID`. Open Researcher and Contributor ID. Optionnal.
-You can create and get your orcid at [orcid.org](https://orcid.org/).
+The mandatory fields, followed by a red asterisk, are:
+- email, used to identify a person
+- affiliation
 
-### Create a person without account
+This section provides information on how to create a person, which can be either a person not related to a Phis account, either a new Phis user.
+Only administrators can create a user from Phis.
+Three fields from the `Create Person` page are visible only to admin users:
+- Password
+- Admin
+- Groups
+
+Those field are highlighted below with the `(Admin only)` tag.
+if they remain empty, a person and not a user is created.
+
+`Email`. The email address used to uniquely identify a person.
+
+used as **username** in the case of a person that is also a Phis user.
+
+`Password (Admin only)`.
+Admin only.
+If you ...
+When left blank, a person without a Phis account is created, otherwise a user is created.
+user or not
+
 *todo*
 not necessarily existing email adress
 no check by mail
 from person to user: possible if a awner user updates the person account
 
-### Create an account (admins only)
+`First Name`. Given Name (Forename) of the person.
+
+`Family Name`. Surname (Last Name) of the person.
+
+`Phone`. Office phone number, preceded by the country phone prefix.
+
+`Address`. Office postal address.
+
+`ORCID`. Open Researcher and Contributor ID.
+You can create and get your own ORCID at [orcid.org](https://orcid.org/).
+
+`Admin (Admin only)`.
+Boolean. tock the box for giving administrator rights.
+Only when creating a user (admins only).
+
+`Groups (Admin only)`.
+Preselected list
+
+### Manage a user account
+*todo*.
+`Tools > Persons`
+
+
+### Get an access to PHIS2
+For those that do not own a Phis account, they can ask a account to be created by either :
+- a Phis user woning administrator rights
+- a Phis manager (see README.md for the contacts)
+
+accounts and authorization access
+A Phis username is of the form of an email adress, e.g. guestphis@supagro.inra.fr
+*à terme, donner le mdp du compte public?*
+
+*instances de phis2: diaphen, etc.; a terme, fournir les URL ici?*
 
 ## Access rights
 
-### User account levels of access
+### Users levels of access
 User access rights depend on users groups.
 
 `Classic`: a classic user gets access to public data and data accessible to the groups the user belongs to.
@@ -53,7 +100,7 @@ Research data requiring authrorizations to be accessed to could become public da
 
 `Owner`: in addition to the visualization rights given to guest groups members, owner groups members can modify the data belonging to the group.
 
-## Groups of users
+## Groups
 
 ### Groups properties
 Only admin-users are able to view the list of user groups within the `Tools > Groups` menu, not visible from a guest user account.
