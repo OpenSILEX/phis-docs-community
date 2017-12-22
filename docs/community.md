@@ -4,7 +4,7 @@
 
 ### Persons properties
 Phis community is composed of persons which can be either:
-- **persons** identified by their names and email. Persons have to be created within Phis before being refered to by projects and expertiments.
+- **persons** uniquely identified by their email. Persons have to be created within Phis before being refered to within projects and expertiments.
 - **users**, term refering to persons linked to a Phis account: they are provided with a password that they can change at any time. Phis users are either classic users or administrators.
 
 ### Create a person
@@ -12,8 +12,8 @@ Within the `Persons` menu, one can create a new one with the
 <span class="btn btn-success">Create Person</span> button.
 
 The mandatory fields, followed by a red asterisk, are:
-- email, used to identify a person
-- affiliation
+- Email
+- Affiliation
 
 This section provides information on how to create a person, which can be either a person not related to a Phis account, either a new Phis user.
 Only administrators can create a user from Phis.
@@ -23,22 +23,17 @@ Three fields from the `Create Person` page are visible only to admin users:
 - Groups
 
 Those field are highlighted below with the `(Admin only)` tag.
-if they remain empty, a person and not a user is created.
+if the field **Password** remains empty, a person without a Phis account is created.
+Otherwise, a Phis user is created.
+At any time, a person without an account can be changed into a user by an administrator modifying its **Password** field after clicking on the <span class="btn btn-primary">Update</span> button above its information sheet.
 
 `Email`. The email address used to uniquely identify a person.
-
-used as **username** in the case of a person that is also a Phis user.
+In the case of a person that is also a Phis user, the email provided is used as **username**.
+For now, the email provided does not necessarily have to be an existing email address: there's no check or email confirmation asked for.
 
 `Password (Admin only)`.
-Admin only.
-If you ...
-When left blank, a person without a Phis account is created, otherwise a user is created.
-user or not
-
-*todo*
-not necessarily existing email adress
-no check by mail
-from person to user: possible if a awner user updates the person account
+If this field is left blank, a person without a Phis account is created, otherwise a user is created.
+The new user is provided with a potentially temporary password which can be modified.
 
 `First Name`. Given Name (Forename) of the person.
 
@@ -47,21 +42,24 @@ from person to user: possible if a awner user updates the person account
 `Phone`. Office phone number, preceded by the country phone prefix.
 
 `Address`. Office postal address.
+No specific format is required in this field.
 
 `ORCID`. Open Researcher and Contributor ID.
 You can create and get your own ORCID at [orcid.org](https://orcid.org/).
 
 `Admin (Admin only)`.
-Boolean. tock the box for giving administrator rights.
-Only when creating a user (admins only).
+If this box is ticked, the new user is given admin rights.
+In the case of a non-user person creation, ticking this box has no effect until the accountless person is transformed into a user by being provided a password.
 
 `Groups (Admin only)`.
-Preselected list
+Names of the Phis groups in which the new person will be included.
+This field in the user creation is crucial, but can also be modified at a later time.
+Groups are selected from a the predefined list of groups found in Phis.
+Moreover, when a new group is created, an existing person can be added to it from the **Group Creation** page.
 
 ### Manage a user account
 *todo*.
 `Tools > Persons`
-
 
 ### Get an access to PHIS2
 For those that do not own a Phis account, they can ask a account to be created by either :
