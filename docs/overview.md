@@ -25,6 +25,7 @@
 Scientific entities are organised as **Object** classes (e.g. plot, block, field).
 A Specific Ontology (OWL) formalizes Objects and Events (RDF) and allows to link reference ontologies (SKOS)
 
+https://www.w3.org/2009/08/skos-reference/skos.html#broader
 
 ## Structural units
 
