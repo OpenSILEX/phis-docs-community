@@ -70,17 +70,37 @@ The email adresses refer uniquely to persons existing on Phis.
 ## Experiments
 
 ### What are experiments ?
-...
+Field plant phenotyping experimentations are refered to in Phis2 as **Experiments**.
+Experiments in Phis form self-sustained organizational units occuring in a delimited and known time frame.
+Every agronomical objects and environmental data stored in Phis field have to be related to an experiment.
+Experiments include both raw and cleaned data.
+The data types found in Phis experiments are including but not limited to :
+- phenotypic data
+- environmental data
+- analysis, workflows and their associated results
 
 ### What are experiment properties ?
 Contrary to projects, experiments information sheets are not public, but accessible only to the Phis members which are part of the groups involved in these experiments.
 Please go to [Access rights](../community/#access-rights) for further details on this matter.
 
-<span class="btn btn-info">Map Visualization</span>
-<span class="btn btn-success">Generate Map</span>
+From the `Experiments` menu, a Phis user has access to the list of experiments it has the rights to access to.
+Every experiment on this list is characterized by :
+- its **URI** which identies it uniquely
+- its **Alias**, a short internal denomination
+- its stat and end dates
+- the experimental installation in which is has been performed
+- the campaign it is part of, i.e. the year
+
+From **Home / Experiments**, one can click on the eye icon on the right to see a given experiment information sheet.
+Further information on the experiment is provided on this information sheet, such as the groups of users that have been given access to the experiment's data.
+For more detail on experimental data access restrictions, see the section [Restrictions to a group](../community/#restrictions-to-a-group).
+
+On top of the experiment information sheet, several buttons are displayed.
+The buttons <span class="btn btn-info">Map Visualization</span> and <span class="btn btn-success">Generate Map</span> enable the visualization of the agronomical objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
+The use of the other buttons is described at the end of the next section entitled [Create an experiment](../experimental-organization/#create-an-experiment).
 
 ### Create an experiment
-Within the `Experiments` menu, one can create a new one with the
+Within the `Experiments` menu, a Phis user can create a new experiment with the
 <span class="btn btn-success">Create Experiment</span> button.
 
 Tool tips are provided for some fields: they appear on the left hand side when one drags the pointer on those fields.
@@ -103,6 +123,7 @@ One can select the name of the given projects only within the exhaustive list of
 `Date Start` and `Date End` are to be provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
 It it compulsory to give a value to the **Date End** field in order to create an experiment.
 If the end date of the experiment is unknown, the start date can be reused in **Date End** temporarily.
+Typical **Date Start** values correspond to a sowing date, while **Date End** typically concur with an harvesting date.
 
 `Installation`. Name or ID of the installation where the experiment is carried.
 No specific format is yet required for submitting an installation name. *todo*.
@@ -145,6 +166,10 @@ The <span class="btn btn-warning">Add document</span> button at the top of the e
 
 Once created, the experiment informations can be modified with the <span class="btn btn-primary">Update</span> button.
 
+## Documents
+
+...
+
 ## Agronomical Objects
 
 ### Object types
@@ -161,7 +186,6 @@ https://en.wikipedia.org/wiki/Well-known_text
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | platformXXX-experimentYYY-plotZZZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | variety-1      | nitrogen-1     | 1 (or A-I)     |
-
 
 ## Variables
 
