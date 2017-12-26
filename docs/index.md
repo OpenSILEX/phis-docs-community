@@ -1,6 +1,6 @@
 # Welcome to PHIS2 users documentation
 
-For full documentation visit [PHIS2 wiki](https://mulcyber.toulouse.inra.fr/plugins/mediawiki/wiki/phenome/index.php/Manuel_de_l%27utilisateur).
+This documenttion has been build with mkdocs.
 
 ## Project layout
 
