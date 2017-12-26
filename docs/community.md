@@ -5,11 +5,11 @@
 ### Persons properties
 Phis community is composed of persons which can be either:
 - **persons** uniquely identified by their email. Persons have to be created within Phis before being refered to within projects and expertiments.
-- **users**, term refering to persons linked to a Phis account: they are provided with a password that they can change at any time. Phis users are either classic users or administrators.
+- **users**, term refering to persons linked to a Phis account: they are provided with a password that they can change at any time. Phis users are either classic users or administrators (admin).
 
 ### Create a person
-Within the `Persons` menu, one can create a new one with the
-<span class="btn btn-success">Create Person</span> button.
+Within the `Persons` menu, a user can create a new person with the
+<span class="btn btn-success">Create Person</span> button displayed at the top left of the persons list.
 
 The mandatory fields, followed by a red asterisk, are:
 - Email
@@ -58,19 +58,13 @@ Groups are selected from a the predefined list of groups found in Phis.
 Moreover, when a new group is created, an existing person can be added to it from the **Group Creation** page.
 
 ### Manage a user account
-*todo*.
-`Tools > Persons`
+From the `Persons` menu, a user can manage its own account after clicking on the eye icon on the right of its name in order to view its personal information sheet.
+Both public informations and password can be changed after clicking on the <span class="btn btn-primary">Update</span> button.
 
 ### Get an access to PHIS2
 For those that do not own a Phis account, they can ask a account to be created by either :
-- a Phis user woning administrator rights
-- a Phis manager (see README.md for the contacts)
-
-accounts and authorization access
-A Phis username is of the form of an email adress, e.g. guestphis@supagro.inra.fr
-*à terme, donner le mdp du compte public?*
-
-*instances de phis2: diaphen, etc.; a terme, fournir les URL ici?*
+- a Phis user diplaying administrator rights
+- a Phis manager (see *README.md* for the Phis manager contact)
 
 ## Access rights
 
