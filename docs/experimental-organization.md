@@ -18,7 +18,9 @@ Within the `Projects` menu, one can create a new project with the
 
 Tool tips are provided for most fields: they appear on the left hand side when one drags the pointer on those fields.
 
-The mandatory fields, followed by an asterisk, are:
+![tooltips](img/create-project_tooltips.png)
+
+The mandatory fields, followed by a red asterisk, are:
 - acronyme
 - name
 - date (start / end)
@@ -38,7 +40,7 @@ Once the project created, its acronym can no longer be modified.
 
 `Subproject Type`. The subproject type can optionnaly be provided. It can be either an existing type to be selected from the list of proposed project types, either a new type provided by the user. In the later case, one has to type the new subproject type (e.g. *phd thesis* or *internship*) in the search field of **Subproject Type** and then click on the newly proposed type.
 
-![Subproject-type](img/create-project_subproject-type.png)
+![subproject-type](img/create-project_subproject-type.png)
 
 `Objective`. A short synthesis of the project objectives is to be provided in plain text, preferably in English. A more complete description will be asked in the **Description** field.
 
@@ -63,7 +65,9 @@ The email adresses refer uniquely to persons existing on Phis.
 
 `Website`. If available, URL of the website of the project.
 
-`Keywords`. Keywords characterizing the project. Each keyword should be separated by a comma and not include any capital letter, e.g. *drought, maize*.
+`Keywords`. Keywords, preferably in English, characterizing the project. Each keyword should be separated by a comma and not include any capital letter, e.g. *drought, maize*.
+
+![keywords](img/create-project_keywords.png)
 
 `Description`. Complete plain text description of the project, preferably provided in English language. Additionally to the description, informations can be provided as uploaded files, after the project has been created.
 
