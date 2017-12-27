@@ -54,6 +54,8 @@ You can create and get your own ORCID at [orcid.org](https://orcid.org/).
 If this box is ticked, the new user is given admin rights.
 In the case of a non-user person creation, ticking this box has no effect until the accountless person is transformed into a user by being provided a password.
 
+![create-person-admin](img/create-person_admin.png)
+
 `Groups (Admin only)`.
 Names of the Phis groups in which the new person will be included.
 This field in the user creation is crucial, but can also be modified at a later time.
@@ -117,16 +119,18 @@ Within the `Groups` menu, one can create a new one with the
 
 `URI`. The group URI is automatically created by Phis web service which uses the **Name** of the group provided by the user.
 
-`Name`. Group name composed of an **Organism** name and additional informations on the group (e.g. laboratory and team) provided by the user.
-No spaces or hyphen are accepted: they are automatically replaced by dots.
-The group **Name** is automatically created in capital letters.
-
 `Organism`. Name of the organism employing the group members.
 If a group includes persons from various organisms, instead of an organism name, a project name, or else, can be provided.
 No spaces or hyphen are accepted: they are automatically replaced by dots.
 The group **Organism** is automatically formatted in capital letters.
 
 ![create-group-URI](img/create-group_URI.png)
+
+`Name`. Group name composed of an **Organism** name and additional informations on the group (e.g. laboratory and team) provided by the user.
+No spaces or hyphen are accepted: they are automatically replaced by dots.
+The group **Name** is automatically created in capital letters.
+
+![create-group-name](img/create-group_name.png)
 
 Once the group created, its **URI**, **Name** and **Organism** name can no longer be modified.
 
