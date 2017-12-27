@@ -25,6 +25,9 @@ Three fields from the `Create Person` page are visible only to admin users:
 Those field are highlighted below with the `(Admin only)` tag.
 if the field **Password** remains empty, a person without a Phis account is created.
 Otherwise, a Phis user is created.
+
+![create-person-email](img/create-person_email.png)
+
 At any time, a person without an account can be changed into a user by an administrator modifying its **Password** field after clicking on the <span class="btn btn-primary">Update</span> button above its information sheet.
 
 `Email`. The email address used to uniquely identify a person.
@@ -122,6 +125,8 @@ The group **Name** is automatically created in capital letters.
 If a group includes persons from various organisms, instead of an organism name, a project name, or else, can be provided.
 No spaces or hyphen are accepted: they are automatically replaced by dots.
 The group **Organism** is automatically formatted in capital letters.
+
+![create-group-URI](img/create-group_URI.png)
 
 Once the group created, its **URI**, **Name** and **Organism** name can no longer be modified.
 
