@@ -3,13 +3,13 @@
 ## Projects
 
 ### What are projects ?
-A research project is the higher level of organisation in PHIS.
+A research project is the higher level of organisation in Phis.
 It is generally the object of a contract or a grant agreement between the laboratory performing the research activities and funding agencies providing the financial support.
 A project can hold many experiments from various experimental campaigns.
 Besides, several projects can participate to the same experimentation.
 
 ### What are project properties ?
-Projects fact sheets are all public, i.e. visible for every PHIS user, including those unrelated to them.
+Projects fact sheets are all public, i.e. visible for every Phis user, including those unrelated to them.
 However, experimental data included in a project are accessible only to users who belong to an owner or guest groups of the experimentation.
 
 ### Create a project
@@ -21,6 +21,7 @@ Tool tips are provided for most fields: they appear on the left hand side when o
 ![tooltips](img/create-project_tooltips.png)
 
 The mandatory fields, followed by a red asterisk, are:
+
 - acronyme
 - name
 - date (start / end)
@@ -36,7 +37,7 @@ Once the project created, its acronym can no longer be modified.
 
 `Name`. Full name of the project, it will seldom be refered to but allows a project creator to explicit the acronym. For instance, *RAPeSeed Oil content anD Yield under low Nitrogen input* would be an adequate name for the project whose acronym is *RAPSODYN*.
 
-`Subproject Of`. If the new project is part of an existing project (requisitly known to PHIS), one can select the name of the given mother-project within the exhaustive list of projects registered to the Phis instance where the new project is created.
+`Subproject Of`. If the new project is part of an existing project (requisitly known to Phis), one can select the name of the given mother-project within the exhaustive list of projects registered to the Phis instance where the new project is created.
 
 `Subproject Type`. The subproject type can optionnaly be provided. It can be either an existing type to be selected from the list of proposed project types, either a new type provided by the user. In the later case, one has to type the new subproject type (e.g. *phd thesis* or *internship*) in the search field of **Subproject Type** and then click on the newly proposed type.
 
@@ -51,6 +52,7 @@ Once the project created, its acronym can no longer be modified.
 `Date Start` and `Date End` are to be provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
 
 ???
+
 If the end date of the project is unknown, the start date can be reused in `Date End` temporarily. *TO CHECK*
 
 `Scientific Contacts`. Email adresses of the scientists involved in the project.
@@ -69,7 +71,7 @@ The email adresses refer uniquely to persons existing on Phis.
 
 ![keywords](img/create-project_keywords.png)
 
-`Description`. Complete plain text description of the project, preferably provided in English language. Additionally to the description, informations can be provided as uploaded files, after the project has been created.
+`Description`. Complete plain text description of the project, preferably provided in English language. Additionally to the description, additional information can be provided as uploaded files, after the project has been created.
 
 ## Experiments
 
@@ -89,6 +91,7 @@ Please go to [Access rights](../community/#access-rights) for further details on
 
 From the `Experiments` menu, a Phis user has access to the list of experiments it has the rights to access to.
 Every experiment on this list is characterized by :
+
 - its **URI** which identies it uniquely
 - its **Alias**, a short internal denomination
 - its stat and end dates
@@ -110,6 +113,7 @@ Within the `Experiments` menu, a Phis user can create a new experiment with the
 Tool tips are provided for some fields: they appear on the left hand side when one drags the pointer on those fields.
 
 The mandatory fields, followed by an asterisk, are:
+
 - projects
 - date (start / end)
 - campaign
@@ -160,23 +164,101 @@ Please go to [Access rights](../community/#access-rights) for further details on
 
 `Keywords`. Keywords characterizing the experiment. Each keyword, should be separated by a comma and not include any capital letter, e.g. *nitrogen use efficiency, rapeseed*.
 
-`Comment`. Complete plain text description of the experiment, preferably provided in English language. Additionally to the description, informations can be provided as uploaded files, after the experiment has been created.
+`Comment`. Complete plain text description of the experiment, preferably provided in English language. Additionally to the description, detailed knowledge on the experimentation can be provided through uploaded files, but only after the experiment has been created.
 
 Completing the experiment creation within Phis is then achieved by clicking on the <span class="btn btn-success">Create</span> button.
 
 From **Home / Experiments**, one can click on the eye icon on the right to see the newly created experiment information sheet.
 
 The <span class="btn btn-warning">Add document</span> button at the top of the experiment sheet remains orange until a first document has been added, e.g. an experimental design.
+See the [Documents](../experimental-organization/#documents) section below for further information on documents.
 
-Once created, the experiment informations can be modified with the <span class="btn btn-primary">Update</span> button.
+Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.
 
 ## Documents
 
-...
+### What are Phis documents ?
+
+In order to ease the comprehension of projects and experiments, it is possible to upload various documents Phis and connect them to projects or experiments.
+The same document can be linked to several projects and experiments.
+A document can be related to no project nor experiment, but this is not recommanded.
+Documents that could help persons understand a project are typically (reasearch) contract, phd (or master) thesis, or various multimedia content such as photos or beamer presentations.
+Similarly, one could expect knowledge about an experimentation to be provided through documents that could be protocols, experimental designs, technical or scientific files, data files, research papers, etc.
+Examples of document formats are PDF, txt, csv, png images, etc.
+However, large files are not yet supported by Phis: a document cannot exceed 2MB.
+
+The documents uploaded to Phis through the `Documents` section are meant for human consultation.
+However, metadata (intelligible to machines) must be provided for every new document.
+These metadata contain the document properties:
+
+- title
+- creator
+- language
+- creation date
+- document type
+
+Information of a document can later be changed, while the document itself cannot be modified.
+
+Metadata are specified with [Dublin Core](http://dublincore.org/documents/dc-rdf/) recommendations.
+Metadata enables the documents to be stored in the Phis triplestore.
+
+### Upload a document
+
+Within the `Documents` menu, as well as from a project or experimentation information sheet, any Phis user can upload a new document and specify its metadata with the <span class="btn btn-success">Create Document</span> button.
+No admin rights are required from a Phis user to add a new document.
+
+`Title`. Title of the uploaded document.
+No specific naming convention is required for filling this field.
+A document title does not have to match the name of the uploaded file it is imported from.
+
+`Creator`. Name(s) of the document creator(s), separated by commas
+No specific naming convention is required for filling this field.
+
+`Language`. Language in which the document is provided.
+In accordance to the [Dublin Core Element Set v1.1](http://dublincore.org/documents/1999/07/02/dces) document, the value of the language element is defined by [RFC 1766](http://www.ietf.org/rfc/rfc1766.txt) which includes a two-character language code taken from the [ISO639](http://xml.coverpages.org/iso639a.html) standard.
+The language code should be provided in lower case (e.g. *fr* for French, *en* for English, etc.).
+
+`Creation Date`. Date of the document creation.
+If unkown, the current date (i.e. the date at the moment of the document upload into Phis) can be used.
+
+`Concerned Projects`. Project(s) for which the document is relevant.
+One can select the name of the given project(s) only within the exhaustive list of projects registered to the Phis instance where the new document is uploaded.
+
+`Concerned Experimentation`. Experiment(s) for which the new document is relevant.
+A Phis user can select the name of the given experiment(s) only within the exhaustive list of experiments it has access to.
+
+`Document Type`. The nature of the document's content.
+A single type has to be selected from a predefined list.
+Only one doucment type can be selected.
+Phis controlled vocabulary of document types is defined in Phis ontology.
+If an element seems to be missing from the proposed predefined list, please contact Phis managers (see *README.md* for Phis managers contact).
+
+`File`.
+This field enables Phis users to upload the new document from their computer through the <span class="btn btn-primary">Browse</span> button.
+Only one document at a time can be created, since every document is identified uniquely through an automatically generated URI.
+The uploaded file cannot be empty (it has to exceed 0B).
+For now, a document cannot exceed 2MB, due to technical problems encountered with **Apache** server.
+
+Once the file has been uploaded, do not click on the <span class="btn btn-primary btn-file">Upload</span> button but <span class="btn btn-success">Create</span> underneath, only when all fields have been completed.
+The upload button is bound to be abandonned in the following Phis development.
+
+![upload-file](img/create-document_file.png)
+
+`Comment`. Complete plain text description of the new document, preferably provided in English language.
+
+Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with Dublin Core standards.
+
+The list of documents a given user has access to is avaible from the navigation bar through the `Tools > Documents` menu.
+From **Home / Documents**, one can click on the eye icon on the right to see a given document information sheet (metadata).
+From there, the document cannot be modified or deleted (in Phis current version).
+However, the document can be downloaded with the <span class="btn btn-primary">Download</span> button, and its metadata can be modified with the <span class="btn btn-primary">Update</span> button.
+
+![update-document](img/document-update.png)
 
 ## Agronomical Objects
 
 ### Object types
+TODO
 plot : link toward AGROVOC: smallest partial unit (one treatment maximum per plot)
 
 block: combination of plots
@@ -184,15 +266,22 @@ block: combination of plots
 field : large spatial unit that includes plots and possibly blocks
 
 ### Importing Objects
-
-https://en.wikipedia.org/wiki/Well-known_text
+TODO
+Plots: geometrical objects such as polygons, provided with Well-known text standard (see [WKT Wikipedia page](https://en.wikipedia.org/wiki/Well-known_text)).
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | platformXXX-experimentYYY-plotZZZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | variety-1      | nitrogen-1     | 1 (or A-I)     |
 
+Alt+Shift
+
+Ctrl+Drag
+
 ## Variables
+todo
 
 ### Phenotypic variables
 
 ### Environmental variables
+
+### Create variables

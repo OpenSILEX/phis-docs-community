@@ -64,12 +64,12 @@ Moreover, when a new group is created, an existing person can be added to it fro
 
 ### Manage a user account
 From the `Persons` menu, a user can manage its own account after clicking on the eye icon on the right of its name in order to view its personal information sheet.
-Both public informations and password can be changed after clicking on the <span class="btn btn-primary">Update</span> button.
+Both public information and password can be changed after clicking on the <span class="btn btn-primary">Update</span> button.
 
 ### Get an access to Phis2
 For those that do not own a Phis account, they can ask a account to be created by either :
 - a Phis user diplaying administrator rights
-- a Phis manager (see *README.md* for the Phis manager contact)
+- a Phis manager (see *README.md* for Phis managers contact)
 
 ## Access rights
 
@@ -109,9 +109,9 @@ From the `Tools > Groups` menu, admin-users get an overview the main properties 
 - the group level of access (guest or owner), cf. [Access rights](../community/#access-rights)
 
 From **Home / Groups**, admin-users can click on the eye icon on the right of a given group in order to view its information sheet.
-The additional informations provided by the group sheet are a short description and the persons included in the group, identified by their email address.
+The additional information provided by the group sheet are a short description and the persons included in the group, identified by their email address.
 
-Groups informations can be modified with the <span class="btn btn-primary">Update</span> button by the admin-users.
+Groups metadata can be modified with the <span class="btn btn-primary">Update</span> button by the admin-users.
 
 ### Create a group (admins only)
 Within the `Groups` menu, one can create a new one with the
@@ -126,7 +126,7 @@ The group **Organism** is automatically formatted in capital letters.
 
 ![create-group-URI](img/create-group_URI.png)
 
-`Name`. Group name composed of an **Organism** name and additional informations on the group (e.g. laboratory and team) provided by the user.
+`Name`. Group name composed of an **Organism** name and additional information on the group (e.g. laboratory and team) provided by the user.
 No spaces or hyphen are accepted: they are automatically replaced by dots.
 The group **Name** is automatically created in capital letters.
 
