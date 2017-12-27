@@ -1,10 +1,25 @@
 # Welcome to PHIS2 users documentation
 
-For full documentation visit [PHIS2 wiki](https://mulcyber.toulouse.inra.fr/plugins/mediawiki/wiki/phenome/index.php/Manuel_de_l%27utilisateur).
+This documenttion has been build with mkdocs.
 
 ## Project layout
 
-    mkdocs.yml    # The configuration file.
+    mkdocs.yml
     docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        index.md
+        overview.md
+        experimental-organization.md
+        community.md
+        css/
+          bootstrap.css
+          site.css
+        img/
+          create-document_file.png
+          create-group_name.png
+          create-group_URI.png
+          create-person_email.png
+          create-project_keywords.png
+          create-project_subproject-type.png
+          create-project_tooltips.png
+          document-update.png
+          wallpaper_leaf.jpg
