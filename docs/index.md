@@ -22,4 +22,5 @@ This documenttion has been build with mkdocs.
           create-project_subproject-type.png
           create-project_tooltips.png
           document-update.png
+          projects-list_eye-icon.png
           wallpaper_leaf.jpg

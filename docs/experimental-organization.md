@@ -10,7 +10,16 @@ Besides, several projects can participate to the same experimentation.
 
 ### What are project properties ?
 Projects fact sheets are all public, i.e. visible for every Phis user, including those unrelated to them.
-However, experimental data included in a project are accessible only to users who belong to an owner or guest groups of the experimentation.
+However, experimental data included in a project is also necessarily related to a given experiment.
+This data is accessible only to users who belong to a group (either owner or guest) authorized to access the experimentation it is related to: access rights are managed by experiment and not by project.
+Please see the [Restrictions to a group](../community/#restrictions-to-a-group) section of this documentation for further details on data access matters.
+
+The complete list of projects is available in the `Projects` menu, accessible from Phis top navigation bar.
+The projects list is preceded by a research bar enabling the user to filter projects by their acronym, their main source of funding, and their start and end dates.
+There's no need to use the same case as the expected results: a lowercase search returns every results matching the characters, disregarding whether those match are lowercase or uppercase.
+Further information on a given project is available on its information sheet, accessed to from the projects list through the eye-icon on the right-hand side of this project row.
+
+![project-menu](img/projects-list_eye-icon.png)
 
 ### Create a project
 Within the `Projects` menu, one can create a new project with the
@@ -278,10 +287,36 @@ Alt+Shift
 Ctrl+Drag
 
 ## Variables
+
+### Variables properties
 todo
+either **agronomical objects** or their **environment**
 
-### Phenotypic variables
+either mesured or computed
 
-### Environmental variables
+A Phis user with access to no expirment is likely to be unable to see the `Variable` menu, since there is no variable for him/her to see.
+
+every variable used in Phis has to be defined unambuigusously, in order to
+
+Variables are used to characterize either the environment of agronomical objects and to monitor their evolution over time in
+
+Variables are all unequivocally characterized by:
+
+- a single **trait**
+- a single **method**
+- a single **unit**
+
+*Trait label_Method label_Unit label*
+
+Reference to external ontologies
+
+
+**Phenotypic variables**:
+
+**Environmental variables**:
 
 ### Create variables
+
+Leaf_Area_Index -> Leaf-Area
+
+### Modifiy existing variables
