@@ -1,4 +1,8 @@
 site_name: PHIS2
+extra_css:
+   - "css/bootstrap.css"
+   - "css/site.css"
+   - "css/navbar.less"
 pages:
    - Home: index.md
    - Overview: overview.md
