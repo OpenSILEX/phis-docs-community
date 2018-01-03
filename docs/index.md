@@ -23,4 +23,5 @@ This documenttion has been build with mkdocs.
           create-project_tooltips.png
           document-update.png
           projects-list_eye-icon.png
+          variables-list.png
           wallpaper_leaf.jpg

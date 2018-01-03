@@ -289,10 +289,11 @@ Ctrl+Drag
 ## Variables
 
 ### Variables properties
-todo
-either **agronomical objects** or their **environment**
+Phis variables characterize Phis **agronomical objects** or their **environment**.
+Variables characterizing agronomical objects are **phenotypic variables**, while variables characterizing the environment in which those agronomical objects are studied are refered to as **environmental variables**.
+Phis variables can be either directly mesured by a sensor, either computed from one or several variables.
 
-either mesured or computed
+In order todo keep track... data provenance...
 
 A Phis user with access to no expirment is likely to be unable to see the `Variable` menu, since there is no variable for him/her to see.
 
@@ -300,23 +301,33 @@ every variable used in Phis has to be defined unambuigusously, in order to
 
 Variables are used to characterize either the environment of agronomical objects and to monitor their evolution over time in
 
+![variables-list](img/variables_list.png)
+
+
+
 Variables are all unequivocally characterized by:
 
 - a single **trait**
-- a single **method**
-- a single **unit**
+- a single **method** of measurement or computation of the trait
+- a single **unit** in which the trait value is displayed
 
 *Trait label_Method label_Unit label*
 
 Reference to external ontologies
 
 
-**Phenotypic variables**:
 
-**Environmental variables**:
+### Create variables, traits, methods and units
 
-### Create variables
+URI:
+label: non necessarily unique, but better if it is
+
+better if short names (less than 2 words : searation by - and _ ...)
 
 Leaf_Area_Index -> Leaf-Area
+
+don't need to specify releated concepts for traits, methods and units, but it is recommanded.
+
+need to specify related concepts for new variables ?
 
 ### Modifiy existing variables
