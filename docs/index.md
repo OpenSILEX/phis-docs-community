@@ -15,6 +15,8 @@ This documenttion has been build with mkdocs.
           site.css
         img/
           create-agronomical-objects_browse.png
+          create-agronomical-objects_click-create.png
+          create-agronomical-objects_find-file.png
           create-agronomical-objects_result.png
           create-document_file.png
           create-group_name.png

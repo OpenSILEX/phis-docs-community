@@ -280,7 +280,21 @@ Plots: geometrical objects such as polygons, provided with Well-known text stand
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
-| platformXXX-experimentYYY-plotZZZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | variety-1      | nitrogen-1     | 1 (or A-I)     |
+| platformX_experimentY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
+
+![new-objects-browse](img/create-agronomical-objects_browse.png)
+
+![new-objects-find-file](img/create-agronomical-objects_find-file.png)
+
+<!---
+![new-objects-create](img/create-agronomical-objects_click-create.png)
+--->
+
+![new-objects-success](img/create-agronomical-objects_result.png)
+
+### Visualize objects
+
+In the case of plots...
 
 Alt+Shift
 
@@ -367,16 +381,41 @@ Otherwise, if the appropriate unit is already register in Phis, then one only ha
 ![existing-trait](img/create-variable_existing-unit.png)
 
 `Related References`.
-TODO
-reference URI: insert here URI of concepts found on ontologies such as the ones suggested in the short list above the **Related References** field. (SKOS)
-relation: relation to this ReferenceURI
-Hyperlink
-related concepts
-don't need to specify related concepts for traits, methods and units, but it is recommanded.
+In order to unambiguously define the new variable, semantic relations are established by the user between the new variable and concepts already defined in reliable ontologies existing on the world wide web.
+These relations to external ontologies are established using **SKOS** (Simple Knowledge Organization System).
+`Entity` refers to the Phis entity that will be associated to a concept found in an ontology.
+This **Entity** be either the new variable, trait, method or unit.
+It is not required to specify related concepts for traits, methods and units, however it is recommanded.
+`Relation` refers to the nature of the relation between the entity and the concept defined in an ontology.
+This semantic relation is provided using SKOS.
+The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
+These SKOS semantic relations are explicited at this [w3 web page](https://www.w3.org/TR/skos-reference/#semantic-relations).
+`Reference URI` refers to the URI of the concept found on ontologies such as the ones suggested in the short list above the **Related References** field.
+Do not erroneously provide in this field the URL of the web page of the ontology on which the targeted concept is defined.
+Indeed, the URI of a given concept does not necessarily match with the URL of the web page where this concept has been found.
+`Hyperlink` (optionnal) refers to the URL where are located the related concept whose URI has been provided in the previous field.
 
-need to specify related concepts for new variables ?
+When a variable is created, multiple references using SKOS can be stated, using the <span class="btn btn-default">**+**</span> white icon.
 
-`Variable Definition`. Short text defining clearly the concept underlying the created variable.
+![add-relation-to-a-reference](img/create-variable_add-relation.png)
+
+The main ontologies differ on the following features:
+
+The **AgroPortal** project aims to offer a reference ontology repository for agronomy, reusing the NCBO BioPortal technology.
+The scientific outcomes and the experience of the biomdical domain are thus exploited and transposed into the agronomy domain, including plants, food, environment and possibly animal sciences.
+
+**AGROVOC** is a controlled vocabulary covering all areas of interest of the United Nations Food and Agriculture Organization (FAO), including food, nutrition, agriculture, fisheries, forestry, environment, etc.
+It is published by the FAO and edited by a community of experts.
+
+The **Plant Ontology** is a sgructured vocabulary and database resource that links plant anatomy, morphology, growth and development to plant genomics data.
+
+The **Planteome** project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.
+
+The **Crop Ontology (CO)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
+
+The **Unit Ontology** gathers metrical units for use in conjunction with **PATO** (Phenotype And Trait Ontology), which is a phenotypic quality ontology.
+
+`Variable Definition`. Text defining clearly the concept underlying the new variable.
 This definition should ideally be provided in English.
 
 
