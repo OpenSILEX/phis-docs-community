@@ -10,7 +10,16 @@ Besides, several projects can participate to the same experimentation.
 
 ### What are project properties ?
 Projects fact sheets are all public, i.e. visible for every Phis user, including those unrelated to them.
-However, experimental data included in a project are accessible only to users who belong to an owner or guest groups of the experimentation.
+However, experimental data included in a project is also necessarily related to a given experiment.
+This data is accessible only to users who belong to a group (either owner or guest) authorized to access the experimentation it is related to: access rights are managed by experiment and not by project.
+Please see the [Restrictions to a group](../community/#restrictions-to-a-group) section of this documentation for further details on data access matters.
+
+The complete list of projects is available in the `Projects` menu, accessible from Phis top navigation bar.
+The projects list is preceded by a research bar enabling the user to filter projects by their acronym, their main source of funding, and their start and end dates.
+There's no need to use the same case as the expected results: a lowercase search returns every results matching the characters, disregarding whether those match are lowercase or uppercase.
+Further information on a given project is available on its information sheet, accessed to from the projects list through the eye-icon on the right-hand side of this project row.
+
+![project-menu](img/projects-list_eye-icon.png)
 
 ### Create a project
 Within the `Projects` menu, one can create a new project with the
@@ -271,17 +280,144 @@ Plots: geometrical objects such as polygons, provided with Well-known text stand
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
-| platformXXX-experimentYYY-plotZZZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | variety-1      | nitrogen-1     | 1 (or A-I)     |
+| platformX_experimentY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
+
+![new-objects-browse](img/create-agronomical-objects_browse.png)
+
+![new-objects-find-file](img/create-agronomical-objects_find-file.png)
+
+<!---
+![new-objects-create](img/create-agronomical-objects_click-create.png)
+--->
+
+![new-objects-success](img/create-agronomical-objects_result.png)
+
+### Visualize objects
+
+In the case of plots...
 
 Alt+Shift
 
 Ctrl+Drag
 
 ## Variables
-todo
 
-### Phenotypic variables
+### Variables properties
+Phis variables characterize Phis **agronomical objects** or their **environment**.
+Variables characterizing agronomical objects are **phenotypic variables**, while variables characterizing the environment in which those agronomical objects are studied are refered to as **environmental variables**.
+Phis variables can be either directly mesured by a sensor, either computed from one or several variables.
 
-### Environmental variables
+Every variable produced by an experiment must have been previously created in Phis, and every variable created in Phis has to be defined unambuigusously.
+Consequently, when a user refers to a variable in an experiment, there is no ambiguity about the concept he is refering to.
+Moreover, the usage of unequivocal variables in experiments is a necessary step towards a more intelligible, reliable and reproducible Science.
 
-### Create variables
+Phis variables are listed in the `Variables` menu.
+A Phis user with access arestricted access (e.g. *guestphis*) is likely to be unable to see the `Variables` menu, since there is no variable for him/her to see.
+
+Variables are all unequivocally characterized by the following triplet:
+
+- a single **trait**, either a phenotypic trait or an environmental feature, which is the subject of the new variable
+- a single **method** of measurement or computation of the trait
+- a single **unit** in which is expressed the value of the trait
+
+Further information on a given variable is available on its information sheet, accessed to from the variables list through the eye-icon on the right-hand side of this project row.
+
+![variables-list](img/variables_list.png)
+
+A variable information sheet provides knowledge on this variable, but also on the three elements that define it, namely the **trait**, **method** and **unit** related to this variable.
+The variable and those three defining features all display a **label**, that should be meaningful and unique, but does not have to be so, an **URI** which is however unique, a **Definition** (or **Comment**) meant for human comprehension, and **related references** meant for Semantic Web applications.
+Reference to external ontologies is achieved through [SKOS](https://www.w3.org/2004/02/skos/intro) standards
+
+*NB: for now, only phenotypic variables are present*
+
+### Create variables, traits, methods and units
+
+Every variable found on Phis has been previously created by a Phis user.
+Within the `Variables` menu, one can create a new project with the
+<span class="btn btn-success">Create Variable</span> button.
+
+`Variable label`. This field is automatically produced with the concatenation of the trait, method and unit labels, separated by underscores.
+The resulting variable label is not necessarily unique, but it would be better if it was.
+On the contrary, the automatically generated URI (not shown in the `Create Variable` menu) is unique.
+
+`Trait`. If the trait associated to the new variable has already been created in Phis, one can select it through the predefined list of the **Trait label** field.
+Otherwise, it has to be created, which can be achieved by clicking on the <span class="btn btn-success">**+**</span> green icon on the right-hand side of the **Trait label** field.
+
+<!--- <button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button> --->
+
+![new-trait](img/create-variable_new-trait.png)
+
+In the case of a new trait, do not fill the `Trait label` field but the `Internal label` one, below the <span class="btn btn-danger">**-**</span> red icon that replaced the <span class="btn btn-success">**+**</span> green icon.
+This new trait label should be if possible meaningful, distinct from other trait labels, and underscores "\_" should be avoided since trait, method and unit labels are concatenated to generate the new variable name with the format *Trait_Method_Unit*.
+
+<!---
+<button class="btn btn-danger">
+<span class="glyphicon glyphicon-minus">
+</span>
+</button>
+--->
+
+A `Comment` should be added, preferably in English, in order to explicit the trait specifics as clearly as possible.
+
+![new-trait-label](img/create-variable_new-trait-label.png)
+
+`Method`. If the method associated to the new variable has already been created in Phis, one can select it through the predefined list of the **Method label** field.
+Otherwise, it has to be created, which can be achieved by clicking on the <span class="btn btn-success">**+**</span> green icon on the right-hand side of the **Method label** field.
+
+![new-method](img/create-variable_new-method.png)
+
+In the case of a new method, do not fill the `Method label` field but the `Internal label` one, below the <span class="btn btn-danger">**-**</span> red icon that replaced the <span class="btn btn-success">**+**</span> green icon.
+This new method label should be if possible meaningful, distinct from other method labels, and underscores "\_" should be avoided.
+
+A `Comment` should be added, preferably in English, in order to explicit the method specifics as clearly as possible.
+
+`Unit`. If the unit associated to the new variable cannot be found on the `Unit label` predefined list, a new unit has to be created.
+This can be achieved by clicking on the <span class="btn btn-success">**+**</span> green icon on the right-hand side of the **Unit label** field.
+In the case of a new unit, do not fill the `Unit label` field but the `Internal label` one, below the <span class="btn btn-danger">**-**</span> red icon that replaced the <span class="btn btn-success">**+**</span> green icon.
+This new unit label should be if possible meaningful, distinct from other unit labels, and underscores "\_" should be avoided.
+
+Otherwise, if the appropriate unit is already register in Phis, then one only has to select it from the `Unit label` field, without clicking on the <span class="btn btn-success">**+**</span> green icon (or clicking on the <span class="btn btn-danger">**-**</span> red icon if the <span class="btn btn-success">**+**</span> green icon had previously been clicked on).
+
+![existing-trait](img/create-variable_existing-unit.png)
+
+`Related References`.
+In order to unambiguously define the new variable, semantic relations are established by the user between the new variable and concepts already defined in reliable ontologies existing on the world wide web.
+These relations to external ontologies are established using **SKOS** (Simple Knowledge Organization System).
+`Entity` refers to the Phis entity that will be associated to a concept found in an ontology.
+This **Entity** be either the new variable, trait, method or unit.
+It is not required to specify related concepts for traits, methods and units, however it is recommanded.
+`Relation` refers to the nature of the relation between the entity and the concept defined in an ontology.
+This semantic relation is provided using SKOS.
+The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
+These SKOS semantic relations are explicited at this [w3 web page](https://www.w3.org/TR/skos-reference/#semantic-relations).
+`Reference URI` refers to the URI of the concept found on ontologies such as the ones suggested in the short list above the **Related References** field.
+Do not erroneously provide in this field the URL of the web page of the ontology on which the targeted concept is defined.
+Indeed, the URI of a given concept does not necessarily match with the URL of the web page where this concept has been found.
+`Hyperlink` (optionnal) refers to the URL where are located the related concept whose URI has been provided in the previous field.
+
+When a variable is created, multiple references using SKOS can be stated, using the <span class="btn btn-default">**+**</span> white icon.
+
+![add-relation-to-a-reference](img/create-variable_add-relation.png)
+
+The main ontologies differ on the following features:
+
+The **AgroPortal** project aims to offer a reference ontology repository for agronomy, reusing the NCBO BioPortal technology.
+The scientific outcomes and the experience of the biomdical domain are thus exploited and transposed into the agronomy domain, including plants, food, environment and possibly animal sciences.
+
+**AGROVOC** is a controlled vocabulary covering all areas of interest of the United Nations Food and Agriculture Organization (FAO), including food, nutrition, agriculture, fisheries, forestry, environment, etc.
+It is published by the FAO and edited by a community of experts.
+
+The **Plant Ontology** is a sgructured vocabulary and database resource that links plant anatomy, morphology, growth and development to plant genomics data.
+
+The **Planteome** project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.
+
+The **Crop Ontology (CO)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
+
+The **Unit Ontology** gathers metrical units for use in conjunction with **PATO** (Phenotype And Trait Ontology), which is a phenotypic quality ontology.
+
+`Variable Definition`. Text defining clearly the concept underlying the new variable.
+This definition should ideally be provided in English.
+
+
+### Modifiy existing variables
+TODO
