@@ -14,6 +14,8 @@ This documenttion has been build with mkdocs.
           bootstrap.css
           site.css
         img/
+          create-agronomical-objects_browse.png
+          create-agronomical-objects_result.png
           create-document_file.png
           create-group_name.png
           create-group_URI.png
@@ -21,6 +23,7 @@ This documenttion has been build with mkdocs.
           create-project_keywords.png
           create-project_subproject-type.png
           create-project_tooltips.png
+          create-variable_add-relation.png
           create-variable_existing-unit.png
           create-variable_new-trait.png
           create-variable_new-trait-label.png
