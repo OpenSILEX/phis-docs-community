@@ -267,12 +267,18 @@ However, the document can be downloaded with the <span class="btn btn-primary">D
 ## Agronomical Objects
 
 ### Object types
-TODO
-plot : link toward AGROVOC: smallest partial unit (one treatment maximum per plot)
+
+- plant organ
+- plant
+- plot : link toward AGROVOC: smallest partial unit (one treatment maximum per plot)
 
 block: combination of plots
 
 field : large spatial unit that includes plots and possibly blocks
+
+<span class="btn btn-primary">Download Search Result</span> button
+
+![objects-list](img/agronomical-objects_list.png)
 
 ### Importing Objects
 Within the `Agronomical objects` menu, a Phis user can import new objects with the

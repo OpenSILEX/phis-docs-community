@@ -14,6 +14,7 @@ This documenttion has been build with mkdocs.
           bootstrap.css
           site.css
         img/
+          agronomical-objects_list.png
           create-agronomical-objects_browse.png
           create-agronomical-objects_click-create.png
           create-agronomical-objects_find-file.png
