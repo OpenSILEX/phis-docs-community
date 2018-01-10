@@ -275,8 +275,18 @@ block: combination of plots
 field : large spatial unit that includes plots and possibly blocks
 
 ### Importing Objects
+Within the `Agronomical objects` menu, a Phis user can import new objects with the
+<span class="btn btn-success">Create</span> button.
+
 TODO
+
 Plots: geometrical objects such as polygons, provided with Well-known text standard (see [WKT Wikipedia page](https://en.wikipedia.org/wiki/Well-known_text)).
+
+ geometry coordinates must be in WGS84 (EPSG4326)
+
+ https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html
+
+ http://spatialreference.org/ref/epsg/wgs-84/
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
@@ -314,7 +324,8 @@ Moreover, the usage of unequivocal variables in experiments is a necessary step 
 Phis variables are listed in the `Variables` menu.
 A Phis user with access arestricted access (e.g. *guestphis*) is likely to be unable to see the `Variables` menu, since there is no variable for him/her to see.
 
-Variables are all unequivocally characterized by the following triplet:
+Variable definition is based on the (Crop Ontology guidelines)[http://www.cropontology.org/CropOntology_Curation_Guidelines_20160510.pdf].
+Therefore, Phis variables are all unequivocally characterized by the following triplet:
 
 - a single **trait**, either a phenotypic trait or an environmental feature, which is the subject of the new variable
 - a single **method** of measurement or computation of the trait
@@ -331,7 +342,6 @@ Reference to external ontologies is achieved through [SKOS](https://www.w3.org/2
 *NB: for now, only phenotypic variables are present*
 
 ### Create variables, traits, methods and units
-
 Every variable found on Phis has been previously created by a Phis user.
 Within the `Variables` menu, one can create a new project with the
 <span class="btn btn-success">Create Variable</span> button.
@@ -343,19 +353,10 @@ On the contrary, the automatically generated URI (not shown in the `Create Varia
 `Trait`. If the trait associated to the new variable has already been created in Phis, one can select it through the predefined list of the **Trait label** field.
 Otherwise, it has to be created, which can be achieved by clicking on the <span class="btn btn-success">**+**</span> green icon on the right-hand side of the **Trait label** field.
 
-<!--- <button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button> --->
-
 ![new-trait](img/create-variable_new-trait.png)
 
 In the case of a new trait, do not fill the `Trait label` field but the `Internal label` one, below the <span class="btn btn-danger">**-**</span> red icon that replaced the <span class="btn btn-success">**+**</span> green icon.
 This new trait label should be if possible meaningful, distinct from other trait labels, and underscores "\_" should be avoided since trait, method and unit labels are concatenated to generate the new variable name with the format *Trait_Method_Unit*.
-
-<!---
-<button class="btn btn-danger">
-<span class="glyphicon glyphicon-minus">
-</span>
-</button>
---->
 
 A `Comment` should be added, preferably in English, in order to explicit the trait specifics as clearly as possible.
 
@@ -389,9 +390,22 @@ It is not required to specify related concepts for traits, methods and units, ho
 `Relation` refers to the nature of the relation between the entity and the concept defined in an ontology.
 This semantic relation is provided using SKOS.
 The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
-These SKOS semantic relations are explicited at this [w3 web page](https://www.w3.org/TR/skos-reference/#semantic-relations).
+
+
+SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to state alignement links between SKOS concepts, as indicated in the [w3 SKOS Mapping properties web page](https://www.w3.org/TR/skos-reference/#mapping) :
+
+- **exactMatch**: used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. `skos:exactMatch` is a transitive property, and is a sub-property of `skos:closeMatch`. *Example: `<MyNewNDVIVariable> skos:exactMatch <CO_322:0000880>` asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'*
+- **closeMatch**: used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, `skos:closeMatch` is not declared to be a transitive property. *Example: `<MyNewLAIVariable> skos:closeMatch <http://www.cropontology.org/rdf/CO_321:0001254>` asserts that the variable 'MyNewLAIVariable' created in Phis is very similar to the variable 'LAI_Calc_Idx' already defined in the Crop Ontology and uniquely identified as 'CO_321:0001254'*
+
+SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations) :
+
+- **narrower**: a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:narrower <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept narrower than the one refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
+- **broader**:  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:broader <http://www.cropontology.org/terms/CO_322:0000905/> asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept broader than the one refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
+
+By convention, `skos:broader` and `skos:narrower` are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties `skos:broader` and `skos:narrower` are not declared as transitive properties.
+
 `Reference URI` refers to the URI of the concept found on ontologies such as the ones suggested in the short list above the **Related References** field.
-Do not erroneously provide in this field the URL of the web page of the ontology on which the targeted concept is defined.
+The URI provided here is not necessarily the URL of the web page of the ontology on which the targeted concept is defined.
 Indeed, the URI of a given concept does not necessarily match with the URL of the web page where this concept has been found.
 `Hyperlink` (optionnal) refers to the URL where are located the related concept whose URI has been provided in the previous field.
 
@@ -401,19 +415,21 @@ When a variable is created, multiple references using SKOS can be stated, using 
 
 The main ontologies differ on the following features:
 
-The **AgroPortal** project aims to offer a reference ontology repository for agronomy, reusing the NCBO BioPortal technology.
+The **[AgroPortal](http://agroportal.lirmm.fr/)** project aims to offer a reference ontology repository for agronomy, reusing the NCBO BioPortal technology, as stated on the [FAO website](http://aims.fao.org/agroportal).
 The scientific outcomes and the experience of the biomdical domain are thus exploited and transposed into the agronomy domain, including plants, food, environment and possibly animal sciences.
 
-**AGROVOC** is a controlled vocabulary covering all areas of interest of the United Nations Food and Agriculture Organization (FAO), including food, nutrition, agriculture, fisheries, forestry, environment, etc.
+**[AGROVOC](http://artemide.art.uniroma2.it:8081/agrovoc/agrovoc/en/)** is a controlled vocabulary covering all areas of interest of the United Nations Food and Agriculture Organization (FAO), including food, nutrition, agriculture, fisheries, forestry, environment, etc.
 It is published by the FAO and edited by a community of experts.
+More information is provided on the [FAO website](http://aims.fao.org/standards/agrovoc/concept-scheme).
 
-The **Plant Ontology** is a sgructured vocabulary and database resource that links plant anatomy, morphology, growth and development to plant genomics data.
+The **[Plant Ontology (PO)](http://www.ontobee.org/ontology/po)** is a structured vocabulary and database resource that links plant anatomy, morphology, growth and development to plant genomics data.
+The URL provided [here](http://browser.planteome.org/amigo) redirects visitors to the Planteome website since PO is developed by the Planteome Project, alongside with other reference ontologies listed in the [Planteome Ontologies webpage](http://planteome.org/node/1).
 
-The **Planteome** project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.
+The **[Planteome](http://planteome.org/)** project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.
 
-The **Crop Ontology (CO)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
+The **[Crop Ontology (CO)](http://www.cropontology.org/)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
 
-The **Unit Ontology** gathers metrical units for use in conjunction with **PATO** (Phenotype And Trait Ontology), which is a phenotypic quality ontology.
+The **[Unit Ontology](http://www.ontobee.org/ontology/UO)** gathers metrical units for use in conjunction with **[PATO](http://obofoundry.org/ontology/pato.html)** (Phenotype And Trait Ontology), which is a phenotypic quality ontology.
 
 `Variable Definition`. Text defining clearly the concept underlying the new variable.
 This definition should ideally be provided in English.
