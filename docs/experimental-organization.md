@@ -38,6 +38,7 @@ The mandatory fields, followed by a red asterisk, are:
 However, it is highly recommended to fill every field. If possible, fields requiring plain text (keywords, description) should be answered to in English.
 
 `URI`. The project URI is automatically created using the acronym provided by the user.
+The URI creation respects the [w3 recommandations](https://www.w3.org/TR/cooluris/).
 
 `Acronym`. Short and meaningful, the acronym will be the preferred way to refer to the created project.
 The acronym provided here is usually the one of the research project.
@@ -300,23 +301,36 @@ However, the document can be downloaded with the <span class="btn btn-primary">D
 ## Agronomical Objects
 
 ### Object types
+Plant phenotyping experiments all revolve around one entity of interest : plants !
+Phis experiments are focused on a given type of elements : **agronomical objects**, which are no more than declinations of plants, at various scales :
 
-- plant organ
-- plant
-- plot : link toward AGROVOC: smallest partial unit (one treatment maximum per plot)
+- **plant organ** : part of a given plant
+- **plant** : single individual, displaying a single genotype, which is refered to as a **variety**
+- **plot** : smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot)
+- **block** : combination of plots, generally forming an environmentally homogeneous entity
+- **field** : large spatial unit that includes plots and potentially blocks
 
-block: combination of plots
+These agronomical objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
+A given agronomical object is required to be associated with one experiment, and one only.
+Phenotypic data created in an experiment, whether is it directly measured, calculated or estimated, is necessarily linked to agronomical objects.
 
-field : large spatial unit that includes plots and possibly blocks
+Every agronomical object is uniquely identified through a standardized URI.
+Metadata is associate to objects under the form of attributes : alias, experiment modality, etc.
+The data associated with these objects correspond with the values of phenotypic variables associated
 
-plants are characterized by a unique variety
-
-<span class="btn btn-primary">Download Search Result</span> button
+The complete list of agronomical objects is available in the `Agronomical Objects` menu, accessible from Phis top navigation bar.
+The agronomical objects list is preceded by a research bar enabling the user to filter projects by their URI, Alias, type, and the experience they are linked to.
+The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
 ![objects-list](img/agronomical-objects_list.png)
 
+Agronomical objects information can also be accessed through the `Experiments` menu.
+After having selected an experiment, the agronomical objects linked to it can be displayed on a map.
+Moreover, selecting objects on such a map provides additional information on the attributes of these objects.
+See the [Map Visualization](../experimental-organization/#map-visualization) section for more information on that matter.
+
 ### Importing Objects
-Within the `Agronomical objects` menu, a Phis user can import new objects with the
+Within the `Agronomical objects` menu, Phis users can import new objects with the
 <span class="btn btn-success">Create</span> button.
 
 TODO
@@ -333,23 +347,17 @@ Plots: geometrical objects such as polygons, provided with Well-known text stand
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
-![new-objects-browse](img/create-agronomical-objects_browse.png)
+![new-objects-browse](img/create-object_browse.png)
 
-![new-objects-find-file](img/create-agronomical-objects_find-file.png)
+![new-objects-find-file](img/create-object_find-file.png)
 
-<!---
-![new-objects-create](img/create-agronomical-objects_click-create.png)
---->
+![new-objects-create](img/create-object_click-create.png)
 
-![new-objects-success](img/create-agronomical-objects_result.png)
+![new-objects-success](img/create-object_result.png)
 
-### Visualize objects
+### Visualize agronomical objects
 
-In the case of plots...
-
-Alt+Shift
-
-Ctrl+Drag
+See [Map Visualization](../experimental-organization/#map-visualization) section.
 
 ## Variables
 
