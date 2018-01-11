@@ -20,6 +20,8 @@ This documenttion has been build with mkdocs.
           create-agronomical-objects_find-file.png
           create-agronomical-objects_result.png
           create-document_file.png
+          create-experiments_campaign.png
+          create-experiments_date.png
           create-group_name.png
           create-group_URI.png
           create-person_email.png
@@ -32,6 +34,10 @@ This documenttion has been build with mkdocs.
           create-variable_new-trait-label.png
           create-variable_new-method.png
           document-update.png
+          experiments_list.png
+          experiments_view.png
+          map-visualization_ctrl.png
+          map-visualization_selected.png
           projects-list_eye-icon.png
           variables-list.png
           wallpaper_leaf.jpg

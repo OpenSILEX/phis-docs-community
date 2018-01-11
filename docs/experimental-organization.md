@@ -90,9 +90,11 @@ Experiments in Phis form self-sustained organizational units occuring in a delim
 Every agronomical objects and environmental data stored in Phis field have to be related to an experiment.
 Experiments include both raw and cleaned data.
 The data types found in Phis experiments are including but not limited to :
+
 - phenotypic data
 - environmental data
 - analysis, workflows and their associated results
+- documents giving a deeper understanding of the experiments
 
 ### What are experiment properties ?
 Contrary to projects, experiments information sheets are not public, but accessible only to the Phis members which are part of the groups involved in these experiments.
@@ -108,12 +110,18 @@ Every experiment on this list is characterized by :
 - the campaign it is part of, i.e. the year
 
 From **Home / Experiments**, one can click on the eye icon on the right to see a given experiment information sheet.
-Further information on the experiment is provided on this information sheet, such as the groups of users that have been given access to the experiment's data.
+
+![experiment-list](img/experiments_list.png)
+
+Further information on the experiment is provided on its information sheet, such as the groups of users that have been given access to the experiment's data.
 For more detail on experimental data access restrictions, see the section [Restrictions to a group](../community/#restrictions-to-a-group).
+
+![experiment-view](img/experiments_view.png)
 
 On top of the experiment information sheet, several buttons are displayed.
 The buttons <span class="btn btn-info">Map Visualization</span> and <span class="btn btn-success">Generate Map</span> enable the visualization of the agronomical objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
-The use of the other buttons is described at the end of the next section entitled [Create an experiment](../experimental-organization/#create-an-experiment).
+Jump to the section [Map Visualization](../experimental-organization/#map-visualization) for more information on experiment maps.
+The use of the other buttons, <span class="btn btn-primary">Update</span> and <span class="btn btn-warning">Add document</span>, is described at the end of the next section entitled [Create an experiment](../experimental-organization/#create-an-experiment).
 
 ### Create an experiment
 Within the `Experiments` menu, a Phis user can create a new experiment with the
@@ -142,11 +150,15 @@ It it compulsory to give a value to the **Date End** field in order to create an
 If the end date of the experiment is unknown, the start date can be reused in **Date End** temporarily.
 Typical **Date Start** values correspond to a sowing date, while **Date End** typically concur with an harvesting date.
 
+![create-experiment-date](img/create-experiments_date.png)
+
 `Installation`. Name or ID of the installation where the experiment is carried.
 No specific format is yet required for submitting an installation name. *todo*.
 
 `Campaign`. Year (format YYYY) in which the experiment has been carried, or the year of the harvest/end of the experiment in case it has been carried on several years (*to be confirmed*).
 Once the experiment created, the information on the campaign in which it has been carried can no longer be modified.
+
+![create-experiment-campaign](img/create-experiments_campaign.png)
 
 `Place`. Locality or town name used internally to situate the installation location.
 This field will later be removed in the upcoming developments of Phis.
@@ -184,6 +196,26 @@ See the [Documents](../experimental-organization/#documents) section below for f
 
 Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.
 
+### Map visualization
+
+Agronomical objects associated with a given experiment, for example plots, can be displayed on a map, thanks to their geopositioning informations.
+In Phis, a map refers to a dynamic map where all the agronomical objects of a given experiment are represented.
+
+After having imported agronomical objects linked to an experiment, the map associated with this experiment is created within the `Experiments` menu through the <span class="btn btn-success">Generate Map</span> button.
+
+Once the map of an experiment has been created, there's no need to re-create it if no new agronomical object has been linked to this experiment.
+In such cases, the access to the experiment map is realized within the `Experiments` menu through the <span class="btn btn-info">Map Visualization</span> button.
+
+The map of an experiment is dynamic: one can zoom in and out with the **+** and **-** sign at the top left corner of the map, or simply using the mouse wheel.
+Map rotation is performed pressing `Alt + Shift` while draging the mouse pointer.
+Selecting multiple contiguous agronomical objects is performed pressing `Ctrl + Left Click` and then dragging the mouse pointer (still holding the mouse left click).
+
+![map-visualization-ctrl](img/map-visualization_ctrl.png)
+
+When agronomical objects of a map are selected, their attributes (alias within the experiment, crop specied, variety, modality, repetition) are displayed in a table under the map.
+
+![map-visualization-selected](img/map-visualization_selected.png)
+
 ## Documents
 
 ### What are Phis documents ?
@@ -208,8 +240,9 @@ These metadata contain the document properties:
 
 Information of a document can later be changed, while the document itself cannot be modified.
 
-Metadata are specified with [Dublin Core](http://dublincore.org/documents/dc-rdf/) recommendations.
+Metadata are specified with [Dublin Core](http://dublincore.org/documents/dces/) recommendations.
 Metadata enables the documents to be stored in the Phis triplestore.
+The expression of Dublin Core metadata using the Resource Description Framework is described [Here](http://dublincore.org/documents/dc-rdf/).
 
 ### Upload a document
 
@@ -276,6 +309,8 @@ block: combination of plots
 
 field : large spatial unit that includes plots and possibly blocks
 
+plants are characterized by a unique variety
+
 <span class="btn btn-primary">Download Search Result</span> button
 
 ![objects-list](img/agronomical-objects_list.png)
@@ -296,7 +331,7 @@ Plots: geometrical objects such as polygons, provided with Well-known text stand
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
-| platformX_experimentY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
+| expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
 ![new-objects-browse](img/create-agronomical-objects_browse.png)
 
