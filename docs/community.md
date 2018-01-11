@@ -4,6 +4,7 @@
 
 ### Persons properties
 Phis community is composed of persons which can be either:
+
 - **persons** uniquely identified by their email. Persons have to be created within Phis before being refered to within projects and expertiments.
 - **users**, term refering to persons linked to a Phis account: they are provided with a password that they can change at any time. Phis users are either classic users or administrators (admin).
 
@@ -12,12 +13,14 @@ Within the `Persons` menu, a user can create a new person with the
 <span class="btn btn-success">Create Person</span> button displayed at the top left of the persons list.
 
 The mandatory fields, followed by a red asterisk, are:
+
 - Email
 - Affiliation
 
 This section provides information on how to create a person, which can be either a person not related to a Phis account, either a new Phis user.
 Only administrators can create a user from Phis.
 Three fields from the `Create Person` page are visible only to admin users:
+
 - Password
 - Admin
 - Groups
@@ -68,6 +71,7 @@ Both public information and password can be changed after clicking on the <span 
 
 ### Get an access to Phis2
 For those that do not own a Phis account, they can ask a account to be created by either :
+
 - a Phis user diplaying administrator rights
 - a Phis manager (see *README.md* for Phis managers contact)
 
