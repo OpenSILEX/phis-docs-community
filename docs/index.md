@@ -15,13 +15,15 @@ This documenttion has been build with mkdocs.
           site.css
         img/
           agronomical-objects_list.png
-          create-agronomical-objects_browse.png
-          create-agronomical-objects_click-create.png
-          create-agronomical-objects_find-file.png
-          create-agronomical-objects_result.png
           create-document_file.png
+          create-experiments_campaign.png
+          create-experiments_date.png
           create-group_name.png
           create-group_URI.png
+          create-object_browse.png
+          create-object_click-create.png
+          create-object_find-file.png
+          create-object_result.png
           create-person_email.png
           create-project_keywords.png
           create-project_subproject-type.png
@@ -32,6 +34,10 @@ This documenttion has been build with mkdocs.
           create-variable_new-trait-label.png
           create-variable_new-method.png
           document-update.png
+          experiments_list.png
+          experiments_view.png
+          map-visualization_ctrl.png
+          map-visualization_selected.png
           projects-list_eye-icon.png
           variables-list.png
           wallpaper_leaf.jpg
