@@ -329,29 +329,68 @@ After having selected an experiment, the agronomical objects linked to it can be
 Moreover, selecting objects on such a map provides additional information on the attributes of these objects.
 See the [Map Visualization](../experimental-organization/#map-visualization) section for more information on that matter.
 
-### Importing Objects
-Within the `Agronomical objects` menu, Phis users can import new objects with the
+### Importing plots
+Within the `Agronomical objects` menu, Phis users can import new plots with the
 <span class="btn btn-success">Create</span> button.
 
-TODO
+Plot, which are agronomical objects, are imported into Phis through a .csv file containing on its first line the following header :
 
-Plots: geometrical objects such as polygons, provided with Well-known text standard (see [WKT Wikipedia page](https://en.wikipedia.org/wiki/Well-known_text)).
+```
+Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
+```
 
- geometry coordinates must be in WGS84 (EPSG4326)
+Every other additional line matches with a new plot.
 
- https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html
+Let's take into consideration a fictionnal experiment composed of 4 plots of the same crop ("species").
+In half of the plot, the variety "A" of the studied crop is grown, and in the other half, the variety "B".
+Of two plots dispaying the same variety, one is submitted to an experiment modality labelled "treatment 1", while the other is submitted to a "treatment 2".
+Experiments and Species have to be expressed with their internal Phis URI.
+This configuration is sum up in the following table :
 
- http://spatialreference.org/ref/epsg/wgs-84/
+| Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
+| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
+| plot1       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyA      | Treatment1   | Rep1     |
+| plot2       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyA      | Treatment2   | Rep1     |
+| plot3       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
+| plot4       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
+
+The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7 required elements separated by semicolons :
+
+```
+Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
+plot1;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;Treatment1;Rep1
+plot2;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;Treatment2;Rep1
+plot3;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment1;Rep1
+plot4;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment2;Rep1
+```
+
+A single plot cannot correspond to several species, variety, experimental modality or repetition.
+On the contrary, the same species, variety, experimental modality or repetition can be used for several plots.
+
+Plots are geometrical objects such as polygons, provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
+Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), alsa known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
+More information on this system [here](https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html).
+
+The first step in order to import plots is therefore to create a .csv file containing all the new plots information, as is reminded below :
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
+THe second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the `Home / Agronomical Objects / Create Agronomical Object ` menu.
+
 ![new-objects-browse](img/create-object_browse.png)
+
+Use the file browser to select the desired .csv file and open it.
 
 ![new-objects-find-file](img/create-object_find-file.png)
 
+Check the imported file but do not press the Upload button.
+Only on file at a time can be imported.
+
 ![new-objects-create](img/create-object_click-create.png)
+
+After having pressed the <span class="btn btn-success">Create</span> bottom button the number of imported agronomical objects is displayed.
 
 ![new-objects-success](img/create-object_result.png)
 
@@ -448,8 +487,8 @@ SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to st
 
 SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations) :
 
-- **[broader](https://www.w3.org/TR/skos-reference/#broader)**, which Label is *has broader* : a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept narrower than the one refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
-- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)**, which Label is *has narrower*  :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept broader than the one refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
+- **[broader](https://www.w3.org/TR/skos-reference/#broader)**, which Label is *has broader* : a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
+- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)**, which Label is *has narrower*  :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
 
 By convention, `skos:broader` and `skos:narrower` are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties `skos:broader` and `skos:narrower` are not declared as transitive properties.
 
