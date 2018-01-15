@@ -208,6 +208,7 @@ Once the map of an experiment has been created, there's no need to re-create it 
 In such cases, the access to the experiment map is realized within the `Experiments` menu through the <span class="btn btn-info">Map Visualization</span> button.
 
 The map of an experiment is dynamic: one can zoom in and out with the **+** and **-** sign at the top left corner of the map, or simply using the mouse wheel.
+The map visualization also works with a touchscreen.
 Map rotation is performed pressing `Alt + Shift` while draging the mouse pointer.
 Selecting multiple contiguous agronomical objects is performed pressing `Ctrl + Left Click` and then dragging the mouse pointer (still holding the mouse left click).
 
