@@ -60,10 +60,7 @@ Once the project created, its acronym can no longer be modified.
 `Financial Name`. As indicated in the tool tip, this field is meant for the user to provide the identification of the financial support document (e.g. a grant agreement number).
 
 `Date Start` and `Date End` are to be provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
-
-???
-
-If the end date of the project is unknown, the start date can be reused in `Date End` temporarily. *TO CHECK*
+If the end date of the project is unknown, the start date can be used also as **Date End** temporarily.
 
 `Scientific Contacts`. Email adresses of the scientists involved in the project.
 The email adresses refer uniquely to persons existing on Phis.
@@ -148,7 +145,7 @@ One can select the name of the given projects only within the exhaustive list of
 
 `Date Start` and `Date End` are to be provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
 It it compulsory to give a value to the **Date End** field in order to create an experiment.
-If the end date of the experiment is unknown, the start date can be reused in **Date End** temporarily.
+If the end date of the experiment is unknown, the start date can be reused in the **Date End** field.
 Typical **Date Start** values correspond to a sowing date, while **Date End** typically concur with an harvesting date.
 
 ![create-experiment-date](img/create-experiments_date.png)
@@ -199,6 +196,8 @@ Once created, the experiment specifics can be modified with the <span class="btn
 
 ### Map visualization
 
+#### Objects selection
+
 Agronomical objects associated with a given experiment, for example plots, can be displayed on a map, thanks to their geopositioning informations.
 In Phis, a map refers to a dynamic map where all the agronomical objects of a given experiment are represented.
 
@@ -217,6 +216,38 @@ Selecting multiple contiguous agronomical objects is performed pressing `Ctrl + 
 When agronomical objects of a map are selected, their attributes (alias within the experiment, crop specied, variety, modality, repetition) are displayed in a table under the map.
 
 ![map-visualization-selected](img/map-visualization_selected.png)
+
+#### Graphics from datasets
+
+Another feature provided by the `Map Visualization` menu is the possibility to plot graphics from datasets associated to an experiment.
+A first step is to select on the map agronomical objects (e.g. plots) as explained [above](../experimental-organization/#objects-selection).
+In order to order to create clear graphics,one should avoid selecting too many objects at the same time.
+At that point, a new section, **Dataset(s) Visualization (On selected plot(s))**, appears under the map where the objects have been selected.
+The second step is to select the variable of the dataset from which a graphic should be produced.
+An optionnal filter for the graphic creation enables the user to use only data from a specific time window to produce the desired graphic.
+
+`Quantitative Variable`. Mandatory field. Here is selected a variable of interest from a predefined list of all the variables defined in a given Phis instance.
+Variables can be selected only one at a time.
+If the selected variable is associated to no dataset linked to the present experiment, then no graphic is plotted.
+In the next Phis developments, variables associated a gien project or experimentation will be declared at the level of the project/experimentation.
+
+`Date Start`. Optionnal. First date from which variable values are used to produce a graphic.
+Variable values associated to a previous date will not appear in the graphic.
+
+`Date End`. Optionnal. Last date at which variable values are used to produce a graphic.
+Variable values associated to a later date will not appear in the graphic.
+
+The last step is to press the <span class="btn btn-primary">Search</span> button, which will lead to the creation of a graphic displaying according to a time axis the variable values associated to :
+
+- the agronomical objects selected on the map
+- the variable selected in the **Quantitative Variable** field
+- potentially the time window between **Date Start** and **Date End** if those fields have been filled out
+
+On the new graphic, the time is displayed on the abscissa axis and the variable on the ordinate axis.
+Each points of the same color are associated to the same agronomical object which is identified below the graphic by its URI.
+In future Phis developments, objects alias instead of URIs will be used as curve labels.
+Variable values and curve associated to an agronomical object can be masked by clicking on its associated curve label which at this point changes from black to grey.
+Clicking a second time on the label as the effect to show again the previously hidden curve.
 
 ## Documents
 
@@ -320,6 +351,7 @@ Metadata is associate to objects under the form of attributes : alias, experimen
 The data associated with these objects correspond with the values of phenotypic variables associated
 
 The complete list of agronomical objects is available in the `Agronomical Objects` menu, accessible from Phis top navigation bar.
+A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Agronomical Objects` menu, since there are no objects for her/him to see.
 The agronomical objects list is preceded by a research bar enabling the user to filter projects by their URI, Alias, type, and the experience they are linked to.
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
@@ -411,7 +443,7 @@ Consequently, when a user refers to a variable in an experiment, there is no amb
 Moreover, the usage of unequivocal variables in experiments is a necessary step towards a more intelligible, reliable and reproducible Science.
 
 Phis variables are listed in the `Variables` menu.
-A Phis user with access arestricted access (e.g. *guestphis*) is likely to be unable to see the `Variables` menu, since there is no variable for him/her to see.
+A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Variables` menu, since there is no variable for her/him to see.
 
 Variable definition is based on the (Crop Ontology guidelines)[http://www.cropontology.org/CropOntology_Curation_Guidelines_20160510.pdf].
 Therefore, Phis variables are all unequivocally characterized by the following triplet:
@@ -488,8 +520,8 @@ SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to st
 
 SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations) :
 
-- **[broader](https://www.w3.org/TR/skos-reference/#broader)**, which Label is *has broader* : a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
-- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)**, which Label is *has narrower*  :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
+- **[broader](https://www.w3.org/TR/skos-reference/#broader)** (label=*has broader*) : a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
+- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)** (label=*has narrower*)  :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
 
 By convention, `skos:broader` and `skos:narrower` are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties `skos:broader` and `skos:narrower` are not declared as transitive properties.
 
@@ -525,4 +557,98 @@ This definition should ideally be provided in English.
 
 
 ### Modifiy existing variables
-TODO
+So far, it is not possible to modify or delete an existing variable, other than by asking a Phis developper.
+
+## Dataset
+
+### Dataset properties
+
+The heart of experiments is to produce datasets associated with the agronomical variables it studies.
+In Phis, each dataset is associated to an experiment.
+High-throughput plant phenotyping platforms commonly set up experiments in which plant growth is monitored.
+Plant growth dynamcis are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.
+
+At this stage of development, all dataset variables are quantitative.
+No qualitative variables are saved in the datasets : a variable from a dataset can only assume numerical values and no character string is allowed.
+
+A dataset typically displays information on many agronomical objects.
+These objects can be described by several variables.
+Each one of these variables can assume diverse values at different dates.
+In order to avoid confusion, each element of a dataset should then be understood as a triplet object-time-variable.
+Thus, each element of a dataset is associated uniquely with :
+
+- a single agronomical object (e.g. a plot)
+- a single date (the day of the data acquisition)
+- a single variable (a quantitative variable used to monitor the measured or calculated trait)
+- a single variable numerical value (the value of the variable cited above)
+
+Datasets are available indirectly through the `Experiments` menu, selecting an experiment and then accessing to its map through the <span class="btn btn-info">Map Visualization</span> button.
+
+Graphics can be extracted from the experiment datasets in the **Dataset(s) Visualization (On selected plot(s))** section, which appears under the map of the experiment when agronomical objects are selected.
+How to create such graphics is explained in the [Map Visualization](../experimental-organization/#map-visualization) section of this documentation.
+
+### Import Dataset
+
+Add datasets to Phis... top navigation bar
+
+A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Dataset` menu.
+Indeed, only users that are part of an owner group are authorized to add datasets to the experiments associated to this group.
+Go to the [Groups level of access](../community/#groups-level-of-access) section for further information on this issue.
+
+recuperation URI des objets agronomiques (à partir de Home / Agronomical Objects) avec un filtre puis dowloads
+
+Add Dataset
+
+dowload template
+
+Those elements are represented ... every row of an imported dataset file
+
+fill date, values
+
+[double-precision floating-point value](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
+
+
+separator: semi-colon
+
+no NA
+
+quantitative variables (doubles: REELS, chiffres à virgule ou non)
+
+```
+AgronomicalObjectURI;Date;Variable1;Variable2
+URI1;YYYY-MM-01;;5
+URI1;YYYY-MM-15;;10.0
+URI1;YYYY-MM-31;;12.00
+URI2;YYYY-MM-01;3.22;8
+URI2;YYYY-MM-15;4.12;9
+URI2;YYYY-MM-31;5.34;10
+```
+
+<!---
+if several variables and only one has a value at a given date: no value should be sent
+--->
+
+
+`Variable`.
+
+`Dataset Creation date`
+YYYY-MM-DD
+provenance notion
+when the imported data has been generated
+eg. drone flight 2 weeks ago, production of the clean data from the raw data 1 week ago and then import of the clean data today: the date of one week ago should be precised here.
+
+`Generated By`.
+if script: add script in `Was generated By` (only one script can be put here)
+`Description`. if more complex, write downloaded
+
+`Linked Documents`
+cf Documents, as many as we want. Same metadata (creation, authior etc) as in Documents.
+
+decimale: point c'est mieux mais virgule ca marche
+
+deposer le fichier: ca peut etre un peu long
+
+on ne peut pas modifier ni supprimer des données pour l'instant (dans 2 semaines)
+
+### Visualize Dataset
+see Experiments > dataset visualization
