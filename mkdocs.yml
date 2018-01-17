@@ -1,10 +1,10 @@
 site_name: PHIS2
+theme: bootstrap
 extra_css:
    - "css/bootstrap.css"
    - "css/site.css"
    - "css/navbar.less"
 pages:
    - Home: index.md
-   - Overview: overview.md
    - Experimental Organization: experimental-organization.md
    - Community: community.md
