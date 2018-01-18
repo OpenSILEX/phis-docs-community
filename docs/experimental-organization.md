@@ -83,7 +83,7 @@ The email adresses refer uniquely to persons existing on Phis.
 ## Experiments
 
 ### What are experiments ?
-Field plant phenotyping experimentations are refered to in Phis2 as **Experiments**.
+Field plant phenotyping experimentations are refered to in Phis as **Experiments**.
 Experiments in Phis form self-sustained organizational units occuring in a delimited and known time frame.
 Every agronomical objects and environmental data stored in Phis field have to be related to an experiment.
 Experiments include both raw and cleaned data.

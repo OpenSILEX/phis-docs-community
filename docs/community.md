@@ -69,7 +69,7 @@ Moreover, when a new group is created, an existing person can be added to it fro
 From the `Persons` menu, a user can manage its own account after clicking on the eye icon on the right of its name in order to view its personal information sheet.
 Both public information and password can be changed after clicking on the <span class="btn btn-primary">Update</span> button.
 
-### Get an access to Phis2
+### Get an access to Phis
 For those that do not own a Phis account, they can ask a account to be created by either :
 
 - a Phis user diplaying administrator rights
