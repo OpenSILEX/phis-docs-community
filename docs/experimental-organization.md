@@ -649,6 +649,7 @@ The dataset added to Phis must respect some file rules :
 - variable values are provided as real number, since Phis then stores numbers as [double-precision floating-point value](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 - numerical values decimal separators should be dots `.` but commas `,` are tolerated
 - no character strings, "NA" included, are tolerated as variable values : if a variable value is unknown, do not write anything (see example below)
+- no quotes for URIs, dates or variable values
 
 In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates :
 
@@ -680,11 +681,9 @@ If an error occurs, the dataset is not added to Phis and an error message is dis
 
 ![add-dataset-unknown-object](img/add-dataset_unknown-object.png)
 
-<!---
-Else, a success message is displayed, with the number of imorted variable values.
+Else, the dataset is imported in Phis and a success message is displayed.
 
-![add-dataset-success](img/add-dataset_success.png)
---->
+![add-dataset-success](img/add-dataset_data-inserted.png)
 
 At the current stage of Phis development, datasets cannot be modified nor deleted once it has been added to Phis.
 

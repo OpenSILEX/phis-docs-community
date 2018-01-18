@@ -6,6 +6,8 @@ PHIS is part of SILEX collaborative meta-project developped at MISTEA joint rese
 More information on SILEX is availbale at [SILEX wiki](https://mulcyber.toulouse.inra.fr/plugins/mediawiki/wiki/silex/index.php/Accueil "SILEX wiki Main Page").
 PHIS2 refers to the PHIS version developped for field phenotyping, which complete name is SILEX-PHIS-FIELD.
 
+![phis-architecture](img/phis-architecture.png)
+
 ## Contributors
 Contributors to this documentation are agents of the joint research unit MISTEA (INRA - SupAgro) in Montpellier :
 - Anne Tireau
