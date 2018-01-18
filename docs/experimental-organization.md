@@ -635,6 +635,9 @@ Click several times on <span class="btn btn-primary btn-file">Add Document</span
 ![add-document-linked-to-dataset](img/add-dataset_linked-document.png)
 
 `Data File`. This mandatory field is used by users to upload the dataset from their computer through the <span class="btn btn-primary">Browse</span> button.
+
+![add-dataset-browse-file](img/add-dataset_browse-file.png)
+
 The dataset added to Phis must respect some file rules :
 
 - the file must be a .csv file
@@ -660,13 +663,28 @@ URI2;2017-04-31;5.347687869;10
 ```
 
 The URI of the agronomical objects of a given experimentation can be found on the `Agronomical Objects` menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the [Object types](../experimental-organization/#object-types) of this documentation).
+All variables values of the imported dataset are associated with agronomical objects that must have been previously declared in Phis (see [Importing plots](../experimental-organization/#importing-plots)).
 
 The data file imported in Phis can displays many fields (i.e. number of items in the header), but only the column matching with the expected fields will be kept.
 The expected fields and their name are provided in the .csv template provide by the *Download Template* link above the **Data File** field.
 Hence, users can copy and paste their data in the template file (keeping the header unchanged), or import directly their datasheet as a .csv, after having renamed correctly the fields as described in the template.
 
+![add-dataset-open-datafile](img/add-dataset_open-datafile.png)
+
 In order to finalize the addition of the dataset, click on the bottom <span class="btn btn-success">Create</span> button.
-The waiting time following the use of the <span class="btn btn-success">Create</span> button can relatively long.
+
+![add-dataset-create](img/add-dataset_create.png)
+
+The waiting time following the use of the <span class="btn btn-success">Create</span> button can relatively long, depending on the quantity of variable values added.
+If an error occurs, the dataset is not added to Phis and an error message is displayed.
+
+![add-dataset-unknown-object](img/add-dataset_unknown-object.png)
+
+<!---
+Else, a success message is displayed, with the number of imorted variable values.
+
+![add-dataset-success](img/add-dataset_success.png)
+--->
 
 At the current stage of Phis development, datasets cannot be modified nor deleted once it has been added to Phis.
 
