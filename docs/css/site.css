@@ -1,12 +1,7 @@
 html,
 body {
     height: 100%;
-}
-
-body {
-   
-    background: url(../img/wallpaper_leaf.jpg);
-   
+    text-align: justify;
 }
 
 .navbar-default{
