@@ -83,7 +83,7 @@ The email adresses refer uniquely to persons existing on Phis.
 ## Experiments
 
 ### What are experiments ?
-Field plant phenotyping experimentations are refered to in Phis2 as **Experiments**.
+Field plant phenotyping experimentations are refered to in Phis as **Experiments**.
 Experiments in Phis form self-sustained organizational units occuring in a delimited and known time frame.
 Every agronomical objects and environmental data stored in Phis field have to be related to an experiment.
 Experiments include both raw and cleaned data.
@@ -512,7 +512,6 @@ It is not required to specify related concepts for traits, methods and units, ho
 This semantic relation is provided using SKOS.
 The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
 
-
 SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to state alignement links between SKOS concepts, as indicated in the [w3 SKOS Mapping properties web page](https://www.w3.org/TR/skos-reference/#mapping) :
 
 - **[exactMatch](https://www.w3.org/TR/skos-reference/#exactMatch)** : used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. `skos:exactMatch` is a transitive property, and is a sub-property of `skos:closeMatch`. *Example: `<MyNewNDVIVariable> skos:exactMatch <CO_322:0000880>` asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'*
@@ -620,11 +619,8 @@ More documents can be imported together with the dataset through the **Linked Do
 
 ![add-script-generating-dataset](img/add-dataset_add-script.png)
 
-`Description`.  Informative plain text description of the imported data, preferably provided in English language.
-
-<!---
-if more complex, write downloaded
---->
+`Description`.  Informative plain text description of how the imported data has been generated, preferably provided in English language.
+For instance, if the data has been generated with Phenoscript v1.2, one can mention it here, especially if the concerned script cannot be imported.
 
 `Linked Document(s)`.
 Additionnal documents associated with the dataset and imported to Phis.
@@ -635,6 +631,9 @@ Click several times on <span class="btn btn-primary btn-file">Add Document</span
 ![add-document-linked-to-dataset](img/add-dataset_linked-document.png)
 
 `Data File`. This mandatory field is used by users to upload the dataset from their computer through the <span class="btn btn-primary">Browse</span> button.
+
+![add-dataset-browse-file](img/add-dataset_browse-file.png)
+
 The dataset added to Phis must respect some file rules :
 
 - the file must be a .csv file
@@ -646,6 +645,7 @@ The dataset added to Phis must respect some file rules :
 - variable values are provided as real number, since Phis then stores numbers as [double-precision floating-point value](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 - numerical values decimal separators should be dots `.` but commas `,` are tolerated
 - no character strings, "NA" included, are tolerated as variable values : if a variable value is unknown, do not write anything (see example below)
+- no quotes for URIs, dates or variable values
 
 In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates :
 
@@ -660,13 +660,26 @@ URI2;2017-04-31;5.347687869;10
 ```
 
 The URI of the agronomical objects of a given experimentation can be found on the `Agronomical Objects` menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the [Object types](../experimental-organization/#object-types) of this documentation).
+All variables values of the imported dataset are associated with agronomical objects that must have been previously declared in Phis (see [Importing plots](../experimental-organization/#importing-plots)).
 
 The data file imported in Phis can displays many fields (i.e. number of items in the header), but only the column matching with the expected fields will be kept.
 The expected fields and their name are provided in the .csv template provide by the *Download Template* link above the **Data File** field.
 Hence, users can copy and paste their data in the template file (keeping the header unchanged), or import directly their datasheet as a .csv, after having renamed correctly the fields as described in the template.
 
+![add-dataset-open-datafile](img/add-dataset_open-datafile.png)
+
 In order to finalize the addition of the dataset, click on the bottom <span class="btn btn-success">Create</span> button.
-The waiting time following the use of the <span class="btn btn-success">Create</span> button can relatively long.
+
+![add-dataset-create](img/add-dataset_create.png)
+
+The waiting time following the use of the <span class="btn btn-success">Create</span> button can relatively long, depending on the quantity of variable values added.
+If an error occurs, the dataset is not added to Phis and an error message is displayed.
+
+![add-dataset-unknown-object](img/add-dataset_unknown-object.png)
+
+Else, the dataset is imported in Phis and a success message is displayed.
+
+![add-dataset-success](img/add-dataset_data-inserted.png)
 
 At the current stage of Phis development, datasets cannot be modified nor deleted once it has been added to Phis.
 
