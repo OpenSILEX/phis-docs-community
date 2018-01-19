@@ -108,6 +108,7 @@ Only admin-users are able to view the list of user groups within the `Tools > Gr
 For instance, the public account *guestphis* has no access to this menu.
 
 From the `Tools > Groups` menu, admin-users get an overview the main properties of all users groups:
+
 - the group URI (standardized, unique and persistent)
 - the group name
 - the group level of access (guest or owner), cf. [Access rights](../community/#access-rights)

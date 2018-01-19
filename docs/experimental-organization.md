@@ -512,7 +512,6 @@ It is not required to specify related concepts for traits, methods and units, ho
 This semantic relation is provided using SKOS.
 The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
 
-
 SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to state alignement links between SKOS concepts, as indicated in the [w3 SKOS Mapping properties web page](https://www.w3.org/TR/skos-reference/#mapping) :
 
 - **[exactMatch](https://www.w3.org/TR/skos-reference/#exactMatch)** : used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. `skos:exactMatch` is a transitive property, and is a sub-property of `skos:closeMatch`. *Example: `<MyNewNDVIVariable> skos:exactMatch <CO_322:0000880>` asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'*
@@ -620,11 +619,8 @@ More documents can be imported together with the dataset through the **Linked Do
 
 ![add-script-generating-dataset](img/add-dataset_add-script.png)
 
-`Description`.  Informative plain text description of the imported data, preferably provided in English language.
-
-<!---
-if more complex, write downloaded
---->
+`Description`.  Informative plain text description of how the imported data has been generated, preferably provided in English language.
+For instance, if the data has been generated with Phenoscript v1.2, one can mention it here, especially if the concerned script cannot be imported.
 
 `Linked Document(s)`.
 Additionnal documents associated with the dataset and imported to Phis.

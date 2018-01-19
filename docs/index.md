@@ -10,11 +10,12 @@ The present documentation is a resource material related to the Phis version dev
 
 ## Contributors
 Contributors to this documentation are agents of the joint research unit MISTEA (INRA - SupAgro) in Montpellier :
-- Anne Tireau
-- Morgane Vidal
-- Pierre-Etienne Alary
 
-Every Phis user is welcomed to enrich this repository with its experience of the information system.
+- Pierre-Etienne Alary
+- Morgane Vidal
+- Anne Tireau
+
+Every Phis user is welcomed to enrich this repository with her/his experience of the information system.
 
 ## Issues
 This documentation is currently under developpement.
@@ -22,4 +23,4 @@ If a Phis user wish to point out a flaw in this documentation, he is welcomed to
 Concerning issues with Phis itself, users are invited to report them via another channel, which has not been set up to this day.
 
 ## Version
-&copy; INRA MISTEA 2014-2017 (SILEX-PHIS-FIELD v.0.1 - 15 May 2017)
+&copy; INRA MISTEA 2014-2018 (SILEX-PHIS v.2.2 - 18 January 2018)

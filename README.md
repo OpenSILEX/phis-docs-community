@@ -23,4 +23,4 @@ If a PHIS2 user wish to point out a flaw in this documentation, he is welcomed t
 Concerning issues with PHIS2 itself, users are invited to report them via another channel, which has not been set up to this day.
 
 ## Version
-&copy; INRA MISTEA 2014-2017 (SILEX-PHIS-FIELD v.0.1 - 15 May 2017)
+&copy; INRA MISTEA 2014-2018 (SILEX-PHIS v.2.2 - 18 January 2018)
