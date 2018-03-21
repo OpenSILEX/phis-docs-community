@@ -505,9 +505,11 @@ Otherwise, if the appropriate unit is already register in Phis, then one only ha
 `Related References`.
 In order to unambiguously define the new variable, semantic relations are established by the user between the new variable and concepts already defined in reliable ontologies existing on the world wide web.
 These relations to external ontologies are established using **SKOS** (Simple Knowledge Organization System).
+
 `Entity` refers to the Phis entity that will be associated to a concept found in an ontology.
 This **Entity** be either the new variable, trait, method or unit.
 It is not required to specify related concepts for traits, methods and units, however it is recommanded.
+
 `Relation` refers to the nature of the relation between the entity and the concept defined in an ontology.
 This semantic relation is provided using SKOS.
 The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
@@ -527,33 +529,43 @@ By convention, `skos:broader` and `skos:narrower` are only used to assert a dire
 `Reference URI` refers to the URI of the concept found on ontologies such as the ones suggested in the short list above the **Related References** field.
 The URI provided here is not necessarily the URL of the web page of the ontology on which the targeted concept is defined.
 Indeed, the URI of a given concept does not necessarily match with the URL of the web page where this concept has been found.
+*Example : http://www.cropontology.org/rdf/CO_322:0000907 is the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+WARNING : using the identifier (e.g. CO_322:0000907) is not sufficient.*
+
 `Hyperlink` (optionnal) refers to the URL where are located the related concept whose URI has been provided in the previous field.
+*Example : http://www.cropontology.org/rdf/CO_322:0000907 is the hyperlink (URL) associated to the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+In this example, the URI of the concept is also an URL (a hyperlink), but it is not the case for every ontology.*
 
 When a variable is created, multiple references using SKOS can be stated, using the <span class="btn btn-default">**+**</span> white icon.
 
 ![add-relation-to-a-reference](img/create-variable_add-relation.png)
 
-The main ontologies differ on the following features:
+Which portals provide a link towards various ontologies ?
 
 The **[AgroPortal](http://agroportal.lirmm.fr/)** project aims to offer a reference ontology repository for agronomy, reusing the NCBO BioPortal technology, as stated on the [FAO website](http://aims.fao.org/agroportal).
 The scientific outcomes and the experience of the biomdical domain are thus exploited and transposed into the agronomy domain, including plants, food, environment and possibly animal sciences.
+
+The **[Ephesis Ontotology Portal](https://urgi.versailles.inra.fr/ephesis/ephesis/ontologyportal.do)**  is a JavaScript widget displaying all the observation variables of a Breeding API endpoint.
+It lists ontologies available with the BreedingAPI/CropOntology JSON format.
+
+Here are some examples of ontologies :
+
+The **[Crop Ontology (CO)](http://www.cropontology.org/)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
+
+The **[Plant Ontology (PO)](http://www.ontobee.org/ontology/po)** is a structured vocabulary and database resource that links plant anatomy, morphology, growth and development to plant genomics data.
+The URL provided [here](http://browser.planteome.org/amigo) redirects visitors to the Planteome website since PO is developed by the Planteome Project, alongside with other reference ontologies listed in the [Planteome Ontologies webpage](http://planteome.org/node/1).
+The **[Planteome](http://planteome.org/)** project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.
+
+The **[Unit Ontology](http://www.ontobee.org/ontology/UO)** gathers metrical units for use in conjunction with **[PATO](http://obofoundry.org/ontology/pato.html)** (Phenotype And Trait Ontology), which is a phenotypic quality ontology.
+
+Which other ressources, besides ontologies, can I link my variables to ?
 
 **[AGROVOC](http://artemide.art.uniroma2.it:8081/agrovoc/agrovoc/en/)** is a controlled vocabulary covering all areas of interest of the United Nations Food and Agriculture Organization (FAO), including food, nutrition, agriculture, fisheries, forestry, environment, etc.
 It is published by the FAO and edited by a community of experts.
 More information is provided on the [FAO website](http://aims.fao.org/standards/agrovoc/concept-scheme).
 
-The **[Plant Ontology (PO)](http://www.ontobee.org/ontology/po)** is a structured vocabulary and database resource that links plant anatomy, morphology, growth and development to plant genomics data.
-The URL provided [here](http://browser.planteome.org/amigo) redirects visitors to the Planteome website since PO is developed by the Planteome Project, alongside with other reference ontologies listed in the [Planteome Ontologies webpage](http://planteome.org/node/1).
-
-The **[Planteome](http://planteome.org/)** project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.
-
-The **[Crop Ontology (CO)](http://www.cropontology.org/)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
-
-The **[Unit Ontology](http://www.ontobee.org/ontology/UO)** gathers metrical units for use in conjunction with **[PATO](http://obofoundry.org/ontology/pato.html)** (Phenotype And Trait Ontology), which is a phenotypic quality ontology.
-
 `Variable Definition`. Text defining clearly the concept underlying the new variable.
 This definition should ideally be provided in English.
-
 
 ### Modifiy existing variables
 So far, it is not possible to modify or delete an existing variable, other than by asking a Phis developper.
