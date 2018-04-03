@@ -352,7 +352,7 @@ The data associated with these objects correspond with the values of phenotypic 
 
 The complete list of agronomical objects is available in the `Agronomical Objects` menu, accessible from Phis top navigation bar.
 A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Agronomical Objects` menu, since there are no objects for her/him to see.
-The agronomical objects list is preceded by a research bar enabling the user to filter projects by their URI, Alias, type, and the experience they are linked to.
+The agronomical objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type, and the experience they are linked to.
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
 ![objects-list](img/agronomical-objects_list.png)
@@ -430,6 +430,36 @@ After having pressed the <span class="btn btn-success">Create</span> bottom butt
 ### Visualize agronomical objects
 
 See [Map Visualization](../experimental-organization/#map-visualization) section.
+
+## Sensor
+
+### Sensors properties
+
+In order to track where Phis data is coming from, users can declare in the `Sensors` menu the name and attributes of the sensing devices producing experiments' raw data.
+
+The `Sensors` menu displays the list of individual sensors that have been declared by the user on Phis.
+The sensor list is preceded by a research bar enabling the user to filter registered sensors by their URI, Alias, type, brand and other optionnal attributes, such as the date of their purchase, their initial starting date and the date of their last calibration.
+
+### Add sensor
+
+handsontable : copy and paste
+
+![add-sensor](img/add-sensor.png)
+
+not correctly filled fields appear in red.
+
+Alias, Type, Brand : mandatory (homemade) cf.phis publi for example, concatenation possible
+
+* Type : seulement serre pour l'instant. if type missing, contact OpenSILEX development team
+
+Generated URI : not provided by the user
+
+Date : 
+
+
+![add-sensor-success](img/added-sensor.png)
+
+contact OpenSILEX development team in order to remove a sensor
 
 ## Variables
 
