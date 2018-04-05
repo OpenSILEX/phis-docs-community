@@ -1,7 +1,7 @@
-# phis2-docs-community
+# phis-docs-community
 
 ## Overview
-This repository contains PHIS2 users documentation.
+This repository contains PHIS users documentation.
 
 ## Background
 PHIS (Phenotyping Hybrid Information System) is developped for high-throughput plant phenotyping in close interaction to plant phenotyping communities.
@@ -14,12 +14,12 @@ Contributors to this documentation are agents of the joint research unit MISTEA 
 - Morgane Vidal
 - Pierre-Etienne Alary
 
-Every PHIS2 user is welcomed to enrich this repository with its experience of the information system.
+Every PHIS user is welcomed to enrich this repository with its experience of the information system.
 
 ## Issues
 This documentation is currently under developpement.
-If a PHIS2 user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis2-docs-community/issues).
-Concerning issues with PHIS2 itself, users are invited to report them via another channel, which has not been set up to this day.
+If a PHIS user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis2-docs-community/issues).
+Concerning issues with PHIS itself, users are invited to report them via another channel, which has not been set up to this day.
 
 ## Version
 &copy; INRA MISTEA 2014-2018 (SILEX-PHIS v.2.2 - 18 January 2018)
