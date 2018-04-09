@@ -8,6 +8,10 @@ The present documentation is a resource material related to the Phis version dev
 
 ![phis-architecture](img/phis-architecture.png)
 
+Phis is organized around three layers : the layer of the data storage (first layer), which the users do not access directly, but using clients (3rd layer) which interact with the data layer through the web services layer (2nd layer).
+
+![phis-architecture](img/phisArchitecture.png)
+
 ## Contributors
 Contributors to this documentation are agents of the joint research unit MISTEA (INRA - SupAgro) in Montpellier :
 
