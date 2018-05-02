@@ -250,6 +250,18 @@ In future Phis developments, objects alias instead of URIs will be used as curve
 Variable values and curve associated to an agronomical object can be masked by clicking on its associated curve label which at this point changes from black to grey.
 Clicking a second time on the label as the effect to show again the previously hidden curve.
 
+### Images
+
+Another feature provided by the `Map Visualization` menu is the possibility to show images associated to an experiment, such as hemispherical images shot on the field.
+
+A first step is to select on the map the agronomical object (e.g. plot), as explained [above](../experimental-organization/#objects-selection), associated with the images you want to visualize.
+Do not select two agronomical objects (or more), otherwise PHIS would look for images associated to both the selected object, while most images are associated to one and only one object.
+At that point, a new section, **Images Visualization (On selected plot)**, appears under the map where the objects have been selected.
+
+![images-visualization](img/images-visualization.png)
+
+The second step is to select the type of image you want to display, selecting it from the list of images type, and then press the <span class="btn btn-primary btn-file">Show Images</span> button.
+
 ## Documents
 
 ### What are Phis documents ?
