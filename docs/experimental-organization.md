@@ -210,6 +210,7 @@ The map of an experiment is dynamic: one can zoom in and out with the **+** and 
 The map visualization also works with a touchscreen.
 Map rotation is performed pressing `Alt + Shift` while draging the mouse pointer.
 Selecting multiple contiguous agronomical objects is performed pressing `Ctrl + Left Click` and then dragging the mouse pointer (still holding the mouse left click).
+Selecting multiple non-contiguous agronomical objects is performed pressing `Ctrl + Shift` and then using the left-click of the mouse pointer.
 
 ![map-visualization-ctrl](img/map-visualization_ctrl.png)
 
