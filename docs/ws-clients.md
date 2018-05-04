@@ -22,9 +22,11 @@ Do not forget the single brackets.
 
 Rows 27 and 28 are used for indicating your own login, the one you use when connecting to PHIS via a web browser.
 
-On row 27, replace the second occurence of 'username' by your username between single brackets : it should be an email adress, e.g. `'guestphis@supagro.inra.fr'`.
+On row 27, replace the second occurence of 'username' by your username between single brackets : it should be an email adress, e.g. `'username': 'example@supagro.inra.fr',`.
 
-On row 28, either replace the second occurence of 'password' by your password between single brackets, either replace `hashlib.md5('password').hexdigest()` by an encrypted version of your password : a md5 checksum of your password (also between single brackets), e.g. `'1a79a4d60de6718e8e5b326e338ae533'` (this is the md5 encryption of "example").
+On row 28, the simplest thing to do is to replace the second occurence of 'password' by your password between single brackets, e.g. ` 'password': hashlib.md5('type your password here').hexdigest(),`.
+
+However, if you do not wish to right your password in clear, replace `hashlib.md5('password').hexdigest()` by an encrypted version of your password : a md5 checksum of your password (also between single brackets), e.g. `'1a79a4d60de6718e8e5b326e338ae533'` (this is the md5 encryption of "example").
 Creating a md5 checksum version of your password can be achieved either using the official [md5 webpage](https://www.md5.fr/) and typing there your password, either from a linux terminal typing `echo example | md5sum`, replacing "example" by your actual password.
 
 **Row n° 58** :
