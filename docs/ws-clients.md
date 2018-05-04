@@ -57,6 +57,7 @@ Each image is characterized by :
 All of these information are filled in plain text and without brackets.
 
 Both image types and entity types have to be submitted using the controlled vocabulary linked to PHIS application ontology.
+The list of images types can be found in the `Tools / Vocabulary` menu of PHIS webapp.
 
 #### Execution of the Python script
 Like any other Python script, e.g. using ipython or a linux terminal :
