@@ -11,6 +11,12 @@ The sensor list is preceded by a research bar enabling the user to filter regist
 
 ![sensor-menu](img/sensor-list.png)
 
+From **Home / Sensors**, one can click on the eye icon on the right of any listed sensor to see this sensor information sheet.
+
+At the top of the experiment sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+Documents linked  to a sensor are typicaly a technical notice or an user manual.
+See the [Documents](../experimental-organization/#documents) section below for further information on documents and how to add insert them in Phis.
+
 ### Add sensors
 
 Manually add multiple sensors can be achieved by selecting the <span class="btn btn-success">Create Sensor</span> button at the top-left side of the `Sensors` menu.
