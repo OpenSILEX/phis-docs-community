@@ -11,11 +11,11 @@ The sensor list is preceded by a research bar enabling the user to filter regist
 
 ![sensor-menu](img/sensor-list.png)
 
-From **Home / Sensors**, one can click on the eye icon on the right of any listed sensor to see this sensor information sheet.
+From **Home / Sensors**, one can click on the eye icon on the right of any listed sensor to see its information sheet.
 
-At the top of the experiment sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+At the top of the sensor sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 Documents linked  to a sensor are typicaly a technical notice or an user manual.
-See the [Documents](../experimental-organization/#documents) section below for further information on documents and how to add insert them in Phis.
+See the [Documents](../experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
 
 ### Add sensors
 
@@ -148,5 +148,7 @@ The number of rows has to match the number of added vectors.
 Complete the vector insertion in Phis clicking on the <span class="btn btn-success">Create Vectors</span> button.
 
 ![add-vector-success](img/added-vector.png)
+
+Once created, the vector specifics can be modified with the <span class="btn btn-primary">Update</span> button located on top of any vector information sheet.
 
 The `delete vector` function has not been implemented yet : contact the OpenSILEX development team in order to ask for a vector to be removed.
