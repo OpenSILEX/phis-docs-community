@@ -513,6 +513,10 @@ This new unit label should be if possible meaningful, distinct from other unit l
 
 Otherwise, if the appropriate unit is already register in Phis, then one only has to select it from the `Unit label` field, without clicking on the <span class="btn btn-success">**+**</span> green icon (or clicking on the <span class="btn btn-danger">**-**</span> red icon if the <span class="btn btn-success">**+**</span> green icon had previously been clicked on).
 
+In the tricky case of a variable presenting no unit (e.g. pH), it is advised to crete a new unit whose label would be : dimensionless_unit_*variable-name* (e.g. dimensionless_unit_pH).
+It matters in order not to use the same "unit" for every variable displaying a dimensionless unit.
+More on this topic on the [ontobee.org](http://www.ontobee.org/ontology/UO?iri=http://purl.obolibrary.org/obo/UO_0000196) website.
+
 ![existing-trait](img/create-variable_existing-unit.png)
 
 `Related References`.
