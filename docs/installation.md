@@ -13,9 +13,13 @@ The sensor list is preceded by a research bar enabling the user to filter regist
 
 From **Home / Sensors**, one can click on the eye icon on the right of any listed sensor to see its information sheet.
 
+![sensor-information](img/sensor-information.png)
+
 At the top of the sensor sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 Documents linked  to a sensor are typicaly a technical notice or an user manual.
 See the [Documents](../experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected sensor using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
+See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Add sensors
 
@@ -158,9 +162,15 @@ The vector list is preceded by a research bar enabling the user to filter regist
 
 From **Home / Vectors**, one can click on the eye icon on the right of any listed vector to see its information sheet.
 
-At the top of the vector sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+<!---
+![vector-information](img/vector-information.png)
+--->
+
+At the top of the vector information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 Documents linked  to a vector are typicaly a technical notice, an user manual or a brochure.
-See the [Documents](../experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
+See the [Documents](../experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected vector using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
+See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Add vectors
 
