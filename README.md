@@ -6,7 +6,7 @@ This repository contains PHIS users documentation.
 ## Background
 PHIS (Phenotyping Hybrid Information System) is developped for high-throughput plant phenotyping in close interaction to plant phenotyping communities.
 PHIS is part of SILEX collaborative meta-project developped at MISTEA joint research unit (INRA - SupAgro).
-More information on SILEX is available at [SILEX wiki](https://mulcyber.toulouse.inra.fr/plugins/mediawiki/wiki/silex/index.php/Accueil "SILEX wiki Main Page").
+More information on SILEX is available at [SILEX web page](https://www6.montpellier.inra.fr/mistea_eng/Projects/Silex "SILEX web page on INRA-MISTEA website").
 
 ## Contributors
 Contributors to this documentation are agents of the joint research unit MISTEA (INRA - SupAgro) in Montpellier :
