@@ -736,8 +736,11 @@ See the [Map Visualization](../experimental-organization/#graphics-from-datasets
 
 ### What are annotations ?
 
-Phis project, experiments, sensors and vectors can be annotated using the W3C specifications of the [Web Annotation Data model](https://www.w3.org/TR/annotation-model/), or `oa` (prefix of the Web Annotation Data Model, whose namespace is [http://www.w3.org/ns/oa#](http://www.w3.org/ns/oa#)).
-Any user can therefore enrich Phis elements with attached information using semantic annotations.
+Annotations are comments made on elemnts of Phis and stored as metadata linked to this element.
+More broadly, [the W3C](https://www.w3.org/TR/annotation-model/) describe annotations as "typically used to convey information about a resource or associations between resources".
+An annotation could be an explanation given by the creator of a resource, an expert viewpoint or the input of other persons.
+Phis projects, experiments, sensors, vectors, etc. (any element displaying an URI) can be annotated using the W3C specifications of the [Web Annotation Data model](https://www.w3.org/TR/annotation-model/), or `oa` (prefix of the Web Annotation Data Model, whose namespace is [http://www.w3.org/ns/oa#](http://www.w3.org/ns/oa#)).
+Any user can therefore enrich Phis elements with attached information (metadata) using semantic annotations.
 
 Phis Annotations are displayed in the `Experimental Organization / Annotations` menu in the top navigation bar.
 
