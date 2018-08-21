@@ -11,6 +11,16 @@ The sensor list is preceded by a research bar enabling the user to filter regist
 
 ![sensor-menu](img/sensor-list.png)
 
+From **Home / Sensors**, one can click on the eye icon on the right of any listed sensor to see its information sheet.
+
+![sensor-information](img/sensor-information.png)
+
+At the top of the sensor sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+Documents linked  to a sensor are typicaly a technical notice or an user manual.
+See the [Documents](../experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected sensor using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
+See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
+
 ### Add sensors
 
 Manually add multiple sensors can be achieved by selecting the <span class="btn btn-success">Create Sensor</span> button at the top-left side of the `Sensors` menu.
@@ -65,20 +75,79 @@ The `delete sensor` function has not been implemented yet : contact the OpenSILE
 
 Once sensors have been added to the information system, you can characterize them extensively by selecting the <span class="btn btn-success">Characterize Sensors</span> button at the top-left side of the `Sensors` menu.
 
+Not all sensors can be characterized through the `Characterize sensors` menu, but only cameras (all camera types : RGB, multispectral, etc.), spectrometers and LiDAR.
+
 The `Characterize Sensors` button leads to two sequential menus : in the first one you select the sensor (already integrated in the information system) you want to characterize, in the second one you characterize it.
 
-One selects the sensor to characterize using its type and its URI (or Alias) :
+One selects the sensor that need to be characterized providing two pieces of information :
 
 - Type
-- URI
-
-Not all sensors can be characterized through the `Characterize sensors` menu, but only cameras (all camera types : RGB, multispectral, etc.), spectrometers and LiDAR.
+- URI (will be changed to Alias in a future version of PHIS)
 
 #### Cameras
 
+Camera characteristics common to all cameras are :
+
+`Height (pixels)`.
+
+`width (pixels)`.
+
+`Pixel Size (µm)`.
+
+The camera types "camera", "hemispherical camera" and "hyperspectral camera" require only those fields to be informed.
+
+In the case of the types "RGB camera" and "TIR camera", additionnal `Lens` fields need to be informed :
+
+`Label`.
+
+`Brand`.
+
+`Person In Charge`.
+
+`In Service Date`.
+
+`Focal length (mm)`.
+
+`Aperture (f-number)`. ratio of the camera lens' focal length to the diameter of the entrance pupil.
+
+When it comes to multispectral cameras, in addition to the common "height", "width" and "pixel size" fields, one has to provide for each band of spectral discrimination information on :
+
+`Wavelength (nm)`.
+
+`Focal Length (nm)`.
+
+`Attenuator Filter`.
+
+Up to 6 distinct bands of spectral discrimination can be informed in the form, each column matching a specific band and each row a different characteristic.
+Not all column have to be filled up (if the camera captures 4 distinct bands, just inform the first 4 columns).
+
 #### Spectrometers
 
+When selecting the sensor type "Spectrometer", the following characteristics need to be filled up :
+
+`Half Field Of View (°)`.
+
+`Minimum Wavelength (nm)`.
+
+`Maximum Wavelength (nm)`.
+
+`Spectral Sampling Interval`.
+
 #### LiDAR
+
+When selecting a LiDAR, the following characteristics need to be filled up :
+
+`Wavelength (nm)`.
+
+`Scanning Angular Range (°)`.
+
+`Scanning Angular Range (°)`.
+
+`Scanning Angular Resolution (°)`.
+
+`Spot width (°)`.
+
+`Spot height (°)`.
 
 ## Vectors
 
@@ -89,9 +158,19 @@ Sensors used for plant phenotyping can be carried on vectors such as UAVs or fie
 The `Vectors` menu displays the list of vectors that have been declared by the user on Phis.
 The vector list is preceded by a research bar enabling the user to filter registered vectors by their Alias, type, brand and optionnal attributes, such as the date of their purchase, the date of their first use or their serial number.
 
-
 ![vector-menu](img/vector-list.png)
 
+From **Home / Vectors**, one can click on the eye icon on the right of any listed vector to see its information sheet.
+
+<!---
+![vector-information](img/vector-information.png)
+--->
+
+At the top of the vector information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+Documents linked  to a vector are typicaly a technical notice, an user manual or a brochure.
+See the [Documents](../experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected vector using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
+See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Add vectors
 
@@ -142,5 +221,7 @@ The number of rows has to match the number of added vectors.
 Complete the vector insertion in Phis clicking on the <span class="btn btn-success">Create Vectors</span> button.
 
 ![add-vector-success](img/added-vector.png)
+
+Once created, the vector specifics can be modified with the <span class="btn btn-primary">Update</span> button located on top of any vector information sheet.
 
 The `delete vector` function has not been implemented yet : contact the OpenSILEX development team in order to ask for a vector to be removed.

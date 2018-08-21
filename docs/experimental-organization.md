@@ -21,6 +21,20 @@ Further information on a given project is available on its information sheet, ac
 
 ![project-menu](img/projects-list_eye-icon.png)
 
+A project information sheet displays all this project information stored in Phis : URI, acronyme, objective, start and end dates, contacts linked to the project, a description, etc.
+Documents (PDF, tables, etc.) can also be linked to a project.
+At the top of the project information sheet lie three buttons allowing the user to interact with the selected project.
+
+![project-information-sheet](img/project-information.png)
+
+The project specifics, displayed in the information sheet, can be modified with the <span class="btn btn-primary">Update</span> button.
+
+Another top button is the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+See the [Documents](../experimental-organization/#documents) section below for further information on Phis documents and for learning how to insert them in the information system.
+
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected project using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
+See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
+
 ### Create a project
 Within the `Projects` menu, one can create a new project with the
 <span class="btn btn-success">Create Project</span> button.
@@ -120,6 +134,8 @@ On top of the experiment information sheet, several buttons are displayed.
 The buttons <span class="btn btn-info">Map Visualization</span> and <span class="btn btn-success">Generate Map</span> enable the visualization of the agronomical objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
 Jump to the section [Map Visualization](../experimental-organization/#map-visualization) for more information on experiment maps.
 The use of the other buttons, <span class="btn btn-primary">Update</span> and <span class="btn btn-warning">Add document</span>, is described at the end of the next section entitled [Create an experiment](../experimental-organization/#create-an-experiment).
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected experiment using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
+See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Create an experiment
 Within the `Experiments` menu, a Phis user can create a new experiment with the
@@ -513,6 +529,10 @@ This new unit label should be if possible meaningful, distinct from other unit l
 
 Otherwise, if the appropriate unit is already register in Phis, then one only has to select it from the `Unit label` field, without clicking on the <span class="btn btn-success">**+**</span> green icon (or clicking on the <span class="btn btn-danger">**-**</span> red icon if the <span class="btn btn-success">**+**</span> green icon had previously been clicked on).
 
+In the tricky case of a variable presenting no unit (e.g. pH), it is advised to crete a new unit whose label would be : dimensionless_unit_*variable-name* (e.g. dimensionless_unit_pH).
+It matters in order not to use the same "unit" for every variable displaying a dimensionless unit.
+More on this topic on the [ontobee.org](http://www.ontobee.org/ontology/UO?iri=http://purl.obolibrary.org/obo/UO_0000196) website.
+
 ![existing-trait](img/create-variable_existing-unit.png)
 
 `Related References`.
@@ -711,3 +731,33 @@ At the current stage of Phis development, datasets cannot be modified nor delete
 ### Visualize Dataset
 Graphics extracted from Phis datasets are available through the `Experiments` menu.
 See the [Map Visualization](../experimental-organization/#graphics-from-datasets) section of this documentation for further information.
+
+## Annotations
+
+### What are annotations ?
+
+Annotations are comments made on elemnts of Phis and stored as metadata linked to this element.
+More broadly, [the W3C](https://www.w3.org/TR/annotation-model/) describe annotations as "typically used to convey information about a resource or associations between resources".
+An annotation could be an explanation given by the creator of a resource, an expert viewpoint or the input of other persons.
+Phis projects, experiments, sensors, vectors, etc. (any element displaying an URI) can be annotated using the W3C specifications of the [Web Annotation Data model](https://www.w3.org/TR/annotation-model/), or `oa` (prefix of the Web Annotation Data Model, whose namespace is [http://www.w3.org/ns/oa#](http://www.w3.org/ns/oa#)).
+Any user can therefore enrich Phis elements with attached information (metadata) using semantic annotations.
+
+Phis Annotations are displayed in the `Experimental Organization / Annotations` menu in the top navigation bar.
+
+### Add annotation
+
+Annotations can be added to Phis through the <span class="btn btn-default">Add annotation</span> button of the information sheet of any project, experiment, sensor or vector.
+
+`Creator`. The username of the creator of the annotation (you) is automatically recorded by Phis whenever you create an annotation.
+
+`Motivated by`. Following W3C recommendations on [annotation motivations](https://www.w3.org/TR/annotation-model/#motivation-and-purpose), when creating an annotation you need to select through the controlled vocabulary of `oa` the motivation category matching the reason why you are creating this annotation :
+- `assessing` : used when the annotation is a comment or a quality assessment
+- `classifying` : used when the annotation is an attempt to classify the resource annotated
+- `editing` : used when the annotation is a request to edit or delete a resource
+- etc. See [https://www.w3.org/TR/annotation-model/#motivation-and-purpose](https://www.w3.org/TR/annotation-model/#motivation-and-purpose) for the exhaustive list of annotation motivations
+
+`Creation Date`. Automatically set by Phis using the local time.
+
+`Targets`. Automatically set by Phis, this field records the resource (e.g. experiment) from which an annotation creation has been requested by the user (i.e. from which resource he clicked on the <span class="btn btn-default">Add annotation</span> button).
+
+`Description`. Content of the annotation, ideally provided in English (free text).
