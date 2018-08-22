@@ -1,5 +1,20 @@
 # Experimental Organization
 
+## Infrastructures
+
+Scientific experiments generate data, which is the focus the present information system.
+However, if only the data produced by experiments is stored, and not the complete experimental conditions, i.e. the environmental conditions, infrastructure and supporting equipment or resources used to conduct those experiments, then such archived data would be orphan and therefore non reusable.
+
+The first element of experimental conditions which is stored in Phis is the infrastructures linked to plant phenotyping experiments.
+An infrastructure can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
+
+Users register infrastructures in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given infrastructures.
+
+The complete list of infrastructures registered in a Phis session is available in the `Experimental organization / Infrastructures` menu, accessible from Phis top navigation bar.
+
+The <span class="btn btn-warning">Add document</span> button at the top of the infrastructures information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
+See the [Documents](../experimental-organization/#documents) section below for further information on documents.
+
 ## Projects
 
 ### What are projects ?
@@ -14,7 +29,7 @@ However, experimental data included in a project is also necessarily related to 
 This data is accessible only to users who belong to a group (either owner or guest) authorized to access the experimentation it is related to: access rights are managed by experiment and not by project.
 Please see the [Restrictions to a group](../community/#restrictions-to-a-group) section of this documentation for further details on data access matters.
 
-The complete list of projects is available in the `Projects` menu, accessible from Phis top navigation bar.
+The complete list of projects is available in the `Experimental organization / Projects` menu, accessible from Phis top navigation bar.
 The projects list is preceded by a research bar enabling the user to filter projects by their acronym, their main source of funding, and their start and end dates.
 There's no need to use the same case as the expected results: a lowercase search returns every results matching the characters, disregarding whether those match are lowercase or uppercase.
 Further information on a given project is available on its information sheet, accessed to from the projects list through the eye-icon on the right-hand side of this project row.
