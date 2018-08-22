@@ -205,7 +205,7 @@ Completing the experiment creation within Phis is then achieved by clicking on t
 
 From **Home / Experiments**, one can click on the eye icon on the right to see the newly created experiment information sheet.
 
-The <span class="btn btn-warning">Add document</span> button at the top of the experiment sheet remains orange until a first document has been added, e.g. an experimental design.
+The <span class="btn btn-warning">Add document</span> button at the top of the experiment information sheet remains orange until a first document has been added, e.g. an experimental design.
 See the [Documents](../experimental-organization/#documents) section below for further information on documents.
 
 Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.
@@ -282,13 +282,15 @@ The second step is to select the type of image you want to display, selecting it
 
 ### What are Phis documents ?
 
-In order to ease the comprehension of projects and experiments, it is possible to upload various documents Phis and connect them to projects or experiments.
+In order to ease the comprehension of projects and experiments, it is possible to upload various documents to Phis and connect them to resources such as infrastructures, projects, experiments, sensors or vectors declared in Phis.
+<!---
 The same document can be linked to several projects and experiments.
 A document can be related to no project nor experiment, but this is not recommanded.
-Documents that could help persons understand a project are typically (reasearch) contract, phd (or master) thesis, or various multimedia content such as photos or beamer presentations.
+--->
+Documents that could help persons understand a project are typically a (reasearch) contract, a phd (or master) thesis, or various multimedia content such as photos or beamer presentations.
 Similarly, one could expect knowledge about an experimentation to be provided through documents that could be protocols, experimental designs, technical or scientific files, data files, research papers, etc.
 Examples of document formats are PDF, txt, csv, png images, etc.
-However, large files are not yet supported by Phis: a document cannot exceed 2MB.
+However, large files are not yet supported by Phis: a document uploaded to Phis cannot exceed 2MB for now.
 
 The documents uploaded to Phis through the `Documents` section are meant for human consultation.
 However, metadata (intelligible to machines) must be provided for every new document.
@@ -304,11 +306,13 @@ Information of a document can later be changed, while the document itself cannot
 
 Metadata are specified with [Dublin Core](http://dublincore.org/documents/dces/) recommendations.
 Metadata enables the documents to be stored in the Phis triplestore.
-The expression of Dublin Core metadata using the Resource Description Framework is described [Here](http://dublincore.org/documents/dc-rdf/).
+The expression of Dublin Core metadata using the Resource Description Framework is described at [dublincore.org](http://dublincore.org/documents/dc-rdf/).
 
 ### Upload a document
-
+Any Phis user can upload a new document and specify its metadata with the <span class="btn btn-success">Create Document</span> button displayed on top of the information sheet of any element prone to be enriched with documents (infrastructures, projects, experiments, sensors and vectors).
+<!---
 Within the `Documents` menu, as well as from a project or experimentation information sheet, any Phis user can upload a new document and specify its metadata with the <span class="btn btn-success">Create Document</span> button.
+--->
 No admin rights are required from a Phis user to add a new document.
 
 `Title`. Title of the uploaded document.
@@ -350,12 +354,13 @@ The upload button is bound to be abandonned in the following Phis development.
 
 `Comment`. Complete plain text description of the new document, preferably provided in English language.
 
-Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with Dublin Core standards.
+Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with [Dublin Core](http://dublincore.org/documents/dces/) standards.
 
 The list of documents a given user has access to is avaible from the navigation bar through the `Tools > Documents` menu.
 From **Home / Documents**, one can click on the eye icon on the right to see a given document information sheet (metadata).
 From there, the document cannot be modified or deleted (in Phis current version).
-However, the document can be downloaded with the <span class="btn btn-primary">Download</span> button, and its metadata can be modified with the <span class="btn btn-primary">Update</span> button.
+However, the document metadata can be modified with the <span class="btn btn-primary">Update</span> button on top of the information sheet.
+The document can also be downloaded clicking on the ![view](img/view_64_32.png) icon above the **View / Download** text, below the information sheet.
 
 ![update-document](img/document-update.png)
 
