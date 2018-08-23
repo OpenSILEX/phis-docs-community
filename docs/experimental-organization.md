@@ -368,6 +368,7 @@ The upload button is bound to be abandonned in the following Phis development.
 ![upload-file](img/create-document_file.png)
 
 `Comment`. Complete plain text description of the new document, preferably provided in English language.
+For now, line breaks cannot be inserted in a comment : they could generate a bug.
 
 Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with [Dublin Core](http://dublincore.org/documents/dces/) standards.
 
