@@ -28,4 +28,4 @@ If a Phis user wish to point out a flaw in this documentation, he is welcomed to
 Concerning issues with Phis itself, users are invited to report them via another channel, which has not been set up to this day.
 
 ## Version
-&copy; INRA MISTEA 2014-2018 (SILEX-PHIS v.2.2 - 18 January 2018)
+&copy; INRA MISTEA 2014-2018 (SILEX-PHIS v.2.5 - August 24th 2018)
