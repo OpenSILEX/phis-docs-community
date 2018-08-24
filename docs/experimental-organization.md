@@ -763,8 +763,6 @@ An annotation could be an explanation given by the creator of a resource, an exp
 Phis projects, experiments, sensors, vectors, etc. (any element displaying an URI) can be annotated using the W3C specifications of the [Web Annotation Data model](https://www.w3.org/TR/annotation-model/), or `oa` (prefix of the Web Annotation Data Model, whose namespace is [http://www.w3.org/ns/oa#](http://www.w3.org/ns/oa#)).
 Any user can therefore enrich Phis elements with attached information (metadata) using semantic annotations.
 
-Phis Annotations are displayed in the `Experimental Organization / Annotations` menu in the top navigation bar.
-
 ### Add annotation
 
 Annotations can be added to Phis through the <span class="btn btn-default">Add annotation</span> button of the information sheet of any project, experiment, sensor or vector.
