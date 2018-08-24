@@ -1,4 +1,4 @@
-site_name: PHIS2
+site_name: PHIS user documentation
 theme: bootstrap
 extra_css:
    - "css/bootstrap.css"

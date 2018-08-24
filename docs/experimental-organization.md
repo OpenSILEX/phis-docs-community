@@ -1,5 +1,20 @@
 # Experimental Organization
 
+## Infrastructures
+
+Scientific experiments generate data, which is the focus the present information system.
+However, if only the data produced by experiments is stored, and not the complete experimental conditions, i.e. the environmental conditions, infrastructure and supporting equipment or resources used to conduct those experiments, then such archived data would be orphan and therefore non reusable.
+
+The first element of experimental conditions which is stored in Phis is the infrastructures linked to plant phenotyping experiments.
+An infrastructure can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
+
+Users register infrastructures in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given infrastructures.
+
+The complete list of infrastructures registered in a Phis session is available in the `Experimental organization / Infrastructures` menu, accessible from Phis top navigation bar.
+
+The <span class="btn btn-warning">Add document</span> button at the top of the infrastructures information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
+See the [Documents](../experimental-organization/#documents) section below for further information on documents.
+
 ## Projects
 
 ### What are projects ?
@@ -14,7 +29,7 @@ However, experimental data included in a project is also necessarily related to 
 This data is accessible only to users who belong to a group (either owner or guest) authorized to access the experimentation it is related to: access rights are managed by experiment and not by project.
 Please see the [Restrictions to a group](../community/#restrictions-to-a-group) section of this documentation for further details on data access matters.
 
-The complete list of projects is available in the `Projects` menu, accessible from Phis top navigation bar.
+The complete list of projects is available in the `Experimental organization / Projects` menu, accessible from Phis top navigation bar.
 The projects list is preceded by a research bar enabling the user to filter projects by their acronym, their main source of funding, and their start and end dates.
 There's no need to use the same case as the expected results: a lowercase search returns every results matching the characters, disregarding whether those match are lowercase or uppercase.
 Further information on a given project is available on its information sheet, accessed to from the projects list through the eye-icon on the right-hand side of this project row.
@@ -205,7 +220,7 @@ Completing the experiment creation within Phis is then achieved by clicking on t
 
 From **Home / Experiments**, one can click on the eye icon on the right to see the newly created experiment information sheet.
 
-The <span class="btn btn-warning">Add document</span> button at the top of the experiment sheet remains orange until a first document has been added, e.g. an experimental design.
+The <span class="btn btn-warning">Add document</span> button at the top of the experiment information sheet remains orange until a first document has been added, e.g. an experimental design.
 See the [Documents](../experimental-organization/#documents) section below for further information on documents.
 
 Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.
@@ -282,13 +297,15 @@ The second step is to select the type of image you want to display, selecting it
 
 ### What are Phis documents ?
 
-In order to ease the comprehension of projects and experiments, it is possible to upload various documents Phis and connect them to projects or experiments.
+In order to ease the comprehension of projects and experiments, it is possible to upload various documents to Phis and connect them to resources such as infrastructures, projects, experiments, sensors or vectors declared in Phis.
+<!---
 The same document can be linked to several projects and experiments.
 A document can be related to no project nor experiment, but this is not recommanded.
-Documents that could help persons understand a project are typically (reasearch) contract, phd (or master) thesis, or various multimedia content such as photos or beamer presentations.
+--->
+Documents that could help persons understand a project are typically a (reasearch) contract, a phd (or master) thesis, or various multimedia content such as photos or beamer presentations.
 Similarly, one could expect knowledge about an experimentation to be provided through documents that could be protocols, experimental designs, technical or scientific files, data files, research papers, etc.
 Examples of document formats are PDF, txt, csv, png images, etc.
-However, large files are not yet supported by Phis: a document cannot exceed 2MB.
+However, large files are not yet supported by Phis: a document uploaded to Phis cannot exceed 2MB for now.
 
 The documents uploaded to Phis through the `Documents` section are meant for human consultation.
 However, metadata (intelligible to machines) must be provided for every new document.
@@ -304,11 +321,13 @@ Information of a document can later be changed, while the document itself cannot
 
 Metadata are specified with [Dublin Core](http://dublincore.org/documents/dces/) recommendations.
 Metadata enables the documents to be stored in the Phis triplestore.
-The expression of Dublin Core metadata using the Resource Description Framework is described [Here](http://dublincore.org/documents/dc-rdf/).
+The expression of Dublin Core metadata using the Resource Description Framework is described at [dublincore.org](http://dublincore.org/documents/dc-rdf/).
 
 ### Upload a document
-
+Any Phis user can upload a new document and specify its metadata with the <span class="btn btn-success">Create Document</span> button displayed on top of the information sheet of any element prone to be enriched with documents (infrastructures, projects, experiments, sensors and vectors).
+<!---
 Within the `Documents` menu, as well as from a project or experimentation information sheet, any Phis user can upload a new document and specify its metadata with the <span class="btn btn-success">Create Document</span> button.
+--->
 No admin rights are required from a Phis user to add a new document.
 
 `Title`. Title of the uploaded document.
@@ -349,13 +368,15 @@ The upload button is bound to be abandonned in the following Phis development.
 ![upload-file](img/create-document_file.png)
 
 `Comment`. Complete plain text description of the new document, preferably provided in English language.
+For now, line breaks cannot be inserted in a comment : they could generate a bug.
 
-Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with Dublin Core standards.
+Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with [Dublin Core](http://dublincore.org/documents/dces/) standards.
 
 The list of documents a given user has access to is avaible from the navigation bar through the `Tools > Documents` menu.
 From **Home / Documents**, one can click on the eye icon on the right to see a given document information sheet (metadata).
 From there, the document cannot be modified or deleted (in Phis current version).
-However, the document can be downloaded with the <span class="btn btn-primary">Download</span> button, and its metadata can be modified with the <span class="btn btn-primary">Update</span> button.
+However, the document metadata can be modified with the <span class="btn btn-primary">Update</span> button on top of the information sheet.
+The document can also be downloaded clicking on the ![view](img/view_64_32.png) icon above the **View / Download** text, below the information sheet.
 
 ![update-document](img/document-update.png)
 
@@ -741,8 +762,6 @@ More broadly, [the W3C](https://www.w3.org/TR/annotation-model/) describe annota
 An annotation could be an explanation given by the creator of a resource, an expert viewpoint or the input of other persons.
 Phis projects, experiments, sensors, vectors, etc. (any element displaying an URI) can be annotated using the W3C specifications of the [Web Annotation Data model](https://www.w3.org/TR/annotation-model/), or `oa` (prefix of the Web Annotation Data Model, whose namespace is [http://www.w3.org/ns/oa#](http://www.w3.org/ns/oa#)).
 Any user can therefore enrich Phis elements with attached information (metadata) using semantic annotations.
-
-Phis Annotations are displayed in the `Experimental Organization / Annotations` menu in the top navigation bar.
 
 ### Add annotation
 
