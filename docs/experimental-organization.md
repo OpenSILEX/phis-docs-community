@@ -757,9 +757,9 @@ See the [Map Visualization](../experimental-organization/#graphics-from-datasets
 
 ### What are annotations ?
 
-Annotations are comments made on elemnts of Phis and stored as metadata linked to this element.
-More broadly, [the W3C](https://www.w3.org/TR/annotation-model/) describe annotations as "typically used to convey information about a resource or associations between resources".
-An annotation could be an explanation given by the creator of a resource, an expert viewpoint or the input of other persons.
+Annotations are comments made on an element of Phis and stored as metadata linked to this element.
+More broadly, [the W3C](https://www.w3.org/TR/annotation-model/) describes annotations as "typically used to convey information about a resource or associations between resources".
+An annotation can be an explanation given by the creator of a resource, an expert viewpoint or the input of other persons.
 Phis projects, experiments, sensors, vectors, etc. (any element displaying an URI) can be annotated using the W3C specifications of the [Web Annotation Data model](https://www.w3.org/TR/annotation-model/), or `oa` (prefix of the Web Annotation Data Model, whose namespace is [http://www.w3.org/ns/oa#](http://www.w3.org/ns/oa#)).
 Any user can therefore enrich Phis elements with attached information (metadata) using semantic annotations.
 
@@ -770,6 +770,7 @@ Annotations can be added to Phis through the <span class="btn btn-default">Add a
 `Creator`. The username of the creator of the annotation (you) is automatically recorded by Phis whenever you create an annotation.
 
 `Motivated by`. Following W3C recommendations on [annotation motivations](https://www.w3.org/TR/annotation-model/#motivation-and-purpose), when creating an annotation you need to select through the controlled vocabulary of `oa` the motivation category matching the reason why you are creating this annotation :
+
 - `assessing` : used when the annotation is a comment or a quality assessment
 - `classifying` : used when the annotation is an attempt to classify the resource annotated
 - `editing` : used when the annotation is a request to edit or delete a resource

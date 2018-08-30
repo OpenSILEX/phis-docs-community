@@ -46,6 +46,7 @@ The first row of the CSV file displays its header :
 
 Then, each row of this CSV file is associated to an image imported in PHIS.
 Each image is characterized by :
+
 - **path_Image_ref** : the name and path of the image (e.g. `image001.png`)
 - **ImageType** : the URI associated with the type of the image (e.g. `http://www.phenome-fppn.fr/vocabulary/2017#HemisphericalImage` or `http://www.phenome-fppn.fr/vocabulary/2017#RGBImage`)
 - **concernedUri** : the URI of the entity associated to the image, typically an agronomical object such a plot (e.g. `http://www.phenome-fppn.fr/mtp/2017/o1000001`)

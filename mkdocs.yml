@@ -7,5 +7,6 @@ extra_css:
 pages:
    - Home: index.md
    - Experimental Organization: experimental-organization.md
+   - Installation : installation.md
    - Community: community.md
    - Clients: ws-clients.md
