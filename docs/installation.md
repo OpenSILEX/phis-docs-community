@@ -115,7 +115,7 @@ When it comes to multispectral cameras, in addition to the common "height", "wid
 
 `Wavelength (nm)`.
 
-`Focal Length (nm)`.
+`Focal Length (mm)`.
 
 `Attenuator Filter (%)`. Set up by the manufacturer of the camera. Between *0* and *100*. If the camera displays no attenuator filter, then set this value to *100*.
 
