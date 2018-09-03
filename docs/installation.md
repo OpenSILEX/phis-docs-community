@@ -57,7 +57,7 @@ If the dropdown list isn't displayed correctly, try selecting any element of the
 `Date of Last Calibration`. Date provided in the YYYY-MM-DD (year-month-day) format of the last calibration of the sensor. Optionnal.
 
 `Person In Charge`. Username (email adress) of the person in charge of the sensing device (typically, the manager of the installation).
-If the person in charge is not displayed in the dropdown list, you should fisrt add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../community/#create-a-person) section for details.
+If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../community/#create-a-person) section for details.
 
 Not correctly filled fields appear in red.
 As long as cells are displayed in red, no sensor can be created.
@@ -88,35 +88,36 @@ One selects the sensor that need to be characterized providing two pieces of inf
 
 Camera characteristics common to all cameras are :
 
-`Height (pixels)`.
+`Height (pixels)`. Number of rows of pixels for the images.
 
-`width (pixels)`.
+`Width (pixels)`. Number of pixels in each row for the images.
 
-`Pixel Size (µm)`.
+`Pixel Size (µm)`. Pixel size for the images in µm.
 
 The camera types "camera", "hemispherical camera" and "hyperspectral camera" require only those fields to be informed.
 
 In the case of the types "RGB camera" and "TIR camera", additionnal `Lens` fields need to be informed :
 
-`Label`.
+`Label`. Internal name of the lens (free text).
 
-`Brand`.
+`Brand`. Brand of the lens (free text).
 
-`Person In Charge`.
+`Person In Charge`. Username (email adress) of the person in charge of the sensing device (typically, the manager of the installation).
+If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../community/#create-a-person) section for details.
 
-`In Service Date`.
+`In Service Date`. Date of the first use of the lens, provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
 
-`Focal length (mm)`.
+`Focal length (mm)`. Focal length associated to the spectral band.
 
-`Aperture (f-number)`. ratio of the camera lens' focal length to the diameter of the entrance pupil.
+`Aperture (f-number)`. Ratio of the camera lens' focal length to the diameter of the entrance pupil.
 
 When it comes to multispectral cameras, in addition to the common "height", "width" and "pixel size" fields, one has to provide for each band of spectral discrimination information on :
 
 `Wavelength (nm)`.
 
-`Focal Length (nm)`.
+`Focal Length (mm)`.
 
-`Attenuator Filter`.
+`Attenuator Filter (%)`. Set up by the manufacturer of the camera. Between *0* and *100*. If the camera displays no attenuator filter, then set this value to *100*.
 
 Up to 6 distinct bands of spectral discrimination can be informed in the form, each column matching a specific band and each row a different characteristic.
 Not all column have to be filled up (if the camera captures 4 distinct bands, just inform the first 4 columns).
