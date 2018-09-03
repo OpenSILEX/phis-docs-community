@@ -88,11 +88,11 @@ One selects the sensor that need to be characterized providing two pieces of inf
 
 Camera characteristics common to all cameras are :
 
-`Height (pixels)`.
+`Height (pixels)`. Number of rows of pixels for the images.
 
-`Width (pixels)`.
+`Width (pixels)`. Number of pixels in each row for the images.
 
-`Pixel Size (µm)`.
+`Pixel Size (µm)`. Pixel size for the images in µm.
 
 The camera types "camera", "hemispherical camera" and "hyperspectral camera" require only those fields to be informed.
 
@@ -107,7 +107,7 @@ If the person in charge is not displayed in the dropdown list, you should first 
 
 `In Service Date`. Date of the first use of the lens, provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
 
-`Focal length (mm)`.
+`Focal length (mm)`. Focal length associated to the spectral band.
 
 `Aperture (f-number)`. Ratio of the camera lens' focal length to the diameter of the entrance pupil.
 
