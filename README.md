@@ -9,10 +9,13 @@ PHIS is part of SILEX collaborative meta-project developped at MISTEA joint rese
 More information on SILEX is available at [SILEX web page](https://www6.montpellier.inra.fr/mistea_eng/Projects/Silex "SILEX web page on INRA-MISTEA website").
 
 ## Contributors
-Contributors to this documentation are agents of the joint research unit MISTEA (INRA - SupAgro) in Montpellier :
-- Anne Tireau
-- Morgane Vidal
+Contributors to this documentation are agents of the INRA - SupAgro joint research units MISTEA and LEPSE in Montpellier :
+
 - Pierre-Etienne Alary
+- Morgane Vidal
+- Anne Tireau
+- Arnaud Charleroy
+- Llorenç Cabrera-Bosquet
 
 Every PHIS user is welcomed to enrich this repository with its experience of the information system.
 
