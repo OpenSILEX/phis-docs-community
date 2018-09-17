@@ -21,5 +21,10 @@ This documentation is currently under developpement.
 If a PHIS user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis2-docs-community/issues).
 Concerning issues with PHIS itself, users are invited to report them via another channel, which has not been set up to this day.
 
+## References
+Pilot version of PHIS (different to the one presented here) described in [Neveu, Pascal, et al. "Dealing with multi‐source and multi‐scale information in plant phenomics: the ontology‐driven Phenotyping Hybrid Information System." New Phytologist (2018).](https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.15385)
+
+Interactive web user interface of the pilot version of PHIS available at [phis.inra.fr](http://www.phis.inra.fr/).
+
 ## Version
-&copy; INRA MISTEA 2014-2018 (SILEX-PHIS v.2.5 - August 24th 2018)
+&copy; OpenSILEX - PHIS v.2.5 - 22 August 2018 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
