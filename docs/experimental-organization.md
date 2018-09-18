@@ -13,7 +13,7 @@ Users register infrastructures in Phis in order to later enrich metadata associa
 The complete list of infrastructures registered in a Phis session is available in the `Experimental organization / Infrastructures` menu, accessible from Phis top navigation bar.
 
 The <span class="btn btn-warning">Add document</span> button at the top of the infrastructures information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
-See the [Documents](../experimental-organization/#documents) section below for further information on documents.
+See the [Documents](phis-docs-community/experimental-organization/#documents) section below for further information on documents.
 
 ## Projects
 
@@ -27,7 +27,7 @@ Besides, several projects can participate to the same experimentation.
 Projects fact sheets are all public, i.e. visible for every Phis user, including those unrelated to them.
 However, experimental data included in a project is also necessarily related to a given experiment.
 This data is accessible only to users who belong to a group (either owner or guest) authorized to access the experimentation it is related to: access rights are managed by experiment and not by project.
-Please see the [Restrictions to a group](../community/#restrictions-to-a-group) section of this documentation for further details on data access matters.
+Please see the [Restrictions to a group](../phis-docs-community/community/#restrictions-to-a-group) section of this documentation for further details on data access matters.
 
 The complete list of projects is available in the `Experimental organization / Projects` menu, accessible from Phis top navigation bar.
 The projects list is preceded by a research bar enabling the user to filter projects by their acronym, their main source of funding, and their start and end dates.
@@ -48,7 +48,7 @@ Another top button is the <span class="btn btn-warning">Add document</span> butt
 See the [Documents](../experimental-organization/#documents) section below for further information on Phis documents and for learning how to insert them in the information system.
 
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected project using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Create a project
 Within the `Projects` menu, one can create a new project with the

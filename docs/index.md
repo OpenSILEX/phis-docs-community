@@ -13,12 +13,13 @@ Phis is organized around three layers : the layer of the data storage (first lay
 ![phis-architecture](img/phisArchitecture.png)
 
 ## Contributors
-Contributors to this documentation are agents of the joint research unit MISTEA (INRA - SupAgro) in Montpellier :
+Contributors to this documentation are agents of the INRA - SupAgro joint research units MISTEA and LEPSE in Montpellier :
 
 - Pierre-Etienne Alary
 - Morgane Vidal
 - Anne Tireau
 - Arnaud Charleroy
+- Llorenç Cabrera-Bosquet
 
 Every Phis user is welcomed to enrich this repository with her/his experience of the information system.
 
@@ -27,5 +28,10 @@ This documentation is currently under developpement.
 If a Phis user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis-docs-community/issues).
 Concerning issues with Phis itself, users are invited to report them via another channel, which has not been set up to this day.
 
+## References
+Pilot version of Phis (different to the one presented here) described in [Neveu, Pascal, et al. "Dealing with multi‐source and multi‐scale information in plant phenomics: the ontology‐driven Phenotyping Hybrid Information System." New Phytologist (2018).](https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.15385)
+
+Interactive web user interface of the pilot version of Phis available at [phis.inra.fr](http://www.phis.inra.fr/).
+
 ## Version
-&copy; INRA MISTEA 2014-2018 (SILEX-PHIS v.2.5 - August 24th 2018)
+&copy; OpenSILEX - PHIS v.2.5 - 22 August 2018 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
