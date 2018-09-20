@@ -13,7 +13,11 @@ Users register infrastructures in Phis in order to later enrich metadata associa
 The complete list of infrastructures registered in a Phis session is available in the `Experimental organization / Infrastructures` menu, accessible from Phis top navigation bar.
 
 The <span class="btn btn-warning">Add document</span> button at the top of the infrastructures information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
-See the [Documents](phis-docs-community/experimental-organization/#documents) section below for further information on documents.
+See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents.
+
+It is from this `Infrastructures` menu that the installation manager can add the template documents for UAV or Phenomobile acquisition sessions.
+He has to click on the <span class="btn btn-warning">Add document</span> button and then select the **Document type** `AcquisitionSessionUAVDocument` or `AcquisitionSessionPhenomobileDocument` depending on which type of template document is created.
+Those template documents will then be accessible from both the `Infrastructures` menu and the [Acquisition session template](../phis-docs-community/installation/#acquisition-session-template) item from the `Installations` menu in the top bar.
 
 ## Projects
 
@@ -45,10 +49,10 @@ At the top of the project information sheet lie three buttons allowing the user 
 The project specifics, displayed in the information sheet, can be modified with the <span class="btn btn-primary">Update</span> button.
 
 Another top button is the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
-See the [Documents](../experimental-organization/#documents) section below for further information on Phis documents and for learning how to insert them in the information system.
+See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on Phis documents and for learning how to insert them in the information system.
 
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected project using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Create a project
 Within the `Projects` menu, one can create a new project with the
@@ -147,10 +151,10 @@ For more detail on experimental data access restrictions, see the section [Restr
 
 On top of the experiment information sheet, several buttons are displayed.
 The buttons <span class="btn btn-info">Map Visualization</span> and <span class="btn btn-success">Generate Map</span> enable the visualization of the agronomical objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
-Jump to the section [Map Visualization](../experimental-organization/#map-visualization) for more information on experiment maps.
-The use of the other buttons, <span class="btn btn-primary">Update</span> and <span class="btn btn-warning">Add document</span>, is described at the end of the next section entitled [Create an experiment](../experimental-organization/#create-an-experiment).
+Jump to the section [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) for more information on experiment maps.
+The use of the other buttons, <span class="btn btn-primary">Update</span> and <span class="btn btn-warning">Add document</span>, is described at the end of the next section entitled [Create an experiment](../phis-docs-community/experimental-organization/#create-an-experiment).
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected experiment using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Create an experiment
 Within the `Experiments` menu, a Phis user can create a new experiment with the
@@ -194,7 +198,7 @@ This field will later be removed in the upcoming developments of Phis.
 
 `Scientific supervisors`. Email adresses of the experiment supervisor(s).
 The email adresses refer uniquely to persons existing on Phis.
-If unavailable in the predefined list, emails can be added to Phis from the `Persons` menu, prior to the new project creation. Please see the [Persons](../community/#persons) section of this documentation for further details.
+If unavailable in the predefined list, emails can be added to Phis from the `Persons` menu, prior to the new project creation. Please see the [Persons](../phis-docs-community/community/#persons) section of this documentation for further details.
 
 `Technical supervisors`. Email adresses of the technicians and scientists (including phd students, interns, etc.) involved in the experiment implementation.
 The email adresses refer uniquely to persons existing on Phis.
@@ -208,7 +212,7 @@ A link to the internal ontology is under development.
 This field is crucial when creating an experiment.
 Only a Phis user belonging to at least one of the groups specified in this field will be authorized to access the newly created experiment.
 An experiment assigned to no group is by default set as public.
-Please go to [Access rights](../community/#access-rights) for further details on this matter.
+Please go to [Access rights](../phis-docs-community/community/#access-rights) for further details on this matter.
 
 `Objective`. A short synthesis of the experiemnt objectives is to be provided in plain text, preferably in English. A more complete description will be asked in the **Comment** field.
 
@@ -221,7 +225,7 @@ Completing the experiment creation within Phis is then achieved by clicking on t
 From **Home / Experiments**, one can click on the eye icon on the right to see the newly created experiment information sheet.
 
 The <span class="btn btn-warning">Add document</span> button at the top of the experiment information sheet remains orange until a first document has been added, e.g. an experimental design.
-See the [Documents](../experimental-organization/#documents) section below for further information on documents.
+See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents.
 
 Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.
 
@@ -252,7 +256,7 @@ When agronomical objects of a map are selected, their attributes (alias within t
 #### Graphics from datasets
 
 Another feature provided by the `Map Visualization` menu is the possibility to plot graphics from datasets associated to an experiment.
-A first step is to select on the map agronomical objects (e.g. plots) as explained [above](../experimental-organization/#objects-selection).
+A first step is to select on the map agronomical objects (e.g. plots) as explained [above](../phis-docs-community/experimental-organization/#objects-selection).
 In order to order to create clear graphics,one should avoid selecting too many objects at the same time.
 At that point, a new section, **Dataset(s) Visualization (On selected plot(s))**, appears under the map where the objects have been selected.
 The second step is to select the variable of the dataset from which a graphic should be produced.
@@ -285,7 +289,7 @@ Clicking a second time on the label as the effect to show again the previously h
 
 Another feature provided by the `Map Visualization` menu is the possibility to show images associated to an experiment, such as hemispherical images shot on the field.
 
-A first step is to select on the map the agronomical object (e.g. plot), as explained [above](../experimental-organization/#objects-selection), associated with the images you want to visualize.
+A first step is to select on the map the agronomical object (e.g. plot), as explained [above](../phis-docs-community/experimental-organization/#objects-selection), associated with the images you want to visualize.
 Do not select two agronomical objects (or more), otherwise PHIS would look for images associated to both the selected object, while most images are associated to one and only one object.
 At that point, a new section, **Images Visualization (On selected plot)**, appears under the map where the objects have been selected.
 
@@ -410,7 +414,7 @@ The list of objects associated with a search result, and their metadata, can be 
 Agronomical objects information can also be accessed through the `Experiments` menu.
 After having selected an experiment, the agronomical objects linked to it can be displayed on a map.
 Moreover, selecting objects on such a map provides additional information on the attributes of these objects.
-See the [Map Visualization](../experimental-organization/#map-visualization) section for more information on that matter.
+See the [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section for more information on that matter.
 
 ### Importing plots
 Within the `Agronomical objects` menu, Phis users can import new plots with the
@@ -479,7 +483,7 @@ After having pressed the <span class="btn btn-success">Create</span> bottom butt
 
 ### Visualize agronomical objects
 
-See [Map Visualization](../experimental-organization/#map-visualization) section.
+See [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section.
 
 ## Variables
 
@@ -650,14 +654,14 @@ Thus, each element of a dataset is associated uniquely with :
 Datasets are available indirectly through the `Experiments` menu, selecting an experiment and then accessing to its map through the <span class="btn btn-info">Map Visualization</span> button.
 
 Graphics can be extracted from the experiment datasets in the **Dataset(s) Visualization (On selected plot(s))** section, which appears under the map of the experiment when agronomical objects are selected.
-How to create such graphics is explained in the [Map Visualization](../experimental-organization/#map-visualization) section of this documentation.
+How to create such graphics is explained in the [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section of this documentation.
 
 ### Import Dataset
 
 Datasets can be added to Phis through the `Dataset` menu in the top navigation bar.
 A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Dataset` menu.
 Indeed, only users that are part of an owner group are authorized to add datasets to the experiments associated to this group.
-Go to the [Groups level of access](../community/#groups-level-of-access) section for further information on this issue.
+Go to the [Groups level of access](../phis-docs-community/community/#groups-level-of-access) section for further information on this issue.
 
 When adding a dataset to Phis, three types of elements can be created :
 
@@ -666,7 +670,7 @@ When adding a dataset to Phis, three types of elements can be created :
 - optionnal documents associated to the dataset
 
 `Quantitative Variable`. Mandatory field. Variable or list of the variables found in the added dataset.
-The variable(s) must have previously been defined in Phis (see [Variables](../experimental-organization/#variables)).
+The variable(s) must have previously been defined in Phis (see [Variables](../phis-docs-community/experimental-organization/#variables)).
 
 `Dataset Creation Date`. Mandatory field. Date in the YYYY-MM-DD (year-month-day) format matching to the day in which the imported data has been generated.
 Let's take the example of a drone flight performed two weeks before the data import, followed by the production of clean data from the flight images one week before the import.
@@ -679,7 +683,7 @@ Optionnal document giving indications on how the data has been created.
 If a single script (e.g. in R or python language) has been used to create the imported data, it should be uploaded here.
 If the data creation process has been more complex, a document (e.g. PDF or text) could be provided to describe it.
 The document import is performed via the <span class="btn btn-primary btn-file">Add Document Script</span> button.
-The metadata to provide is the same as in any Phis document, see the [Upload a document](../experimental-organization/#upload-a-document) section.
+The metadata to provide is the same as in any Phis document, see the [Upload a document](../phis-docs-community/experimental-organization/#upload-a-document) section.
 Only one document can be added to this field.
 More documents can be imported together with the dataset through the **Linked Document(s)** field.
 
@@ -690,7 +694,7 @@ For instance, if the data has been generated with Phenoscript v1.2, one can ment
 
 `Linked Document(s)`.
 Additionnal documents associated with the dataset and imported to Phis.
-Click on the <span class="btn btn-primary btn-file">Add Document</span> button and then fill out the usual document creation form as described in the [Upload a document](../experimental-organization/#upload-a-document) section.
+Click on the <span class="btn btn-primary btn-file">Add Document</span> button and then fill out the usual document creation form as described in the [Upload a document](../phis-docs-community/experimental-organization/#upload-a-document) section.
 Multiple documents can be uploaded and associated to the imported dataset.
 Click several times on <span class="btn btn-primary btn-file">Add Document</span> in order to add several documents.
 
@@ -725,8 +729,8 @@ URI2;2017-04-15;4.12;9
 URI2;2017-04-31;5.347687869;10
 ```
 
-The URI of the agronomical objects of a given experimentation can be found on the `Agronomical Objects` menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the [Object types](../experimental-organization/#object-types) of this documentation).
-All variables values of the imported dataset are associated with agronomical objects that must have been previously declared in Phis (see [Importing plots](../experimental-organization/#importing-plots)).
+The URI of the agronomical objects of a given experimentation can be found on the `Agronomical Objects` menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the [Object types](../phis-docs-community/experimental-organization/#object-types) of this documentation).
+All variables values of the imported dataset are associated with agronomical objects that must have been previously declared in Phis (see [Importing plots](../phis-docs-community/experimental-organization/#importing-plots)).
 
 The data file imported in Phis can displays many fields (i.e. number of items in the header), but only the column matching with the expected fields will be kept.
 The expected fields and their name are provided in the .csv template provide by the *Download Template* link above the **Data File** field.
@@ -751,7 +755,7 @@ At the current stage of Phis development, datasets cannot be modified nor delete
 
 ### Visualize Dataset
 Graphics extracted from Phis datasets are available through the `Experiments` menu.
-See the [Map Visualization](../experimental-organization/#graphics-from-datasets) section of this documentation for further information.
+See the [Map Visualization](../phis-docs-community/experimental-organization/#graphics-from-datasets) section of this documentation for further information.
 
 ## Annotations
 

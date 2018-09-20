@@ -53,7 +53,7 @@ Each image is characterized by :
 - **concernedType** : the URI associated with the type of the entity associated with the image (e.g. `http://www.phenome-fppn.fr/vocabulary/2017#Plot`)
 - **position** (optionnal) : if a sensor can display several positions, then you might want to fill the position from which the image has been shot (e.g. `1`)
 - **date** : date at which the image has been shot, using the *YYYY-MM-DD HH:MM:SS* format (e.g. `2017-06-15 09:00:00`)
-- **sensorUri** : URI of the sensor who captured the image (the URI of the sensors you registered in PHIS are available on the [Sensors menu](../experimental-organization/#sensor))
+- **sensorUri** : URI of the sensor who captured the image (the URI of the sensors you registered in PHIS are available on the [Sensors menu](../phis-docs-community/experimental-organization/#sensor))
 
 All of these information are filled in plain text and without brackets.
 

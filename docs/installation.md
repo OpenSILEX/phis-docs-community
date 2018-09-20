@@ -17,9 +17,9 @@ From **Home / Sensors**, one can click on the eye icon on the right of any liste
 
 At the top of the sensor sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 Documents linked  to a sensor are typicaly a technical notice or an user manual.
-See the [Documents](../experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
+See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected sensor using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Add sensors
 
@@ -57,7 +57,7 @@ If the dropdown list isn't displayed correctly, try selecting any element of the
 `Date of Last Calibration`. Date provided in the YYYY-MM-DD (year-month-day) format of the last calibration of the sensor. Optionnal.
 
 `Person In Charge`. Username (email adress) of the person in charge of the sensing device (typically, the manager of the installation).
-If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../community/#create-a-person) section for details.
+If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../phis-docs-community/community/#create-a-person) section for details.
 
 Not correctly filled fields appear in red.
 As long as cells are displayed in red, no sensor can be created.
@@ -103,7 +103,7 @@ In the case of the types "RGB camera" and "TIR camera", additionnal `Lens` field
 `Brand`. Brand of the lens (free text).
 
 `Person In Charge`. Username (email adress) of the person in charge of the sensing device (typically, the manager of the installation).
-If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../community/#create-a-person) section for details.
+If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../phis-docs-community/community/#create-a-person) section for details.
 
 `In Service Date`. Date of the first use of the lens, provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
 
@@ -169,9 +169,9 @@ From **Home / Vectors**, one can click on the eye icon on the right of any liste
 
 At the top of the vector information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 Documents linked  to a vector are typicaly a technical notice, an user manual or a brochure.
-See the [Documents](../experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
+See the [Documents](../phis-docs-community/experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected vector using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](../experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
 
 ### Add vectors
 
@@ -208,7 +208,7 @@ If the dropdown list isn't displayed correctly, try selecting any element of the
 `In Service Date`. Date provided in the YYYY-MM-DD (year-month-day) format of the first use of the vector.
 
 `Person In Charge`. Username (email adress) of the person in charge of the vector (typically, the manager of the installation).
-If the person in charge is not displayed in the dropdown list, you should fisrt add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../community/#create-a-person) section for details.
+If the person in charge is not displayed in the dropdown list, you should fisrt add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../phis-docs-community/community/#create-a-person) section for details.
 
 ![add-vector](img/add-vector-red.png)
 
@@ -226,3 +226,8 @@ Complete the vector insertion in Phis clicking on the <span class="btn btn-succe
 Once created, the vector specifics can be modified with the <span class="btn btn-primary">Update</span> button located on top of any vector information sheet.
 
 The `delete vector` function has not been implemented yet : contact the OpenSILEX development team in order to ask for a vector to be removed.
+
+## Acquisition session template
+
+The **Acquisition session template** in the `Installations` menu allows the user to download the template documents of the type `AcquisitionSessionUAVDocument` and `AcquisitionSessionPhenomobileDocument` that have been previously uploaded by the installation manager as documents from the [Infrastructures menu](../phis-docs-community/experimental-organization/#infrastructures).
+If more than one `AcquisitionSessionUAVDocument` (or `AcquisitionSessionPhenomobileDocument`) has been uploaded to Phis by the installation manager, only the ones with the latest `Creation date` can be downloaded through the **Acquisition session template** button.
