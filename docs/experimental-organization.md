@@ -15,6 +15,10 @@ The complete list of infrastructures registered in a Phis session is available i
 The <span class="btn btn-warning">Add document</span> button at the top of the infrastructures information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
 See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents.
 
+It is from this `Infrastructures` menu that the installation manager can add the template documents for UAV or Phenomobile acquisition sessions.
+He has to click on the <span class="btn btn-warning">Add document</span> button and then select the **Document type** `AcquisitionSessionUAVDocument` or `AcquisitionSessionPhenomobileDocument` depending on which type of template document is created.
+Those template documents will then be accessible from both the `Infrastructures` menu and the [Acquisition session template](../phis-docs-community/installation/#acquisition-session-template) item from the `Installations` menu in the top bar.
+
 ## Projects
 
 ### What are projects ?

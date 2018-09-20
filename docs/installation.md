@@ -226,3 +226,8 @@ Complete the vector insertion in Phis clicking on the <span class="btn btn-succe
 Once created, the vector specifics can be modified with the <span class="btn btn-primary">Update</span> button located on top of any vector information sheet.
 
 The `delete vector` function has not been implemented yet : contact the OpenSILEX development team in order to ask for a vector to be removed.
+
+## Acquisition session template
+
+The **Acquisition session template** in the `Installations` menu allows the user to download the template documents of the type `AcquisitionSessionUAVDocument` and `AcquisitionSessionPhenomobileDocument` that have been previously uploaded by the installation manager as documents from the [Infrastructures menu](../phis-docs-community/experimental-organization/#infrastructures).
+If more than one `AcquisitionSessionUAVDocument` (or `AcquisitionSessionPhenomobileDocument`) has been uploaded to Phis by the installation manager, only the ones with the latest `Creation date` can be downloaded through the **Acquisition session template** button.
