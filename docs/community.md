@@ -111,7 +111,7 @@ From the `Tools > Groups` menu, admin-users get an overview the main properties 
 
 - the group URI (standardized, unique and persistent)
 - the group name
-- the group level of access (guest or owner), cf. [Access rights](../community/#access-rights)
+- the group level of access (guest or owner), cf. [Access rights](../phis-docs-community/community/#access-rights)
 
 From **Home / Groups**, admin-users can click on the eye icon on the right of a given group in order to view its information sheet.
 The additional information provided by the group sheet are a short description and the persons included in the group, identified by their email address.
