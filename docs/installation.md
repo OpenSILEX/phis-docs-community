@@ -232,7 +232,7 @@ The `delete vector` function has not been implemented yet : contact the OpenSILE
 The **Acquisition session template** in the `Installations` menu allows the user to download the template documents of the type `AcquisitionSessionUAVDocument` and `AcquisitionSessionPhenomobileDocument` that has previously been uploaded by the installation manager as documents from the [Infrastructures menu](../phis-docs-community/experimental-organization/#infrastructures).
 
 
-The procedure followed by the installation manager to upload the templates to PHIS is the following :
+The procedure followed by the installation manager to upload the templates to Phis is the following :
 
 - go to the `Infrastructures` menu from the top navigation bar
 - click on `Add document`
