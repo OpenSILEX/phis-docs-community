@@ -306,6 +306,7 @@ The CSV file, using tabulations (`\t`) as field separators and dots (`.`) as dec
 
 Clink on on <span class="btn btn-success">Create</span> to complete the radiometric target registration in Phis.
 
+Once created, the radiometric target metadata can be modified with the <span class="btn btn-primary">Update</span> button located on top of any radiometric target information sheet.
 The `delete radiometric target` function has not been implemented yet : contact the OpenSILEX development team in order to ask for a radiometric target to be removed.
 
 ## Acquisition session template
