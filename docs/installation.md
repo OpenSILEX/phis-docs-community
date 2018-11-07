@@ -17,7 +17,7 @@ From **Home / Sensors**, one can click on the eye icon on the right of any liste
 
 At the top of the sensor information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 Documents linked to a sensor are typicaly a technical notice or an user manual.
-See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
+See the [Documents](../phis-docs-community/experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected sensor using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
 See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
 
@@ -231,7 +231,7 @@ The `delete vector` function has not been implemented yet : contact the OpenSILE
 
 ### Radiometric targets properties
 
-In order to track where Phis data is coming from, users can declare in the `Radiometric targets` menu the name and attributes of the radiometric calibration targets enabling imagery softwares to calibrate and correct the reflectance of images originating from images acquisition sessions such as UAV flights.
+In order to record how phenotypic data has been produced, users can declare in the `Radiometric targets` menu the name and attributes of the radiometric targets enabling imagery softwares to calibrate and correct the reflectance of images originating from images acquisition sessions such as UAV flights.
 
 The `Radiometric targets` menu displays the list of individual radiometric targets that have been declared by the user on Phis.
 The radiometric target list is preceded by a research bar enabling the user to filter registered radiometric targets by their Alias and URI.
@@ -242,11 +242,13 @@ From **Home / Radiometric targets**, one can click on the eye icon on the right 
 
 ![radiometric-targets-information](img/radiometric-targets-information.png)
 
+<!---
 At the top of the radiometric target information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 It is mandatory for radiometric targets to be linked to at least one document, a spectral hemispheric directional reflectance file.
 See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents and how to insert them in Phis.
+--->
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected radiometric target using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section for further information on annotations within Phis.
 
 ### Add radiometric targets
 
@@ -278,18 +280,21 @@ However, it is highly recommended to fill every field, except the `URI` field wh
 `Person In Charge`. Username (email adress) of the person in charge of the radiometric target (typically, the manager of the installation).
 If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../phis-docs-community/community/#create-a-person) section for details.
 
-`Material`. Material from which is made the part of the radiometric target exposed to the cameras during acquisition sessions. It can be "Carpet", "Painting", or "Spectralon" (dropdown list).
+`Material`. Material from which is made the part of the radiometric target exposed to the cameras during acquisition sessions. It can be "Carpet", "Painting" or "Spectralon" (dropdown list).
 The material in the dropdown list have been proposed based on the ones used within the french plant phenotyping community : do not hesitate to contact OpenSILEX development team to add materials to this list.
 
 `Shape`. Shape of the radiometric target, which can be either "Circular" or "Rectangular" (dropdown list).
 
 `Length (m)` and `Width (m)` or `Diameter (m)`. Dimensions of the radiometric target. Either length & width or diameter are provided, depending on the shape that has been selected in the previous field.
 
-`BRDF coefficient P1`, `P2`, `P3` and `P4`. Coefficients to the bidirectional reflectance distribution function (see the [BRDF wikipedia page](https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function)), provided as real numbers (the decimal separator is `.` when using the English version, and `,` when using the French version of Phis).
+`BRDF coefficient P1`, `P2`, `P3` and `P4`. Coefficients to the bidirectional reflectance distribution function (see the [BRDF wikipedia page](https://en.wikipedia.org/wiki/Bidirectional_reflectance_distribution_function) and the figure below), provided as real numbers (the decimal separator is `.` when using the English version, and `,` when using the French version of Phis).
 
+<!---
 $$
 BRDF(\theta)=P_1+P_2cos(\theta)+\frac{1}{2}P_3(3\cos^2\theta-1)+\frac{1}{2}P_4(5\cos^3\theta-3\cos\theta)
 $$
+--->
+![BRDF-equation](img/BRDF-equation.png)
 
 `Spectral hemispheric reflectance file`. CSV file showing the results of the radiometric target calibration.
 The CSV file, using tabulations (`\t`) as field separators and dots (`.`) as decimal separators, displays in its first row the **wavelength (nm)** of the radiations to which the radiometric target has been exposed to, and in the second row the **reflectance percentage (%)** associated to each wavelength, provided in a range of [0 - 100].
