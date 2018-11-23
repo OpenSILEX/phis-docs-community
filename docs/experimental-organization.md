@@ -1,23 +1,23 @@
 # Experimental Organization
 
-## Infrastructures
+## Scientific frames
 
 Scientific experiments generate data, which is the focus the present information system.
 However, if only the data produced by experiments is stored, and not the complete experimental conditions, i.e. the environmental conditions, infrastructure and supporting equipment or resources used to conduct those experiments, then such archived data would be orphan and therefore non reusable.
 
-The first element of experimental conditions which is stored in Phis is the infrastructures linked to plant phenotyping experiments.
-An infrastructure can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
+The first element of experimental conditions which is stored in Phis is the scientific frames linked to plant phenotyping experiments.
+A scientific frame can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
 
-Users register infrastructures in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given infrastructures.
+Users register scientific frames in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given scientific frames.
 
-The complete list of infrastructures registered in a Phis session is available in the `Experimental organization / Infrastructures` menu, accessible from Phis top navigation bar.
+The complete list of scientific frames registered in a Phis session is available in the `Experimental organization / Scientific frames` menu, accessible from Phis top navigation bar.
 
-The <span class="btn btn-warning">Add document</span> button at the top of the infrastructures information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
+The <span class="btn btn-warning">Add document</span> button at the top of the each scientific frame information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
 See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents.
 
-It is from this `Infrastructures` menu that the installation manager can add the template documents for UAV or Phenomobile acquisition sessions.
-He has to click on the <span class="btn btn-warning">Add document</span> button and then select the **Document type** `AcquisitionSessionUAVDocument` or `AcquisitionSessionPhenomobileDocument` depending on which type of template document is created.
-Those template documents will then be accessible from both the `Infrastructures` menu and the [Acquisition session template](../phis-docs-community/installation/#acquisition-session-template) item from the `Installations` menu in the top bar.
+It is from this `Scientific frames` menu that the installation manager can add the template documents for UAV or Phenomobile acquisition sessions.
+He has to go to the information sheet of the concerned scientific frame. Then he has to click on the <span class="btn btn-warning">Add document</span> button and then select the **Document type** `AcquisitionSessionUAVDocument` or `AcquisitionSessionPhenomobileDocument` depending on which type of template document is created.
+Those template documents will then be accessible from the [Acquisition session template](../phis-docs-community/installation/#acquisition-session-template) item from the `Installations` menu in the top bar.
 
 ## Projects
 
