@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Experimental Organization - PHIS user documentation</title>
+
+        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/site.css" rel="stylesheet">
+        <link href="../css/navbar.less" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">PHIS user documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Experimental Organization</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../installation/">Installation</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../community/">Community</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../ws-clients/">Clients</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="..">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../installation/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#experimental-organization">Experimental Organization</a></li>
+        
+            <li><a href="#scientific-frames">Scientific frames</a></li>
+        
+            <li><a href="#projects">Projects</a></li>
+        
+            <li><a href="#experiments">Experiments</a></li>
+        
+            <li><a href="#documents">Documents</a></li>
+        
+            <li><a href="#agronomical-objects">Agronomical Objects</a></li>
+        
+            <li><a href="#variables">Variables</a></li>
+        
+            <li><a href="#dataset">Dataset</a></li>
+        
+            <li><a href="#annotations">Annotations</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="experimental-organization">Experimental Organization</h1>
+<h2 id="scientific-frames">Scientific frames</h2>
+<p>Scientific experiments generate data, which is the focus the present information system.
+However, if only the data produced by experiments is stored, and not the complete experimental conditions, i.e. the environmental conditions, infrastructure and supporting equipment or resources used to conduct those experiments, then such archived data would be orphan and therefore non reusable.</p>
+<p>The first element of experimental conditions which is stored in Phis is the scientific frames linked to plant phenotyping experiments.
+A scientific frame can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at <a href="https://emphasis.plant-phenotyping.eu/Infrastructure_ontology">emphasis.plant-phenotyping.eu</a> and at <a href="http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&amp;conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure">agroportal.lirmm.fr/ontologies/OEPO</a>.</p>
+<p>Users register scientific frames in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given scientific frames.</p>
+<p>The complete list of scientific frames registered in a Phis session is available in the <code>Experimental organization / Scientific frames</code> menu, accessible from Phis top navigation bar.</p>
+<p>The <span class="btn btn-warning">Add document</span> button at the top of the each scientific frame information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
+See the <a href="../../phis-docs-community/experimental-organization/#documents">Documents</a> section below for further information on documents.</p>
+<p>It is from this <code>Scientific frames</code> menu that the installation manager can add the template documents for UAV or Phenomobile acquisition sessions.
+He has to go to the information sheet of the concerned scientific frame. Then he has to click on the <span class="btn btn-warning">Add document</span> button and then select the <strong>Document type</strong> <code>AcquisitionSessionUAVDocument</code> or <code>AcquisitionSessionPhenomobileDocument</code> depending on which type of template document is created.
+Those template documents will then be accessible from the <a href="../../phis-docs-community/installation/#acquisition-session-template">Acquisition session template</a> item from the <code>Installations</code> menu in the top bar.</p>
+<h2 id="projects">Projects</h2>
+<h3 id="what-are-projects">What are projects ?</h3>
+<p>A research project is the higher level of organisation in Phis.
+It is generally the object of a contract or a grant agreement between the laboratory performing the research activities and funding agencies providing the financial support.
+A project can hold many experiments from various experimental campaigns.
+Besides, several projects can participate to the same experimentation.</p>
+<h3 id="what-are-project-properties">What are project properties ?</h3>
+<p>Projects fact sheets are all public, i.e. visible for every Phis user, including those unrelated to them.
+However, experimental data included in a project is also necessarily related to a given experiment.
+This data is accessible only to users who belong to a group (either owner or guest) authorized to access the experimentation it is related to: access rights are managed by experiment and not by project.
+Please see the <a href="../../phis-docs-community/community/#restrictions-to-a-group">Restrictions to a group</a> section of this documentation for further details on data access matters.</p>
+<p>The complete list of projects is available in the <code>Experimental organization / Projects</code> menu, accessible from Phis top navigation bar.
+The projects list is preceded by a research bar enabling the user to filter projects by their acronym, their main source of funding, and their start and end dates.
+There's no need to use the same case as the expected results: a lowercase search returns every results matching the characters, disregarding whether those match are lowercase or uppercase.
+Further information on a given project is available on its information sheet, accessed to from the projects list through the eye-icon on the right-hand side of this project row.</p>
+<p><img alt="project-menu" src="../img/projects-list_eye-icon.png" /></p>
+<p>A project information sheet displays all this project information stored in Phis : URI, acronyme, objective, start and end dates, contacts linked to the project, a description, etc.
+Documents (PDF, tables, etc.) can also be linked to a project.
+At the top of the project information sheet lie three buttons allowing the user to interact with the selected project.</p>
+<p><img alt="project-information-sheet" src="../img/project-information.png" /></p>
+<p>The project specifics, displayed in the information sheet, can be modified with the <span class="btn btn-primary">Update</span> button.</p>
+<p>Another top button is the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+See the <a href="../../phis-docs-community/experimental-organization/#documents">Documents</a> section below for further information on Phis documents and for learning how to insert them in the information system.</p>
+<p>The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected project using the <a href="https://www.w3.org/TR/annotation-model/">Web Annotation Data Model</a> (oa).
+See the <a href="../../phis-docs-community/experimental-organization/#annotation">Annotation</a> section below for further information on annotations within Phis.</p>
+<h3 id="create-a-project">Create a project</h3>
+<p>Within the <code>Projects</code> menu, one can create a new project with the
+<span class="btn btn-success">Create Project</span> button.</p>
+<p>Tool tips are provided for most fields: they appear on the left hand side when one drags the pointer on those fields.</p>
+<p><img alt="tooltips" src="../img/create-project_tooltips.png" /></p>
+<p>The mandatory fields, followed by a red asterisk, are:</p>
+<ul>
+<li>acronyme</li>
+<li>name</li>
+<li>date (start / end)</li>
+</ul>
+<p>However, it is highly recommended to fill every field. If possible, fields requiring plain text (keywords, description) should be answered to in English.</p>
+<p><code>URI</code>. The project URI is automatically created using the acronym provided by the user.
+The URI creation respects the <a href="https://www.w3.org/TR/cooluris/">w3 recommandations</a>.</p>
+<p><code>Acronym</code>. Short and meaningful, the acronym will be the preferred way to refer to the created project.
+The acronym provided here is usually the one of the research project.
+A project acronym cannot include spaces.
+Once the project created, its acronym can no longer be modified.</p>
+<p><code>Name</code>. Full name of the project, it will seldom be refered to but allows a project creator to explicit the acronym. For instance, <em>RAPeSeed Oil content anD Yield under low Nitrogen input</em> would be an adequate name for the project whose acronym is <em>RAPSODYN</em>.</p>
+<p><code>Subproject Of</code>. If the new project is part of an existing project (requisitly known to Phis), one can select the name of the given mother-project within the exhaustive list of projects registered to the Phis instance where the new project is created.</p>
+<p><code>Subproject Type</code>. The subproject type can optionnaly be provided. It can be either an existing type to be selected from the list of proposed project types, either a new type provided by the user. In the later case, one has to type the new subproject type (e.g. <em>phd thesis</em> or <em>internship</em>) in the search field of <strong>Subproject Type</strong> and then click on the newly proposed type.</p>
+<p><img alt="subproject-type" src="../img/create-project_subproject-type.png" /></p>
+<p><code>Objective</code>. A short synthesis of the project objectives is to be provided in plain text, preferably in English. A more complete description will be asked in the <strong>Description</strong> field.</p>
+<p><code>Financial Support</code>. Organism, institution or funding agency providing the financial support of the research project. Only one organism supporting financially the project can be cited for now. Same as the <strong>Subproject Type</strong> field, the answer can be both from a predefined list or a new one (the user has to type the new organism name and then click on the search result matching the organism name).</p>
+<p><code>Financial Name</code>. As indicated in the tool tip, this field is meant for the user to provide the identification of the financial support document (e.g. a grant agreement number).</p>
+<p><code>Date Start</code> and <code>Date End</code> are to be provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
+If the end date of the project is unknown, the start date can be used also as <strong>Date End</strong> temporarily.</p>
+<p><code>Scientific Contacts</code>. Email adresses of the scientists involved in the project.
+The email adresses refer uniquely to persons existing on Phis.
+If unavailable in the predefined list, emails can be added to Phis from the <code>Persons</code> menu, prior to the new project creation. Please see the <a href="../../community/#persons">Persons</a> section of this documentation for further details.</p>
+<p><code>Administrative Contacts</code>. Email adresses of the administrative personnel linked to the project (e.g. human ressources people).
+The email adresses refer uniquely to persons existing on Phis.</p>
+<p><code>Project Coordinators</code>. Email adresses of the project coordinators.
+The email adresses refer uniquely to persons existing on Phis.</p>
+<p><code>Website</code>. If available, URL of the website of the project.</p>
+<p><code>Keywords</code>. Keywords, preferably in English, characterizing the project. Each keyword should be separated by a comma and not include any capital letter, e.g. <em>drought, maize</em>.</p>
+<p><img alt="keywords" src="../img/create-project_keywords.png" /></p>
+<p><code>Description</code>. Complete plain text description of the project, preferably provided in English language. Additionally to the description, additional information can be provided as uploaded files, after the project has been created.</p>
+<h2 id="experiments">Experiments</h2>
+<h3 id="what-are-experiments">What are experiments ?</h3>
+<p>Field plant phenotyping experimentations are refered to in Phis as <strong>Experiments</strong>.
+Experiments in Phis form self-sustained organizational units occuring in a delimited and known time frame.
+Every agronomical objects and environmental data stored in Phis field have to be related to an experiment.
+Experiments include both raw and cleaned data.
+The data types found in Phis experiments are including but not limited to :</p>
+<ul>
+<li>phenotypic data</li>
+<li>environmental data</li>
+<li>analysis, workflows and their associated results</li>
+<li>documents giving a deeper understanding of the experiments</li>
+</ul>
+<h3 id="what-are-experiment-properties">What are experiment properties ?</h3>
+<p>Contrary to projects, experiments information sheets are not public, but accessible only to the Phis members which are part of the groups involved in these experiments.
+Please go to <a href="../../community/#access-rights">Access rights</a> for further details on this matter.</p>
+<p>From the <code>Experiments</code> menu, a Phis user has access to the list of experiments it has the rights to access to.
+Every experiment on this list is characterized by :</p>
+<ul>
+<li>its <strong>URI</strong> which identies it uniquely</li>
+<li>its <strong>Alias</strong>, a short internal denomination</li>
+<li>its stat and end dates</li>
+<li>the experimental installation in which is has been performed</li>
+<li>the campaign it is part of, i.e. the year</li>
+</ul>
+<p>From <strong>Home / Experiments</strong>, one can click on the eye icon on the right to see a given experiment information sheet.</p>
+<p><img alt="experiment-list" src="../img/experiments_list.png" /></p>
+<p>Further information on the experiment is provided on its information sheet, such as the groups of users that have been given access to the experiment's data.
+For more detail on experimental data access restrictions, see the section <a href="../../community/#restrictions-to-a-group">Restrictions to a group</a>.</p>
+<p><img alt="experiment-view" src="../img/experiments_view.png" /></p>
+<p>On top of the experiment information sheet, several buttons are displayed.
+The buttons <span class="btn btn-info">Map Visualization</span> and <span class="btn btn-success">Generate Map</span> enable the visualization of the agronomical objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
+Jump to the section <a href="../../phis-docs-community/experimental-organization/#map-visualization">Map Visualization</a> for more information on experiment maps.
+The use of the other buttons, <span class="btn btn-primary">Update</span> and <span class="btn btn-warning">Add document</span>, is described at the end of the next section entitled <a href="../../phis-docs-community/experimental-organization/#create-an-experiment">Create an experiment</a>.
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected experiment using the <a href="https://www.w3.org/TR/annotation-model/">Web Annotation Data Model</a> (oa).
+See the <a href="../../phis-docs-community/experimental-organization/#annotation">Annotation</a> section below for further information on annotations within Phis.</p>
+<h3 id="create-an-experiment">Create an experiment</h3>
+<p>Within the <code>Experiments</code> menu, a Phis user can create a new experiment with the
+<span class="btn btn-success">Create Experiment</span> button.</p>
+<p>Tool tips are provided for some fields: they appear on the left hand side when one drags the pointer on those fields.</p>
+<p>The mandatory fields, followed by an asterisk, are:</p>
+<ul>
+<li>projects</li>
+<li>date (start / end)</li>
+<li>campaign</li>
+</ul>
+<p>However, it is highly recommended to fill every field. If possible, fields requiring plain text (keywords, description) should be answered to in English.</p>
+<p><code>URI</code>. The project URI is automatically created by Phis web service which uses the acronym of the Phis instance from where the experiment is created (e.g. <em>DIA</em> for Diaphen) and the <strong>campaign</strong> provided by the user (e.g. <em>2018</em>).</p>
+<p><code>Alias</code>. Internal name of the experiment, usually provided in all caps.</p>
+<p><code>Projects</code>. Name of the project(s) the new experiment is part of.
+A single experiment can be linked to several projects.
+One can select the name of the given projects only within the exhaustive list of projects registered to the Phis instance where the new experiment is created.</p>
+<p><code>Date Start</code> and <code>Date End</code> are to be provided in the format YYYY-MM-DD (year-month-day), directly or through the calendar view.
+It it compulsory to give a value to the <strong>Date End</strong> field in order to create an experiment.
+If the end date of the experiment is unknown, the start date can be reused in the <strong>Date End</strong> field.
+Typical <strong>Date Start</strong> values correspond to a sowing date, while <strong>Date End</strong> typically concur with an harvesting date.</p>
+<p><img alt="create-experiment-date" src="../img/create-experiments_date.png" /></p>
+<p><code>Installation</code>. Name or ID of the installation where the experiment is carried.
+No specific format is yet required for submitting an installation name. <em>todo</em>.</p>
+<p><code>Campaign</code>. Year (format YYYY) in which the experiment has been carried, or the year of the harvest/end of the experiment in case it has been carried on several years (<em>to be confirmed</em>).
+Once the experiment created, the information on the campaign in which it has been carried can no longer be modified.</p>
+<p><img alt="create-experiment-campaign" src="../img/create-experiments_campaign.png" /></p>
+<p><code>Place</code>. Locality or town name used internally to situate the installation location.
+This field will later be removed in the upcoming developments of Phis.</p>
+<p><code>Scientific supervisors</code>. Email adresses of the experiment supervisor(s).
+The email adresses refer uniquely to persons existing on Phis.
+If unavailable in the predefined list, emails can be added to Phis from the <code>Persons</code> menu, prior to the new project creation. Please see the <a href="../../phis-docs-community/community/#persons">Persons</a> section of this documentation for further details.</p>
+<p><code>Technical supervisors</code>. Email adresses of the technicians and scientists (including phd students, interns, etc.) involved in the experiment implementation.
+The email adresses refer uniquely to persons existing on Phis.</p>
+<p><code>Crop Species</code>. Common name of the crop species which are the object of the experiment.
+Each crop species names must be separated by a comm.
+Preferably provided in English, without any capital letters.
+A link to the internal ontology is under development.</p>
+<p><code>Groups</code>. List of the Phis users groups authorized to access the new experiment.
+This field is crucial when creating an experiment.
+Only a Phis user belonging to at least one of the groups specified in this field will be authorized to access the newly created experiment.
+An experiment assigned to no group is by default set as public.
+Please go to <a href="../../phis-docs-community/community/#access-rights">Access rights</a> for further details on this matter.</p>
+<p><code>Objective</code>. A short synthesis of the experiemnt objectives is to be provided in plain text, preferably in English. A more complete description will be asked in the <strong>Comment</strong> field.</p>
+<p><code>Keywords</code>. Keywords characterizing the experiment. Each keyword, should be separated by a comma and not include any capital letter, e.g. <em>nitrogen use efficiency, rapeseed</em>.</p>
+<p><code>Comment</code>. Complete plain text description of the experiment, preferably provided in English language. Additionally to the description, detailed knowledge on the experimentation can be provided through uploaded files, but only after the experiment has been created.</p>
+<p>Completing the experiment creation within Phis is then achieved by clicking on the <span class="btn btn-success">Create</span> button.</p>
+<p>From <strong>Home / Experiments</strong>, one can click on the eye icon on the right to see the newly created experiment information sheet.</p>
+<p>The <span class="btn btn-warning">Add document</span> button at the top of the experiment information sheet remains orange until a first document has been added, e.g. an experimental design.
+See the <a href="../../phis-docs-community/experimental-organization/#documents">Documents</a> section below for further information on documents.</p>
+<p>Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.</p>
+<h3 id="map-visualization">Map visualization</h3>
+<h4 id="objects-selection">Objects selection</h4>
+<p>Agronomical objects associated with a given experiment, for example plots, can be displayed on a map, thanks to their geopositioning informations.
+In Phis, a map refers to a dynamic map where all the agronomical objects of a given experiment are represented.</p>
+<p>After having imported agronomical objects linked to an experiment, the map associated with this experiment is created within the <code>Experiments</code> menu through the <span class="btn btn-success">Generate Map</span> button.</p>
+<p>Once the map of an experiment has been created, there's no need to re-create it if no new agronomical object has been linked to this experiment.
+In such cases, the access to the experiment map is realized within the <code>Experiments</code> menu through the <span class="btn btn-info">Map Visualization</span> button.</p>
+<p>The map of an experiment is dynamic: one can zoom in and out with the <strong>+</strong> and <strong>-</strong> sign at the top left corner of the map, or simply using the mouse wheel.
+The map visualization also works with a touchscreen.
+Map rotation is performed pressing <code>Alt + Shift</code> while draging the mouse pointer.
+Selecting multiple contiguous agronomical objects is performed pressing <code>Ctrl + Left Click</code> and then dragging the mouse pointer (still holding the mouse left click).
+Selecting multiple non-contiguous agronomical objects is performed pressing <code>Ctrl + Shift</code> and then using the left-click of the mouse pointer.</p>
+<p><img alt="map-visualization-ctrl" src="../img/map-visualization_ctrl.png" /></p>
+<p>When agronomical objects of a map are selected, their attributes (alias within the experiment, crop specied, variety, modality, repetition) are displayed in a table under the map.</p>
+<p><img alt="map-visualization-selected" src="../img/map-visualization_selected.png" /></p>
+<h4 id="graphics-from-datasets">Graphics from datasets</h4>
+<p>Another feature provided by the <code>Map Visualization</code> menu is the possibility to plot graphics from datasets associated to an experiment.
+A first step is to select on the map agronomical objects (e.g. plots) as explained <a href="../../phis-docs-community/experimental-organization/#objects-selection">above</a>.
+In order to order to create clear graphics,one should avoid selecting too many objects at the same time.
+At that point, a new section, <strong>Dataset(s) Visualization (On selected plot(s))</strong>, appears under the map where the objects have been selected.
+The second step is to select the variable of the dataset from which a graphic should be produced.
+An optionnal filter for the graphic creation enables the user to use only data from a specific time window to produce the desired graphic.</p>
+<p><code>Quantitative Variable</code>. Mandatory field. Here is selected a variable of interest from a predefined list of all the variables defined in a given Phis instance.
+Variables can be selected only one at a time.
+If the selected variable is associated to no dataset linked to the present experiment, then no graphic is plotted.
+In the next Phis developments, variables associated a gien project or experimentation will be declared at the level of the project/experimentation.</p>
+<p><code>Date Start</code>. Optionnal. First date from which variable values are used to produce a graphic.
+Variable values associated to a previous date will not appear in the graphic.</p>
+<p><code>Date End</code>. Optionnal. Last date at which variable values are used to produce a graphic.
+Variable values associated to a later date will not appear in the graphic.</p>
+<p>The last step is to press the <span class="btn btn-primary">Search</span> button, which will lead to the creation of a graphic displaying according to a time axis the variable values associated to :</p>
+<ul>
+<li>the agronomical objects selected on the map</li>
+<li>the variable selected in the <strong>Quantitative Variable</strong> field</li>
+<li>potentially the time window between <strong>Date Start</strong> and <strong>Date End</strong> if those fields have been filled out</li>
+</ul>
+<p>On the new graphic, the time is displayed on the abscissa axis and the variable on the ordinate axis.
+Each points of the same color are associated to the same agronomical object which is identified below the graphic by its URI.
+In future Phis developments, objects alias instead of URIs will be used as curve labels.
+Variable values and curve associated to an agronomical object can be masked by clicking on its associated curve label which at this point changes from black to grey.
+Clicking a second time on the label as the effect to show again the previously hidden curve.</p>
+<h3 id="images">Images</h3>
+<p>Another feature provided by the <code>Map Visualization</code> menu is the possibility to show images associated to an experiment, such as hemispherical images shot on the field.</p>
+<p>A first step is to select on the map the agronomical object (e.g. plot), as explained <a href="../../phis-docs-community/experimental-organization/#objects-selection">above</a>, associated with the images you want to visualize.
+Do not select two agronomical objects (or more), otherwise PHIS would look for images associated to both the selected object, while most images are associated to one and only one object.
+At that point, a new section, <strong>Images Visualization (On selected plot)</strong>, appears under the map where the objects have been selected.</p>
+<p><img alt="images-visualization" src="../img/images-visualization.png" /></p>
+<p>The second step is to select the type of image you want to display, selecting it from the list of images type, and then press the <span class="btn btn-primary btn-file">Show Images</span> button.</p>
+<h2 id="documents">Documents</h2>
+<h3 id="what-are-phis-documents">What are Phis documents ?</h3>
+<p>In order to ease the comprehension of projects and experiments, it is possible to upload various documents to Phis and connect them to resources such as infrastructures, projects, experiments, sensors or vectors declared in Phis.
+<!---
+The same document can be linked to several projects and experiments.
+A document can be related to no project nor experiment, but this is not recommanded.
+--->
+Documents that could help persons understand a project are typically a (reasearch) contract, a phd (or master) thesis, or various multimedia content such as photos or beamer presentations.
+Similarly, one could expect knowledge about an experimentation to be provided through documents that could be protocols, experimental designs, technical or scientific files, data files, research papers, etc.
+Examples of document formats are PDF, txt, csv, png images, etc.
+However, large files are not yet supported by Phis: a document uploaded to Phis cannot exceed 2MB for now.</p>
+<p>The documents uploaded to Phis through the <code>Documents</code> section are meant for human consultation.
+However, metadata (intelligible to machines) must be provided for every new document.
+These metadata contain the document properties:</p>
+<ul>
+<li>title</li>
+<li>creator</li>
+<li>language</li>
+<li>creation date</li>
+<li>document type</li>
+</ul>
+<p>Information of a document can later be changed, while the document itself cannot be modified.</p>
+<p>Metadata are specified with <a href="http://dublincore.org/documents/dces/">Dublin Core</a> recommendations.
+Metadata enables the documents to be stored in the Phis triplestore.
+The expression of Dublin Core metadata using the Resource Description Framework is described at <a href="http://dublincore.org/documents/dc-rdf/">dublincore.org</a>.</p>
+<h3 id="upload-a-document">Upload a document</h3>
+<p>Any Phis user can upload a new document and specify its metadata with the <span class="btn btn-success">Create Document</span> button displayed on top of the information sheet of any element prone to be enriched with documents (infrastructures, projects, experiments, sensors and vectors).
+<!---
+Within the <code>Documents</code> menu, as well as from a project or experimentation information sheet, any Phis user can upload a new document and specify its metadata with the <span class="btn btn-success">Create Document</span> button.
+--->
+No admin rights are required from a Phis user to add a new document.</p>
+<p><code>Title</code>. Title of the uploaded document.
+No specific naming convention is required for filling this field.
+A document title does not have to match the name of the uploaded file it is imported from.</p>
+<p><code>Creator</code>. Name(s) of the document creator(s), separated by commas
+No specific naming convention is required for filling this field.</p>
+<p><code>Language</code>. Language in which the document is provided.
+In accordance to the <a href="http://dublincore.org/documents/1999/07/02/dces">Dublin Core Element Set v1.1</a> document, the value of the language element is defined by <a href="http://www.ietf.org/rfc/rfc1766.txt">RFC 1766</a> which includes a two-character language code taken from the <a href="http://xml.coverpages.org/iso639a.html">ISO639</a> standard.
+The language code should be provided in lower case (e.g. <em>fr</em> for French, <em>en</em> for English, etc.).</p>
+<p><code>Creation Date</code>. Date of the document creation.
+If unknown, the current date (i.e. the date at the moment of the document upload into Phis) can be used.</p>
+<p><code>Concerned Projects</code>. Project(s) for which the document is relevant.
+One can select the name of the given project(s) only within the exhaustive list of projects registered to the Phis instance where the new document is uploaded.</p>
+<p><code>Concerned Experimentation</code>. Experiment(s) for which the new document is relevant.
+A Phis user can select the name of the given experiment(s) only within the exhaustive list of experiments it has access to.</p>
+<p><code>Document Type</code>. The nature of the document's content.
+A single type has to be selected from a predefined list.
+Only one doucment type can be selected.
+Phis controlled vocabulary of document types is defined in Phis ontology.
+If an element seems to be missing from the proposed predefined list, please contact Phis managers (see <em>README.md</em> for Phis managers contact).</p>
+<p><code>File</code>.
+This field enables Phis users to upload the new document from their computer through the <span class="btn btn-primary">Browse</span> button.
+Only one document at a time can be created, since every document is identified uniquely through an automatically generated URI.
+The uploaded file cannot be empty (it has to exceed 0B).
+For now, a document cannot exceed 2MB, due to technical problems encountered with <strong>Apache</strong> server.</p>
+<p>Once the file has been uploaded, do not click on the <span class="btn btn-primary btn-file">Upload</span> button but <span class="btn btn-success">Create</span> underneath, only when all fields have been completed.
+The upload button is bound to be abandonned in the following Phis development.</p>
+<p><img alt="upload-file" src="../img/create-document_file.png" /></p>
+<p><code>Comment</code>. Complete plain text description of the new document, preferably provided in English language.
+For now, line breaks cannot be inserted in a comment : they could generate a bug.</p>
+<p>Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with <a href="http://dublincore.org/documents/dces/">Dublin Core</a> standards.</p>
+<p>The list of documents a given user has access to is avaible from the navigation bar through the <code>Tools &gt; Documents</code> menu.
+From <strong>Home / Documents</strong>, one can click on the eye icon on the right to see a given document information sheet (metadata).
+From there, the document cannot be modified or deleted (in Phis current version).
+However, the document metadata can be modified with the <span class="btn btn-primary">Update</span> button on top of the information sheet.
+The document can also be downloaded clicking on the <img alt="view" src="../img/view_64_32.png" /> icon above the <strong>View / Download</strong> text, below the information sheet.</p>
+<p><img alt="update-document" src="../img/document-update.png" /></p>
+<h2 id="agronomical-objects">Agronomical Objects</h2>
+<h3 id="object-types">Object types</h3>
+<p>Plant phenotyping experiments all revolve around one entity of interest : plants !
+Phis experiments are focused on a given type of elements : <strong>agronomical objects</strong>, which are no more than declinations of plants, at various scales :</p>
+<ul>
+<li><strong>plant organ</strong> : part of a given plant</li>
+<li><strong>plant</strong> : single individual, displaying a single genotype, which is refered to as a <strong>variety</strong></li>
+<li><strong>plot</strong> : smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot)</li>
+<li><strong>block</strong> : combination of plots, generally forming an environmentally homogeneous entity</li>
+<li><strong>field</strong> : large spatial unit that includes plots and potentially blocks</li>
+</ul>
+<p>These agronomical objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
+A given agronomical object is required to be associated with one experiment, and one only.
+Phenotypic data created in an experiment, whether is it directly measured, calculated or estimated, is necessarily linked to agronomical objects.</p>
+<p>Every agronomical object is uniquely identified through a standardized URI.
+Metadata is associate to objects under the form of attributes : alias, experiment modality, etc.
+The data associated with these objects correspond with the values of phenotypic variables associated</p>
+<p>The complete list of agronomical objects is available in the <code>Agronomical Objects</code> menu, accessible from Phis top navigation bar.
+A Phis user with a restricted access (e.g. <em>guestphis</em>) is likely to be unable to see the <code>Agronomical Objects</code> menu, since there are no objects for her/him to see.
+The agronomical objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type, and the experience they are linked to.
+The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.</p>
+<p><img alt="objects-list" src="../img/agronomical-objects_list.png" /></p>
+<p>Agronomical objects information can also be accessed through the <code>Experiments</code> menu.
+After having selected an experiment, the agronomical objects linked to it can be displayed on a map.
+Moreover, selecting objects on such a map provides additional information on the attributes of these objects.
+See the <a href="../../phis-docs-community/experimental-organization/#map-visualization">Map Visualization</a> section for more information on that matter.</p>
+<h3 id="importing-plots">Importing plots</h3>
+<p>Within the <code>Agronomical objects</code> menu, Phis users can import new plots with the
+<span class="btn btn-success">Create</span> button.</p>
+<p>Plot, which are agronomical objects, are imported into Phis through a .csv file containing on its first line the following header :</p>
+<pre><code>Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
+</code></pre>
+
+<p>Every other additional line matches with a new plot.</p>
+<p>Let's take into consideration a fictionnal experiment composed of 4 plots of the same crop ("species").
+In half of the plot, the variety "A" of the studied crop is grown, and in the other half, the variety "B".
+Of two plots dispaying the same variety, one is submitted to an experiment modality labelled "treatment 1", while the other is submitted to a "treatment 2".
+Experiments and Species have to be expressed with their internal Phis URI.
+This configuration is sum up in the following table :</p>
+<table>
+<thead>
+<tr>
+<th>Alias</th>
+<th>Geometry</th>
+<th>ExperimentURI</th>
+<th>Species</th>
+<th align="left">Variety</th>
+<th>ExperimentModalities</th>
+<th>Repetition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plot1</td>
+<td>POLYGON (( ... ... , ... ... ))</td>
+<td>URI Experiment X</td>
+<td>URI Species Y</td>
+<td align="left">varietyA</td>
+<td>Treatment1</td>
+<td>Rep1</td>
+</tr>
+<tr>
+<td>plot2</td>
+<td>POLYGON (( ... ... , ... ... ))</td>
+<td>URI Experiment X</td>
+<td>URI Species Y</td>
+<td align="left">varietyA</td>
+<td>Treatment2</td>
+<td>Rep1</td>
+</tr>
+<tr>
+<td>plot3</td>
+<td>POLYGON (( ... ... , ... ... ))</td>
+<td>URI Experiment X</td>
+<td>URI Species Y</td>
+<td align="left">varietyB</td>
+<td>Treatment1</td>
+<td>Rep1</td>
+</tr>
+<tr>
+<td>plot4</td>
+<td>POLYGON (( ... ... , ... ... ))</td>
+<td>URI Experiment X</td>
+<td>URI Species Y</td>
+<td align="left">varietyB</td>
+<td>Treatment2</td>
+<td>Rep1</td>
+</tr>
+</tbody>
+</table>
+<p>The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7 required elements separated by semicolons :</p>
+<pre><code>Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
+plot1;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;Treatment1;Rep1
+plot2;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;Treatment2;Rep1
+plot3;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment1;Rep1
+plot4;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment2;Rep1
+</code></pre>
+
+<p>A single plot cannot correspond to several species, variety, experimental modality or repetition.
+On the contrary, the same species, variety, experimental modality or repetition can be used for several plots.</p>
+<p>Plots are geometrical objects such as polygons, provided according to <a href="https://en.wikipedia.org/wiki/Well-known_text">Well-known text standard</a>).
+Geometry coordinates are formatted in <a href="http://spatialreference.org/ref/epsg/wgs-84/">WGS84</a>, alsa known as the <a href="http://epsg.io/4326">EPSG4326</a> geodetic coordinate system.
+More information on this system <a href="https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html">here</a>.</p>
+<p>The first step in order to import plots is therefore to create a .csv file containing all the new plots information, as is reminded below :</p>
+<table>
+<thead>
+<tr>
+<th>Alias</th>
+<th>Geometry</th>
+<th>ExperimentURI</th>
+<th>Species</th>
+<th align="left">Variety</th>
+<th>ExperimentModalities</th>
+<th>Repetition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>expX_modY_plotZ</td>
+<td>POLYGON (( ... ... , ... ... ))</td>
+<td>http&#58;//www.phenome-fppn.fr/.../...</td>
+<td>http&#58;//www.phenome-fppn.fr/id/species/...</td>
+<td align="left">e.g. varietyX</td>
+<td>e.g. nitrogen-1</td>
+<td>e.g. 1 (or A-I)</td>
+</tr>
+</tbody>
+</table>
+<p>THe second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the <code>Home / Agronomical Objects / Create Agronomical Object</code> menu.</p>
+<p><img alt="new-objects-browse" src="../img/create-object_browse.png" /></p>
+<p>Use the file browser to select the desired .csv file and open it.</p>
+<p><img alt="new-objects-find-file" src="../img/create-object_find-file.png" /></p>
+<p>Check the imported file but do not press the Upload button.
+Only on file at a time can be imported.</p>
+<p><img alt="new-objects-create" src="../img/create-object_click-create.png" /></p>
+<p>After having pressed the <span class="btn btn-success">Create</span> bottom button the number of imported agronomical objects is displayed.</p>
+<p><img alt="new-objects-success" src="../img/create-object_result.png" /></p>
+<h3 id="visualize-agronomical-objects">Visualize agronomical objects</h3>
+<p>See <a href="../../phis-docs-community/experimental-organization/#map-visualization">Map Visualization</a> section.</p>
+<h2 id="variables">Variables</h2>
+<h3 id="variables-properties">Variables properties</h3>
+<p>Phis variables characterize Phis <strong>agronomical objects</strong> or their <strong>environment</strong>.
+Variables characterizing agronomical objects are <strong>phenotypic variables</strong>, while variables characterizing the environment in which those agronomical objects are studied are refered to as <strong>environmental variables</strong>.
+Phis variables can be either directly mesured by a sensor, either computed from one or several variables.</p>
+<p>Every variable produced by an experiment must have been previously created in Phis, and every variable created in Phis has to be defined unambuigusously.
+Consequently, when a user refers to a variable in an experiment, there is no ambiguity about the concept he is refering to.
+Moreover, the usage of unequivocal variables in experiments is a necessary step towards a more intelligible, reliable and reproducible Science.</p>
+<p>Phis variables are listed in the <code>Variables</code> menu.
+A Phis user with a restricted access (e.g. <em>guestphis</em>) is likely to be unable to see the <code>Variables</code> menu, since there is no variable for her/him to see.</p>
+<p>Variable definition is based on the <a href="http://www.cropontology.org/CropOntology_Curation_Guidelines_20160510.pdf">Crop Ontology guidelines</a>.
+Therefore, Phis variables are all unequivocally characterized by the following triplet:</p>
+<ul>
+<li>a single <strong>trait</strong>, either a phenotypic trait or an environmental feature, which is the subject of the new variable</li>
+<li>a single <strong>method</strong> of measurement or computation of the trait</li>
+<li>a single <strong>unit</strong> in which is expressed the value of the trait</li>
+</ul>
+<p>Further information on a given variable is available on its information sheet, accessed to from the variables list through the eye-icon on the right-hand side of this project row.</p>
+<p><img alt="variables-list" src="../img/variables_list.png" /></p>
+<p>A variable information sheet provides knowledge on this variable, but also on the three elements that define it, namely the <strong>trait</strong>, <strong>method</strong> and <strong>unit</strong> related to this variable.
+The variable and those three defining features all display a <strong>label</strong>, that should be meaningful and unique, but does not have to be so, an <strong>URI</strong> which is however unique, a <strong>Definition</strong> (or <strong>Comment</strong>) meant for human comprehension, and <strong>related references</strong> meant for Semantic Web applications.
+Reference to external ontologies is achieved through <a href="https://www.w3.org/2004/02/skos/intro">SKOS</a> standards</p>
+<p><em>NB: for now, only phenotypic variables are present</em></p>
+<h3 id="create-variables-traits-methods-and-units">Create variables, traits, methods and units</h3>
+<p>Every variable found on Phis has been previously created by a Phis user.
+Within the <code>Variables</code> menu, one can create a new project with the
+<span class="btn btn-success">Create Variable</span> button.</p>
+<p><code>Variable label</code>. This field is automatically produced with the concatenation of the trait, method and unit labels, separated by underscores.
+The resulting variable label is not necessarily unique, but it would be better if it was.
+On the contrary, the automatically generated URI (not shown in the <code>Create Variable</code> menu) is unique.</p>
+<p><code>Trait</code>. If the trait associated to the new variable has already been created in Phis, one can select it through the predefined list of the <strong>Trait label</strong> field.
+Otherwise, it has to be created, which can be achieved by clicking on the <span class="btn btn-success"><strong>+</strong></span> green icon on the right-hand side of the <strong>Trait label</strong> field.</p>
+<p><img alt="new-trait" src="../img/create-variable_new-trait.png" /></p>
+<p>In the case of a new trait, do not fill the <code>Trait label</code> field but the <code>Internal label</code> one, below the <span class="btn btn-danger"><strong>-</strong></span> red icon that replaced the <span class="btn btn-success"><strong>+</strong></span> green icon.
+This new trait label should be if possible meaningful, distinct from other trait labels, and underscores "_" should be avoided since trait, method and unit labels are concatenated to generate the new variable name with the format <em>Trait_Method_Unit</em>.</p>
+<p>A <code>Comment</code> should be added, preferably in English, in order to explicit the trait specifics as clearly as possible.</p>
+<p><img alt="new-trait-label" src="../img/create-variable_new-trait-label.png" /></p>
+<p><code>Method</code>. If the method associated to the new variable has already been created in Phis, one can select it through the predefined list of the <strong>Method label</strong> field.
+Otherwise, it has to be created, which can be achieved by clicking on the <span class="btn btn-success"><strong>+</strong></span> green icon on the right-hand side of the <strong>Method label</strong> field.</p>
+<p><img alt="new-method" src="../img/create-variable_new-method.png" /></p>
+<p>In the case of a new method, do not fill the <code>Method label</code> field but the <code>Internal label</code> one, below the <span class="btn btn-danger"><strong>-</strong></span> red icon that replaced the <span class="btn btn-success"><strong>+</strong></span> green icon.
+This new method label should be if possible meaningful, distinct from other method labels, and underscores "_" should be avoided.</p>
+<p>A <code>Comment</code> should be added, preferably in English, in order to explicit the method specifics as clearly as possible.</p>
+<p><code>Unit</code>. If the unit associated to the new variable cannot be found on the <code>Unit label</code> predefined list, a new unit has to be created.
+This can be achieved by clicking on the <span class="btn btn-success"><strong>+</strong></span> green icon on the right-hand side of the <strong>Unit label</strong> field.
+In the case of a new unit, do not fill the <code>Unit label</code> field but the <code>Internal label</code> one, below the <span class="btn btn-danger"><strong>-</strong></span> red icon that replaced the <span class="btn btn-success"><strong>+</strong></span> green icon.
+This new unit label should be if possible meaningful, distinct from other unit labels, and underscores "_" should be avoided.</p>
+<p>Otherwise, if the appropriate unit is already register in Phis, then one only has to select it from the <code>Unit label</code> field, without clicking on the <span class="btn btn-success"><strong>+</strong></span> green icon (or clicking on the <span class="btn btn-danger"><strong>-</strong></span> red icon if the <span class="btn btn-success"><strong>+</strong></span> green icon had previously been clicked on).</p>
+<p>In the tricky case of a variable presenting no unit (e.g. pH), it is advised to crete a new unit whose label would be : dimensionless_unit_<em>variable-name</em> (e.g. dimensionless_unit_pH).
+It matters in order not to use the same "unit" for every variable displaying a dimensionless unit.
+More on this topic on the <a href="http://www.ontobee.org/ontology/UO?iri=http://purl.obolibrary.org/obo/UO_0000196">ontobee.org</a> website.</p>
+<p><img alt="existing-trait" src="../img/create-variable_existing-unit.png" /></p>
+<p><code>Related References</code>.
+In order to unambiguously define the new variable, semantic relations are established by the user between the new variable and concepts already defined in reliable ontologies existing on the world wide web.
+These relations to external ontologies are established using <strong>SKOS</strong> (Simple Knowledge Organization System).</p>
+<p><code>Entity</code> refers to the Phis entity that will be associated to a concept found in an ontology.
+This <strong>Entity</strong> be either the new variable, trait, method or unit.
+It is not required to specify related concepts for traits, methods and units, however it is recommanded.</p>
+<p><code>Relation</code> refers to the nature of the relation between the entity and the concept defined in an ontology.
+This semantic relation is provided using SKOS.
+The entity can either be, compared to an ontology concept, an <strong>exact match</strong>, a <strong>close match</strong>, <strong>narrower</strong> or <strong>broader</strong>.</p>
+<p>SKOS mapping properties, <code>skos:closeMatch</code> and <code>skos:exactMatch</code>, are used to state alignement links between SKOS concepts, as indicated in the <a href="https://www.w3.org/TR/skos-reference/#mapping">w3 SKOS Mapping properties web page</a> :</p>
+<ul>
+<li><strong><a href="https://www.w3.org/TR/skos-reference/#exactMatch">exactMatch</a></strong> : used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. <code>skos:exactMatch</code> is a transitive property, and is a sub-property of <code>skos:closeMatch</code>. <em>Example: <code>&lt;MyNewNDVIVariable&gt; skos:exactMatch &lt;CO_322:0000880&gt;</code> asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'</em></li>
+<li><strong><a href="https://www.w3.org/TR/skos-reference/#closeMatch">closeMatch</a></strong> : used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, <code>skos:closeMatch</code> is not declared to be a transitive property. <em>Example: <code>&lt;MyNewLAIVariable&gt; skos:closeMatch &lt;http://www.cropontology.org/rdf/CO_321:0001254&gt;</code> asserts that the variable 'MyNewLAIVariable' created in Phis is very similar to the variable 'LAI_Calc_Idx' already defined in the Crop Ontology and uniquely identified as 'CO_321:0001254'</em></li>
+</ul>
+<p>SKOS hierarchical properties <code>skos:broader</code> and <code>skos:narrower</code> are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the <a href="https://www.w3.org/TR/skos-reference/#semantic-relations">w3 Semantic Relations web page</a> :</p>
+<ul>
+<li><strong><a href="https://www.w3.org/TR/skos-reference/#broader">broader</a></strong> (label=<em>has broader</em>) : a triple <code>&lt;A&gt; skos:broader &lt;B&gt;</code> asserts that <code>&lt;B&gt;</code>, the object of the triple, is a broader concept than <code>&lt;A&gt;</code>, the subject of the triple. <em>Example: <code>&lt;MyNewPlantHeightTrait&gt; skos:broader &lt;CO_322:0000994&gt;</code> asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'</em></li>
+<li><strong><a href="https://www.w3.org/TR/skos-reference/#narrower">narrower</a></strong> (label=<em>has narrower</em>)  :  a triple <code>&lt;C&gt; skos:narrower &lt;D&gt;</code> asserts that <code>&lt;D&gt;</code>, the object of the triple, is a narrower concept than <code>&lt;C&gt;</code>, the subject of the triple. <code>skos:broader</code> is <code>owl:inverseOf</code> the property <code>skos:narrower</code>.  <em>Example: <code>&lt;MyNewStageEstimationMethod&gt; skos:narrower &lt;http://www.cropontology.org/terms/CO_322:0000905/&gt;</code> asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'</em></li>
+</ul>
+<p>By convention, <code>skos:broader</code> and <code>skos:narrower</code> are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties <code>skos:broader</code> and <code>skos:narrower</code> are not declared as transitive properties.</p>
+<p><code>Reference URI</code> refers to the URI of the concept found on ontologies such as the ones suggested in the short list above the <strong>Related References</strong> field.
+The URI provided here is not necessarily the URL of the web page of the ontology on which the targeted concept is defined.
+Indeed, the URI of a given concept does not necessarily match with the URL of the web page where this concept has been found.
+<em>Example : http://www.cropontology.org/rdf/CO_322:0000907 is the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+WARNING : using the identifier (e.g. CO_322:0000907) is not sufficient.</em></p>
+<p><code>Hyperlink</code> (optionnal) refers to the URL where are located the related concept whose URI has been provided in the previous field.
+<em>Example : http://www.cropontology.org/rdf/CO_322:0000907 is the hyperlink (URL) associated to the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+In this example, the URI of the concept is also an URL (a hyperlink), but it is not the case for every ontology.</em></p>
+<p>When a variable is created, multiple references using SKOS can be stated, using the <span class="btn btn-default"><strong>+</strong></span> white icon.</p>
+<p><img alt="add-relation-to-a-reference" src="../img/create-variable_add-relation.png" /></p>
+<p>Which portals provide a link towards various ontologies ?</p>
+<p>The <strong><a href="http://agroportal.lirmm.fr/">AgroPortal</a></strong> project aims to offer a reference ontology repository for agronomy, reusing the NCBO BioPortal technology, as stated on the <a href="http://aims.fao.org/agroportal">FAO website</a>.
+The scientific outcomes and the experience of the biomdical domain are thus exploited and transposed into the agronomy domain, including plants, food, environment and possibly animal sciences.</p>
+<p>The <strong><a href="https://urgi.versailles.inra.fr/ephesis/ephesis/ontologyportal.do">Ephesis Ontotology Portal</a></strong>  is a JavaScript widget displaying all the observation variables of a Breeding API endpoint.
+It lists ontologies available with the BreedingAPI/CropOntology JSON format.</p>
+<p>Here are some examples of ontologies :</p>
+<p>The <strong><a href="http://www.cropontology.org/">Crop Ontology (CO)</a></strong> current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.</p>
+<p>The <strong><a href="http://www.ontobee.org/ontology/po">Plant Ontology (PO)</a></strong> is a structured vocabulary and database resource that links plant anatomy, morphology, growth and development to plant genomics data.
+The URL provided <a href="http://browser.planteome.org/amigo">here</a> redirects visitors to the Planteome website since PO is developed by the Planteome Project, alongside with other reference ontologies listed in the <a href="http://planteome.org/node/1">Planteome Ontologies webpage</a>.
+The <strong><a href="http://planteome.org/">Planteome</a></strong> project is a centralized platform where reference ontologies for plants will be used to access plant genomics data.</p>
+<p>The <strong><a href="http://www.ontobee.org/ontology/UO">Unit Ontology</a></strong> gathers metrical units for use in conjunction with <strong><a href="http://obofoundry.org/ontology/pato.html">PATO</a></strong> (Phenotype And Trait Ontology), which is a phenotypic quality ontology.</p>
+<p>Which other ressources, besides ontologies, can I link my variables to ?</p>
+<p><strong><a href="http://artemide.art.uniroma2.it:8081/agrovoc/agrovoc/en/">AGROVOC</a></strong> is a controlled vocabulary covering all areas of interest of the United Nations Food and Agriculture Organization (FAO), including food, nutrition, agriculture, fisheries, forestry, environment, etc.
+It is published by the FAO and edited by a community of experts.
+More information is provided on the <a href="http://aims.fao.org/standards/agrovoc/concept-scheme">FAO website</a>.</p>
+<p><code>Variable Definition</code>. Text defining clearly the concept underlying the new variable.
+This definition should ideally be provided in English.</p>
+<h3 id="modifiy-existing-variables">Modifiy existing variables</h3>
+<p>So far, it is not possible to modify or delete an existing variable, other than by asking a Phis developper.</p>
+<h2 id="dataset">Dataset</h2>
+<h3 id="dataset-properties">Dataset properties</h3>
+<p>The heart of experiments is to produce datasets associated with the agronomical variables it studies.
+In Phis, each dataset is associated to an experiment.
+High-throughput plant phenotyping platforms commonly set up experiments in which plant growth is monitored.
+Plant growth dynamcis are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.</p>
+<p>At this stage of development, all dataset variables are quantitative.
+No qualitative variables are saved in the datasets : a variable from a dataset can only assume numerical values and no character string is allowed.</p>
+<p>A dataset typically displays information on many agronomical objects.
+These objects can be described by several variables.
+Each one of these variables can assume diverse values at different dates.
+In order to avoid confusion, each element of a dataset should then be understood as a triplet object-time-variable.
+Thus, each element of a dataset is associated uniquely with :</p>
+<ul>
+<li>a single agronomical object (e.g. a plot)</li>
+<li>a single date (the day of the data acquisition)</li>
+<li>a single variable (a quantitative variable used to monitor the measured or calculated trait)</li>
+<li>a single variable numerical value (the value of the variable cited above)</li>
+</ul>
+<p>Datasets are available indirectly through the <code>Experiments</code> menu, selecting an experiment and then accessing to its map through the <span class="btn btn-info">Map Visualization</span> button.</p>
+<p>Graphics can be extracted from the experiment datasets in the <strong>Dataset(s) Visualization (On selected plot(s))</strong> section, which appears under the map of the experiment when agronomical objects are selected.
+How to create such graphics is explained in the <a href="../../phis-docs-community/experimental-organization/#map-visualization">Map Visualization</a> section of this documentation.</p>
+<h3 id="import-dataset">Import Dataset</h3>
+<p>Datasets can be added to Phis through the <code>Dataset</code> menu in the top navigation bar.
+A Phis user with a restricted access (e.g. <em>guestphis</em>) is likely to be unable to see the <code>Dataset</code> menu.
+Indeed, only users that are part of an owner group are authorized to add datasets to the experiments associated to this group.
+Go to the <a href="../../phis-docs-community/community/#groups-level-of-access">Groups level of access</a> section for further information on this issue.</p>
+<p>When adding a dataset to Phis, three types of elements can be created :</p>
+<ul>
+<li>the dataset itself, as a .csv file</li>
+<li>the metadata associated to this dataset (e.g. variables in the dataset, creation date, etc.)</li>
+<li>optionnal documents associated to the dataset</li>
+</ul>
+<p><code>Quantitative Variable</code>. Mandatory field. Variable or list of the variables found in the added dataset.
+The variable(s) must have previously been defined in Phis (see <a href="../../phis-docs-community/experimental-organization/#variables">Variables</a>).</p>
+<p><code>Dataset Creation Date</code>. Mandatory field. Date in the YYYY-MM-DD (year-month-day) format matching to the day in which the imported data has been generated.
+Let's take the example of a drone flight performed two weeks before the data import, followed by the production of clean data from the flight images one week before the import.
+The imported data is the clean data created one week before the data import.
+Therefore, the date to provide in <strong>Dataset Creation Date</strong> is the one corresponding to one week before the data import.
+This field is necessary for provenance purposes.</p>
+<p><code>Was generated By</code>.
+Optionnal document giving indications on how the data has been created.
+If a single script (e.g. in R or python language) has been used to create the imported data, it should be uploaded here.
+If the data creation process has been more complex, a document (e.g. PDF or text) could be provided to describe it.
+The document import is performed via the <span class="btn btn-primary btn-file">Add Document Script</span> button.
+The metadata to provide is the same as in any Phis document, see the <a href="../../phis-docs-community/experimental-organization/#upload-a-document">Upload a document</a> section.
+Only one document can be added to this field.
+More documents can be imported together with the dataset through the <strong>Linked Document(s)</strong> field.</p>
+<p><img alt="add-script-generating-dataset" src="../img/add-dataset_add-script.png" /></p>
+<p><code>Description</code>.  Informative plain text description of how the imported data has been generated, preferably provided in English language.
+For instance, if the data has been generated with Phenoscript v1.2, one can mention it here, especially if the concerned script cannot be imported.</p>
+<p><code>Linked Document(s)</code>.
+Additionnal documents associated with the dataset and imported to Phis.
+Click on the <span class="btn btn-primary btn-file">Add Document</span> button and then fill out the usual document creation form as described in the <a href="../../phis-docs-community/experimental-organization/#upload-a-document">Upload a document</a> section.
+Multiple documents can be uploaded and associated to the imported dataset.
+Click several times on <span class="btn btn-primary btn-file">Add Document</span> in order to add several documents.</p>
+<p><img alt="add-document-linked-to-dataset" src="../img/add-dataset_linked-document.png" /></p>
+<p><code>Data File</code>. This mandatory field is used by users to upload the dataset from their computer through the <span class="btn btn-primary">Browse</span> button.</p>
+<p><img alt="add-dataset-browse-file" src="../img/add-dataset_browse-file.png" /></p>
+<p>The dataset added to Phis must respect some file rules :</p>
+<ul>
+<li>the file must be a .csv file</li>
+<li>the first line of the file is a header, every other additional row matches with a new element characterized by a single agronomical object, a single date and as many variable values as there are variables</li>
+<li>in a given row, each items are separated by a single semicolon <code>;</code></li>
+<li>the header contains the fields <strong>AgronomicalObjectURI</strong> and <strong>Date</strong>, and as many variable alias as there are added variables (see the .csv template that can be downloaded above the <strong>Data File</strong> field)</li>
+<li>the agronomical objects are refered to by their respective URI</li>
+<li>the date is refered to in the YYYY-MM-DD (year-month-date) format</li>
+<li>variable values are provided as real number, since Phis then stores numbers as <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision floating-point value</a></li>
+<li>numerical values decimal separators should be dots <code>.</code> but commas <code>,</code> are tolerated</li>
+<li>no character strings, "NA" included, are tolerated as variable values : if a variable value is unknown, do not write anything (see example below)</li>
+<li>no quotes for URIs, dates or variable values</li>
+</ul>
+<p>In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates :</p>
+<pre><code>AgronomicalObjectURI;Date;VariableAlias1;VariableAlias2
+URI1;2017-04-01;;5
+URI1;2017-04-15;;10.0
+URI1;2017-04-31;;12.00
+URI2;2017-04-01;3.22;6
+URI2;2017-04-15;4.12;9
+URI2;2017-04-31;5.347687869;10
+</code></pre>
+
+<p>The URI of the agronomical objects of a given experimentation can be found on the <code>Agronomical Objects</code> menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the <a href="../../phis-docs-community/experimental-organization/#object-types">Object types</a> of this documentation).
+All variables values of the imported dataset are associated with agronomical objects that must have been previously declared in Phis (see <a href="../../phis-docs-community/experimental-organization/#importing-plots">Importing plots</a>).</p>
+<p>The data file imported in Phis can displays many fields (i.e. number of items in the header), but only the column matching with the expected fields will be kept.
+The expected fields and their name are provided in the .csv template provide by the <em>Download Template</em> link above the <strong>Data File</strong> field.
+Hence, users can copy and paste their data in the template file (keeping the header unchanged), or import directly their datasheet as a .csv, after having renamed correctly the fields as described in the template.</p>
+<p><img alt="add-dataset-open-datafile" src="../img/add-dataset_open-datafile.png" /></p>
+<p>In order to finalize the addition of the dataset, click on the bottom <span class="btn btn-success">Create</span> button.</p>
+<p><img alt="add-dataset-create" src="../img/add-dataset_create.png" /></p>
+<p>The waiting time following the use of the <span class="btn btn-success">Create</span> button can relatively long, depending on the quantity of variable values added.
+If an error occurs, the dataset is not added to Phis and an error message is displayed.</p>
+<p><img alt="add-dataset-unknown-object" src="../img/add-dataset_unknown-object.png" /></p>
+<p>Else, the dataset is imported in Phis and a success message is displayed.</p>
+<p><img alt="add-dataset-success" src="../img/add-dataset_data-inserted.png" /></p>
+<p>At the current stage of Phis development, datasets cannot be modified nor deleted once it has been added to Phis.</p>
+<h3 id="visualize-dataset">Visualize Dataset</h3>
+<p>Graphics extracted from Phis datasets are available through the <code>Experiments</code> menu.
+See the <a href="../../phis-docs-community/experimental-organization/#graphics-from-datasets">Map Visualization</a> section of this documentation for further information.</p>
+<h2 id="annotations">Annotations</h2>
+<h3 id="what-are-annotations">What are annotations ?</h3>
+<p>Annotations are comments made on an element of Phis and stored as metadata linked to this element.
+More broadly, <a href="https://www.w3.org/TR/annotation-model/">the W3C</a> describes annotations as "typically used to convey information about a resource or associations between resources".
+An annotation can be an explanation given by the creator of a resource, an expert viewpoint or the input of other persons.
+Phis projects, experiments, sensors, vectors, etc. (any element displaying an URI) can be annotated using the W3C specifications of the <a href="https://www.w3.org/TR/annotation-model/">Web Annotation Data model</a>, or <code>oa</code> (prefix of the Web Annotation Data Model, whose namespace is <a href="http://www.w3.org/ns/oa#">http://www.w3.org/ns/oa#</a>).
+Any user can therefore enrich Phis elements with attached information (metadata) using semantic annotations.</p>
+<h3 id="add-annotation">Add annotation</h3>
+<p>Annotations can be added to Phis through the <span class="btn btn-default">Add annotation</span> button of the information sheet of any project, experiment, sensor or vector.</p>
+<p><code>Creator</code>. The username of the creator of the annotation (you) is automatically recorded by Phis whenever you create an annotation.</p>
+<p><code>Motivated by</code>. Following W3C recommendations on <a href="https://www.w3.org/TR/annotation-model/#motivation-and-purpose">annotation motivations</a>, when creating an annotation you need to select through the controlled vocabulary of <code>oa</code> the motivation category matching the reason why you are creating this annotation :</p>
+<ul>
+<li><code>assessing</code> : used when the annotation is a comment or a quality assessment</li>
+<li><code>classifying</code> : used when the annotation is an attempt to classify the resource annotated</li>
+<li><code>editing</code> : used when the annotation is a request to edit or delete a resource</li>
+<li>etc. See <a href="https://www.w3.org/TR/annotation-model/#motivation-and-purpose">https://www.w3.org/TR/annotation-model/#motivation-and-purpose</a> for the exhaustive list of annotation motivations</li>
+</ul>
+<p><code>Creation Date</code>. Automatically set by Phis using the local time.</p>
+<p><code>Targets</code>. Automatically set by Phis, this field records the resource (e.g. experiment) from which an annotation creation has been requested by the user (i.e. from which resource he clicked on the <span class="btn btn-default">Add annotation</span> button).</p>
+<p><code>Description</code>. Content of the annotation, ideally provided in English (free text).</p></div>
+        </div>
+
+	<footer class="col-md-12">
+		<hr>
+		
+		<center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+	</footer>
+
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>

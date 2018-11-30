@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Community - PHIS user documentation</title>
+
+        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/site.css" rel="stylesheet">
+        <link href="../css/navbar.less" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">PHIS user documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../experimental-organization/">Experimental Organization</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../installation/">Installation</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Community</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../ws-clients/">Clients</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../installation/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../ws-clients/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#community">Community</a></li>
+        
+            <li><a href="#persons">Persons</a></li>
+        
+            <li><a href="#access-rights">Access rights</a></li>
+        
+            <li><a href="#groups">Groups</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="community">Community</h1>
+<h2 id="persons">Persons</h2>
+<h3 id="persons-properties">Persons properties</h3>
+<p>Phis community is composed of persons which can be either:</p>
+<ul>
+<li><strong>persons</strong> uniquely identified by their email. Persons have to be created within Phis before being refered to within projects and expertiments.</li>
+<li><strong>users</strong>, term refering to persons linked to a Phis account: they are provided with a password that they can change at any time. Phis users are either classic users or administrators (admin).</li>
+</ul>
+<h3 id="create-a-person">Create a person</h3>
+<p>Within the <code>Persons</code> menu, a user can create a new person with the
+<span class="btn btn-success">Create Person</span> button displayed at the top left of the persons list.</p>
+<p>The mandatory fields, followed by a red asterisk, are:</p>
+<ul>
+<li>Email</li>
+<li>Affiliation</li>
+</ul>
+<p>This section provides information on how to create a person, which can be either a person not related to a Phis account, either a new Phis user.
+Only administrators can create a user from Phis.
+Three fields from the <code>Create Person</code> page are visible only to admin users:</p>
+<ul>
+<li>Password</li>
+<li>Admin</li>
+<li>Groups</li>
+</ul>
+<p>Those field are highlighted below with the <code>(Admin only)</code> tag.
+if the field <strong>Password</strong> remains empty, a person without a Phis account is created.
+Otherwise, a Phis user is created.</p>
+<p><img alt="create-person-email" src="../img/create-person_email.png" /></p>
+<p>At any time, a person without an account can be changed into a user by an administrator modifying its <strong>Password</strong> field after clicking on the <span class="btn btn-primary">Update</span> button above its information sheet.</p>
+<p><code>Email</code>. The email address used to uniquely identify a person.
+In the case of a person that is also a Phis user, the email provided is used as <strong>username</strong>.
+For now, the email provided does not necessarily have to be an existing email address: there's no check or email confirmation asked for.</p>
+<p><code>Password (Admin only)</code>.
+If this field is left blank, a person without a Phis account is created, otherwise a user is created.
+The new user is provided with a potentially temporary password which can be modified.</p>
+<p><code>First Name</code>. Given Name (Forename) of the person.</p>
+<p><code>Family Name</code>. Surname (Last Name) of the person.</p>
+<p><code>Phone</code>. Office phone number, preceded by the country phone prefix.</p>
+<p><code>Address</code>. Office postal address.
+No specific format is required in this field.</p>
+<p><code>ORCID</code>. Open Researcher and Contributor ID.
+You can create and get your own ORCID at <a href="https://orcid.org/">orcid.org</a>.</p>
+<p><code>Admin (Admin only)</code>.
+If this box is ticked, the new user is given admin rights.
+In the case of a non-user person creation, ticking this box has no effect until the accountless person is transformed into a user by being provided a password.</p>
+<p><img alt="create-person-admin" src="../img/create-person_admin.png" /></p>
+<p><code>Groups (Admin only)</code>.
+Names of the Phis groups in which the new person will be included.
+This field in the user creation is crucial, but can also be modified at a later time.
+Groups are selected from a the predefined list of groups found in Phis.
+Moreover, when a new group is created, an existing person can be added to it from the <strong>Group Creation</strong> page.</p>
+<h3 id="manage-a-user-account">Manage a user account</h3>
+<p>From the <code>Persons</code> menu, a user can manage its own account after clicking on the eye icon on the right of its name in order to view its personal information sheet.
+Both public information and password can be changed after clicking on the <span class="btn btn-primary">Update</span> button.</p>
+<h3 id="get-an-access-to-phis">Get an access to Phis</h3>
+<p>For those that do not own a Phis account, they can ask a account to be created by either :</p>
+<ul>
+<li>a Phis user diplaying administrator rights</li>
+<li>a Phis manager (see <em>README.md</em> for Phis managers contact)</li>
+</ul>
+<h2 id="access-rights">Access rights</h2>
+<h3 id="users-levels-of-access">Users levels of access</h3>
+<p>User access rights depend on users groups.</p>
+<p><code>Classic</code>: a classic user gets access to public data and data accessible to the groups the user belongs to.</p>
+<p><code>Admin</code>: on top of the guest user access rights, an admin can create or delete user accounts.
+An admin can also create groups and assign users to those groups.
+An admin are usually platform or installation managers, as well as data managers.
+There is generally no more than one or two admin per platform.</p>
+<h3 id="restrictions-to-a-group">Restrictions to a group</h3>
+<p>A given information can be visible to specific groups. A Phis user not belonging to those groups will not be able to view the data linked to them.
+The concepts that can be assigned to groups are experiments and the agronomical objects it contains.
+Currently, access rights are managed by experiment.</p>
+<h3 id="public-data">Public data</h3>
+<p>An information assigned to no group is by default set as public. For instance, an experiment not belonging to any group will be viewable to every Phis user, e.g. to every person owning a Phis account.
+Research data requiring authrorizations to be accessed to could become public data after several years. <em>to confirm</em></p>
+<h3 id="groups-levels-of-access">Groups levels of access</h3>
+<p><code>Guest</code>: members of a guest group can visualize the data linked to this guest group.</p>
+<p><code>Owner</code>: in addition to the visualization rights given to guest groups members, owner groups members can modify the data belonging to the group.</p>
+<h2 id="groups">Groups</h2>
+<h3 id="groups-properties">Groups properties</h3>
+<p>Only admin-users are able to view the list of user groups within the <code>Tools &gt; Groups</code> menu, not visible from a guest user account.
+For instance, the public account <em>guestphis</em> has no access to this menu.</p>
+<p>From the <code>Tools &gt; Groups</code> menu, admin-users get an overview the main properties of all users groups:</p>
+<ul>
+<li>the group URI (standardized, unique and persistent)</li>
+<li>the group name</li>
+<li>the group level of access (guest or owner), cf. <a href="../../phis-docs-community/community/#access-rights">Access rights</a></li>
+</ul>
+<p>From <strong>Home / Groups</strong>, admin-users can click on the eye icon on the right of a given group in order to view its information sheet.
+The additional information provided by the group sheet are a short description and the persons included in the group, identified by their email address.</p>
+<p>Groups metadata can be modified with the <span class="btn btn-primary">Update</span> button by the admin-users.</p>
+<h3 id="create-a-group-admins-only">Create a group (admins only)</h3>
+<p>Within the <code>Groups</code> menu, one can create a new one with the
+<span class="btn btn-success">Create Group</span> button.</p>
+<p><code>URI</code>. The group URI is automatically created by Phis web service which uses the <strong>Name</strong> of the group provided by the user.</p>
+<p><code>Organism</code>. Name of the organism employing the group members.
+If a group includes persons from various organisms, instead of an organism name, a project name, or else, can be provided.
+No spaces or hyphen are accepted: they are automatically replaced by dots.
+The group <strong>Organism</strong> is automatically formatted in capital letters.</p>
+<p><img alt="create-group-URI" src="../img/create-group_URI.png" /></p>
+<p><code>Name</code>. Group name composed of an <strong>Organism</strong> name and additional information on the group (e.g. laboratory and team) provided by the user.
+No spaces or hyphen are accepted: they are automatically replaced by dots.
+The group <strong>Name</strong> is automatically created in capital letters.</p>
+<p><img alt="create-group-name" src="../img/create-group_name.png" /></p>
+<p>Once the group created, its <strong>URI</strong>, <strong>Name</strong> and <strong>Organism</strong> name can no longer be modified.</p>
+<p><code>Level</code>. Group's level of access to the experiments it will be involved in: <em>guest</em> or <em>owner</em>.
+A scientific supervisor can consider creating two distinct groups acceding to the same experiments : an owner group that includes the few users susceptible to add and modify experimental data and persons accessing it, and a guest group of persons not involved in the data production, but provided with an access to the data.</p>
+<p><code>Description</code>. Complete plain text description of the user group, preferably provided in English language.</p>
+<p><code>Members</code>. Email of the Phis persons that will be part of the new group.
+This field in the group creation is crucial, but can also be modified at a later time.
+Persons are selected from a predefined list of the email identifiying them in Phis.</p>
+<p>Note that even persons without an account (persons that are not users) can be added to the new group.</p>
+<p>Completing the group creation within Phis is then achieved by clicking on the <span class="btn btn-success">Create</span> button.</p></div>
+        </div>
+
+	<footer class="col-md-12">
+		<hr>
+		
+		<center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+	</footer>
+
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>

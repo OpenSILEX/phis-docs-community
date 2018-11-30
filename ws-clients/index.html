@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Clients - PHIS user documentation</title>
+
+        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/site.css" rel="stylesheet">
+        <link href="../css/navbar.less" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">PHIS user documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../experimental-organization/">Experimental Organization</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../installation/">Installation</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../community/">Community</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Clients</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../community/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li class="disabled">
+                    <a rel="prev" >
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#web-service-clients">Web Service Clients</a></li>
+        
+            <li><a href="#python-clients">Python Clients</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="web-service-clients">Web Service Clients</h1>
+<h2 id="python-clients">Python Clients</h2>
+<h3 id="images-import-python-client">Images import Python client</h3>
+<p>An up-to-date version of said client can be founded on GitHub at the following URL : <a href="https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py">https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py</a>.</p>
+<p>Download this <code>post.py</code> script and change with the help of a text editor (e.g. Notepad++ if you are using Windows) its rows n° 17, 27, 28 and 58.</p>
+<h4 id="modification-of-the-python-script">Modification of the Python script</h4>
+<p>Having installed <a href="https://www.python.org/">Python</a> is required to run the <code>post.py</code> script.
+Here is the list of changes you need to make to this script in order to import your images to PHIS :</p>
+<p><strong>Row n° 17</strong> :</p>
+<p>Replace the default host name <code>'http://localhost:8084/phis2ws/rest/'</code> by the host name associated to your occurence of PHIS.
+The URL of your documentation link should be of the form <code>'http://[...]/[occurence name]/api-docs/'</code>. The host name you need to provide on row 17 of <code>post.py</code> is this URL but with "api-docs" replaced by "rest" : <code>'http://[...]/[occurence name]/rest/'</code>.
+Do not forget the single brackets.</p>
+<p><strong>Row n° 27 &amp; 28</strong> :</p>
+<p>Rows 27 and 28 are used for indicating your own login, the one you use when connecting to PHIS via a web browser.</p>
+<p>On row 27, replace the second occurence of 'username' by your username between single brackets : it should be an email adress, e.g. <code>'username': 'example@supagro.inra.fr',</code>.</p>
+<p>On row 28, the simplest thing to do is to replace the second occurence of 'password' by your password between single brackets, e.g. <code>'password': hashlib.md5('type your password here').hexdigest(),</code>.</p>
+<p>However, if you do not wish to right your password in clear, replace <code>hashlib.md5('password').hexdigest()</code> by an encrypted version of your password : a md5 checksum of your password (also between single brackets), e.g. <code>'1a79a4d60de6718e8e5b326e338ae533'</code> (this is the md5 encryption of "example").
+Creating a md5 checksum version of your password can be achieved either using the official <a href="https://www.md5.fr/">md5 webpage</a> and typing there your password, either from a linux terminal typing <code>echo example | md5sum</code>, replacing "example" by your actual password.</p>
+<p><strong>Row n° 58</strong> :</p>
+<p>Replace <code>"POSTImages-template.csv"</code> by the name of the CSV file containing the information on the images you would like to import to PHIS.
+Do not forget the double brackets.
+If you execute the Python script from a different repository than the one where the CSV file is stored, then in addition to the CSV file name, you need to inform the path to the CSV file, e.g. <code>"path/to/POSTImages-template.csv"</code>.</p>
+<p>A template of the required CSV file can be founded on GitHub at the following URL : <a href="https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv">https://github.com/OpenSILEX/phis-ws-clients/blob/mastehttps://www.theguardian.com/world/europe-newsr/python/images/POSTImages-template.csv</a>.</p>
+<h4 id="modification-of-the-csv">Modification of the CSV</h4>
+<p>The first row of the CSV file displays its header :</p>
+<table>
+<thead>
+<tr>
+<th>path_image_ref</th>
+<th>imageType</th>
+<th>concernedUri</th>
+<th>concernedType</th>
+<th>position</th>
+<th>date</th>
+<th>sensorUri</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<p>Then, each row of this CSV file is associated to an image imported in PHIS.
+Each image is characterized by :</p>
+<ul>
+<li><strong>path_Image_ref</strong> : the name and path of the image (e.g. <code>image001.png</code>)</li>
+<li><strong>ImageType</strong> : the URI associated with the type of the image (e.g. <code>http://www.phenome-fppn.fr/vocabulary/2017#HemisphericalImage</code> or <code>http://www.phenome-fppn.fr/vocabulary/2017#RGBImage</code>)</li>
+<li><strong>concernedUri</strong> : the URI of the entity associated to the image, typically an agronomical object such a plot (e.g. <code>http://www.phenome-fppn.fr/mtp/2017/o1000001</code>)</li>
+<li><strong>concernedType</strong> : the URI associated with the type of the entity associated with the image (e.g. <code>http://www.phenome-fppn.fr/vocabulary/2017#Plot</code>)</li>
+<li><strong>position</strong> (optionnal) : if a sensor can display several positions, then you might want to fill the position from which the image has been shot (e.g. <code>1</code>)</li>
+<li><strong>date</strong> : date at which the image has been shot, using the <em>YYYY-MM-DD HH:MM:SS</em> format (e.g. <code>2017-06-15 09:00:00</code>)</li>
+<li><strong>sensorUri</strong> : URI of the sensor who captured the image (the URI of the sensors you registered in PHIS are available on the <a href="../../phis-docs-community/experimental-organization/#sensor">Sensors menu</a>)</li>
+</ul>
+<p>All of these information are filled in plain text and without brackets.</p>
+<p>Both image types and entity types have to be submitted using the controlled vocabulary linked to PHIS application ontology.
+The list of images types can be found in the <code>Tools / Vocabulary</code> menu of PHIS webapp.</p>
+<h4 id="execution-of-the-python-script">Execution of the Python script</h4>
+<p>Like any other Python script, e.g. using ipython or a linux terminal :</p>
+<pre><code>python3 post.py
+</code></pre></div>
+        </div>
+
+	<footer class="col-md-12">
+		<hr>
+		
+		<center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+	</footer>
+
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>
