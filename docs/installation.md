@@ -9,11 +9,11 @@ In order to track where Phis data is coming from, users can declare in the `Sens
 The `Sensors` menu displays the list of individual sensors that have been declared by the user on Phis.
 The sensor list is preceded by a research bar enabling the user to filter registered sensors by their URI, Alias, type, brand and optionnal attributes, such as the date of their purchase, the date of their first use the date of their last calibration.
 
-![sensor-menu](img/sensor-list.png)
+![sensor-menu](img/sensor-list2.png)
 
 From **Home / Sensors**, one can click on the eye icon on the right of any listed sensor to see its information sheet.
 
-![sensor-information](img/sensor-information.png)
+![sensor-information](img/topview-camera.png)
 
 At the top of the sensor information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
 Documents linked to a sensor are typicaly a technical notice or an user manual.
@@ -149,6 +149,44 @@ When selecting a LiDAR, the following characteristics need to be filled up :
 `Spot width (°)`.
 
 `Spot height (°)`.
+
+### Link sensors to environmental variables
+
+#### Purpose of the sensor-variable link
+
+The link between a sensor and the data it produces can be established through Phis web client.
+This link enables the visualization through graphics of the raw data produced by an environmental sensor directly from its information sheet.
+
+This feature is for now dedicated only to environmental sensors measuring variations in the plant environment (e.g. humidity, temperature, radiation sensors...).
+The output these sensors are environmental variables whose values can be displayed on the sensor information sheet they are linked to, if this link has been formally declared by a Phis user.
+
+The link sensor-variable for phenotypic sensors such as cameras is not available, since most of those sensors do not provide directly intelligible data, but intermediate outputs such as images or other complex information which have to be treated before providing practical phenotypic variables such as plant heigh or chlorophyll content.
+
+#### Creation of a the sensor-variable link
+
+From the information sheet of an environmental sensor, one can associate it with variables already declared in the system through to the [Variables](../phis-docs-community/experimental-organization/#variables) menu.
+
+A single environmental sensor can be linked to several variables previously declared in Phis.
+
+From the `Sensors` menu (accessible from the **installation** menu in the top navigation bar), select a sensor from the sensors list clicking on the eye icon on the right to access its information sheet.
+Then, go to the **Variables** field and add variables from the dropdown list displaying all the alias of the variables previously declared in Phis.
+
+![Link environmental variables to a sensor](img/variables-linked-to-sensor.png)
+
+After having selected one or several variables, click on the *Update measured variable* button (check symbol) on the right to save the changes you made to the sensor.
+You should get a green "resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button.
+
+The sensor-variable link is now saved in the triplestore and displayed in the **Variables** field of the sensor information sheet.
+To remove this link, just click on the close window symbol ("x") next to the variable alias in the **Variables** field of the sensor, and then click on the *Update measured variable* button.
+
+![Check the link between environmental variables and a sensor](img/variables-linked-to-sensor-checked.png)
+
+If Phis contains data associated to the variables now linked to a given sensor, this data can be visualized from this sensor information sheet.
+A graphic displaying the last recorded values of the variable (e.g. the last outputs from the sensor) is automatically produced in the **Sensor Data Visualization** section of the sensor information sheet.
+
+![Visualization of environmental variables linked to a sensor](img/sensor-data-visualization.png)
+
+One can scroll through the data linked to a sensor using the **Date Start** and **Date End** values of the filter displayed on top of the graphic, and then clicking on the <span class="btn btn-primary">Search</span> button.
 
 ## Vectors
 
