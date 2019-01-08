@@ -420,7 +420,7 @@ A given scientific object is required to be associated with one experiment, and 
 Phenotypic data created in an experiment, whether is it directly measured, calculated or estimated, is necessarily linked to scientific objects.
 
 Every scientific object is uniquely identified through a standardized URI.
-Metadata is associate to objects under the form of attributes : alias, experiment modality, etc.
+Metadata is associated to objects under the form of attributes : the object alias, its type (plant, plot, etc.) the experiment it is part of ...
 The data associated with these objects correspond with the values of phenotypic variables associated
 
 The complete list of scientific objects is available in the `Scientific Objects` menu, accessible from Phis top navigation bar.
@@ -435,17 +435,60 @@ After having selected an experiment, the scientific objects linked to it can be 
 Moreover, selecting objects on such a map provides additional information on the attributes of these objects.
 See the [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section for more information on that matter.
 
-### Importing plots
+### Importing scientific objects
 Within the `Scientific Objects` menu, Phis users can import new plots with the
 <span class="btn btn-success">Create</span> button.
 
-Plot, which are scientific objects, are imported into Phis through a .csv file containing on its first line the following header :
+Scientific objectssuch as plots are imported into Phis through an editable table in which each additionnal row contains the information of an additionnal scientifc object to be inserted in Phis database.
+
+One can also copy and paste in this table the content of a .csv file whose header is :
 
 ```
-Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
+Alias;Type;Experiment;Geometry;Parent;Species;Variety
 ```
 
-Every other additional line matches with a new plot.
+Description of the content of this table, column by column :
+
+`Generated URI`. Field to leave blank. Every new scientific object will be automatically assigned an URI when declared in Phis.
+
+`Alias`. Internal name of the scientific object (free text).
+In a given experiment, there can not be two identical aliases.
+
+`Type`. Type of the scientific object, chosen from a closed list containing :
+
+- Plot
+- Plant
+- Leaf
+- Rootstock
+- Seed
+- Scion
+- Silk
+- ScientificObject (generic term, it is not recommended to use it)
+
+There is only a handful of proposed scientific object types  in the current ontology : do not hesitate to contact OpenSILEX development team to add vector types that cannot be found in the list in order to make it evolve.
+If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
+
+`Experiment`. URI of the experiment the declared scientific objects belong to.
+If this field is not filled excusively with URIs of experiments stored in Phis, then no scientific object will be added to the system.
+The experiments URIs can be selected from a dropdown list displaying all experiments declared in the system.
+If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
+
+`Geometry`. Optionnal.
+
+`Parent`. Optionnal.
+
+`Species`. Optionnal.
+
+`Variety`. Optionnal. The variety of a plant or a plant part or the variety of a plot.
+
+<!--
+Additional scienfic object properties that can be declared through the web services but not through the web client :
+
+- `ExperimentModalities` : the experiment modality of the plot, no controlled vocabulary required so far (e.g. "WD" for water deficit)
+- `Repetition` : the repetition of the scientific object mostly used for plots (e.g. 2 or A)
+-->
+
+Every other additional line matches with a new scientific object.
 
 Let's take into consideration a fictionnal experiment composed of 4 plots of the same crop ("species").
 In half of the plot, the variety "A" of the studied crop is grown, and in the other half, the variety "B".
@@ -483,7 +526,8 @@ The first step in order to import plots is therefore to create a .csv file conta
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
-THe second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the `Home / Scientific Objects / Create Scientific Object` menu.
+<!--
+The second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the `Home / Scientific Objects / Create Scientific Object` menu.
 
 ![new-objects-browse](img/create-object_browse.png)
 
@@ -495,8 +539,9 @@ Check the imported file but do not press the Upload button.
 Only on file at a time can be imported.
 
 ![new-objects-create](img/create-object_click-create.png)
+-->
 
-After having pressed the <span class="btn btn-success">Create</span> bottom button the number of imported scientific objects is displayed.
+After having pressed the <span class="btn btn-success">Create Scientific Objects</span> bottom button, the number of imported scientific objects is displayed.
 
 ![new-objects-success](img/create-object_result.png)
 
