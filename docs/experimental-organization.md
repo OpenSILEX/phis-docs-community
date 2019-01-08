@@ -255,10 +255,10 @@ You should get another green "Resources updated" pop-up on the top right corner 
 Agronomical objects associated with a given experiment, for example plots, can be displayed on a map, thanks to their geopositioning informations.
 In Phis, a map refers to a dynamic map where all the agronomical objects of a given experiment are represented.
 
-After having imported agronomical objects linked to an experiment, the map associated with this experiment is created within the `Experiments` menu through the <span class="btn btn-success">Generate Map</span> button.
+After having imported agronomical objects linked to an experiment, a map associated with this experiment can be visualized within the `Experiments` menu through the <span class="btn btn-info">Map Visualization</span> button.
 
-Once the map of an experiment has been created, there's no need to re-create it if no new agronomical object has been linked to this experiment.
-In such cases, the access to the experiment map is realized within the `Experiments` menu through the <span class="btn btn-info">Map Visualization</span> button.
+From this `Map Visualization` menu, one can create and subsequently update its information (if new scientific objects have been linked to the experiment) through the <span class="btn btn-success">Generate Map</span> button on the top right corner of the web page.
+Once the map of an experiment has been created, there's no need to re-create it if no new scientific object (e.g. plot) has been linked to this experiment.
 
 The map of an experiment is dynamic: one can zoom in and out with the **+** and **-** sign at the top left corner of the map, or simply using the mouse wheel.
 The map visualization also works with a touchscreen.
