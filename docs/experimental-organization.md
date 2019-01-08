@@ -229,6 +229,25 @@ See the [Documents](../phis-docs-community/experimental-organization/#documents)
 
 Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.
 
+### Linking sensors and variables to an experiments
+
+Admin users can associate experiments to variables and sensors, but only if they have already been declared in the system through to the [Variables](../phis-docs-community/experimental-organization/#variables) menu and the [Sensors]((../phis-docs-community/installation/#sensors)) menu respectively.
+
+An experiment can be linked to several variables and sensors previously declared in Phis.
+
+From the `Experiments` menu (accessible from the **experimental organization** menu in the top navigation bar), select an experiment from the experiments list clicking on the eye icon on its right to access its information sheet.
+Then, go to the **Measured Variables** field and add variables from the dropdown list displaying all the alias of the variables previously declared in Phis.
+You can also go to the **Sensors which participates in** field and add sensors from the dropdown list displaying all the alias of the sensors previously declared in Phis.
+
+After having selected one or several variables or sensors, click on the *Update measured variable* button (check symbol) on the right to save the changes you made to the experiment.
+You should get a green "Resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button.
+
+![experiments_link-to-variables-and-sensors](img/experiments_linked-variables-and-sensors.png)
+
+The experiment-variable and experiment-sensor links are now saved in the triplestore and displayed respectively in the **Measured Variables** and **Sensors which participates in** fields of the experiment information sheet.
+To remove these links, just click on the close window symbol ("x") next to the variable or sensor alias in their respective fields, and then click on the associated *Update measured variable* button.
+You should get another green "Resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button, which confirms the changes made.
+
 ### Map visualization
 
 #### Objects selection

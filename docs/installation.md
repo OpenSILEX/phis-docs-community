@@ -174,10 +174,11 @@ Then, go to the **Variables** field and add variables from the dropdown list dis
 ![Link environmental variables to a sensor](img/variables-linked-to-sensor.png)
 
 After having selected one or several variables, click on the *Update measured variable* button (check symbol) on the right to save the changes you made to the sensor.
-You should get a green "resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button.
+You should get a green "Resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button.
 
 The sensor-variable link is now saved in the triplestore and displayed in the **Variables** field of the sensor information sheet.
 To remove this link, just click on the close window symbol ("x") next to the variable alias in the **Variables** field of the sensor, and then click on the *Update measured variable* button.
+You should get another green "Resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button, which confirms the changes made.
 
 ![Check the link between environmental variables and a sensor](img/variables-linked-to-sensor-checked.png)
 
