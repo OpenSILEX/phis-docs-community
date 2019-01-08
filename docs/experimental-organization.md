@@ -150,7 +150,7 @@ For more detail on experimental data access restrictions, see the section [Restr
 ![experiment-view](img/experiments_view.png)
 
 On top of the experiment information sheet, several buttons are displayed.
-The buttons <span class="btn btn-info">Map Visualization</span> and <span class="btn btn-success">Generate Map</span> enable the visualization of the scientific objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
+The button <span class="btn btn-info">Map Visualization</span> enables the visualization of the scientific objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
 Jump to the section [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) for more information on experiment maps.
 The use of the other buttons, <span class="btn btn-primary">Update</span> and <span class="btn btn-warning">Add document</span>, is described at the end of the next section entitled [Create an experiment](../phis-docs-community/experimental-organization/#create-an-experiment).
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected experiment using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
