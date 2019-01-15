@@ -407,28 +407,33 @@ The document can also be downloaded clicking on the ![view](img/view_64_32.png) 
 
 ### Object types
 Plant phenotyping experiments all revolve around one entity of interest : plants !
-Phis experiments are focused on a given type of elements : **scientific objects** (also refered to as agronomical objects), which are no more than declinations of plants, at various scales :
+However, plants can be studied at various scales, from a single leaf to a field.
+Phis experiments register data on elementary units : **scientific objects** (also refered to as agronomical objects), which are no more than declinations of plants, at various scales :
 
-- **plant organ** : part of a given plant
-- **plant** : single individual, displaying a single genotype, which is refered to as a **variety**
-- **plot** : smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot)
+- **plant organ** : part of a given plant (e.g. **rootstock**, **scion**, **silk**, **seed**)
+- **plant** : single individual, displaying a single genotype (which is refered to as a **variety**). Most common elementary unit of greenhouse experiments.
+- **plot** : smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.
 - **block** : combination of plots, generally forming an environmentally homogeneous entity
 - **field** : large spatial unit that includes plots and potentially blocks
 
 These scientific objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
+
 A given scientific object is required to be associated with one experiment, and one only.
-Phenotypic data created in an experiment, whether is it directly measured, calculated or estimated, is necessarily linked to scientific objects.
+Phis development team is aware of the challenge in declaring perennial plants studied over several years. One might want to declare it in various experiments, each experiment matching a different time-period.
+Phis development team is open for discussion on this matter with its user.
 
-Every scientific object is uniquely identified through a standardized URI.
-Metadata is associated to objects under the form of attributes : the object alias, its type (plant, plot, etc.) the experiment it is part of ...
-The data associated with these objects correspond with the values of phenotypic variables associated
+Phenotypic data created in an experiment, whether it is directly measured, calculated or estimated, is necessarily linked to scientific objects.
 
-The complete list of scientific objects is available in the `Scientific Objects` menu, accessible from Phis top navigation bar.
-A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Scientific Objects` menu, since there are no objects for her/him to see.
-The scientific objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type, and the experience they are linked to.
+Every scientific object is uniquely identified through a standardized URI which is automatically assigned by Phis when it is declared by a user.
+Metadata is associated to objects under the form of attributes : the object alias, its type (plant, plot, etc.), the experiment it is part of, etc.
+Data associated with these objects consists of the values of phenotypic variables (declared in Phis through the [Variables menu](../phis-docs-community/experimental-organization/#variables)) linked to these objects during the [Data import process](../phis-docs-community/experimental-organization/#dataset).
+
+The complete list of scientific objects declared in Phis is available in the `Scientific Objects` menu, accessible from Phis top navigation bar.
+Phis users with a restricted access (e.g. *guestphis*) are likely to be unable to see the `Scientific Objects` menu, since there are no objects for them to see.
+The scientific objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type, additional properties (its variety, etc.) and the experience they are linked to.
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
-![objects-list](img/agronomical-objects_list.png)
+![scientific-objects-list](img/scientific-objects_list.png)
 
 Scientific objects information can also be accessed through the `Experiments` menu.
 After having selected an experiment, the scientific objects linked to it can be displayed on a map.
@@ -439,7 +444,7 @@ See the [Map Visualization](../phis-docs-community/experimental-organization/#ma
 Within the `Scientific Objects` menu, Phis users can import new plots with the
 <span class="btn btn-success">Create</span> button.
 
-Scientific objectssuch as plots are imported into Phis through an editable table in which each additionnal row contains the information of an additionnal scientifc object to be inserted in Phis database.
+Scientific objects such as plots are imported into Phis through an editable table in which each additionnal row contains the information of an additionnal scientifc object to be inserted in Phis database.
 
 One can also copy and paste in this table the content of a .csv file whose header is :
 
@@ -773,7 +778,7 @@ The dataset added to Phis must respect some file rules :
 - the file must be a .csv file
 - the first line of the file is a header, every other additional row matches with a new element characterized by a single scientific object, a single date and as many variable values as there are variables
 - in a given row, each items are separated by a single semicolon `;`
-- the header contains the fields **AgronomicalObjectURI** and **Date**, and as many variable alias as there are added variables (see the .csv template that can be downloaded above the **Data File** field)
+- the header contains the fields **ScientificObjectURI** and **Date**, and as many variable alias as there are added variables (see the .csv template that can be downloaded above the **Data File** field)
 - the scientific objects are refered to by their respective URI
 - the date is refered to in the YYYY-MM-DD (year-month-date) format
 - variable values are provided as real number, since Phis then stores numbers as [double-precision floating-point value](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
@@ -784,7 +789,7 @@ The dataset added to Phis must respect some file rules :
 In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates :
 
 ```
-AgronomicalObjectURI;Date;VariableAlias1;VariableAlias2
+ScientificObjectURI;Date;VariableAlias1;VariableAlias2
 URI1;2017-04-01;;5
 URI1;2017-04-15;;10.0
 URI1;2017-04-31;;12.00
