@@ -424,13 +424,14 @@ Phis development team is open for discussion on this matter with its user.
 
 Phenotypic data created in an experiment, whether it is directly measured, calculated or estimated, is necessarily linked to scientific objects.
 
-Every scientific object is uniquely identified through a standardized URI which is automatically assigned by Phis when it is declared by a user.
+Every scientific object is uniquely identified through a standardized URI which is automatically assigned by Phis when it is first entered in the system by a user.
 Metadata is associated to objects under the form of attributes : the object alias, its type (plant, plot, etc.), the experiment it is part of, etc.
 Data associated with these objects consists of the values of phenotypic variables (declared in Phis through the [Variables menu](../phis-docs-community/experimental-organization/#variables)) linked to these objects during the [Data import process](../phis-docs-community/experimental-organization/#dataset).
 
 The complete list of scientific objects declared in Phis is available in the `Scientific Objects` menu, accessible from Phis top navigation bar.
 Phis users with a restricted access (e.g. *guestphis*) are likely to be unable to see the `Scientific Objects` menu, since there are no objects for them to see.
-The scientific objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type, additional properties (its variety, etc.) and the experience they are linked to.
+The scientific objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type and the experience they are linked to.
+The scientific objects list also displays additional properties (the objects species, variety, etc.).
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
 ![scientific-objects-list](img/scientific-objects_list.png)
@@ -444,7 +445,7 @@ See the [Map Visualization](../phis-docs-community/experimental-organization/#ma
 Within the `Scientific Objects` menu, Phis users can import new plots with the
 <span class="btn btn-success">Create</span> button.
 
-Scientific objects such as plots are imported into Phis through an editable table in which each additionnal row contains the information of an additionnal scientifc object to be inserted in Phis database.
+Scientific objects such as plots are imported into Phis through an editable table in which each row contains the information of an additionnal scientifc object to be inserted in Phis database.
 
 One can also copy and paste in this table the content of a .csv file whose header is :
 
@@ -470,7 +471,7 @@ In a given experiment, there can not be two identical aliases.
 - Silk
 - ScientificObject (generic term, it is not recommended to use it)
 
-There is only a handful of proposed scientific object types  in the current ontology : do not hesitate to contact OpenSILEX development team to add vector types that cannot be found in the list in order to make it evolve.
+There is only a handful of proposed scientific object types in the current ontology : do not hesitate to contact OpenSILEX development team to add object types that cannot be found in the list in order to make it evolve.
 If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
 
 `Experiment`. URI of the experiment the declared scientific objects belong to.
@@ -478,24 +479,28 @@ If this field is not filled excusively with URIs of experiments stored in Phis, 
 The experiments URIs can be selected from a dropdown list displaying all experiments declared in the system.
 If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
 
-`Geometry`. Optionnal.
+`Geometry`. Optionnal. Vector geometry such as polygons (for plots), provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
+Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), also known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
+More information on this system [here](https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html).
 
-`Parent`. Optionnal.
+`Parent`. Optionnal. URI of the parent scientific object, for example the URI of a previously declared plot when declaring in the system a plant that has been harvested from this plot.
+Another example is a plant URI which can be used as a parent of a plant organ being declared.
 
-`Species`. Optionnal.
+`Species`. Optionnal. The URI of the species of a plant, a plant part or plot (free text).
+The Species URIs can be selected from a dropdown list displaying all species URIs declared in the system.
+If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
+The complete list of species found in Phis is displayed in the  `Experimental organization / Species` menu, described in the [Species](../phis-docs-community/experimental-organization/#species) section of this documentation.
 
-`Variety`. Optionnal. The variety of a plant or a plant part or the variety of a plot.
+`Variety`. Optionnal. The variety of a plant or a plant part or the variety of a plot (free text).
 
-<!--
 Additional scienfic object properties that can be declared through the web services but not through the web client :
 
 - `ExperimentModalities` : the experiment modality of the plot, no controlled vocabulary required so far (e.g. "WD" for water deficit)
 - `Repetition` : the repetition of the scientific object mostly used for plots (e.g. 2 or A)
--->
 
 Every other additional line matches with a new scientific object.
 
-Let's take into consideration a fictionnal experiment composed of 4 plots of the same crop ("species").
+Let's take into consideration a fictionnal experiment composed of 4 plots of the same crop ("Species").
 In half of the plot, the variety "A" of the studied crop is grown, and in the other half, the variety "B".
 Of two plots dispaying the same variety, one is submitted to an experiment modality labelled "treatment 1", while the other is submitted to a "treatment 2".
 Experiments and Species have to be expressed with their internal Phis URI.
@@ -508,7 +513,15 @@ This configuration is sum up in the following table :
 | plot3       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
 | plot4       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
 
-The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7 required elements separated by semicolons :
+<!--
+| Alias          | Type          | Experiment   | Geometry       | Species     | Variety | ExperimentModalities | Repetition |
+| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- | :--------- |
+| plot01       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         |URI Species Y    |  varietyA      | Treatment1   | Rep1     |
+| plot02       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyA      | Treatment2   | Rep1     |
+| plot03       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
+| plot04       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
+-->
+The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7<!--8--> required elements separated by semicolons :
 
 ```
 Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
@@ -517,21 +530,32 @@ plot2;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;T
 plot3;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment1;Rep1
 plot4;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment2;Rep1
 ```
+<!--
+```
+Alias;Type;Experiment;Geometry;Species;Variety;ExperimentModalities;Repetition
+plot01;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyA;Treatment1;Rep1
+plot02;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyA;Treatment2;Rep1
+plot03;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyB;Treatment1;Rep1
+plot04;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyB;Treatment2;Rep1
+```
+-->
+A single scientific object cannot correspond to several species, variety, experimental modality or repetition.
+On the contrary, the same species, variety, experimental modality or repetition can be used for several scientific objects.
 
-A single plot cannot correspond to several species, variety, experimental modality or repetition.
-On the contrary, the same species, variety, experimental modality or repetition can be used for several plots.
+Some scientific object type such as plots can be described by geometrical objects such as polygons, whose GPS coordinates are provided following the [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
 
-Plots are geometrical objects such as polygons, provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
-Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), alsa known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
-More information on this system [here](https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html).
-
-The first step in order to import plots is therefore to create a .csv file containing all the new plots information, as is reminded below :
+The first step in order to import scientific object is usually to create a .csv file containing all the new plots information, as is reminded below :
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
 <!--
+| Alias          | Type          | Experiment   | Geometry       | Species     | Variety | ExperimentModalities | Repetition |
+| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
+| expX_modY_plotZ       | e.g. Plot, Plant, etc. | http&#58;//www.phenome-fppn.fr/.../...   | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
+-->
+
 The second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the `Home / Scientific Objects / Create Scientific Object` menu.
 
 ![new-objects-browse](img/create-object_browse.png)
@@ -544,7 +568,6 @@ Check the imported file but do not press the Upload button.
 Only on file at a time can be imported.
 
 ![new-objects-create](img/create-object_click-create.png)
--->
 
 After having pressed the <span class="btn btn-success">Create Scientific Objects</span> bottom button, the number of imported scientific objects is displayed.
 
@@ -553,6 +576,15 @@ After having pressed the <span class="btn btn-success">Create Scientific Objects
 ### Visualize scientific objects
 
 See [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section.
+
+## Species
+
+The complete list of species registered in a Phis session is available in the `Experimental organization / Species` menu, accessible from Phis top navigation bar.
+
+This list comes handy when declaring the species a scientific object belongs to. Instead of using free text when specifing a species, we choose between the available species URI.
+This procedure prevents the use of various names for the same entity, e.g. *triticum aestivum* and *bread wheat*.
+
+There is only a handful of proposed species in the current ontology : do not hesitate to contact OpenSILEX development team to add species that cannot be found in the list in order to make it evolve.
 
 ## Variables
 
