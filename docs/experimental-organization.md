@@ -1,4 +1,4 @@
-scientific object# Experimental Organization
+# Experimental Organization
 
 ## Scientific frames
 
@@ -831,7 +831,7 @@ URI2;2017-04-31;5.347687869;10
 ```
 
 The URI of the scientific objects of a given experimentation can be found on the `Scientific objects` menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the [Object types](../phis-docs-community/experimental-organization/#object-types) of this documentation).
-All variables values of the imported dataset are associated with scientific objects that must have been previously declared in Phis (see [Importing plots](../phis-docs-community/experimental-organization/#importing-plots)).
+All variables values of the imported dataset are associated with scientific objects that must have been previously declared in Phis (see [Importing Scientific Objects](../phis-docs-community/experimental-organization/#importing-scientific-objects)).
 
 The data file imported in Phis can displays many fields (i.e. number of items in the header), but only the column matching with the expected fields will be kept.
 The expected fields and their name are provided in the .csv template provide by the *Download Template* link above the **Data File** field.
