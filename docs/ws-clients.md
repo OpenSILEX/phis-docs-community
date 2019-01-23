@@ -64,5 +64,5 @@ The list of images types can be found in the `Tools / Vocabulary` menu of PHIS w
 Like any other Python script, e.g. using ipython or a linux terminal :
 
 ```
-python3 post.py
+python post.py
 ```
