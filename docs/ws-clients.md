@@ -35,7 +35,7 @@ Replace `"POSTImages-template.csv"` by the name of the CSV file containing the i
 Do not forget the double brackets.
 If you execute the Python script from a different repository than the one where the CSV file is stored, then in addition to the CSV file name, you need to inform the path to the CSV file, e.g. `"path/to/POSTImages-template.csv"`.
 
-A template of the required CSV file can be found on GitHub at the following URL : [https://github.com/OpenSILEX/phis-ws-clients/blob/mastehttps://www.theguardian.com/world/europe-newsr/python/images/POSTImages-template.csv](https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv).
+A template of the required CSV file can be found on GitHub at the following URL : [https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv](https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv).
 
 #### Modification of the CSV
 
