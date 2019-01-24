@@ -406,15 +406,15 @@ The document can also be downloaded clicking on the ![view](img/view_64_32.png) 
 ## Scientific Objects
 
 ### Object types
-Plant phenotyping experiments all revolve around one entity of interest : plants !
+Plant phenotyping experiments all revolve around one entity of interest: plants !
 However, plants can be studied at various scales, from a single leaf to a field.
-Phis experiments register data on elementary units : **scientific objects** (also refered to as agronomical objects), which are no more than declinations of plants, at various scales :
+Phis experiments register data on elementary units: **scientific objects** (also refered to as agronomical objects), which are no more than declinations of plants, at various scales:
 
-- **plant organ** : part of a given plant (e.g. **rootstock**, **scion**, **silk**, **seed**)
-- **plant** : single individual, displaying a single genotype (which is refered to as a **variety**). Most common elementary unit of greenhouse experiments.
-- **plot** : smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.
-- **block** : combination of plots, generally forming an environmentally homogeneous entity
-- **field** : large spatial unit that includes plots and potentially blocks
+- **plant organ**: part of a given plant (e.g. **rootstock**, **scion**, **silk**, **seed**)
+- **plant**: single individual, displaying a single genotype (which is refered to as a **variety**). Most common elementary unit of greenhouse experiments.
+- **plot**: smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.
+- **block**: combination of plots, generally forming an environmentally homogeneous entity
+- **field**: large spatial unit that includes plots and potentially blocks
 
 These scientific objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
 
@@ -425,7 +425,7 @@ Phis development team is open for discussion on this matter with its user.
 Phenotypic data created in an experiment, whether it is directly measured, calculated or estimated, is necessarily linked to scientific objects.
 
 Every scientific object is uniquely identified through a standardized URI which is automatically assigned by Phis when it is first entered in the system by a user.
-Metadata is associated to objects under the form of attributes : the object alias, its type (plant, plot, etc.), the experiment it is part of, etc.
+Metadata is associated to objects under the form of attributes: the object alias, its type (plant, plot, etc.), the experiment it is part of, etc.
 Data associated with these objects consists of the values of phenotypic variables (declared in Phis through the [Variables menu](../phis-docs-community/experimental-organization/#variables)) linked to these objects during the [Data import process](../phis-docs-community/experimental-organization/#dataset).
 
 The complete list of scientific objects declared in Phis is available in the `Scientific Objects` menu, accessible from Phis top navigation bar.
@@ -447,20 +447,20 @@ Within the `Scientific Objects` menu, Phis users can import new plots with the
 
 Scientific objects such as plots are imported into Phis through an editable table in which each row contains the information of an additionnal scientifc object to be inserted in Phis database.
 
-One can also copy and paste in this table the content of a .csv file whose header is :
+One can also copy and paste in this table the content of a .csv file whose header is:
 
 ```
 Alias;Type;Experiment;Geometry;Parent;Species;Variety
 ```
 
-Description of the content of this table, column by column :
+Description of the content of this table, column by column:
 
 `Generated URI`. Field to leave blank. Every new scientific object will be automatically assigned an URI when declared in Phis.
 
 `Alias`. Internal name of the scientific object (free text).
 In a given experiment, there can not be two identical aliases.
 
-`Type`. Type of the scientific object, chosen from a closed list containing :
+`Type`. Type of the scientific object, chosen from a closed list containing:
 
 - Plot
 - Plant
@@ -471,13 +471,13 @@ In a given experiment, there can not be two identical aliases.
 - Silk
 - ScientificObject (generic term, it is not recommended to use it)
 
-There is only a handful of proposed scientific object types in the current ontology : do not hesitate to contact OpenSILEX development team to add object types that cannot be found in the list in order to make it evolve.
-If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
+There is only a handful of proposed scientific object types in the current ontology: do not hesitate to contact OpenSILEX development team to add object types that cannot be found in the list in order to make it evolve.
+If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
 
 `Experiment`. URI of the experiment the declared scientific objects belong to.
 If this field is not filled excusively with URIs of experiments stored in Phis, then no scientific object will be added to the system.
 The experiments URIs can be selected from a dropdown list displaying all experiments declared in the system.
-If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
+If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
 
 `Geometry`. Optionnal. Vector geometry such as polygons (for plots), provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
 Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), also known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
@@ -488,15 +488,15 @@ Another example is a plant URI which can be used as a parent of a plant organ be
 
 `Species`. Optionnal. The URI of the species of a plant, a plant part or plot (free text).
 The Species URIs can be selected from a dropdown list displaying all species URIs declared in the system.
-If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
+If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
 The complete list of species found in Phis is displayed in the  `Experimental organization / Species` menu, described in the [Species](../phis-docs-community/experimental-organization/#species) section of this documentation.
 
 `Variety`. Optionnal. The variety of a plant or a plant part or the variety of a plot (free text).
 
-Additional scienfic object properties that can be declared through the web services but not through the web client :
+Additional scienfic object properties that can be declared through the web services but not through the web client:
 
-- `ExperimentModalities` : the experiment modality of the plot, no controlled vocabulary required so far (e.g. "WD" for water deficit)
-- `Repetition` : the repetition of the scientific object mostly used for plots (e.g. 2 or A)
+- `ExperimentModalities`: the experiment modality of the plot, no controlled vocabulary required so far (e.g. "WD" for water deficit)
+- `Repetition`: the repetition of the scientific object mostly used for plots (e.g. 2 or A)
 
 Every other additional line matches with a new scientific object.
 
@@ -521,7 +521,7 @@ This configuration is sum up in the following table:
 | plot03       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
 | plot04       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
 -->
-The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7<!--8--> required elements separated by semicolons :
+The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7<!--8--> required elements separated by semicolons:
 
 ```
 Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
@@ -544,7 +544,7 @@ On the contrary, the same species, variety, experimental modality or repetition 
 
 Some scientific object type such as plots can be described by geometrical objects such as polygons, whose GPS coordinates are provided following the [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
 
-The first step in order to import scientific object is usually to create a .csv file containing all the new plots information, as is reminded below :
+The first step in order to import scientific object is usually to create a .csv file containing all the new plots information, as is reminded below:
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
@@ -584,7 +584,7 @@ The complete list of species registered in a Phis session is available in the `E
 This list comes handy when declaring the species a scientific object belongs to. Instead of using free text when specifing a species, we choose between the available species URI.
 This procedure prevents the use of various names for the same entity, e.g. *triticum aestivum* and *bread wheat*.
 
-There is only a handful of proposed species in the current ontology : do not hesitate to contact OpenSILEX development team to add species that cannot be found in the list in order to make it evolve.
+There is only a handful of proposed species in the current ontology: do not hesitate to contact OpenSILEX development team to add species that cannot be found in the list in order to make it evolve.
 
 ## Variables
 
@@ -681,7 +681,7 @@ SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to st
 SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations):
 
 - **[broader](https://www.w3.org/TR/skos-reference/#broader)** (label=*has broader*): a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
-- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)** (label=*has narrower*) :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
+- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)** (label=*has narrower*):  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
 
 By convention, `skos:broader` and `skos:narrower` are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties `skos:broader` and `skos:narrower` are not declared as transitive properties.
 
