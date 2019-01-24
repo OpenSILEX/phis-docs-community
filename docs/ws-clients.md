@@ -10,17 +10,17 @@ Download this `post.py` script and change with the help of a text editor (e.g. N
 
 #### Modification of the Python script
 Having installed [Python](https://www.python.org/) is required to run the `post.py` script.
-Here is the list of changes you need to make to this script in order to import your images to PHIS:
+Here is the list of changes you need to make to this script in order to import your images to OpenSILEX PHIS:
 
 **Row n° 17**:
 
-Replace the default host name `'http://localhost:8084/phis2ws/rest/'` by the host name associated to your occurence of PHIS.
+Replace the default host name `'http://localhost:8084/phis2ws/rest/'` by the host name associated to your occurence of OpenSILEX PHIS.
 The URL of your documentation link should be of the form `'http://[...]/[occurence name]/api-docs/'`. The host name you need to provide on row 17 of `post.py` is this URL but with "api-docs" replaced by "rest": `'http://[...]/[occurence name]/rest/'`.
 Do not forget the single brackets.
 
 **Row n° 27 & 28**:
 
-Rows 27 and 28 are used for indicating your own login, the one you use when connecting to PHIS via a web browser.
+Rows 27 and 28 are used for indicating your own login, the one you use when connecting to OpenSILEX PHIS via a web browser.
 
 On row 27, replace the second occurence of 'username' by your username between single brackets: it should be an email adress, e.g. `'username': 'example@supagro.inra.fr',`.
 
@@ -31,7 +31,7 @@ Creating a md5 checksum version of your password can be achieved either using th
 
 **Row n° 58**:
 
-Replace `"POSTImages-template.csv"` by the name of the CSV file containing the information on the images you would like to import to PHIS.
+Replace `"POSTImages-template.csv"` by the name of the CSV file containing the information on the images you would like to import to OpenSILEX PHIS.
 Do not forget the double brackets.
 If you execute the Python script from a different repository than the one where the CSV file is stored, then in addition to the CSV file name, you need to inform the path to the CSV file, e.g. `"path/to/POSTImages-template.csv"`.
 
@@ -44,7 +44,7 @@ The first row of the CSV file displays its header:
 | path_image_ref     | imageType     | concernedUri     | concernedType     | position    | date     |  sensorUri   |
 | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
 
-Then, each row of this CSV file is associated to an image imported in PHIS.
+Then, each row of this CSV file is associated to an image imported in OpenSILEX PHIS.
 Each image is characterized by:
 
 - **path_Image_ref**: the name and path of the image (e.g. `image001.png`)
@@ -53,12 +53,12 @@ Each image is characterized by:
 - **concernedType**: the URI associated with the type of the entity associated with the image (e.g. `http://www.phenome-fppn.fr/vocabulary/2017#Plot`)
 - **position** (optionnal): if a sensor can display several positions, then you might want to fill the position from which the image has been shot (e.g. `1`)
 - **date**: date at which the image has been shot, using the *YYYY-MM-DD HH:MM:SS* format (e.g. `2017-06-15 09:00:00`)
-- **sensorUri**: URI of the sensor who captured the image (the URI of the sensors you registered in PHIS are available on the [Sensors menu](../phis-docs-community/experimental-organization/#sensor))
+- **sensorUri**: URI of the sensor who captured the image (the URI of the sensors you registered in OpenSILEX PHIS are available on the [Sensors menu](../phis-docs-community/experimental-organization/#sensor))
 
 All of these information are filled in plain text and without brackets.
 
-Both image types and entity types have to be submitted using the controlled vocabulary linked to PHIS application ontology.
-The list of images types can be found in the `Tools / Vocabulary` menu of PHIS webapp.
+Both image types and entity types have to be submitted using the controlled vocabulary linked to OpenSILEX PHIS application ontology.
+The list of images types can be found in the `Tools / Vocabulary` menu of OpenSILEX PHIS webapp.
 
 #### Execution of the Python script
 Like any other Python script, e.g. using ipython or a linux terminal:
