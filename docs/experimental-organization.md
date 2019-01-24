@@ -40,7 +40,7 @@ Further information on a given project is available on its information sheet, ac
 
 ![project-menu](img/projects-list_eye-icon.png)
 
-A project information sheet displays all this project information stored in Phis : URI, acronyme, objective, start and end dates, contacts linked to the project, a description, etc.
+A project information sheet displays all this project information stored in Phis: URI, acronyme, objective, start and end dates, contacts linked to the project, a description, etc.
 Documents (PDF, tables, etc.) can also be linked to a project.
 At the top of the project information sheet lie three buttons allowing the user to interact with the selected project.
 
@@ -120,7 +120,7 @@ Field plant phenotyping experimentations are refered to in Phis as **Experiments
 Experiments in Phis form self-sustained organizational units occuring in a delimited and known time frame.
 Every agronomical objects and environmental data stored in Phis field have to be related to an experiment.
 Experiments include both raw and cleaned data.
-The data types found in Phis experiments are including but not limited to :
+The data types found in Phis experiments are including but not limited to:
 
 - phenotypic data
 - environmental data
@@ -132,7 +132,7 @@ Contrary to projects, experiments information sheets are not public, but accessi
 Please go to [Access rights](../community/#access-rights) for further details on this matter.
 
 From the `Experiments` menu, a Phis user has access to the list of experiments it has the rights to access to.
-Every experiment on this list is characterized by :
+Every experiment on this list is characterized by:
 
 - its **URI** which identies it uniquely
 - its **Alias**, a short internal denomination
@@ -273,7 +273,7 @@ Variable values associated to a previous date will not appear in the graphic.
 `Date End`. Optionnal. Last date at which variable values are used to produce a graphic.
 Variable values associated to a later date will not appear in the graphic.
 
-The last step is to press the <span class="btn btn-primary">Search</span> button, which will lead to the creation of a graphic displaying according to a time axis the variable values associated to :
+The last step is to press the <span class="btn btn-primary">Search</span> button, which will lead to the creation of a graphic displaying according to a time axis the variable values associated to:
 
 - the agronomical objects selected on the map
 - the variable selected in the **Quantitative Variable** field
@@ -372,7 +372,7 @@ The upload button is bound to be abandonned in the following Phis development.
 ![upload-file](img/create-document_file.png)
 
 `Comment`. Complete plain text description of the new document, preferably provided in English language.
-For now, line breaks cannot be inserted in a comment : they could generate a bug.
+For now, line breaks cannot be inserted in a comment: they could generate a bug.
 
 Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with [Dublin Core](http://dublincore.org/documents/dces/) standards.
 
@@ -387,21 +387,21 @@ The document can also be downloaded clicking on the ![view](img/view_64_32.png) 
 ## Agronomical Objects
 
 ### Object types
-Plant phenotyping experiments all revolve around one entity of interest : plants !
-Phis experiments are focused on a given type of elements : **agronomical objects**, which are no more than declinations of plants, at various scales :
+Plant phenotyping experiments all revolve around one entity of interest: plants !
+Phis experiments are focused on a given type of elements: **agronomical objects**, which are no more than declinations of plants, at various scales:
 
-- **plant organ** : part of a given plant
-- **plant** : single individual, displaying a single genotype, which is refered to as a **variety**
-- **plot** : smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot)
-- **block** : combination of plots, generally forming an environmentally homogeneous entity
-- **field** : large spatial unit that includes plots and potentially blocks
+- **plant organ**: part of a given plant
+- **plant**: single individual, displaying a single genotype, which is refered to as a **variety**
+- **plot**: smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot)
+- **block**: combination of plots, generally forming an environmentally homogeneous entity
+- **field**: large spatial unit that includes plots and potentially blocks
 
 These agronomical objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
 A given agronomical object is required to be associated with one experiment, and one only.
 Phenotypic data created in an experiment, whether is it directly measured, calculated or estimated, is necessarily linked to agronomical objects.
 
 Every agronomical object is uniquely identified through a standardized URI.
-Metadata is associate to objects under the form of attributes : alias, experiment modality, etc.
+Metadata is associate to objects under the form of attributes: alias, experiment modality, etc.
 The data associated with these objects correspond with the values of phenotypic variables associated
 
 The complete list of agronomical objects is available in the `Agronomical Objects` menu, accessible from Phis top navigation bar.
@@ -420,7 +420,7 @@ See the [Map Visualization](../phis-docs-community/experimental-organization/#ma
 Within the `Agronomical objects` menu, Phis users can import new plots with the
 <span class="btn btn-success">Create</span> button.
 
-Plot, which are agronomical objects, are imported into Phis through a .csv file containing on its first line the following header :
+Plot, which are agronomical objects, are imported into Phis through a .csv file containing on its first line the following header:
 
 ```
 Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
@@ -432,7 +432,7 @@ Let's take into consideration a fictionnal experiment composed of 4 plots of the
 In half of the plot, the variety "A" of the studied crop is grown, and in the other half, the variety "B".
 Of two plots dispaying the same variety, one is submitted to an experiment modality labelled "treatment 1", while the other is submitted to a "treatment 2".
 Experiments and Species have to be expressed with their internal Phis URI.
-This configuration is sum up in the following table :
+This configuration is sum up in the following table:
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
@@ -441,7 +441,7 @@ This configuration is sum up in the following table :
 | plot3       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
 | plot4       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
 
-The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7 required elements separated by semicolons :
+The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7 required elements separated by semicolons:
 
 ```
 Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
@@ -458,7 +458,7 @@ Plots are geometrical objects such as polygons, provided according to [Well-know
 Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), alsa known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
 More information on this system [here](https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html).
 
-The first step in order to import plots is therefore to create a .csv file containing all the new plots information, as is reminded below :
+The first step in order to import plots is therefore to create a .csv file containing all the new plots information, as is reminded below:
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
@@ -554,7 +554,7 @@ This new unit label should be if possible meaningful, distinct from other unit l
 
 Otherwise, if the appropriate unit is already register in Phis, then one only has to select it from the `Unit label` field, without clicking on the <span class="btn btn-success">**+**</span> green icon (or clicking on the <span class="btn btn-danger">**-**</span> red icon if the <span class="btn btn-success">**+**</span> green icon had previously been clicked on).
 
-In the tricky case of a variable presenting no unit (e.g. pH), it is advised to crete a new unit whose label would be : dimensionless_unit_*variable-name* (e.g. dimensionless_unit_pH).
+In the tricky case of a variable presenting no unit (e.g. pH), it is advised to crete a new unit whose label would be: dimensionless_unit_*variable-name* (e.g. dimensionless_unit_pH).
 It matters in order not to use the same "unit" for every variable displaying a dimensionless unit.
 More on this topic on the [ontobee.org](http://www.ontobee.org/ontology/UO?iri=http://purl.obolibrary.org/obo/UO_0000196) website.
 
@@ -572,26 +572,26 @@ It is not required to specify related concepts for traits, methods and units, ho
 This semantic relation is provided using SKOS.
 The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
 
-SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to state alignement links between SKOS concepts, as indicated in the [w3 SKOS Mapping properties web page](https://www.w3.org/TR/skos-reference/#mapping) :
+SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to state alignement links between SKOS concepts, as indicated in the [w3 SKOS Mapping properties web page](https://www.w3.org/TR/skos-reference/#mapping):
 
-- **[exactMatch](https://www.w3.org/TR/skos-reference/#exactMatch)** : used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. `skos:exactMatch` is a transitive property, and is a sub-property of `skos:closeMatch`. *Example: `<MyNewNDVIVariable> skos:exactMatch <CO_322:0000880>` asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'*
-- **[closeMatch](https://www.w3.org/TR/skos-reference/#closeMatch)** : used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, `skos:closeMatch` is not declared to be a transitive property. *Example: `<MyNewLAIVariable> skos:closeMatch <http://www.cropontology.org/rdf/CO_321:0001254>` asserts that the variable 'MyNewLAIVariable' created in Phis is very similar to the variable 'LAI_Calc_Idx' already defined in the Crop Ontology and uniquely identified as 'CO_321:0001254'*
+- **[exactMatch](https://www.w3.org/TR/skos-reference/#exactMatch)**: used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. `skos:exactMatch` is a transitive property, and is a sub-property of `skos:closeMatch`. *Example: `<MyNewNDVIVariable> skos:exactMatch <CO_322:0000880>` asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'*
+- **[closeMatch](https://www.w3.org/TR/skos-reference/#closeMatch)**: used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, `skos:closeMatch` is not declared to be a transitive property. *Example: `<MyNewLAIVariable> skos:closeMatch <http://www.cropontology.org/rdf/CO_321:0001254>` asserts that the variable 'MyNewLAIVariable' created in Phis is very similar to the variable 'LAI_Calc_Idx' already defined in the Crop Ontology and uniquely identified as 'CO_321:0001254'*
 
-SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations) :
+SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations):
 
-- **[broader](https://www.w3.org/TR/skos-reference/#broader)** (label=*has broader*) : a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
-- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)** (label=*has narrower*)  :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
+- **[broader](https://www.w3.org/TR/skos-reference/#broader)** (label=*has broader*): a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
+- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)** (label=*has narrower*) :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
 
 By convention, `skos:broader` and `skos:narrower` are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties `skos:broader` and `skos:narrower` are not declared as transitive properties.
 
 `Reference URI` refers to the URI of the concept found on ontologies such as the ones suggested in the short list above the **Related References** field.
 The URI provided here is not necessarily the URL of the web page of the ontology on which the targeted concept is defined.
 Indeed, the URI of a given concept does not necessarily match with the URL of the web page where this concept has been found.
-*Example : http://www.cropontology.org/rdf/CO_322:0000907 is the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
-WARNING : using the identifier (e.g. CO_322:0000907) is not sufficient.*
+*Example: http://www.cropontology.org/rdf/CO_322:0000907 is the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+WARNING: using the identifier (e.g. CO_322:0000907) is not sufficient.*
 
 `Hyperlink` (optionnal) refers to the URL where are located the related concept whose URI has been provided in the previous field.
-*Example : http://www.cropontology.org/rdf/CO_322:0000907 is the hyperlink (URL) associated to the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+*Example: http://www.cropontology.org/rdf/CO_322:0000907 is the hyperlink (URL) associated to the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
 In this example, the URI of the concept is also an URL (a hyperlink), but it is not the case for every ontology.*
 
 When a variable is created, multiple references using SKOS can be stated, using the <span class="btn btn-default">**+**</span> white icon.
@@ -606,7 +606,7 @@ The scientific outcomes and the experience of the biomdical domain are thus expl
 The **[Ephesis Ontotology Portal](https://urgi.versailles.inra.fr/ephesis/ephesis/ontologyportal.do)**  is a JavaScript widget displaying all the observation variables of a Breeding API endpoint.
 It lists ontologies available with the BreedingAPI/CropOntology JSON format.
 
-Here are some examples of ontologies :
+Here are some examples of ontologies:
 
 The **[Crop Ontology (CO)](http://www.cropontology.org/)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
 
@@ -635,16 +635,16 @@ So far, it is not possible to modify or delete an existing variable, other than 
 The heart of experiments is to produce datasets associated with the agronomical variables it studies.
 In Phis, each dataset is associated to an experiment.
 High-throughput plant phenotyping platforms commonly set up experiments in which plant growth is monitored.
-Plant growth dynamcis are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.
+Plant growth dynamics are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.
 
 At this stage of development, all dataset variables are quantitative.
-No qualitative variables are saved in the datasets : a variable from a dataset can only assume numerical values and no character string is allowed.
+No qualitative variables are saved in the datasets: a variable from a dataset can only assume numerical values and no character string is allowed.
 
 A dataset typically displays information on many agronomical objects.
 These objects can be described by several variables.
 Each one of these variables can assume diverse values at different dates.
 In order to avoid confusion, each element of a dataset should then be understood as a triplet object-time-variable.
-Thus, each element of a dataset is associated uniquely with :
+Thus, each element of a dataset is associated uniquely with
 
 - a single agronomical object (e.g. a plot)
 - a single date (the day of the data acquisition)
@@ -663,7 +663,7 @@ A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable t
 Indeed, only users that are part of an owner group are authorized to add datasets to the experiments associated to this group.
 Go to the [Groups level of access](../phis-docs-community/community/#groups-level-of-access) section for further information on this issue.
 
-When adding a dataset to Phis, three types of elements can be created :
+When adding a dataset to Phis, three types of elements can be created:
 
 - the dataset itself, as a .csv file
 - the metadata associated to this dataset (e.g. variables in the dataset, creation date, etc.)
@@ -704,7 +704,7 @@ Click several times on <span class="btn btn-primary btn-file">Add Document</span
 
 ![add-dataset-browse-file](img/add-dataset_browse-file.png)
 
-The dataset added to Phis must respect some file rules :
+The dataset added to Phis must respect some file rules:
 
 - the file must be a .csv file
 - the first line of the file is a header, every other additional row matches with a new element characterized by a single agronomical object, a single date and as many variable values as there are variables
@@ -714,10 +714,10 @@ The dataset added to Phis must respect some file rules :
 - the date is refered to in the YYYY-MM-DD (year-month-date) format
 - variable values are provided as real number, since Phis then stores numbers as [double-precision floating-point value](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 - numerical values decimal separators should be dots `.` but commas `,` are tolerated
-- no character strings, "NA" included, are tolerated as variable values : if a variable value is unknown, do not write anything (see example below)
+- no character strings, "NA" included, are tolerated as variable values: if a variable value is unknown, do not write anything (see example below)
 - no quotes for URIs, dates or variable values
 
-In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates :
+In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates:
 
 ```
 AgronomicalObjectURI;Date;VariableAlias1;VariableAlias2
@@ -773,11 +773,11 @@ Annotations can be added to Phis through the <span class="btn btn-default">Add a
 
 `Creator`. The username of the creator of the annotation (you) is automatically recorded by Phis whenever you create an annotation.
 
-`Motivated by`. Following W3C recommendations on [annotation motivations](https://www.w3.org/TR/annotation-model/#motivation-and-purpose), when creating an annotation you need to select through the controlled vocabulary of `oa` the motivation category matching the reason why you are creating this annotation :
+`Motivated by`. Following W3C recommendations on [annotation motivations](https://www.w3.org/TR/annotation-model/#motivation-and-purpose), when creating an annotation you need to select through the controlled vocabulary of `oa` the motivation category matching the reason why you are creating this annotation:
 
-- `assessing` : used when the annotation is a comment or a quality assessment
-- `classifying` : used when the annotation is an attempt to classify the resource annotated
-- `editing` : used when the annotation is a request to edit or delete a resource
+- `assessing`: used when the annotation is a comment or a quality assessment
+- `classifying`: used when the annotation is an attempt to classify the resource annotated
+- `editing`: used when the annotation is a request to edit or delete a resource
 - etc. See [https://www.w3.org/TR/annotation-model/#motivation-and-purpose](https://www.w3.org/TR/annotation-model/#motivation-and-purpose) for the exhaustive list of annotation motivations
 
 `Creation Date`. Automatically set by Phis using the local time.
