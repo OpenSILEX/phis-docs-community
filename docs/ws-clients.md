@@ -22,7 +22,7 @@ Do not forget the single brackets.
 
 Rows 27 and 28 are used for indicating your own login, the one you use when connecting to OpenSILEX PHIS via a web browser.
 
-On row 27, replace the second occurence of 'username' by your username between single brackets: it should be an email adress, e.g. `'username': 'example@supagro.inra.fr',`.
+On row 27, replace the second occurence of 'username' by your username between single brackets: it should be an email adress, e.g. `'username': 'example@opensilex.org',`.
 
 On row 28, the simplest thing to do is to replace the second occurence of 'password' by your password between single brackets, e.g. ` 'password': hashlib.md5('type your password here').hexdigest(),`.
 
