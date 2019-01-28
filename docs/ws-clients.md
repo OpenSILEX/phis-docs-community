@@ -18,6 +18,12 @@ Replace the default host name `'http://localhost:8084/phis2ws/rest/'` by the hos
 The URL of your documentation link should be of the form `'http://[...]/[occurence name]/api-docs/'`. The host name you need to provide on row 17 of `post.py` is this URL but with "api-docs" replaced by "rest": `'http://[...]/[occurence name]/rest/'`.
 Do not forget the single brackets.
 
+**Row n° 18**:
+
+Replace `"POSTImages-template.csv"` by the name of the CSV file containing the information on the images you would like to import to OpenSILEX PHIS.
+Do not forget the double brackets.
+If you execute the Python script from a different repository than the one where the CSV file is stored, then in addition to the CSV file name, you need to inform the path to the CSV file, e.g. `"path/to/POSTImages-template.csv"`.
+
 **Row n° 27 & 28**:
 
 Rows 27 and 28 are used for indicating your own login, the one you use when connecting to OpenSILEX PHIS via a web browser.
@@ -28,12 +34,6 @@ On row 28, the simplest thing to do is to replace the second occurence of 'passw
 
 However, if you do not wish to right your password in clear, replace `hashlib.md5('password').hexdigest()` by an encrypted version of your password: a md5 checksum of your password (also between single brackets), e.g. `'1a79a4d60de6718e8e5b326e338ae533'` (this is the md5 encryption of "example").
 Creating a md5 checksum version of your password can be achieved either using the official [md5 webpage](https://www.md5.fr/) and typing there your password, either from a linux terminal typing `echo example | md5sum`, replacing "example" by your actual password.
-
-**Row n° 58**:
-
-Replace `"POSTImages-template.csv"` by the name of the CSV file containing the information on the images you would like to import to OpenSILEX PHIS.
-Do not forget the double brackets.
-If you execute the Python script from a different repository than the one where the CSV file is stored, then in addition to the CSV file name, you need to inform the path to the CSV file, e.g. `"path/to/POSTImages-template.csv"`.
 
 A template of the required CSV file can be found on GitHub at the following URL: [https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv](https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv).
 
