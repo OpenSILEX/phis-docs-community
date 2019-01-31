@@ -4,7 +4,7 @@
 
 ### Images import Python client
 
-An up-to-date version of said client can be founded on GitHub at the following URL : [https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py](https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py).
+An up-to-date version of said client can be found on GitHub at the following URL : [https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py](https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py).
 
 Download this `post.py` script and change with the help of a text editor (e.g. Notepad++ if you are using Windows) its rows n° 17, 27, 28 and 58.
 
