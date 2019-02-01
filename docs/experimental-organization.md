@@ -1,23 +1,23 @@
 # Experimental Organization
 
-## Infrastructures
+## Scientific frames
 
 Scientific experiments generate data, which is the focus the present information system.
 However, if only the data produced by experiments is stored, and not the complete experimental conditions, i.e. the environmental conditions, infrastructure and supporting equipment or resources used to conduct those experiments, then such archived data would be orphan and therefore non reusable.
 
-The first element of experimental conditions which is stored in Phis is the infrastructures linked to plant phenotyping experiments.
-An infrastructure can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
+The first element of experimental conditions which is stored in Phis is the scientific frames linked to plant phenotyping experiments.
+A scientific frame can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
 
-Users register infrastructures in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given infrastructures.
+Users register scientific frames in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given scientific frames.
 
-The complete list of infrastructures registered in a Phis session is available in the `Experimental organization / Infrastructures` menu, accessible from Phis top navigation bar.
+The complete list of scientific frames registered in a Phis session is available in the `Experimental organization / Scientific frames` menu, accessible from Phis top navigation bar.
 
-The <span class="btn btn-warning">Add document</span> button at the top of the infrastructures information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
+The <span class="btn btn-warning">Add document</span> button at the top of the each scientific frame information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
 See the [Documents](../phis-docs-community/experimental-organization/#documents) section below for further information on documents.
 
-It is from this `Infrastructures` menu that the installation manager can add the template documents for UAV or Phenomobile acquisition sessions.
-He has to click on the <span class="btn btn-warning">Add document</span> button and then select the **Document type** `AcquisitionSessionUAVDocument` or `AcquisitionSessionPhenomobileDocument` depending on which type of template document is created.
-Those template documents will then be accessible from both the `Infrastructures` menu and the [Acquisition session template](../phis-docs-community/installation/#acquisition-session-template) item from the `Installations` menu in the top bar.
+It is from this `Scientific frames` menu that the installation manager can add the template documents for UAV or Phenomobile acquisition sessions.
+He has to go to the information sheet of the concerned scientific frame. Then he has to click on the <span class="btn btn-warning">Add document</span> button and then select the **Document type** `AcquisitionSessionUAVDocument` or `AcquisitionSessionPhenomobileDocument` depending on which type of template document is created.
+Those template documents will then be accessible from the [Acquisition session template](../phis-docs-community/installation/#acquisition-session-template) item from the `Installations` menu in the top bar.
 
 ## Projects
 
@@ -40,7 +40,7 @@ Further information on a given project is available on its information sheet, ac
 
 ![project-menu](img/projects-list_eye-icon.png)
 
-A project information sheet displays all this project information stored in Phis : URI, acronyme, objective, start and end dates, contacts linked to the project, a description, etc.
+A project information sheet displays all this project information stored in Phis: URI, acronyme, objective, start and end dates, contacts linked to the project, a description, etc.
 Documents (PDF, tables, etc.) can also be linked to a project.
 At the top of the project information sheet lie three buttons allowing the user to interact with the selected project.
 
@@ -118,9 +118,9 @@ The email adresses refer uniquely to persons existing on Phis.
 ### What are experiments ?
 Field plant phenotyping experimentations are refered to in Phis as **Experiments**.
 Experiments in Phis form self-sustained organizational units occuring in a delimited and known time frame.
-Every agronomical objects and environmental data stored in Phis field have to be related to an experiment.
+Every scientific objects and environmental data stored in Phis field have to be related to an experiment.
 Experiments include both raw and cleaned data.
-The data types found in Phis experiments are including but not limited to :
+The data types found in Phis experiments are including but not limited to:
 
 - phenotypic data
 - environmental data
@@ -132,7 +132,7 @@ Contrary to projects, experiments information sheets are not public, but accessi
 Please go to [Access rights](../community/#access-rights) for further details on this matter.
 
 From the `Experiments` menu, a Phis user has access to the list of experiments it has the rights to access to.
-Every experiment on this list is characterized by :
+Every experiment on this list is characterized by:
 
 - its **URI** which identies it uniquely
 - its **Alias**, a short internal denomination
@@ -150,7 +150,7 @@ For more detail on experimental data access restrictions, see the section [Restr
 ![experiment-view](img/experiments_view.png)
 
 On top of the experiment information sheet, several buttons are displayed.
-The buttons <span class="btn btn-info">Map Visualization</span> and <span class="btn btn-success">Generate Map</span> enable the visualization of the agronomical objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
+The button <span class="btn btn-info">Map Visualization</span> enables the visualization of the scientific objects (e.g. plots) of the experiment on a map centered on the experiment intallation location.
 Jump to the section [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) for more information on experiment maps.
 The use of the other buttons, <span class="btn btn-primary">Update</span> and <span class="btn btn-warning">Add document</span>, is described at the end of the next section entitled [Create an experiment](../phis-docs-community/experimental-organization/#create-an-experiment).
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected experiment using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
@@ -229,34 +229,53 @@ See the [Documents](../phis-docs-community/experimental-organization/#documents)
 
 Once created, the experiment specifics can be modified with the <span class="btn btn-primary">Update</span> button.
 
+### Linking sensors and variables to an experiments
+
+Admin users can associate experiments to variables and sensors, but only if they have already been declared in the system through to the [Variables](../phis-docs-community/experimental-organization/#variables) menu and the [Sensors]((../phis-docs-community/installation/#sensors)) menu respectively.
+
+An experiment can be linked to several variables and sensors previously declared in Phis.
+
+From the `Experiments` menu (accessible from the **experimental organization** menu in the top navigation bar), select an experiment from the experiments list clicking on the eye icon on its right to access its information sheet.
+Then, go to the **Measured Variables** field and add variables from the dropdown list displaying all the alias of the variables previously declared in Phis.
+You can also go to the **Sensors which participates in** field and add sensors from the dropdown list displaying all the alias of the sensors previously declared in Phis.
+
+After having selected one or several variables or sensors, click on the *Update measured variable* button (check symbol) on the right to save the changes you made to the experiment.
+You should get a green "Resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button.
+
+![experiments_link-to-variables-and-sensors](img/experiments_linked-variables-and-sensors.png)
+
+The experiment-variable and experiment-sensor links are now saved in the triplestore and displayed respectively in the **Measured Variables** and **Sensors which participates in** fields of the experiment information sheet.
+To remove these links, just click on the close window symbol ("x") next to the variable or sensor alias in their respective fields, and then click on the associated *Update measured variable* button.
+You should get another green "Resources updated" pop-up on the top right corner of your screen after having clicked on the *Update measured variable* button, which confirms the changes made.
+
 ### Map visualization
 
 #### Objects selection
 
-Agronomical objects associated with a given experiment, for example plots, can be displayed on a map, thanks to their geopositioning informations.
-In Phis, a map refers to a dynamic map where all the agronomical objects of a given experiment are represented.
+Scientific objects associated with a given experiment, for example plots, can be displayed on a map, thanks to their geopositioning informations.
+In Phis, a map refers to a dynamic map where all the scientific objects of a given experiment are represented.
 
-After having imported agronomical objects linked to an experiment, the map associated with this experiment is created within the `Experiments` menu through the <span class="btn btn-success">Generate Map</span> button.
+After having imported scientific objects linked to an experiment, a map associated with this experiment can be visualized within the `Experiments` menu through the <span class="btn btn-info">Map Visualization</span> button.
 
-Once the map of an experiment has been created, there's no need to re-create it if no new agronomical object has been linked to this experiment.
-In such cases, the access to the experiment map is realized within the `Experiments` menu through the <span class="btn btn-info">Map Visualization</span> button.
+From this `Map Visualization` menu, one can create and subsequently update its information (if new scientific objects have been linked to the experiment) through the <span class="btn btn-success">Generate Map</span> button on the top right corner of the web page.
+Once the map of an experiment has been created, there's no need to re-create it if no new scientific object (e.g. plot) has been linked to this experiment.
 
 The map of an experiment is dynamic: one can zoom in and out with the **+** and **-** sign at the top left corner of the map, or simply using the mouse wheel.
 The map visualization also works with a touchscreen.
 Map rotation is performed pressing `Alt + Shift` while draging the mouse pointer.
-Selecting multiple contiguous agronomical objects is performed pressing `Ctrl + Left Click` and then dragging the mouse pointer (still holding the mouse left click).
-Selecting multiple non-contiguous agronomical objects is performed pressing `Ctrl + Shift` and then using the left-click of the mouse pointer.
+Selecting multiple contiguous scientific objects is performed pressing `Ctrl + Left Click` and then dragging the mouse pointer (still holding the mouse left click).
+Selecting multiple non-contiguous scientific objects is performed pressing `Ctrl + Shift` and then using the left-click of the mouse pointer.
 
 ![map-visualization-ctrl](img/map-visualization_ctrl.png)
 
-When agronomical objects of a map are selected, their attributes (alias within the experiment, crop specied, variety, modality, repetition) are displayed in a table under the map.
+When scientific objects of a map are selected, their attributes (alias within the experiment, crop specied, variety, modality, repetition) are displayed in a table under the map.
 
 ![map-visualization-selected](img/map-visualization_selected.png)
 
 #### Graphics from datasets
 
 Another feature provided by the `Map Visualization` menu is the possibility to plot graphics from datasets associated to an experiment.
-A first step is to select on the map agronomical objects (e.g. plots) as explained [above](../phis-docs-community/experimental-organization/#objects-selection).
+A first step is to select on the map scientific objects (e.g. plots) as explained [above](../phis-docs-community/experimental-organization/#objects-selection).
 In order to order to create clear graphics,one should avoid selecting too many objects at the same time.
 At that point, a new section, **Dataset(s) Visualization (On selected plot(s))**, appears under the map where the objects have been selected.
 The second step is to select the variable of the dataset from which a graphic should be produced.
@@ -273,24 +292,24 @@ Variable values associated to a previous date will not appear in the graphic.
 `Date End`. Optionnal. Last date at which variable values are used to produce a graphic.
 Variable values associated to a later date will not appear in the graphic.
 
-The last step is to press the <span class="btn btn-primary">Search</span> button, which will lead to the creation of a graphic displaying according to a time axis the variable values associated to :
+The last step is to press the <span class="btn btn-primary">Search</span> button, which will lead to the creation of a graphic displaying according to a time axis the variable values associated to:
 
-- the agronomical objects selected on the map
+- the scientific objects selected on the map
 - the variable selected in the **Quantitative Variable** field
 - potentially the time window between **Date Start** and **Date End** if those fields have been filled out
 
 On the new graphic, the time is displayed on the abscissa axis and the variable on the ordinate axis.
-Each points of the same color are associated to the same agronomical object which is identified below the graphic by its URI.
+Each points of the same color are associated to the same scientific object which is identified below the graphic by its URI.
 In future Phis developments, objects alias instead of URIs will be used as curve labels.
-Variable values and curve associated to an agronomical object can be masked by clicking on its associated curve label which at this point changes from black to grey.
+Variable values and curve associated to an scientific object can be masked by clicking on its associated curve label which at this point changes from black to grey.
 Clicking a second time on the label as the effect to show again the previously hidden curve.
 
 ### Images
 
 Another feature provided by the `Map Visualization` menu is the possibility to show images associated to an experiment, such as hemispherical images shot on the field.
 
-A first step is to select on the map the agronomical object (e.g. plot), as explained [above](../phis-docs-community/experimental-organization/#objects-selection), associated with the images you want to visualize.
-Do not select two agronomical objects (or more), otherwise PHIS would look for images associated to both the selected object, while most images are associated to one and only one object.
+A first step is to select on the map the scientific object (e.g. plot), as explained [above](../phis-docs-community/experimental-organization/#objects-selection), associated with the images you want to visualize.
+Do not select two scientific objects (or more), otherwise PHIS would look for images associated to both the selected object, while most images are associated to one and only one object.
 At that point, a new section, **Images Visualization (On selected plot)**, appears under the map where the objects have been selected.
 
 ![images-visualization](img/images-visualization.png)
@@ -372,7 +391,7 @@ The upload button is bound to be abandonned in the following Phis development.
 ![upload-file](img/create-document_file.png)
 
 `Comment`. Complete plain text description of the new document, preferably provided in English language.
-For now, line breaks cannot be inserted in a comment : they could generate a bug.
+For now, line breaks cannot be inserted in a comment: they could generate a bug.
 
 Click on the <span class="btn btn-success">Create</span> button to complete the document creation, i.e. the document upload and the specification of its metadata with [Dublin Core](http://dublincore.org/documents/dces/) standards.
 
@@ -384,55 +403,108 @@ The document can also be downloaded clicking on the ![view](img/view_64_32.png) 
 
 ![update-document](img/document-update.png)
 
-## Agronomical Objects
+## Scientific Objects
 
 ### Object types
-Plant phenotyping experiments all revolve around one entity of interest : plants !
-Phis experiments are focused on a given type of elements : **agronomical objects**, which are no more than declinations of plants, at various scales :
+Plant phenotyping experiments all revolve around one entity of interest: plants !
+However, plants can be studied at various scales, from a single leaf to a field.
+Phis experiments register data on elementary units: **scientific objects** (also refered to as agronomical objects), which are no more than declinations of plants, at various scales:
 
-- **plant organ** : part of a given plant
-- **plant** : single individual, displaying a single genotype, which is refered to as a **variety**
-- **plot** : smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot)
-- **block** : combination of plots, generally forming an environmentally homogeneous entity
-- **field** : large spatial unit that includes plots and potentially blocks
+- **plant organ**: part of a given plant (e.g. **rootstock**, **scion**, **silk**, **seed**)
+- **plant**: single individual, displaying a single genotype (which is refered to as a **variety**). Most common elementary unit of greenhouse experiments.
+- **plot**: smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.
+- **block**: combination of plots, generally forming an environmentally homogeneous entity
+- **field**: large spatial unit that includes plots and potentially blocks
 
-These agronomical objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
-A given agronomical object is required to be associated with one experiment, and one only.
-Phenotypic data created in an experiment, whether is it directly measured, calculated or estimated, is necessarily linked to agronomical objects.
+These scientific objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
 
-Every agronomical object is uniquely identified through a standardized URI.
-Metadata is associate to objects under the form of attributes : alias, experiment modality, etc.
-The data associated with these objects correspond with the values of phenotypic variables associated
+A given scientific object is required to be associated with one experiment, and one only.
+Phis development team is aware of the challenge in declaring perennial plants studied over several years. One might want to declare it in various experiments, each experiment matching a different time-period.
+Phis development team is open for discussion on this matter with its user.
 
-The complete list of agronomical objects is available in the `Agronomical Objects` menu, accessible from Phis top navigation bar.
-A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Agronomical Objects` menu, since there are no objects for her/him to see.
-The agronomical objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type, and the experience they are linked to.
+Phenotypic data created in an experiment, whether it is directly measured, calculated or estimated, is necessarily linked to scientific objects.
+
+Every scientific object is uniquely identified through a standardized URI which is automatically assigned by Phis when it is first entered in the system by a user.
+Metadata is associated to objects under the form of attributes: the object alias, its type (plant, plot, etc.), the experiment it is part of, etc.
+Data associated with these objects consists of the values of phenotypic variables (declared in Phis through the [Variables menu](../phis-docs-community/experimental-organization/#variables)) linked to these objects during the [Data import process](../phis-docs-community/experimental-organization/#dataset).
+
+The complete list of scientific objects declared in Phis is available in the `Scientific Objects` menu, accessible from Phis top navigation bar.
+Phis users with a restricted access (e.g. *guest*) are likely to be unable to see the `Scientific Objects` menu, since there are no objects for them to see.
+The scientific objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type and the experience they are linked to.
+The scientific objects list also displays additional properties (the objects species, variety, etc.).
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
-![objects-list](img/agronomical-objects_list.png)
+![scientific-objects-list](img/scientific-objects_list.png)
 
-Agronomical objects information can also be accessed through the `Experiments` menu.
-After having selected an experiment, the agronomical objects linked to it can be displayed on a map.
+Scientific objects information can also be accessed through the `Experiments` menu.
+After having selected an experiment, the scientific objects linked to it can be displayed on a map.
 Moreover, selecting objects on such a map provides additional information on the attributes of these objects.
 See the [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section for more information on that matter.
 
-### Importing plots
-Within the `Agronomical objects` menu, Phis users can import new plots with the
+### Importing scientific objects
+Within the `Scientific Objects` menu, Phis users can import new plots with the
 <span class="btn btn-success">Create</span> button.
 
-Plot, which are agronomical objects, are imported into Phis through a .csv file containing on its first line the following header :
+Scientific objects such as plots are imported into Phis through an editable table in which each row contains the information of an additionnal scientifc object to be inserted in Phis database.
+
+One can also copy and paste in this table the content of a .csv file whose header is:
 
 ```
-Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
+Alias;Type;Experiment;Geometry;Parent;Species;Variety
 ```
 
-Every other additional line matches with a new plot.
+Description of the content of this table, column by column:
 
-Let's take into consideration a fictionnal experiment composed of 4 plots of the same crop ("species").
+`Generated URI`. Field to leave blank. Every new scientific object will be automatically assigned an URI when declared in Phis.
+
+`Alias`. Internal name of the scientific object (free text).
+In a given experiment, there can not be two identical aliases.
+
+`Type`. Type of the scientific object, chosen from a closed list containing:
+
+- Plot
+- Plant
+- Leaf
+- Rootstock
+- Seed
+- Scion
+- Silk
+- ScientificObject (generic term, it is not recommended to use it)
+
+There is only a handful of proposed scientific object types in the current ontology: do not hesitate to contact OpenSILEX development team to add object types that cannot be found in the list in order to make it evolve.
+If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
+
+`Experiment`. URI of the experiment the declared scientific objects belong to.
+If this field is not filled excusively with URIs of experiments stored in Phis, then no scientific object will be added to the system.
+The experiments URIs can be selected from a dropdown list displaying all experiments declared in the system.
+If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
+
+`Geometry`. Optionnal. Vector geometry such as polygons (for plots), provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
+Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), also known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
+More information on this system [here](https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html).
+
+`Parent`. Optionnal. URI of the parent scientific object, for example the URI of a previously declared plot when declaring in the system a plant that has been harvested from this plot.
+Another example is a plant URI which can be used as a parent of a plant organ being declared.
+
+`Species`. Optionnal. The URI of the species of a plant, a plant part or plot (free text).
+The Species URIs can be selected from a dropdown list displaying all species URIs declared in the system.
+If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
+The complete list of species found in Phis is displayed in the  `Experimental organization / Species` menu, described in the [Species](../phis-docs-community/experimental-organization/#species) section of this documentation.
+
+`Variety`. Optionnal. The variety of a plant or a plant part or the variety of a plot (free text).
+
+Additional scienfic object properties that can be declared through the web services but not through the web client:
+
+- `ExperimentModalities`: the experiment modality of the plot, no controlled vocabulary required so far (e.g. "WD" for water deficit)
+- `Repetition`: the repetition of the scientific object mostly used for plots (e.g. 2 or A)
+
+Every other additional line matches with a new scientific object.
+
+Let's take into consideration a fictionnal experiment composed of 4 plots of the same crop ("Species").
 In half of the plot, the variety "A" of the studied crop is grown, and in the other half, the variety "B".
 Of two plots dispaying the same variety, one is submitted to an experiment modality labelled "treatment 1", while the other is submitted to a "treatment 2".
 Experiments and Species have to be expressed with their internal Phis URI.
-This configuration is sum up in the following table :
+This configuration is sum up in the following table:
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
@@ -441,7 +513,15 @@ This configuration is sum up in the following table :
 | plot3       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
 | plot4       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
 
-The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7 required elements separated by semicolons :
+<!--
+| Alias          | Type          | Experiment   | Geometry       | Species     | Variety | ExperimentModalities | Repetition |
+| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- | :--------- |
+| plot01       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         |URI Species Y    |  varietyA      | Treatment1   | Rep1     |
+| plot02       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyA      | Treatment2   | Rep1     |
+| plot03       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
+| plot04       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
+-->
+The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7<!--8--> required elements separated by semicolons:
 
 ```
 Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
@@ -450,21 +530,33 @@ plot2;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;T
 plot3;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment1;Rep1
 plot4;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment2;Rep1
 ```
+<!--
+```
+Alias;Type;Experiment;Geometry;Species;Variety;ExperimentModalities;Repetition
+plot01;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyA;Treatment1;Rep1
+plot02;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyA;Treatment2;Rep1
+plot03;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyB;Treatment1;Rep1
+plot04;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyB;Treatment2;Rep1
+```
+-->
+A single scientific object cannot correspond to several species, variety, experimental modality or repetition.
+On the contrary, the same species, variety, experimental modality or repetition can be used for several scientific objects.
 
-A single plot cannot correspond to several species, variety, experimental modality or repetition.
-On the contrary, the same species, variety, experimental modality or repetition can be used for several plots.
+Some scientific object type such as plots can be described by geometrical objects such as polygons, whose GPS coordinates are provided following the [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
 
-Plots are geometrical objects such as polygons, provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
-Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), alsa known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
-More information on this system [here](https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html).
-
-The first step in order to import plots is therefore to create a .csv file containing all the new plots information, as is reminded below :
+The first step in order to import scientific object is usually to create a .csv file containing all the new plots information, as is reminded below:
 
 | Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
-THe second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the `Home / Agronomical Objects / Create Agronomical Object` menu.
+<!--
+| Alias          | Type          | Experiment   | Geometry       | Species     | Variety | ExperimentModalities | Repetition |
+| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
+| expX_modY_plotZ       | e.g. Plot, Plant, etc. | http&#58;//www.phenome-fppn.fr/.../...   | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
+-->
+
+The second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the `Home / Scientific Objects / Create Scientific Object` menu.
 
 ![new-objects-browse](img/create-object_browse.png)
 
@@ -477,19 +569,28 @@ Only on file at a time can be imported.
 
 ![new-objects-create](img/create-object_click-create.png)
 
-After having pressed the <span class="btn btn-success">Create</span> bottom button the number of imported agronomical objects is displayed.
+After having pressed the <span class="btn btn-success">Create Scientific Objects</span> bottom button, the number of imported scientific objects is displayed.
 
 ![new-objects-success](img/create-object_result.png)
 
-### Visualize agronomical objects
+### Visualize scientific objects
 
 See [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section.
+
+## Species
+
+The complete list of species registered in a Phis session is available in the `Experimental organization / Species` menu, accessible from Phis top navigation bar.
+
+This list comes handy when declaring the species a scientific object belongs to. Instead of using free text when specifing a species, we choose between the available species URI.
+This procedure prevents the use of various names for the same entity, e.g. *triticum aestivum* and *bread wheat*.
+
+There is only a handful of proposed species in the current ontology: do not hesitate to contact OpenSILEX development team to add species that cannot be found in the list in order to make it evolve.
 
 ## Variables
 
 ### Variables properties
-Phis variables characterize Phis **agronomical objects** or their **environment**.
-Variables characterizing agronomical objects are **phenotypic variables**, while variables characterizing the environment in which those agronomical objects are studied are refered to as **environmental variables**.
+Phis variables characterize Phis **scientific objects** or their **environment**.
+Variables characterizing scientific objects are **phenotypic variables**, while variables characterizing the environment in which those scientific objects are studied are refered to as **environmental variables**.
 Phis variables can be either directly mesured by a sensor, either computed from one or several variables.
 
 Every variable produced by an experiment must have been previously created in Phis, and every variable created in Phis has to be defined unambuigusously.
@@ -554,7 +655,7 @@ This new unit label should be if possible meaningful, distinct from other unit l
 
 Otherwise, if the appropriate unit is already register in Phis, then one only has to select it from the `Unit label` field, without clicking on the <span class="btn btn-success">**+**</span> green icon (or clicking on the <span class="btn btn-danger">**-**</span> red icon if the <span class="btn btn-success">**+**</span> green icon had previously been clicked on).
 
-In the tricky case of a variable presenting no unit (e.g. pH), it is advised to crete a new unit whose label would be : dimensionless_unit_*variable-name* (e.g. dimensionless_unit_pH).
+In the tricky case of a variable presenting no unit (e.g. pH), it is advised to crete a new unit whose label would be: dimensionless_unit_*variable-name* (e.g. dimensionless_unit_pH).
 It matters in order not to use the same "unit" for every variable displaying a dimensionless unit.
 More on this topic on the [ontobee.org](http://www.ontobee.org/ontology/UO?iri=http://purl.obolibrary.org/obo/UO_0000196) website.
 
@@ -572,26 +673,26 @@ It is not required to specify related concepts for traits, methods and units, ho
 This semantic relation is provided using SKOS.
 The entity can either be, compared to an ontology concept, an **exact match**, a **close match**, **narrower** or **broader**.
 
-SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to state alignement links between SKOS concepts, as indicated in the [w3 SKOS Mapping properties web page](https://www.w3.org/TR/skos-reference/#mapping) :
+SKOS mapping properties, `skos:closeMatch` and `skos:exactMatch`, are used to state alignement links between SKOS concepts, as indicated in the [w3 SKOS Mapping properties web page](https://www.w3.org/TR/skos-reference/#mapping):
 
-- **[exactMatch](https://www.w3.org/TR/skos-reference/#exactMatch)** : used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. `skos:exactMatch` is a transitive property, and is a sub-property of `skos:closeMatch`. *Example: `<MyNewNDVIVariable> skos:exactMatch <CO_322:0000880>` asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'*
-- **[closeMatch](https://www.w3.org/TR/skos-reference/#closeMatch)** : used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, `skos:closeMatch` is not declared to be a transitive property. *Example: `<MyNewLAIVariable> skos:closeMatch <http://www.cropontology.org/rdf/CO_321:0001254>` asserts that the variable 'MyNewLAIVariable' created in Phis is very similar to the variable 'LAI_Calc_Idx' already defined in the Crop Ontology and uniquely identified as 'CO_321:0001254'*
+- **[exactMatch](https://www.w3.org/TR/skos-reference/#exactMatch)**: used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. `skos:exactMatch` is a transitive property, and is a sub-property of `skos:closeMatch`. *Example: `<MyNewNDVIVariable> skos:exactMatch <CO_322:0000880>` asserts that the variable 'MyNewNDVIVariable' created in Phis refers to the exact same concept as does the variable 'NDVI_M_idx' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000880'*
+- **[closeMatch](https://www.w3.org/TR/skos-reference/#closeMatch)**: used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of "compound errors" when combining mappings across more than two concept schemes, `skos:closeMatch` is not declared to be a transitive property. *Example: `<MyNewLAIVariable> skos:closeMatch <http://www.cropontology.org/rdf/CO_321:0001254>` asserts that the variable 'MyNewLAIVariable' created in Phis is very similar to the variable 'LAI_Calc_Idx' already defined in the Crop Ontology and uniquely identified as 'CO_321:0001254'*
 
-SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations) :
+SKOS hierarchical properties `skos:broader` and `skos:narrower` are used to assert a direct hierarchical link between two SKOS concepts, as indicated in the [w3 Semantic Relations web page](https://www.w3.org/TR/skos-reference/#semantic-relations):
 
-- **[broader](https://www.w3.org/TR/skos-reference/#broader)** (label=*has broader*) : a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
-- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)** (label=*has narrower*)  :  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
+- **[broader](https://www.w3.org/TR/skos-reference/#broader)** (label=*has broader*): a triple `<A> skos:broader <B>` asserts that `<B>`, the object of the triple, is a broader concept than `<A>`, the subject of the triple. *Example: `<MyNewPlantHeightTrait> skos:broader <CO_322:0000994>` asserts that the trait 'MyNewPlantHeightTrait' created in Phis refers to a concept that has a broader one: which is the concept refered to by the trait 'Plant height' already defined in the Crop Ontology and uniquely identified as 'CO_322:0000994'*
+- **[narrower](https://www.w3.org/TR/skos-reference/#narrower)** (label=*has narrower*):  a triple `<C> skos:narrower <D>` asserts that `<D>`, the object of the triple, is a narrower concept than `<C>`, the subject of the triple. `skos:broader` is `owl:inverseOf` the property `skos:narrower`.  *Example: `<MyNewStageEstimationMethod> skos:narrower <http://www.cropontology.org/terms/CO_322:0000905/>` asserts that the method 'MyNewStageEstimationMethod' created in Phis refers to a concept that has a narrower one, which is the concept refered to by the method 'Silking date - Estimation' already defined in the Crop Ontology and uniquely identified as 'http://www.cropontology.org/terms/CO_322:0000905/'*
 
 By convention, `skos:broader` and `skos:narrower` are only used to assert a direct (i.e., immediate) hierarchical link between two SKOS concepts. This provides applications with a convenient and reliable way to access the direct broader and narrower links for any given concept. Note that, to support this usage convention, the properties `skos:broader` and `skos:narrower` are not declared as transitive properties.
 
 `Reference URI` refers to the URI of the concept found on ontologies such as the ones suggested in the short list above the **Related References** field.
 The URI provided here is not necessarily the URL of the web page of the ontology on which the targeted concept is defined.
 Indeed, the URI of a given concept does not necessarily match with the URL of the web page where this concept has been found.
-*Example : http://www.cropontology.org/rdf/CO_322:0000907 is the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
-WARNING : using the identifier (e.g. CO_322:0000907) is not sufficient.*
+*Example: http://www.cropontology.org/rdf/CO_322:0000907 is the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+WARNING: using the identifier (e.g. CO_322:0000907) is not sufficient.*
 
 `Hyperlink` (optionnal) refers to the URL where are located the related concept whose URI has been provided in the previous field.
-*Example : http://www.cropontology.org/rdf/CO_322:0000907 is the hyperlink (URL) associated to the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
+*Example: http://www.cropontology.org/rdf/CO_322:0000907 is the hyperlink (URL) associated to the URI of the concept "Silk_Date_ymd" of the Crop Ontology.
 In this example, the URI of the concept is also an URL (a hyperlink), but it is not the case for every ontology.*
 
 When a variable is created, multiple references using SKOS can be stated, using the <span class="btn btn-default">**+**</span> white icon.
@@ -606,7 +707,7 @@ The scientific outcomes and the experience of the biomdical domain are thus expl
 The **[Ephesis Ontotology Portal](https://urgi.versailles.inra.fr/ephesis/ephesis/ontologyportal.do)**  is a JavaScript widget displaying all the observation variables of a Breeding API endpoint.
 It lists ontologies available with the BreedingAPI/CropOntology JSON format.
 
-Here are some examples of ontologies :
+Here are some examples of ontologies:
 
 The **[Crop Ontology (CO)](http://www.cropontology.org/)** current objective is to compile validated concepts along with their inter-relationships on anatomy, structure and phenotype of crops, on trait mesurement and methods, as well as on germplasm with the multi-crop passport terms.
 
@@ -635,25 +736,25 @@ So far, it is not possible to modify or delete an existing variable, other than 
 The heart of experiments is to produce datasets associated with the agronomical variables it studies.
 In Phis, each dataset is associated to an experiment.
 High-throughput plant phenotyping platforms commonly set up experiments in which plant growth is monitored.
-Plant growth dynamcis are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.
+Plant growth dynamics are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.
 
 At this stage of development, all dataset variables are quantitative.
-No qualitative variables are saved in the datasets : a variable from a dataset can only assume numerical values and no character string is allowed.
+No qualitative variables are saved in the datasets: a variable from a dataset can only assume numerical values and no character string is allowed.
 
-A dataset typically displays information on many agronomical objects.
+A dataset typically displays information on many scientific objects.
 These objects can be described by several variables.
 Each one of these variables can assume diverse values at different dates.
 In order to avoid confusion, each element of a dataset should then be understood as a triplet object-time-variable.
-Thus, each element of a dataset is associated uniquely with :
+Thus, each element of a dataset is associated uniquely with
 
-- a single agronomical object (e.g. a plot)
+- a single scientific object (e.g. a plot)
 - a single date (the day of the data acquisition)
 - a single variable (a quantitative variable used to monitor the measured or calculated trait)
 - a single variable numerical value (the value of the variable cited above)
 
 Datasets are available indirectly through the `Experiments` menu, selecting an experiment and then accessing to its map through the <span class="btn btn-info">Map Visualization</span> button.
 
-Graphics can be extracted from the experiment datasets in the **Dataset(s) Visualization (On selected plot(s))** section, which appears under the map of the experiment when agronomical objects are selected.
+Graphics can be extracted from the experiment datasets in the **Dataset(s) Visualization (On selected plot(s))** section, which appears under the map of the experiment when scientific objects are selected.
 How to create such graphics is explained in the [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section of this documentation.
 
 ### Import Dataset
@@ -663,7 +764,7 @@ A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable t
 Indeed, only users that are part of an owner group are authorized to add datasets to the experiments associated to this group.
 Go to the [Groups level of access](../phis-docs-community/community/#groups-level-of-access) section for further information on this issue.
 
-When adding a dataset to Phis, three types of elements can be created :
+When adding a dataset to Phis, three types of elements can be created:
 
 - the dataset itself, as a .csv file
 - the metadata associated to this dataset (e.g. variables in the dataset, creation date, etc.)
@@ -704,23 +805,23 @@ Click several times on <span class="btn btn-primary btn-file">Add Document</span
 
 ![add-dataset-browse-file](img/add-dataset_browse-file.png)
 
-The dataset added to Phis must respect some file rules :
+The dataset added to Phis must respect some file rules:
 
 - the file must be a .csv file
-- the first line of the file is a header, every other additional row matches with a new element characterized by a single agronomical object, a single date and as many variable values as there are variables
+- the first line of the file is a header, every other additional row matches with a new element characterized by a single scientific object, a single date and as many variable values as there are variables
 - in a given row, each items are separated by a single semicolon `;`
-- the header contains the fields **AgronomicalObjectURI** and **Date**, and as many variable alias as there are added variables (see the .csv template that can be downloaded above the **Data File** field)
-- the agronomical objects are refered to by their respective URI
+- the header contains the fields **ScientificObjectURI** and **Date**, and as many variable alias as there are added variables (see the .csv template that can be downloaded above the **Data File** field)
+- the scientific objects are refered to by their respective URI
 - the date is refered to in the YYYY-MM-DD (year-month-date) format
 - variable values are provided as real number, since Phis then stores numbers as [double-precision floating-point value](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 - numerical values decimal separators should be dots `.` but commas `,` are tolerated
-- no character strings, "NA" included, are tolerated as variable values : if a variable value is unknown, do not write anything (see example below)
+- no character strings, "NA" included, are tolerated as variable values: if a variable value is unknown, do not write anything (see example below)
 - no quotes for URIs, dates or variable values
 
-In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates :
+In the following example, the added dataset exhibits information on two objects, one of them (URI1) displaying values for one variable at three different dates, and the other one (URI2) displaying values for two variables at the same dates:
 
 ```
-AgronomicalObjectURI;Date;VariableAlias1;VariableAlias2
+ScientificObjectURI;Date;VariableAlias1;VariableAlias2
 URI1;2017-04-01;;5
 URI1;2017-04-15;;10.0
 URI1;2017-04-31;;12.00
@@ -729,8 +830,8 @@ URI2;2017-04-15;4.12;9
 URI2;2017-04-31;5.347687869;10
 ```
 
-The URI of the agronomical objects of a given experimentation can be found on the `Agronomical Objects` menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the [Object types](../phis-docs-community/experimental-organization/#object-types) of this documentation).
-All variables values of the imported dataset are associated with agronomical objects that must have been previously declared in Phis (see [Importing plots](../phis-docs-community/experimental-organization/#importing-plots)).
+The URI of the scientific objects of a given experimentation can be found on the `Scientific objects` menu, using search filters, and then downloaded with the <span class="btn btn-primary">Download Search Result</span> button (see the [Object types](../phis-docs-community/experimental-organization/#object-types) of this documentation).
+All variables values of the imported dataset are associated with scientific objects that must have been previously declared in Phis (see [Importing Scientific Objects](../phis-docs-community/experimental-organization/#importing-scientific-objects)).
 
 The data file imported in Phis can displays many fields (i.e. number of items in the header), but only the column matching with the expected fields will be kept.
 The expected fields and their name are provided in the .csv template provide by the *Download Template* link above the **Data File** field.
@@ -773,11 +874,11 @@ Annotations can be added to Phis through the <span class="btn btn-default">Add a
 
 `Creator`. The username of the creator of the annotation (you) is automatically recorded by Phis whenever you create an annotation.
 
-`Motivated by`. Following W3C recommendations on [annotation motivations](https://www.w3.org/TR/annotation-model/#motivation-and-purpose), when creating an annotation you need to select through the controlled vocabulary of `oa` the motivation category matching the reason why you are creating this annotation :
+`Motivated by`. Following W3C recommendations on [annotation motivations](https://www.w3.org/TR/annotation-model/#motivation-and-purpose), when creating an annotation you need to select through the controlled vocabulary of `oa` the motivation category matching the reason why you are creating this annotation:
 
-- `assessing` : used when the annotation is a comment or a quality assessment
-- `classifying` : used when the annotation is an attempt to classify the resource annotated
-- `editing` : used when the annotation is a request to edit or delete a resource
+- `assessing`: used when the annotation is a comment or a quality assessment
+- `classifying`: used when the annotation is an attempt to classify the resource annotated
+- `editing`: used when the annotation is a request to edit or delete a resource
 - etc. See [https://www.w3.org/TR/annotation-model/#motivation-and-purpose](https://www.w3.org/TR/annotation-model/#motivation-and-purpose) for the exhaustive list of annotation motivations
 
 `Creation Date`. Automatically set by Phis using the local time.
@@ -785,4 +886,3 @@ Annotations can be added to Phis through the <span class="btn btn-default">Add a
 `Targets`. Automatically set by Phis, this field records the resource (e.g. experiment) from which an annotation creation has been requested by the user (i.e. from which resource he clicked on the <span class="btn btn-default">Add annotation</span> button).
 
 `Description`. Content of the annotation, ideally provided in English (free text).
-
