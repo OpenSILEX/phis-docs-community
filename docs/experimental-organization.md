@@ -268,7 +268,7 @@ Selecting multiple non-contiguous scientific objects is performed pressing `Ctrl
 
 ![map-visualization-ctrl](img/map-visualization_ctrl.png)
 
-When scientific objects of a map are selected, their attributes (alias within the experiment, crop specied, variety, modality, repetition) are displayed in a table under the map.
+When scientific objects of a map are selected, their attributes (alias within the experiment, crop species, variety, modality, replication) are displayed in a table under the map.
 
 ![map-visualization-selected](img/map-visualization_selected.png)
 
@@ -450,7 +450,7 @@ Scientific objects such as plots are imported into Phis through an editable tabl
 One can also copy and paste in this table the content of a .csv file whose header is:
 
 ```
-Alias;Type;Experiment;Geometry;Parent;Species;Variety
+Alias;Type;Experiment;Geometry;Parent;Species;Variety;ExperimentModalities;Replication
 ```
 
 Description of the content of this table, column by column:
@@ -495,8 +495,11 @@ The complete list of species found in Phis is displayed in the  `Experimental or
 
 Additional scienfic object properties that can be declared through the web services but not through the web client:
 
-- `ExperimentModalities`: the experiment modality of the plot, no controlled vocabulary required so far (e.g. "WD" for water deficit)
-- `Repetition`: the repetition of the scientific object mostly used for plots (e.g. 2 or A)
+`ExperimentModalities`. The experiment modality of the plot, no controlled vocabulary required so far (e.g. "WD" for water deficit). (free text).
+
+`Replication`. The repetition of the scientific object mostly used for plots (e.g. 1, 2, A, or B...). (free text).
+
+`Insertion status`. Automatically filled when clicking on the <span class="btn btn-success">Create Scientific Objects</span> button : this indicator shows which new scientific objects have been created and which one have failed to be added to the system.
 
 Every other additional line matches with a new scientific object.
 
@@ -506,68 +509,38 @@ Of two plots dispaying the same variety, one is submitted to an experiment modal
 Experiments and Species have to be expressed with their internal Phis URI.
 This configuration is sum up in the following table:
 
-| Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
+| Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Replication |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | plot1       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyA      | Treatment1   | Rep1     |
 | plot2       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyA      | Treatment2   | Rep1     |
 | plot3       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
 | plot4       | POLYGON (( ... ... , ... ... ))       | URI Experiment X   | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
 
-<!--
-| Alias          | Type          | Experiment   | Geometry       | Species     | Variety | ExperimentModalities | Repetition |
-| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- | :--------- |
-| plot01       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         |URI Species Y    |  varietyA      | Treatment1   | Rep1     |
-| plot02       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyA      | Treatment2   | Rep1     |
-| plot03       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment1   | Rep1     |
-| plot04       | Plot        | URI Experiment X   | POLYGON (( ... ... , ... ... ))       | URI Parent         | URI Species Y    |  varietyB      | Treatment2   | Rep1     |
--->
-The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7<!--8--> required elements separated by semicolons:
+The file necessary to import those four plots is a 5 line csv file: after the header, every line of the imported file needs to display the 7 required elements, for instance separated by semicolons (or commas):
 
 ```
-Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Repetition
+Alias;Geometry;ExperimentURI;Species;Variety;ExperimentModalities;Replication
 plot1;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;Treatment1;Rep1
 plot2;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyA;Treatment2;Rep1
 plot3;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment1;Rep1
 plot4;POLYGON (( ... ... , ... ... ));URI Experiment X;URI Species Y; varietyB;Treatment2;Rep1
 ```
-<!--
-```
-Alias;Type;Experiment;Geometry;Species;Variety;ExperimentModalities;Repetition
-plot01;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyA;Treatment1;Rep1
-plot02;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyA;Treatment2;Rep1
-plot03;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyB;Treatment1;Rep1
-plot04;Plot;URI Experiment X;POLYGON (( ... ... , ... ... ));URI Parent;URI Species Y; varietyB;Treatment2;Rep1
-```
--->
-A single scientific object cannot correspond to several species, variety, experimental modality or repetition.
-On the contrary, the same species, variety, experimental modality or repetition can be used for several scientific objects.
+Such a file can be then copied and pasted to the handsontable form.
+
+A single scientific object cannot correspond to several species, variety, experimental modality or replication.
+On the contrary, the same species, variety, experimental modality or replication can be used for several scientific objects.
 
 Some scientific object type such as plots can be described by geometrical objects such as polygons, whose GPS coordinates are provided following the [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
 
 The first step in order to import scientific object is usually to create a .csv file containing all the new plots information, as is reminded below:
 
-| Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Repetition |
+| Alias          | Geometry       | ExperimentURI  | Species     | Variety | ExperimentModalities | Replication |
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
-<!--
-| Alias          | Type          | Experiment   | Geometry       | Species     | Variety | ExperimentModalities | Repetition |
-| :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
-| expX_modY_plotZ       | e.g. Plot, Plant, etc. | http&#58;//www.phenome-fppn.fr/.../...   | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
--->
+The second step is to copy and paste the content of the CSV file in the handsontable form displayed in the `Home / Scientific Objects / Create Scientific Object` menu.
 
-The second step is to import the .csv file through the <span class="btn btn-primary">Browse</span> button, at the bottom right of the `Home / Scientific Objects / Create Scientific Object` menu.
-
-![new-objects-browse](img/create-object_browse.png)
-
-Use the file browser to select the desired .csv file and open it.
-
-![new-objects-find-file](img/create-object_find-file.png)
-
-Check the imported file but do not press the Upload button.
-Only on file at a time can be imported.
-
-![new-objects-create](img/create-object_click-create.png)
+![new-objects-create](img/create-object_handsontable.png)
 
 After having pressed the <span class="btn btn-success">Create Scientific Objects</span> bottom button, the number of imported scientific objects is displayed.
 
