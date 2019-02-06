@@ -859,3 +859,54 @@ Annotations can be added to Phis through the <span class="btn btn-default">Add a
 `Targets`. Automatically set by Phis, this field records the resource (e.g. experiment) from which an annotation creation has been requested by the user (i.e. from which resource he clicked on the <span class="btn btn-default">Add annotation</span> button).
 
 `Description`. Content of the annotation, ideally provided in English (free text).
+
+## Events
+
+### What are events ?
+
+Events, like simple annotations, are created following the [Open Annotation Data Model](http://www.openannotation.org/spec/core/core.html) that allows assigning motivation and purpose attributes to annotations (e.g. oa:describing, oa:identifying, oa:linking, oa: replying, etc.). [Dublin Core](http://dublincore.org/) and [foaf](http://xmlns.com/foaf/spec/) specifications such as *dcterms:created*, *dcterms:creator*, *foaf:Agent* are also used.
+
+### Ontology of Experimental Events
+
+The Ontology of Experimental Events (OEEv) is hosted by **AgroPortal**: it can be accessed to at [agroportal.lirmm.fr/ontologies/OEEV](http://agroportal.lirmm.fr/ontologies/OEEV).
+
+The **Ontology of Experimental Events (OEEv)**, characterises events that occur during an experiment, e.g. dates of sowing, application of a given treatment, harvesting, measurements or sampling for -omic measurements, or any category of technical problem. The OEEv ontology contains four groups of events, namely *Facility Management*, *Scientific Object Management*, *Trouble* and *Displacement*.
+
+#### Facility Management
+
+The *Facility Management* refers to the set of actions related to the management and maintenance infrastructure and supporting equipment. It describes events related to *servicing*, *maintenance* and *calibration of equipment or installations*.
+
+#### Scientific Object Management
+
+The *Scientific Object Management* contains different sub-categories of events related to the typical operations conducted on plants or plots in experiments:
+
+- *AddingProduct* refers to the application of products such as fertilizers
+- *Clipping* is related to the installation of accessories surch as embeded sensors
+- *Detasseling* refres to removal of the tassel of maize
+- *Harvesting* refers to the harvest of the plant
+- *Irrigation* describes irrgation events
+- *Thinning* refers to the removal of some plants, or parts of plants, to make room for the growth of others
+- *Treatment* related to either curative or preventive treatments applied to plants
+- *PhenolgyScoring* refers to the set of events related to the different phenological stages of plants.
+- *Potting* applies to pot experiments
+- *Sowing* applies for both field and pot experiments
+- *Stacking* refers to the action of putting plant tutors
+
+#### Trouble
+
+The event *Trouble* is defined by three different sub-categories:
+
+- *Breakdown* (sensor or conveyor)
+- *Dysfunction* (sensor fault, irrigation trouble)
+- *Incident* (a pot falls down, a leaf is blocked in an imaging cabin, lodging of a plot, human error, etc.)
+
+Several subtypes of *incidents* that often occur in platfortm or field experiments have been declared including:
+
+- *PotFall*
+- *Lodging*
+- *StuckPlant*
+- *PestAttack*
+
+#### Displacement (object tracking)
+
+The *Displacement* event has been created to follow the position in time and space of the different objects participating in experiments. For instance, plants are often transferred, during a single indoor experiment, between installations or compartments with different environmental conditions. Similarly, sensors can be replaced or moved to different positions in the field or greenhouse. The *MoveTo* and *MoveFrom* concepts allow tracking objects.
