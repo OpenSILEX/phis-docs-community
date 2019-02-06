@@ -7,6 +7,7 @@ However, if only the data produced by experiments is stored, and not the complet
 
 The first element of experimental conditions which is stored in Phis is the scientific frames linked to plant phenotyping experiments.
 A scientific frame can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
+OEPO is progressively being replaced by the more generic **Ontology of Experimental Scientif Objects (OESO)** stored in GitHub at [github.com/OpenSILEX/ontology-vocabularies](https://github.com/OpenSILEX/ontology-vocabularies). 
 
 Users register scientific frames in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given scientific frames.
 
