@@ -864,13 +864,18 @@ Annotations can be added to Phis through the <span class="btn btn-default">Add a
 
 ### What are events ?
 
+Events are crucial pieces of information used to enrich Phis datasets.
+Events are ponctual occurrences happening during an experiment, and potentially having an impact on the recorded data.
+Those events can be either planned (e.g. a sowing date) or unexpected (e.g. damages to a field experiment caused by wild animals).
+
 Events, like simple annotations, are created following the [Open Annotation Data Model](http://www.openannotation.org/spec/core/core.html) that allows assigning motivation and purpose attributes to annotations (e.g. oa:describing, oa:identifying, oa:linking, oa: replying, etc.). [Dublin Core](http://dublincore.org/) and [foaf](http://xmlns.com/foaf/spec/) specifications such as *dcterms:created*, *dcterms:creator*, *foaf:Agent* are also used.
 
 ### Ontology of Experimental Events
 
-The Ontology of Experimental Events (OEEv) is hosted by **AgroPortal**: it can be accessed to at [agroportal.lirmm.fr/ontologies/OEEV](http://agroportal.lirmm.fr/ontologies/OEEV).
+An application ontology developped at INRA Montpellier, compliant with the standards of OWL, provides the structured vocabulary necessary to describe all events created and then stored in Phis: it is the Ontology of Experimental Events (OEEv), hosted by **AgroPortal**.
+It can be accessed to from [agroportal.lirmm.fr/ontologies/OEEV](http://agroportal.lirmm.fr/ontologies/OEEV).
 
-The **Ontology of Experimental Events (OEEv)**, characterises events that occur during an experiment, e.g. dates of sowing, application of a given treatment, harvesting, measurements or sampling for -omic measurements, or any category of technical problem. The OEEv ontology contains four groups of events, namely *Facility Management*, *Scientific Object Management*, *Trouble* and *Displacement*.
+The **Ontology of Experimental Events**, characterises events that occur during an experiment, e.g. dates of sowing, application of a given treatment, harvesting, measurements or sampling for -omic measurements, or any category of technical problem. The OEEv ontology contains four groups of events, namely *Facility Management*, *Scientific Object Management*, *Trouble* and *Displacement*.
 
 #### Facility Management
 
