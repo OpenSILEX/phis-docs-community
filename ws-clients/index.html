@@ -118,35 +118,35 @@
 <h1 id="web-service-clients">Web Service Clients</h1>
 <h2 id="python-clients">Python Clients</h2>
 <h3 id="images-import-python-client">Images import Python client</h3>
-<p>An up-to-date version of said client can be found on GitHub at the following URL : <a href="https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py">https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py</a>.</p>
-<p>Download this <code>post.py</code> script and change with the help of a text editor (e.g. Notepad++ if you are using Windows) its rows n° 17, 27, 28 and 58.</p>
+<p>An up-to-date version of said client can be found on GitHub at the following URL: <a href="https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py">https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/post.py</a>.</p>
+<p>Download this <code>post.py</code> script and change with the help of a text editor (e.g. Notepad++ if you are using Windows) its rows n° 17, 18, 27 and 28.</p>
 <h4 id="modification-of-the-python-script">Modification of the Python script</h4>
 <p>Having installed <a href="https://www.python.org/">Python</a> is required to run the <code>post.py</code> script.
-Here is the list of changes you need to make to this script in order to import your images to PHIS :</p>
-<p><strong>Row n° 17</strong> :</p>
-<p>Replace the default host name <code>'http://localhost:8084/phis2ws/rest/'</code> by the host name associated to your occurence of PHIS.
-The URL of your documentation link should be of the form <code>'http://[...]/[occurence name]/api-docs/'</code>. The host name you need to provide on row 17 of <code>post.py</code> is this URL but with "api-docs" replaced by "rest" : <code>'http://[...]/[occurence name]/rest/'</code>.
+Here is the list of changes you need to make to this script in order to import your images to OpenSILEX PHIS:</p>
+<p><strong>Row n° 17</strong>:</p>
+<p>Replace the default host name <code>'http://localhost:8084/phis2ws/rest/'</code> by the host name associated to your occurence of OpenSILEX PHIS.
+The URL of your documentation link should be of the form <code>'http://[...]/[occurence name]/api-docs/'</code>. The host name you need to provide on row 17 of <code>post.py</code> is this URL but with "api-docs" replaced by "rest": <code>'http://[...]/[occurence name]/rest/'</code>.
 Do not forget the single brackets.</p>
-<p><strong>Row n° 27 &amp; 28</strong> :</p>
-<p>Rows 27 and 28 are used for indicating your own login, the one you use when connecting to PHIS via a web browser.</p>
-<p>On row 27, replace the second occurence of 'username' by your username between single brackets : it should be an email adress, e.g. <code>'username': 'example@supagro.inra.fr',</code>.</p>
-<p>On row 28, the simplest thing to do is to replace the second occurence of 'password' by your password between single brackets, e.g. <code>'password': hashlib.md5('type your password here').hexdigest(),</code>.</p>
-<p>However, if you do not wish to right your password in clear, replace <code>hashlib.md5('password').hexdigest()</code> by an encrypted version of your password : a md5 checksum of your password (also between single brackets), e.g. <code>'1a79a4d60de6718e8e5b326e338ae533'</code> (this is the md5 encryption of "example").
-Creating a md5 checksum version of your password can be achieved either using the official <a href="https://www.md5.fr/">md5 webpage</a> and typing there your password, either from a linux terminal typing <code>echo example | md5sum</code>, replacing "example" by your actual password.</p>
-<p><strong>Row n° 58</strong> :</p>
-<p>Replace <code>"POSTImages-template.csv"</code> by the name of the CSV file containing the information on the images you would like to import to PHIS.
+<p><strong>Row n° 18</strong>:</p>
+<p>Replace <code>"POSTImages-template.csv"</code> by the name of the CSV file containing the information on the images you would like to import to OpenSILEX PHIS.
 Do not forget the double brackets.
 If you execute the Python script from a different repository than the one where the CSV file is stored, then in addition to the CSV file name, you need to inform the path to the CSV file, e.g. <code>"path/to/POSTImages-template.csv"</code>.</p>
-<p>A template of the required CSV file can be founded on GitHub at the following URL : <a href="https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv">https://github.com/OpenSILEX/phis-ws-clients/blob/mastehttps://www.theguardian.com/world/europe-newsr/python/images/POSTImages-template.csv</a>.</p>
+<p><strong>Row n° 27 &amp; 28</strong>:</p>
+<p>Rows 27 and 28 are used for indicating your own login, the one you use when connecting to OpenSILEX PHIS via a web browser.</p>
+<p>On row 27, replace the second occurence of 'username' by your username between single brackets: it should be an email adress, e.g. <code>'username': 'example@opensilex.org',</code>.</p>
+<p>On row 28, the simplest thing to do is to replace the second occurence of 'password' by your password between single brackets, e.g. <code>'password': hashlib.md5('type your password here').hexdigest(),</code>.</p>
+<p>However, if you do not wish to right your password in clear, replace <code>hashlib.md5('password').hexdigest()</code> by an encrypted version of your password: a md5 checksum of your password (also between single brackets), e.g. <code>'1a79a4d60de6718e8e5b326e338ae533'</code> (this is the md5 encryption of "example").
+Creating a md5 checksum version of your password can be achieved either using a <a href="https://www.md5.fr/">md5 hash webpage</a> and typing there your password, either from a linux terminal typing <code>echo example | md5sum</code>, replacing "example" by your actual password.</p>
+<p>A template of the required CSV file can be found on GitHub at the following URL: <a href="https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv">https://github.com/OpenSILEX/phis-ws-clients/blob/master/python/images/POSTImages-template.csv</a>.</p>
 <h4 id="modification-of-the-csv">Modification of the CSV</h4>
-<p>The first row of the CSV file displays its header :</p>
+<p>The first row of the CSV file displays its header:</p>
 <table>
 <thead>
 <tr>
 <th>path_image_ref</th>
 <th>imageType</th>
-<th>concernedUri</th>
-<th>concernedType</th>
+<th>concernedItemUri</th>
+<th>concernedItemType</th>
 <th>position</th>
 <th>date</th>
 <th>sensorUri</th>
@@ -154,22 +154,22 @@ If you execute the Python script from a different repository than the one where 
 </thead>
 <tbody></tbody>
 </table>
-<p>Then, each row of this CSV file is associated to an image imported in PHIS.
-Each image is characterized by :</p>
+<p>Then, each row of this CSV file is associated to an image imported in OpenSILEX PHIS.
+Each image is characterized by:</p>
 <ul>
-<li><strong>path_Image_ref</strong> : the name and path of the image (e.g. <code>image001.png</code>)</li>
-<li><strong>ImageType</strong> : the URI associated with the type of the image (e.g. <code>http://www.phenome-fppn.fr/vocabulary/2017#HemisphericalImage</code> or <code>http://www.phenome-fppn.fr/vocabulary/2017#RGBImage</code>)</li>
-<li><strong>concernedUri</strong> : the URI of the entity associated to the image, typically an agronomical object such a plot (e.g. <code>http://www.phenome-fppn.fr/mtp/2017/o1000001</code>)</li>
-<li><strong>concernedType</strong> : the URI associated with the type of the entity associated with the image (e.g. <code>http://www.phenome-fppn.fr/vocabulary/2017#Plot</code>)</li>
-<li><strong>position</strong> (optionnal) : if a sensor can display several positions, then you might want to fill the position from which the image has been shot (e.g. <code>1</code>)</li>
-<li><strong>date</strong> : date at which the image has been shot, using the <em>YYYY-MM-DD HH:MM:SS</em> format (e.g. <code>2017-06-15 09:00:00</code>)</li>
-<li><strong>sensorUri</strong> : URI of the sensor who captured the image (the URI of the sensors you registered in PHIS are available on the <a href="../../phis-docs-community/experimental-organization/#sensor">Sensors menu</a>)</li>
+<li><strong>path_Image_ref</strong>: the name and path of the image (e.g. <code>image001.png</code>)</li>
+<li><strong>ImageType</strong>: the URI associated with the type of the image (e.g. <code>http://www.phenome-fppn.fr/vocabulary/2017#HemisphericalImage</code> or <code>http://www.phenome-fppn.fr/vocabulary/2017#RGBImage</code>)</li>
+<li><strong>concernedItemUri</strong>: the URI of the entity associated to the image, typically an agronomical object such a plot (e.g. <code>http://www.phenome-fppn.fr/mtp/2017/o1000001</code>)</li>
+<li><strong>concernedItemType</strong>: the URI associated with the type of the entity associated with the image (e.g. <code>http://www.phenome-fppn.fr/vocabulary/2017#Plot</code>)</li>
+<li><strong>position</strong> (optionnal): if a sensor can display several positions, then you might want to fill the position from which the image has been shot (e.g. <code>1</code>)</li>
+<li><strong>date</strong>: date at which the image has been shot, using the <em>YYYY-MM-DD HH:MM:SS</em> format (e.g. <code>2017-06-15 09:00:00</code>)</li>
+<li><strong>sensorUri</strong>: URI of the sensor who captured the image (the URI of the sensors you registered in OpenSILEX PHIS are available on the <a href="../../phis-docs-community/experimental-organization/#sensor">Sensors menu</a>)</li>
 </ul>
 <p>All of these information are filled in plain text and without brackets.</p>
-<p>Both image types and entity types have to be submitted using the controlled vocabulary linked to PHIS application ontology.
-The list of images types can be found in the <code>Tools / Vocabulary</code> menu of PHIS webapp.</p>
+<p>Both image types and entity types have to be submitted using the controlled vocabulary linked to OpenSILEX PHIS application ontology.
+The list of images types can be found in the <code>Tools / Vocabulary</code> menu of OpenSILEX PHIS webapp.</p>
 <h4 id="execution-of-the-python-script">Execution of the Python script</h4>
-<p>Like any other Python3 script, e.g. using ipython or a linux terminal :</p>
+<p>Like any other Python3 script, e.g. using ipython or a linux terminal as follows:</p>
 <pre><code>python3 post.py
 </code></pre></div>
         </div>
