@@ -89,7 +89,7 @@ There is generally no more than one or two admin per platform.
 
 ### Restrictions to a group
 A given information can be visible to specific groups. A Phis user not belonging to those groups will not be able to view the data linked to them.
-The concepts that can be assigned to groups are experiments and the agronomical objects it contains.
+The concepts that can be assigned to groups are experiments and the scientific objects it contains.
 Currently, access rights are managed by experiment.
 
 ### Public data
