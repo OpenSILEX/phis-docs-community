@@ -11,17 +11,20 @@ More information on SILEX is available at [SILEX web page](https://www6.montpell
 ## Contributors
 Contributors to this documentation are agents of the INRA - SupAgro joint research units MISTEA and LEPSE in Montpellier :
 
-- Pierre-Etienne Alary
-- Morgane Vidal
+- Alice Boizet
+- Andréas Garcia
 - Anne Tireau
 - Arnaud Charleroy
 - Llorenç Cabrera-Bosquet
+- Morgane Vidal
+- Pierre-Etienne Alary
+- Vincent Migot
 
 Every PHIS user is welcomed to enrich this repository with its experience of the information system.
 
 ## Issues
 This documentation is currently under developpement.
-If a PHIS user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis2-docs-community/issues).
+If a PHIS user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis-docs-community/issues).
 Concerning issues with PHIS itself, users are invited to report them via another channel, which has not been set up to this day.
 
 ## References
@@ -30,4 +33,5 @@ Pilot version of PHIS (different to the one presented here) described in [Neveu,
 Interactive web user interface of the pilot version of PHIS available at [phis.inra.fr](http://www.phis.inra.fr/).
 
 ## Version
-&copy; OpenSILEX - PHIS v.2.5 - 22 August 2018 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
+&copy; OpenSILEX - PHIS v.3 - 31 January 2019 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
+

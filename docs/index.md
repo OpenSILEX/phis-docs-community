@@ -37,4 +37,4 @@ Pilot version of Phis (different to the one presented here) described in [Neveu,
 Interactive web user interface of the pilot version of Phis available at [phis.inra.fr](http://www.phis.inra.fr/).
 
 ## Version
-&copy; OpenSILEX - PHIS v.2.5 - 22 August 2018 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
+&copy; OpenSILEX - PHIS v.3 - 31 January 2019 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
