@@ -28,13 +28,17 @@ Every Phis user is welcomed to enrich this repository with her/his experience of
 
 ## Issues
 This documentation is currently under developpement.
-If a Phis user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis-docs-community/issues).
-Concerning issues with Phis itself, users are invited to report them via another channel, which has not been set up to this day.
+If a OpenSILEX PHIS user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis-docs-community/issues).
+
+Concerning issues with OpenSILEX PHIS itself, users are invited to report them via the GitHub issues of the repositories causing trouble, for instance [phis-ws/issues](https://github.com/OpenSILEX/phis-ws/issues) for problems concerning the Web services and [phis-webapp/issues](https://github.com/OpenSILEX/phis-webapp/issues) for issues with the Web client.
+
+OpenSILEX development team can also be contacted through its official email address: [opensilex@gmail.com](mailto:opensilex@gmail.com).
 
 ## References
 Pilot version of Phis (different to the one presented here) described in [Neveu, Pascal, et al. "Dealing with multi‐source and multi‐scale information in plant phenomics: the ontology‐driven Phenotyping Hybrid Information System." New Phytologist (2018).](https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.15385)
+An interactive web user interface of the pilot version of Phis is available at [phis.inra.fr](http://www.phis.inra.fr/).
 
-Interactive web user interface of the pilot version of Phis available at [phis.inra.fr](http://www.phis.inra.fr/).
+The current version of OpenSILEX PHIS is presented on the webpage [opensilex.org](http://www.opensilex.org/).
 
 ## Version
 &copy; OpenSILEX - PHIS v.3 - 31 January 2019 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
