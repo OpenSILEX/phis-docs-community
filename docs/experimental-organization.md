@@ -7,7 +7,7 @@ However, if only the data produced by experiments is stored, and not the complet
 
 The first element of experimental conditions which is stored in Phis is the scientific frames linked to plant phenotyping experiments.
 A scientific frame can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at [emphasis.plant-phenotyping.eu](https://emphasis.plant-phenotyping.eu/Infrastructure_ontology) and at [agroportal.lirmm.fr/ontologies/OEPO](http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure).
-OEPO is progressively being replaced by the more generic **Ontology of Experimental Scientif Objects (OESO)** stored in GitHub at [github.com/OpenSILEX/ontology-vocabularies](https://github.com/OpenSILEX/ontology-vocabularies). 
+OEPO is progressively being replaced by the more generic **Ontology of Experimental Scientif Objects (OESO)** stored in GitHub at [github.com/OpenSILEX/ontology-vocabularies](https://github.com/OpenSILEX/ontology-vocabularies).
 
 Users register scientific frames in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given scientific frames.
 
@@ -483,6 +483,8 @@ If the dropdown list isn't displayed correctly, try selecting any element of the
 `Geometry`. Optionnal. Vector geometry such as polygons (for plots), provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
 Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), also known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
 More information on this system [here](https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html).
+A quick way to draw WKT polygons from a map is to use the "draw a shape" tool of the [sandbox](https://arthur-e.github.io/Wicket/sandbox-gmaps3.html) website.
+However, it is recommended to use professional geographic information systems such as [QGis](https://www.qgis.org).
 
 `Parent`. Optionnal. URI of the parent scientific object, for example the URI of a previously declared plot when declaring in the system a plant that has been harvested from this plot.
 Another example is a plant URI which can be used as a parent of a plant organ being declared.
