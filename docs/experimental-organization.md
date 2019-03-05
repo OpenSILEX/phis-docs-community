@@ -708,7 +708,6 @@ So far, it is not possible to modify or delete an existing variable, other than 
 ### Dataset properties
 
 The heart of experiments is to produce datasets associated with the agronomical variables it studies.
-In Phis, each dataset is associated to an experiment.
 High-throughput plant phenotyping platforms commonly set up experiments in which plant growth is monitored.
 Plant growth dynamics are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.
 
