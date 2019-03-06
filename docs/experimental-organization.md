@@ -574,7 +574,7 @@ Moreover, the usage of unequivocal variables in experiments is a necessary step 
 Phis variables are listed in the `Variables` menu.
 A Phis user with a restricted access (e.g. *guestphis*) is likely to be unable to see the `Variables` menu, since there is no variable for her/him to see.
 
-Variable definition is based on the [Crop Ontology guidelines](http://www.cropontology.org/CropOntology_Curation_Guidelines_20160510.pdf).
+Variable definition is based on the [Crop Ontology guidelines (draft document)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwirq4mHm-3gAhVCXRoKHXigCYwQFjACegQIBxAC&url=https%3A%2F%2Furgi.versailles.inra.fr%2Fcontent%2Fdownload%2F5615%2F42178%2Ffile%2F11_05_2018_CropOntology_Curation_Guidelines.pdf&usg=AOvVaw1qg5ZjagUYmSSp5pWPtpaq).
 Therefore, Phis variables are all unequivocally characterized by the following triplet:
 
 - a single **trait**, either a phenotypic trait or an environmental feature, which is the subject of the new variable
