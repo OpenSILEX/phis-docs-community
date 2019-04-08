@@ -541,13 +541,15 @@ The first step in order to import scientific object is usually to create a .csv 
 | :------------- | :------------- | :------------- | :---------- |:------------- | :------------- | :--------- |
 | expX_modY_plotZ       | POLYGON (( ... ... , ... ... ))       | http&#58;//www.phenome-fppn.fr/.../...   | http&#58;//www.phenome-fppn.fr/id/species/...    | e.g. varietyX      | e.g. nitrogen-1     | e.g. 1 (or A-I)     |
 
-The second step is to copy and paste the content of the CSV file in the handsontable form displayed in the `Home / Scientific Objects / Create Scientific Object` menu.
+The second step is to copy and paste the content of the CSV file in the handsontable form displayed in the `Home / Scientific Objects / Create Scientific Object` menu and then click on the <span class="btn btn-success">Create Scientific Objects</span> bottom button to complete the declaration of scientific objects.
 
 ![new-objects-create](img/create-object_handsontable.png)
 
+<!---
 After having pressed the <span class="btn btn-success">Create Scientific Objects</span> bottom button, the number of imported scientific objects is displayed.
 
 ![new-objects-success](img/create-object_result.png)
+--->
 
 ### Visualize scientific objects
 
