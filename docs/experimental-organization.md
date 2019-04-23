@@ -414,8 +414,10 @@ Phis experiments register data on elementary units: **scientific objects** (also
 - **plant organ**: part of a given plant (e.g. **rootstock**, **scion**, **silk**, **seed**)
 - **plant**: single individual, displaying a single genotype (which is refered to as a **variety**). Most common elementary unit of greenhouse experiments.
 - **plot**: smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.
+<!--
 - **block**: combination of plots, generally forming an environmentally homogeneous entity
 - **field**: large spatial unit that includes plots and potentially blocks
+-->
 
 These scientific objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
 
