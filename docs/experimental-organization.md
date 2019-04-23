@@ -554,8 +554,14 @@ After having pressed the <span class="btn btn-success">Create Scientific Objects
 --->
 
 ### Modifying scientific objects
+Within the `Scientific Objects` menu, Phis users can modify the properties of existing scientific objects with the <span class="btn btn-success">Update</span> button.
 
+Scientific objects such as plots are modified through an editable table in which each row contains the information of an additionnal scientifc object to be modified in Phis database.
 
+Even if you want to change the value of only one property of an experimental object (i.e. its experimental modality), you need to provide in the handson table all of its former properties that you want to keep (e.g. type, species, etc.), otherwise this information will be lost.
+
+It is not possible to change the experiment to which a scientific object participates, however it is possible to state that a scientific object participates in various experiments.
+In order to assign scientific objects to two experiments, one has to create those scientific objects through the "create" button of the scientific object menu, assigning them to a first experiment, and then submit the same table through the "modify" button, with the exception of the "ExperimentURI" filed which will display of URI of the other experiment the new scientific objects belong to.
 
 ### Visualize scientific objects
 
