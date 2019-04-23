@@ -437,7 +437,7 @@ The scientific objects list is preceded by a research bar enabling the user to f
 The scientific objects list also displays additional properties (the objects species, variety, etc.).
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
-![scientific-objects-list](img/scientific-objects_list.png)
+![scientific-objects-list](img/scientific-objects_list-2.png)
 
 Scientific objects information can also be accessed through the `Experiments` menu.
 After having selected an experiment, the scientific objects linked to it can be displayed on a map.
@@ -552,6 +552,10 @@ After having pressed the <span class="btn btn-success">Create Scientific Objects
 
 ![new-objects-success](img/create-object_result.png)
 --->
+
+### Modifying scientific objects
+
+
 
 ### Visualize scientific objects
 
