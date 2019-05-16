@@ -66,7 +66,7 @@
             
             
                 <li >
-                    <a href="../installation/">Installation</a>
+                    <a href="../devices/">Devices</a>
                 </li>
             
             
@@ -92,7 +92,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../installation/">
+                    <a rel="prev" href="../devices/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -139,7 +139,7 @@
 However, if only the data produced by experiments is stored, and not the complete experimental conditions, i.e. the environmental conditions, infrastructure and supporting equipment or resources used to conduct those experiments, then such archived data would be orphan and therefore non reusable.</p>
 <p>The first element of experimental conditions which is stored in Phis is the scientific frames linked to plant phenotyping experiments.
 A scientific frame can be a national infrastructure, a local infrastructure, or an installation (also refered to as "platform" or "facility"), as defined at <a href="https://emphasis.plant-phenotyping.eu/Infrastructure_ontology">emphasis.plant-phenotyping.eu</a> and at <a href="http://agroportal.lirmm.fr/ontologies/OEPO/?p=classes&amp;conceptid=http%3A%2F%2Fwww.phenome-fppn.fr%2Fvocabulary%2F2018%2Foepo%23Infrastructure">agroportal.lirmm.fr/ontologies/OEPO</a>.
-OEPO is progressively being replaced by the more generic <strong>Ontology of Experimental Scientif Objects (OESO)</strong> stored in GitHub at <a href="https://github.com/OpenSILEX/ontology-vocabularies">github.com/OpenSILEX/ontology-vocabularies</a>. </p>
+OEPO is progressively being replaced by the more generic <strong>Ontology of Experimental Scientif Objects (OESO)</strong> stored in GitHub at <a href="https://github.com/OpenSILEX/ontology-vocabularies">github.com/OpenSILEX/ontology-vocabularies</a>.</p>
 <p>Users register scientific frames in Phis in order to later enrich metadata associated to experimental data by establishing a link between this data and given scientific frames.</p>
 <p>The complete list of scientific frames registered in a Phis session is available in the <code>Experimental organization / Scientific frames</code> menu, accessible from Phis top navigation bar.</p>
 <p>The <span class="btn btn-warning">Add document</span> button at the top of the each scientific frame information sheet remains orange until a first document has been added, e.g. a flyer describing the infrastructure or an organization chart.
@@ -431,9 +431,11 @@ Phis experiments register data on elementary units: <strong>scientific objects</
 <ul>
 <li><strong>plant organ</strong>: part of a given plant (e.g. <strong>rootstock</strong>, <strong>scion</strong>, <strong>silk</strong>, <strong>seed</strong>)</li>
 <li><strong>plant</strong>: single individual, displaying a single genotype (which is refered to as a <strong>variety</strong>). Most common elementary unit of greenhouse experiments.</li>
-<li><strong>plot</strong>: smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.</li>
+<li><strong>plot</strong>: smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.
+&lt;!--</li>
 <li><strong>block</strong>: combination of plots, generally forming an environmentally homogeneous entity</li>
-<li><strong>field</strong>: large spatial unit that includes plots and potentially blocks</li>
+<li><strong>field</strong>: large spatial unit that includes plots and potentially blocks
+--&gt;</li>
 </ul>
 <p>These scientific objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.</p>
 <p>A given scientific object is required to be associated with one experiment, and one only.
@@ -448,7 +450,7 @@ Phis users with a restricted access (e.g. <em>guest</em>) are likely to be unabl
 The scientific objects list is preceded by a research bar enabling the user to filter objects by their URI, Alias, type and the experience they are linked to.
 The scientific objects list also displays additional properties (the objects species, variety, etc.).
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.</p>
-<p><img alt="scientific-objects-list" src="../img/scientific-objects_list.png" /></p>
+<p><img alt="scientific-objects-list" src="../img/scientific-objects_list-2.png" /></p>
 <p>Scientific objects information can also be accessed through the <code>Experiments</code> menu.
 After having selected an experiment, the scientific objects linked to it can be displayed on a map.
 Moreover, selecting objects on such a map provides additional information on the attributes of these objects.
@@ -484,7 +486,9 @@ The experiments URIs can be selected from a dropdown list displaying all experim
 If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.</p>
 <p><code>Geometry</code>. Optionnal. Vector geometry such as polygons (for plots), provided according to <a href="https://en.wikipedia.org/wiki/Well-known_text">Well-known text standard</a>).
 Geometry coordinates are formatted in <a href="http://spatialreference.org/ref/epsg/wgs-84/">WGS84</a>, also known as the <a href="http://epsg.io/4326">EPSG4326</a> geodetic coordinate system.
-More information on this system <a href="https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html">here</a>.</p>
+More information on this system <a href="https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html">here</a>.
+A quick way to draw WKT polygons from a map is to use the "draw a shape" tool of the <a href="https://arthur-e.github.io/Wicket/sandbox-gmaps3.html">sandbox</a> website.
+However, it is recommended to use professional geographic information systems such as <a href="https://www.qgis.org">QGis</a>.</p>
 <p><code>Parent</code>. Optionnal. URI of the parent scientific object, for example the URI of a previously declared plot when declaring in the system a plant that has been harvested from this plot.
 Another example is a plant URI which can be used as a parent of a plant organ being declared.</p>
 <p><code>Species</code>. Optionnal. The URI of the species of a plant, a plant part or plot (free text).
@@ -590,10 +594,20 @@ On the contrary, the same species, variety, experimental modality or replication
 </tr>
 </tbody>
 </table>
-<p>The second step is to copy and paste the content of the CSV file in the handsontable form displayed in the <code>Home / Scientific Objects / Create Scientific Object</code> menu.</p>
+<p>The second step is to copy and paste the content of the CSV file in the handsontable form displayed in the <code>Home / Scientific Objects / Create Scientific Object</code> menu and then click on the <span class="btn btn-success">Create Scientific Objects</span> bottom button to complete the declaration of scientific objects.</p>
 <p><img alt="new-objects-create" src="../img/create-object_handsontable.png" /></p>
-<p>After having pressed the <span class="btn btn-success">Create Scientific Objects</span> bottom button, the number of imported scientific objects is displayed.</p>
-<p><img alt="new-objects-success" src="../img/create-object_result.png" /></p>
+<!---
+After having pressed the <span class="btn btn-success">Create Scientific Objects</span> bottom button, the number of imported scientific objects is displayed.
+
+![new-objects-success](img/create-object_result.png)
+--->
+
+<h3 id="modifying-scientific-objects">Modifying scientific objects</h3>
+<p>Within the <code>Scientific Objects</code> menu, Phis users can modify the properties of existing scientific objects with the <span class="btn btn-primary">Update</span> button.</p>
+<p>Scientific objects such as plots are modified through an editable table in which each row contains the information of an additionnal scientifc object to be modified in Phis database.</p>
+<p>Even if you want to change the value of only one property of an experimental object (i.e. its experimental modality), you need to provide in the handsontable all of its former properties that you want to keep (e.g. type, species, etc.), otherwise this information will be lost.</p>
+<p>It is not possible to change the experiment to which a scientific object participates, however it is possible to state that a scientific object participates in various experiments.
+In order to assign scientific objects to two experiments, one has to create those scientific objects through the <span class="btn btn-success">Create</span> button of the <code>Home / Scientific Objects</code> menu, assigning them to a first experiment, and then submit the same table through the <span class="btn btn-primary">Update</span> button, with the exception of the "ExperimentURI" field which will display of URI of the other experiment the new scientific objects belong to.</p>
 <h3 id="visualize-scientific-objects">Visualize scientific objects</h3>
 <p>See <a href="../../phis-docs-community/experimental-organization/#map-visualization">Map Visualization</a> section.</p>
 <h2 id="species">Species</h2>
@@ -611,7 +625,7 @@ Consequently, when a user refers to a variable in an experiment, there is no amb
 Moreover, the usage of unequivocal variables in experiments is a necessary step towards a more intelligible, reliable and reproducible Science.</p>
 <p>Phis variables are listed in the <code>Variables</code> menu.
 A Phis user with a restricted access (e.g. <em>guestphis</em>) is likely to be unable to see the <code>Variables</code> menu, since there is no variable for her/him to see.</p>
-<p>Variable definition is based on the <a href="http://www.cropontology.org/CropOntology_Curation_Guidelines_20160510.pdf">Crop Ontology guidelines</a>.
+<p>Variable definition is based on the <a href="https://b927e63d-a-c5a1c92d-s-sites.googlegroups.com/a/cgxchange.org/cropontologycommunity/home/guidelines-for-the-trait-dictionary-template-v-5/11_05_2018_CropOntology_Curation_Guidelines.pdf">Crop Ontology guidelines (draft document)</a>.
 Therefore, Phis variables are all unequivocally characterized by the following triplet:</p>
 <ul>
 <li>a single <strong>trait</strong>, either a phenotypic trait or an environmental feature, which is the subject of the new variable</li>
@@ -705,7 +719,6 @@ This definition should ideally be provided in English.</p>
 <h2 id="dataset">Dataset</h2>
 <h3 id="dataset-properties">Dataset properties</h3>
 <p>The heart of experiments is to produce datasets associated with the agronomical variables it studies.
-In Phis, each dataset is associated to an experiment.
 High-throughput plant phenotyping platforms commonly set up experiments in which plant growth is monitored.
 Plant growth dynamics are analyzed through the evolution of various variable (e.g. LAI, NDVI, etc.) through time.</p>
 <p>At this stage of development, all dataset variables are quantitative.
