@@ -1,4 +1,4 @@
-# Installation
+# Devices
 
 ## Sensors
 
@@ -336,11 +336,11 @@ $$
 ![BRDF-equation](img/BRDF-equation.png)
 
 `Spectral hemispheric reflectance file`. CSV file showing the results of the radiometric target calibration.
-The CSV file, using tabulations (`\t`) as field separators and dots (`.`) as decimal separators, displays in its first row the **wavelength (nm)** of the radiations to which the radiometric target has been exposed to, and in the second row the **reflectance percentage (%)** associated to each wavelength, provided in a range of [0 - 100].
+The CSV file, using tabulations (`\t`) as field separators and dots (`.`) as decimal separators, displays in its first row the **wavelength (nm)** of the radiations to which the radiometric target has been exposed to, and in the second row the **reflectance** associated with each wavelength, provided in a range of [0 - 1].
 
 ```
 450 560 710
-15  18  21.2
+0.15  0.18  0.212
 ```
 
 Clink on on <span class="btn btn-success">Create</span> to complete the radiometric target registration in Phis.

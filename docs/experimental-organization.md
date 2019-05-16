@@ -414,8 +414,10 @@ Phis experiments register data on elementary units: **scientific objects** (also
 - **plant organ**: part of a given plant (e.g. **rootstock**, **scion**, **silk**, **seed**)
 - **plant**: single individual, displaying a single genotype (which is refered to as a **variety**). Most common elementary unit of greenhouse experiments.
 - **plot**: smallest spatial unit, a.k.a micro-plot (one treatment maximum can be applied on a plot). Most common elementary unit of field experiments.
+<!--
 - **block**: combination of plots, generally forming an environmentally homogeneous entity
 - **field**: large spatial unit that includes plots and potentially blocks
+-->
 
 These scientific objects, forming the basic units of experimentations, are observed through time, and consequently constitute the origin of phenotypic data.
 
@@ -435,7 +437,7 @@ The scientific objects list is preceded by a research bar enabling the user to f
 The scientific objects list also displays additional properties (the objects species, variety, etc.).
 The list of objects associated with a search result, and their metadata, can be retrieved as a .csv file with the <span class="btn btn-primary">Download Search Result</span> button.
 
-![scientific-objects-list](img/scientific-objects_list.png)
+![scientific-objects-list](img/scientific-objects_list-2.png)
 
 Scientific objects information can also be accessed through the `Experiments` menu.
 After having selected an experiment, the scientific objects linked to it can be displayed on a map.
@@ -550,6 +552,16 @@ After having pressed the <span class="btn btn-success">Create Scientific Objects
 
 ![new-objects-success](img/create-object_result.png)
 --->
+
+### Modifying scientific objects
+Within the `Scientific Objects` menu, Phis users can modify the properties of existing scientific objects with the <span class="btn btn-primary">Update</span> button.
+
+Scientific objects such as plots are modified through an editable table in which each row contains the information of an additionnal scientifc object to be modified in Phis database.
+
+Even if you want to change the value of only one property of an experimental object (i.e. its experimental modality), you need to provide in the handsontable all of its former properties that you want to keep (e.g. type, species, etc.), otherwise this information will be lost.
+
+It is not possible to change the experiment to which a scientific object participates, however it is possible to state that a scientific object participates in various experiments.
+In order to assign scientific objects to two experiments, one has to create those scientific objects through the <span class="btn btn-success">Create</span> button of the `Home / Scientific Objects` menu, assigning them to a first experiment, and then submit the same table through the <span class="btn btn-primary">Update</span> button, with the exception of the "ExperimentURI" field which will display of URI of the other experiment the new scientific objects belong to.
 
 ### Visualize scientific objects
 
