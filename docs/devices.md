@@ -1,4 +1,4 @@
-# Devices
+actuators# Devices
 
 ## Sensors
 
@@ -16,10 +16,12 @@ From **Home / Sensors**, one can click on the eye icon on the right of any liste
 ![sensor-information](img/topview-camera.png)
 
 At the top of the sensor information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
-Documents linked to a sensor are typicaly a technical notice or an user manual.
+Documents linked to a sensor are typicaly a technical notice or a user manual.
 See the [Documents](../phis-docs-community/experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected sensor using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section for further information on annotations within Phis.
+The <span class="btn btn-default">Add event</span> button can be used by any user in order to link an event to the selected sensor.
+See the [Events](../phis-docs-community/experimental-organization/#events) section for further information on events within Phis.
 
 ### Add sensors
 
@@ -49,6 +51,8 @@ If the dropdown list isn't displayed correctly, try selecting any element of the
 "homemade" is a valid answer for sensors engineered/modified on site.
 
 `Serial Number`. Free-text used to store the sensor serial number. Optionnal.
+
+`Model`. Model of the sensor (free text).
 
 `Date of Purchase`. Date of the purchase (or creation for homemade sensors) of the sensor, provided in the YYYY-MM-DD (year-month-day) format. Optionnal.
 
@@ -82,7 +86,7 @@ The `Characterize Sensors` button leads to two sequential menus : in the first o
 One selects the sensor that need to be characterized providing two pieces of information :
 
 - Type
-- URI (will be changed to Alias in a future version of PHIS)
+- URI (will be changed to Alias in a future version of Phis)
 
 #### Cameras
 
@@ -207,10 +211,12 @@ From **Home / Vectors**, one can click on the eye icon on the right of any liste
 --->
 
 At the top of the vector information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
-Documents linked  to a vector are typicaly a technical notice, an user manual or a brochure.
+Documents linked  to a vector are typicaly a technical notice, a user manual or a brochure.
 See the [Documents](../phis-docs-community/experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected vector using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
-See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section below for further information on annotations within Phis.
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section for further information on annotations within Phis.
+The <span class="btn btn-default">Add event</span> button can be used by any user in order to link an event to the selected vector.
+See the [Events](../phis-docs-community/experimental-organization/#events) section for further information on events within Phis.
 
 ### Add vectors
 
@@ -288,6 +294,8 @@ See the [Documents](../phis-docs-community/experimental-organization/#documents)
 --->
 The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected radiometric target using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
 See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section for further information on annotations within Phis.
+The <span class="btn btn-default">Add event</span> button can be used by any user in order to link an event to the selected radiometric target.
+See the [Events](../phis-docs-community/experimental-organization/#events) section for further information on events within Phis.
 
 ### Add radiometric targets
 
@@ -363,3 +371,80 @@ The procedure followed by the installation manager to upload the templates to Ph
 - click on the <span class="btn btn-success">Create</span> button
 
 If more than one `AcquisitionSessionUAVDocument` (or `AcquisitionSessionPhenomobileDocument`) has been uploaded to Phis by the installation manager, only the ones with the latest `Creation date` can be downloaded through the **Acquisition session template** button.
+
+## Actuators
+
+### Actuators properties
+
+In order to characterize as precisely as possible the plants environment, users can also declare in the `Actuators` menu the name and attributes of the tools used to modify the water content, light, humidity, etc.
+
+Similarly to sensors, some actuators can also produce raw data. For instance, the volume of water provided by an irrigation system is an environmental data that can be stored in Phis, but only if it is linked to the actuators involved in said watering.
+
+The `Actuators` menu displays the list of individual actuators that have been declared by the user on Phis.
+The actuator list is preceded by a research bar enabling the user to filter registered actuators by their URI, Alias, type, brand and optionnal attributes, such as their model or their serial number.
+
+![actuator-menu](img/actuator-list.png)
+
+From **Home / Actuators**, one can click on the eye icon on the right of any listed actuator to see its information sheet.
+
+![actuator-information](img/actuator-information.png)
+
+At the top of the actuator information sheet lies the <span class="btn btn-warning">Add document</span> button which remains orange until a first document has been added.
+Documents linked to a actuator are typicaly a technical notice or a user manual.
+See the [Documents](../phis-docs-community/experimental-organization/#documents) section for further information on documents and how to insert them in Phis.
+The <span class="btn btn-default">Add annotation</span> button can be used by any user in order to annotate the selected actuator using the [Web Annotation Data Model](https://www.w3.org/TR/annotation-model/) (oa).
+See the [Annotation](../phis-docs-community/experimental-organization/#annotation) section for further information on annotations within Phis.
+The <span class="btn btn-default">Add event</span> button can be used by any user in order to link an event to the selected actuator.
+See the [Events](../phis-docs-community/experimental-organization/#events) section for further information on events within Phis.
+
+### Add actuators
+
+Adding multiple actuators can be achieved by selecting the <span class="btn btn-success">Create Actuator</span> button at the top-left side of the `Actuators` menu.
+
+The `Add Actuators` menu consists of an editable table in which each additionnal row should contain the information of an additionnal individual actuator to be entrered in Phis database.
+The user interface has been built using Handsontable, a JavaScript spreadsheet that allow the user (i) to check quickly the data he is creating and (ii) to copy and paste entire tables into the `Add Actuators` menu.
+
+The mandatory fields, in red, are:
+
+- Alias
+- Type
+- Brand
+- Person In Charge
+
+However, it is highly recommended to fill every field, except the `Generated URI` field which is automatically produced by Phis after the user clicks on <span class="btn btn-success">Create Actuators</span>.
+
+`Alias`. Internal name of the actuator (free text).
+
+`Type`. Type of the actuator, chosen from a closed list.
+Proposed actuator types are mainly greenhouse actuators : do not hesitate to contact OpenSILEX development team to add actuator types that cannot be found in the list in order to make it evolve.
+If the dropdown list isn't displayed correctly, try selecting any element of the list : the column width will then expand automatically.
+
+![actuator-type](img/actuator-type.png)
+
+`Brand`. Brand of the actuator (free text).
+"homemade" is a valid answer for actuators engineered/modified on site.
+
+`Serial Number`. Free-text used to store the actuator serial number. Optionnal.
+
+`Model`. Model of the actuator (free text).
+
+`Date of Purchase`. Date of the purchase (or creation for homemade actuators) of the actuator, provided in the YYYY-MM-DD (year-month-day) format. Optionnal.
+
+`In Service Date`. Date provided in the YYYY-MM-DD (year-month-day) format of the first use of the actuator. Optionnal.
+
+`Date of Last Calibration`. Date provided in the YYYY-MM-DD (year-month-day) format of the last calibration of the actuator. Optionnal.
+
+`Person In Charge`. Username (email adress) of the person in charge of the sensing device (typically, the manager of the installation).
+If the person in charge is not displayed in the dropdown list, you should first add it to the list of persons through the `Tools > Persons` menu. See the [Create a Person](../phis-docs-community/community/#create-a-person) section for details.
+
+Not correctly filled fields appear in red.
+As long as cells are displayed in red, no actuator can be created.
+
+![add-actuator](img/add-actuator.png)
+
+Note that when you add a single actuator only, you need to remove the second row displayed by default, using the `Remove row` button which appears after a right-click anywhere on the row to delete.
+The number of rows has to match the number of added actuators.
+
+![add-actuator-success](img/added-actuator.png)
+
+The `delete actuator` function has not been implemented yet : contact the OpenSILEX development team in order to ask for a actuator to be removed.
