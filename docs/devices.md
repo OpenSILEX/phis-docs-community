@@ -1,4 +1,4 @@
-actuators# Devices
+# Devices
 
 ## Sensors
 
