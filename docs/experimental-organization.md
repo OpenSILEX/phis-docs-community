@@ -481,6 +481,11 @@ If the dropdown list isn't displayed correctly, try selecting any element of the
 If this field is not filled excusively with URIs of experiments stored in Phis, then no scientific object will be added to the system.
 The experiments URIs can be selected from a dropdown list displaying all experiments declared in the system.
 If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
+Note that as described in the [Modifying scientific objects](../phis-docs-community/experimental-organization/#modifying-scientific-objects) section, it is possible to link a scientific object to several experiments in two steps. From the `Scientific Objects` menu :
+
+1. Using the <span class="btn btn-success">Create</span> button, create scientific objects with a given experiment URI in the `Experiment` column
+2. Using the <span class="btn btn-primary">Update</span> button, copy and paste the table used in the scientific object creation, and then replace the value of the `Experiment` column with another experiment URI
+3. Repeat the step 2 everytime you want to associate the same scientific objects to another experiment
 
 `Geometry`. Optionnal. Vector geometry such as polygons (for plots), provided according to [Well-known text standard](https://en.wikipedia.org/wiki/Well-known_text)).
 Geometry coordinates are formatted in [WGS84](http://spatialreference.org/ref/epsg/wgs-84/), also known as the [EPSG4326](http://epsg.io/4326) geodetic coordinate system.
