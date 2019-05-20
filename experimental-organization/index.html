@@ -483,7 +483,13 @@ If the dropdown list isn't displayed correctly, try selecting any element of the
 <p><code>Experiment</code>. URI of the experiment the declared scientific objects belong to.
 If this field is not filled excusively with URIs of experiments stored in Phis, then no scientific object will be added to the system.
 The experiments URIs can be selected from a dropdown list displaying all experiments declared in the system.
-If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.</p>
+If the dropdown list isn't displayed correctly, try selecting any element of the list: the column width will then expand automatically.
+Note that as described in the <a href="../../phis-docs-community/experimental-organization/#modifying-scientific-objects">Modifying scientific objects</a> section, it is possible to link a scientific object to several experiments in two steps. From the <code>Scientific Objects</code> menu :</p>
+<ol>
+<li>Using the <span class="btn btn-success">Create</span> button, create scientific objects with a given experiment URI in the <code>Experiment</code> column</li>
+<li>Using the <span class="btn btn-primary">Update</span> button, copy and paste the table used in the scientific object creation, and then replace the value of the <code>Experiment</code> column with another experiment URI</li>
+<li>Repeat the step 2 everytime you want to associate the same scientific objects to another experiment</li>
+</ol>
 <p><code>Geometry</code>. Optionnal. Vector geometry such as polygons (for plots), provided according to <a href="https://en.wikipedia.org/wiki/Well-known_text">Well-known text standard</a>).
 Geometry coordinates are formatted in <a href="http://spatialreference.org/ref/epsg/wgs-84/">WGS84</a>, also known as the <a href="http://epsg.io/4326">EPSG4326</a> geodetic coordinate system.
 More information on this system <a href="https://confluence.qps.nl/qinsy/en/world-geodetic-system-1984-wgs84-29855173.html">here</a>.
