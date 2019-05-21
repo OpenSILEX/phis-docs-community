@@ -36,5 +36,6 @@ An interactive web user interface of the pilot version of PHIS, currently used i
 The current version of OpenSILEX PHIS is presented on the webpage [opensilex.org](http://www.opensilex.org/).
 
 ## Version
-&copy; OpenSILEX - PHIS v.3 - 31 January 2019 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
+&copy; OpenSILEX v.3.2 - May 15, 2019 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
+
 
