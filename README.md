@@ -36,6 +36,7 @@ In order to keep abreast of the latest OpenSILEX PHIS development, one can :
 - follow our twitter feed [@OpenSilex](https://twitter.com/OpenSilex)
 - subscribe to the [opensilex@groupes.renater.fr mailing list](https://groupes.renater.fr/sympa/subscribe/opensilex) for generic information
 - subscribe to the [opensilex-dev@groupes.renater.fr mailing list](https://groupes.renater.fr/sympa/subscribe/opensilex-dev) for technical updates
+
 ## References
 Pilot version of PHIS (different to the one presented here) described in [Neveu, Pascal, et al. "Dealing with multi‐source and multi‐scale information in plant phenomics: the ontology‐driven Phenotyping Hybrid Information System." New Phytologist (2018).](https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.15385)
 
