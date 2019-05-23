@@ -26,8 +26,16 @@ Every PHIS user is welcomed to enrich this repository with its experience of the
 This documentation is currently under developpement.
 If a PHIS user wish to point out a flaw in this documentation, he is welcomed to do so in this repository's [GitHub issues](https://github.com/OpenSILEX/phis-docs-community/issues).
 
-Concerning issues with OpenSILEX PHIS itself, users are invited to report them via OpenSILEX development team email address: [opensilex@gmail.com](mailto:opensilex@gmail.com).
+Concerning issues with OpenSILEX PHIS itself, users are invited to report them via the GitHub issues of the repositories causing trouble, for instance [phis-ws/issues](https://github.com/OpenSILEX/phis-ws/issues) for problems concerning the Web services and [phis-webapp/issues](https://github.com/OpenSILEX/phis-webapp/issues) for issues with the Web client.
 
+OpenSILEX development team can also be contacted through its official email address [opensilex@gmail.com](mailto:opensilex@gmail.com) or through the mailing list [opensilex-help@groupes.renater.fr](mailto:opensilex-help@groupes.renater.fr) when reporting a bug or seeking help.
+
+## Keep up to date
+In order to keep abreast of the latest OpenSILEX PHIS development, one can :
+
+- follow our twitter feed [@OpenSilex](https://twitter.com/OpenSilex)
+- subscribe to the [opensilex@groupes.renater.fr mailing list](https://groupes.renater.fr/sympa/subscribe/opensilex) for generic information
+- subscribe to the [opensilex-dev@groupes.renater.fr mailing list](https://groupes.renater.fr/sympa/subscribe/opensilex-dev) for technical updates
 ## References
 Pilot version of PHIS (different to the one presented here) described in [Neveu, Pascal, et al. "Dealing with multi‐source and multi‐scale information in plant phenomics: the ontology‐driven Phenotyping Hybrid Information System." New Phytologist (2018).](https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.15385)
 
@@ -37,5 +45,3 @@ The current version of OpenSILEX PHIS is presented on the webpage [opensilex.org
 
 ## Version
 &copy; OpenSILEX v.3.2 - May 15, 2019 ; Software is licensed under AGPL-3.0 and data under CC BY-NC-SA 4.0
-
-
