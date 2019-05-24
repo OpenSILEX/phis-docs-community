@@ -32,7 +32,14 @@ If a OpenSILEX PHIS user wish to point out a flaw in this documentation, he is w
 
 Concerning issues with OpenSILEX PHIS itself, users are invited to report them via the GitHub issues of the repositories causing trouble, for instance [phis-ws/issues](https://github.com/OpenSILEX/phis-ws/issues) for problems concerning the Web services and [phis-webapp/issues](https://github.com/OpenSILEX/phis-webapp/issues) for issues with the Web client.
 
-OpenSILEX development team can also be contacted through its official email address: [opensilex@gmail.com](mailto:opensilex@gmail.com).
+OpenSILEX development team can also be contacted through its official email address [opensilex@gmail.com](mailto:opensilex@gmail.com) or through the mailing list [opensilex-help@groupes.renater.fr](mailto:opensilex-help@groupes.renater.fr) when reporting a bug or seeking help.
+
+## Keep up to date
+In order to keep abreast of the latest OpenSILEX PHIS development, one can :
+
+- follow our twitter feed [@OpenSilex](https://twitter.com/OpenSilex)
+- subscribe to the [opensilex@groupes.renater.fr mailing list](https://groupes.renater.fr/sympa/subscribe/opensilex) for generic information
+- subscribe to the [opensilex-dev@groupes.renater.fr mailing list](https://groupes.renater.fr/sympa/subscribe/opensilex-dev) for technical updates
 
 ## References
 Pilot version of Phis (different to the one presented here) described in [Neveu, Pascal, et al. "Dealing with multi‐source and multi‐scale information in plant phenomics: the ontology‐driven Phenotyping Hybrid Information System." New Phytologist (2018).](https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.15385)
