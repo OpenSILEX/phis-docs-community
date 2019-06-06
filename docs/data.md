@@ -23,7 +23,7 @@ When inserting data in Phis through the webapp, one must provide :
 - the source (**provenance**) of this dataset
 - the dataset itself (as a **CSV file** in which fields are separated by semi-colons `;`, and the decimal separator is a point `.`)
 
-Optionnaly, one can also link one or more documents to the dataset provenance (e.g. files describing the data collection method or user manuals supplied by the manufacturer of the equipment used for the data collection).
+Optionnaly, one can also link one or more documents to the dataset provenance (e.g. files describing the data collection method, the drone path files, etc.).
 
 ### Link an imported dataset to its provenance
 
@@ -50,7 +50,7 @@ It is possible to start typing the label of the looked for provenance in order t
 
 ![add-data-choose-provenance](img/add-data-choose-provenance.png)
 
-As stated above, one can also (but it is not mandatory) link one or several documents to the dataset provenance (e.g. files describing the data collection method or user manuals supplied by the manufacturer of the equipment used for the data collection).
+As stated above, one can also (but it is not mandatory) link one or several documents to the dataset provenance (e.g. files describing the data collection method, the drone path, computation scripts or user manuals supplied by the manufacturer of the equipment used for the data collection).
 
 ### Finalize a dataset import
 
