@@ -11,6 +11,8 @@ Select a variable from the dropdown list at the top left corner of the table to 
 You can refine your search by using the **Date**, **Object** or **Provenance** filters at the top of the table displaying the data associated to the selected variable.
 In order to validate your search, press enter or click anywhere outside the filter insert after having typed the content of your search.
 
+You can dowload the data linked to your search result (and to a single variable) clicking on the <span class="btn btn-primary">Download Search Result</span> button located the top left corner of the data table.
+
 ## Add data
 
 ### Overview of a dataset import
