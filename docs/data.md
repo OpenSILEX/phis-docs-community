@@ -21,7 +21,7 @@ One can use the web app to manually insert data in Phis, although it is recommen
 
 When inserting data in Phis through the webapp, one must provide :
 
-- the name of the **variable(s)** concerned by the data import
+- the name of the **variable(s)** concerned by the data import (you can import several data types : numeric, symbolic or date values)
 - the source (**provenance**) of this dataset
 - the dataset itself (as a **CSV file** in which fields are separated by semi-colons `;`, and the decimal separator is a point `.`)
 
