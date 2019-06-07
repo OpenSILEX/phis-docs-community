@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Data - PHIS user documentation</title>
+
+        <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/base.css" rel="stylesheet">
+        <link href="../css/bootstrap.css" rel="stylesheet">
+        <link href="../css/site.css" rel="stylesheet">
+        <link href="../css/navbar.less" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">PHIS user documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+            
+            
+                <li >
+                    <a href="..">Home</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../experimental-organization/">Experimental Organization</a>
+                </li>
+            
+            
+            
+                <li class="active">
+                    <a href="./">Data</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../devices/">Devices</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../community/">Community</a>
+                </li>
+            
+            
+            
+                <li >
+                    <a href="../ws-clients/">Clients</a>
+                </li>
+            
+            
+            </ul>
+
+            <!-- Search, Navigation and Repo links -->
+            <ul class="nav navbar-nav navbar-right">
+                <li >
+                    <a rel="next" href="../experimental-organization/">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </li>
+                <li >
+                    <a rel="prev" href="../devices/">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#data">Data</a></li>
+        
+            <li><a href="#view-data">View data</a></li>
+        
+            <li><a href="#add-data">Add data</a></li>
+        
+    
+    </ul>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="data">Data</h1>
+<h2 id="view-data">View data</h2>
+<p>You can view and download both environmental an phenotypic variables values from the <code>View</code> section of the <code>Data</code> menu.</p>
+<p><img alt="view-data" src="../img/view-data.png" /></p>
+<p>Select a variable from the dropdown list at the top left corner of the table to get an overview of the data linked to this variable.</p>
+<p>You can refine your search by using the <strong>Date</strong>, <strong>Object</strong> or <strong>Provenance</strong> filters at the top of the table displaying the data associated to the selected variable.
+In order to validate your search, press enter or click anywhere outside the filter insert after having typed the content of your search.</p>
+<p>You can dowload the data linked to your search result (and to a single variable) clicking on the <span class="btn btn-primary">Download Search Result</span> button located the top left corner of the data table.</p>
+<h2 id="add-data">Add data</h2>
+<h3 id="overview-of-a-dataset-import">Overview of a dataset import</h3>
+<p>One can use the web app to manually insert data in Phis, although it is recommended to have this task covered by an automated pipeline, such as a Python scripts which inserts automatically data produced by a sensor to Phis using the <code>POST /data</code> web service.</p>
+<p>When inserting data in Phis through the webapp, one must provide :</p>
+<ul>
+<li>the name of the <strong>variable(s)</strong> concerned by the data import (you can import several data types : numeric, symbolic or date values)</li>
+<li>the source (<strong>provenance</strong>) of this dataset</li>
+<li>the dataset itself (as a <strong>CSV file</strong> in which fields are separated by semi-colons <code>;</code>, and the decimal separator is a point <code>.</code>)</li>
+</ul>
+<p>Optionnaly, one can also link one or more documents to the dataset provenance (e.g. files describing the data collection method, the drone path files, etc.).</p>
+<h3 id="link-an-imported-dataset-to-its-provenance">Link an imported dataset to its provenance</h3>
+<p>It is mandatory to link every dataset import in Phis to a <strong>provenance</strong>, i.e. an identified data source which is characterized by a URI, a label and a short description (its comment).</p>
+<p><img alt="add-data-new-provenance" src="../img/add-data-new-provenance.png" /></p>
+<p>One can either choose from an existing provenance from the <strong>Provenance (URI)</strong> dropdown list, either type in this <strong>Provenance (URI)</strong> text insert the label of a new provenance, which has to be described in the following text insert, the <strong>Provenance comment</strong> field.
+The provenance comment is a free text text insert, it is however suggested to be as precise as possible regarding the description of the dataset source.
+One can use the provenance comment to answer to some of the following questions :</p>
+<ul>
+<li>where has the data been collected ?</li>
+<li>when has the data been collected ?</li>
+<li>by whom has the data been collected ? (e.g. the operator supervising the data collection or the equipment linked to it)</li>
+<li>how has the data been collected ? (e.g. the method from the variable description and the equipment used)</li>
+<li>for which purpose has the dtat been collected ? (e.g. the name of a project)</li>
+</ul>
+<p><img alt="add-data-new-provenance-comment" src="../img/add-data-new-provenance-comment.png" /></p>
+<p>The same provenance (and its URI) can be used for several datasets, as long as they have the same source.</p>
+<p>When selecting an existing provenance instead of creating a new one, it is only needed to select the desired provenance label from the dropdown list of the <strong>Provenance (URI)</strong> list.
+It is possible to start typing the label of the looked for provenance in order to search through the existing provenances, in doing so reducing the dropdown list length.</p>
+<p><img alt="add-data-choose-provenance" src="../img/add-data-choose-provenance.png" /></p>
+<p>As stated above, one can also (but it is not mandatory) link one or several documents to the dataset provenance (e.g. files describing the data collection method, the drone path, computation scripts or user manuals supplied by the manufacturer of the equipment used for the data collection).</p>
+<h3 id="finalize-a-dataset-import">Finalize a dataset import</h3>
+<p>A file template is created using the variable(s) name(s) provided by the user at the first step of this <code>Data / Add</code> form.
+This template file header contains :</p>
+<ul>
+<li>the concerned <strong>ScientificObjectURI</strong> in the first column</li>
+<li>the data collection <strong>Date</strong> in the second column</li>
+<li>the <strong>variables</strong> labels in the following columns</li>
+</ul>
+<p>To finalize the data import process, one has to upload a <strong>CSV file</strong> containing the data, which header matches the one of the template file, in which fields are separated by semi-colons <code>;</code>, and in which the decimal separator is a point <code>.</code></p>
+<p><img alt="add-data-create" src="../img/add-data-click-create-with-document.png" /></p></div>
+        </div>
+
+	<footer class="col-md-12">
+		<hr>
+		
+		<center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
+	</footer>
+
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script src="../js/base.js"></script>
+    </body>
+</html>
