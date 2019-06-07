@@ -2,7 +2,7 @@
 
 ## View data
 
-Ypu can view and download both environmental an phenotypic variables values from the `View` section of the `Data` menu.
+You can view and download both environmental an phenotypic variables values from the `View` section of the `Data` menu.
 
 ![view-data](img/view-data.png)
 
