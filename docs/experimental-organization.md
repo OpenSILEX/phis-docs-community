@@ -569,8 +569,58 @@ It is not possible to change the experiment to which a scientific object partici
 In order to assign scientific objects to two experiments, one has to create those scientific objects through the <span class="btn btn-success">Create</span> button of the `Home / Scientific Objects` menu, assigning them to a first experiment, and then submit the same table through the <span class="btn btn-primary">Update</span> button, with the exception of the "ExperimentURI" field which will display of URI of the other experiment the new scientific objects belong to.
 
 ### Visualize scientific objects
+![objects-visualization](img/so_visualization_action.png)
+This section gives you the ability to see **variable datasets**, **images**, and **events** linked to a scientific object in a generated graphic.
 
-See [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section.
+A dataset is a serie of values that are taken by a variable in a periode of time.
+A variable can be calculated in differents ways that are called provenances.
+
+**Data search section fields**:
+
+`Variable`. Mandatory field. It's a quantitative variable from a predefined list of all the variables defined in a given Phis instance.
+
+`Provenance`. Optionnal. By default all provenances are selected.
+
+`Date Start`. Optionnal. Date from which the serie starts.
+
+`Date End`. Optionnal. Date from which the serie ends .
+
+To see scientific object images you need to check option and fill the fields.
+
+**Image search section fields**(optionnal):
+
+`Type`. Mandatory field. The image type.
+
+`Camera position`. Optional field. The camera position.
+
+
+The last step is to press the <span class="btn btn-primary">Show</span> button, which will lead to the creation of a graphic displaying according to a time axis the variable values associated to:
+
+- the scientific objects selected on the map
+- the variable selected in the **Quantitative Variable** field
+- potentially the time window between **Date Start** and **Date End** if those fields have been filled out
+
+![visualization](img/so_datasets_photos_visualization.png)
+
+On the graphic, the time is displayed on the abscissa axis and the variable on the ordinate axis.
+Variable values and curve associated to a provenance or events serie can be masked by clicking on its associated curve label beneath the graphic.
+Clicking a second time on the label as the effect to show again the previously hidden curve.
+
+**Image display**
+
+An image is indicated by a little circle above the serie point. Click on them to see  images.
+
+**Add a new annotation or event**
+
+You can add a new annotation or event by clicking somewhere in a graphic serie. 
+All annotations and events attached to the scientific object will be display beneath the graphic.
+
+**Zoom on the graphic**
+
+Click and drag on the graphic to zoom on a period of time you need to see.
+
+
+To see datasets from more than one scientific object see [Map Visualization](../phis-docs-community/experimental-organization/#map-visualization) section.
 
 ## Species
 
