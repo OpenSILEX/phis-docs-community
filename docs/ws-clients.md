@@ -1,5 +1,68 @@
 # Web Service Clients
 
+## Sensor data integration :
+
+This part describes the way to add data coming from a sensor into the ``data service``.
+
+Two steps need to be done :
+
+1. Create one or several provenance(s) which describe the way which the data was obtained (sensor, sensor settings, ...)
+
+The service used to create a provenance is ``POST /provenances``.
+
+The following JSON schema is expected :
+
+```json
+[
+    {
+        "label": "provenance sensor ddd with new data",
+        "comment": "",
+        "metadata": {
+            "prov:Agent": [{
+                "prov:id": "http://www.phenome-fppn.fr/test/2020/s20002",
+                "rdf:type": "oeso:SensingDevice", 
+                "settings": {
+                    "verticalPosition": 0.0
+            }
+        }]
+        }
+    }
+]
+```
+
+This service will return the **uri(s) of the provenance(s)** which will used in the **next step**.
+
+Important Notes:
+
+- *Sensor type* in opensilex ontology is defined by **"rdf:type": "oeso:SensingDevice"**. It must not be modified.
+- *prov:id* is the sensor uri in our information system **"prov:id": "http://www.phenome-fppn.fr/test/2020/s20002"**,
+
+2. Format your dataset to be able to use de ``data service``.
+
+The service used to create a provenance is ``POST /data``.
+
+The following JSON schema is expected, it is an array of unique single observation measures :
+
+```json
+[
+  {
+    "provenanceUri": "http://www.opensilex.org/demo/2018/pv181515071552",
+    "objectUri": null,
+    "variableUri": "http://www.opensilex.org/demo/id/variable/v0000001",
+    "date": "2017-06-15T10:51:00+0200",
+    "value": "1.3",
+    "metadata": {}
+  }
+]
+```
+
+Important Notes:
+
+- *variableUri* is the uri of the measured variable in your dataset
+- *objectUri* is null in this case
+- *date* is expected in one of these formats : 2017-06-15 or  2017-06-15T10:51:00+0200 or 2017-06-15T10:51:00.300+0200  
+- *value* can be in date, in text or in numeric format
+
 ## Python Clients
 
 ### Images import Python client
@@ -41,8 +104,8 @@ A template of the required CSV file can be found on GitHub at the following URL:
 
 The first row of the CSV file displays its header:
 
-| path_image_ref     | imageType     | concernedItemUri     | concernedItemType     | position    | date     |  sensorUri   |
-| :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
+| path_image_ref | imageType | concernedItemUri | concernedItemType | position | date | sensorUri |
+| :------------- | :-------- | :--------------- | :---------------- | :------- | :--- | :-------- |
 
 Then, each row of this CSV file is associated to an image imported in OpenSILEX PHIS.
 Each image is characterized by:
